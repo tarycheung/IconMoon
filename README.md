@@ -1,4 +1,6 @@
 # IconMoon
-========
+## Online Portfolio Website of JJ Ying
 
-Personal Online Portfolio Website
+-  IconMoon.com © 2013 JJ Ying.
+
+
