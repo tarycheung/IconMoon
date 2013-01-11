@@ -1,0 +1,6 @@
+#
+# JJ.Ying
+#
+
+User-agent: *
+Disallow: /temp/
