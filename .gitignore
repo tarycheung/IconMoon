@@ -10,7 +10,13 @@ skins
 Sinalicity
 birthday
 blog-old
-blog2
+blog2/data
+blog2/bak
+blog2/attachment
+blog2/data/images
+blog2/data/post
+blog2/temp
+blog2/template/default
 photos
 skins
 rss.txt

@@ -1,0 +1,40 @@
+<?php
+$relatednum=6;
+$number=6;
+$length=10;
+$tablew1=40;
+$tablew2=180;
+
+if (!defined('VALIDREQUEST')) die ('Access Denied.');
+
+global $records, $blog, $db_prefix, $permission,$mbcon; 
+if ($records[0]['tags'] && $records[0]['tags']!='>') {
+	$records[0]['tags']=trim($records[0]['tags'],'>');
+	$taginfo=@explode('>', $records[0]['tags']);
+}
+
+$plugin_return='';
+if (is_array($taginfo)) {
+	$tagforsearch=makeaquery($taginfo, "`tagname`='%s'", 'OR');
+	$allrelates=$blog->getarraybyquery("SELECT tagentry FROM `{$db_prefix}tags` WHERE {$tagforsearch}");
+	$alllse=@implode(',', $allrelates['tagentry']);
+	$allsingle=array_unique(@explode(',', $alllse));
+	if (is_array($allsingle)) {
+		$tagforsearch=makeaquery($allsingle, "`blogid`='%s'", 'OR');
+		$allrelates=$blog->getgroupbyquery("SELECT blogid,title,views,blogalias FROM `{$db_prefix}blogs` WHERE ({$tagforsearch}) AND `property`<2 ORDER BY `pubtime`DESC LIMIT 0,{$relatednum}");
+		if (is_array($allrelates)) {
+			foreach ($allrelates as $relateditem) {
+				if ($relateditem['blogid']==0 || $relateditem['blogid']==$records[0]['blogid']) continue;
+				$showrelate.="+ <a href=\"".getlink_entry($relateditem['blogid'], $relateditem['blogalias'])."\">{$relateditem['title']}</a><br/>";
+			}
+			if ($showrelate) $plugin_return="<!-- Added by RelatedTopic, plugin for Bo-Blog 2.0.0 -->\r<div class='textbox-extra'><div class='textbox-related'><span class='big-f'>Related Posts:</span><br/>{$showrelate}</div><div class='textbox-share'><span class='big-f'>Share this Post:</span><br/>
+
+
+
+
+</div><div class='clear'></div></div>\r<!-- RelatedTopic over -->";
+		}
+	}
+}
+
+?>
