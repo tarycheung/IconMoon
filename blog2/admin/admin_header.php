@@ -36,6 +36,7 @@ $display_overall.=<<<eot
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="Content-Language" content="UTF-8" />
 <meta name="robots" content="noindex, nofollow" />
+<link REL="SHORTCUT ICON" HREF="favicon.ico">
 <link rel="stylesheet" rev="stylesheet" href="{$csslocation}" type="text/css" media="all" />
 <title>{$config['blogname']} - {$lna[0]} [Powered by Bo-Blog]</title>
 $initialjs
