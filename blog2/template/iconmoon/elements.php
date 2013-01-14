@@ -322,7 +322,7 @@ $elements['viewentry']=<<<eot
 <div id="commentWrapper" class="comment-wrapper">	
 	<a name="topreply"></a>
 
-
+<a name="comments"></a>
 <!-- Duoshuo Comment BEGIN -->
 	<div class="ds-thread"></div>
 	<script type="text/javascript">
