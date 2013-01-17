@@ -691,7 +691,7 @@ h5{
 	border-bottom:2px solid #d6351c;
 }
 .panel .panel-content{
-	margin:6px 20px 27px 20px;
+	margin:12px 20px 27px 20px;
 	line-height:180%;
 	color:#8792ab;
 }
@@ -1210,23 +1210,25 @@ select{
 	background:none;
 	font-size: 12px;
 	border-top: none;
-	margin-top:14px !important;
+	margin-top:0px !important;
 	text-indent: 0;
+	padding: 0 0 6px !important;
 }
 ul#ds-recent-comments .ds-meta{
 	font-weight: 700;
 	text-indent: 0;
+	font-size: 12px;
+	margin:5px 0 0px;
+	color: #d7361d !important;
 }
 ul#ds-recent-comments .ds-meta a{
-	background: #EDF0F6;
-	border-radius: 5px;
+	background: none;
 	-webkit-border-radius: 5px;
-	padding:3px 8px;
+	color: #d7361d !important;
 }
 ul#ds-recent-comments .ds-meta a:hover{
-	background:#d7361d;
-	color:#fff;
-	text-decoration: none;
+	color:#d7361d;
+	text-decoration: underline;
 }
 ul#ds-recent-comments .ds-excerpt{
 	text-indent: 0;
@@ -1234,7 +1236,7 @@ ul#ds-recent-comments .ds-excerpt{
 }
 ul#ds-recent-comments .ds-time{
 	margin-right:5px !important;
-	color: #d7361d !important;
+	color: #c3c9d6 !important;
 	font-weight: 400;
 	float: right;
 }
