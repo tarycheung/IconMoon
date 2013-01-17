@@ -84,8 +84,8 @@ if ($job=='add' || $job=='edit') { //Initialize public items
 			$arrayvalue_weather[]=$wkey;
 		}
 	}
-	$arrayoption_property=array($lna[269], $lna[270], $lna[271], $lna[272], $lna[1111]);
-	$arrayvalue_property=array(0, 1, 2, 3, 4);
+	$arrayoption_property=array($lna[269], $lna[271]);
+	$arrayvalue_property=array(0, 2);
 	$arrayoption_sticky=array($lna[273], $lna[274], $lna[275]);
 	$arrayvalue_sticky=array(0, 1, 2);
 	$usergp_1=array_values($usergp);
