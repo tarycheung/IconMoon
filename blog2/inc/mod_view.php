@@ -181,10 +181,16 @@ if ($job=='archivelist') {
 		for ($i=0; $i<count($uniquedates); $i++) {
 			$y=$uniquedates[$i];
 			$result.="<tr><td colspan=\"4\" class=\"archive-year\" ><h6>{$y}{$lnc[299]}</h6></td></tr>\n<tr>";
-			for ($j=1; $j<13; $j++) {
+			for ($j=12; $j>0; $j--) {
 				$resultdates[$y][$j]=floor($resultdates[$y][$j]);
-				$result.="<td class=\"archive-month\"><a href=\"".getlink_archive($j, $y)."\" rel=\"noindex,nofollow\">{$j}<strong>{$lnc[298]}</strong> <br/><span class=\"archive-desc\">{$resultdates[$y][$j]}篇博文</span></a></td>"; 
-				if ($j%4==0) $result.="</tr><tr>";
+				if ($resultdates[$y][$j]==0)
+				$result.="<td class=\"archive-month archive-empty\"><a href=\"".getlink_archive($j, $y)."\" rel=\"noindex,nofollow\">{$j}<strong>{$lnc[298]}</strong></a></td>"; 
+				else {
+					$result.="<td class=\"archive-month\"><a href=\"".getlink_archive($j, $y)."\" rel=\"noindex,nofollow\">{$j}<strong>{$lnc[298]}</strong> <br/><span class=\"archive-desc\">{$resultdates[$y][$j]}篇博文</span></a></td>"; 				
+				}
+
+				if ($j%4==1) $result.="</tr><tr>";
+				
 			}
 			$result.="</tr>\n";
 		}

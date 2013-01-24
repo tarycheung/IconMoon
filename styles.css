@@ -1861,7 +1861,7 @@ ul#ds-recent-comments .ds-time{
 	font-size: 14px;
 	padding: 14px 0 14px;
 	text-align: center;
-
+	border-bottom: 1px dotted #dce;
 }
 .archive-month a{
 	font-size: 36px;
@@ -1872,6 +1872,10 @@ ul#ds-recent-comments .ds-time{
 	padding: 8px 4px 4px;
 	width:70px;
 	height: 50px;
+}
+.archive-empty a{
+	opacity: 0.2;
+	cursor: default;
 }
 .archive-month a:hover{
 	text-decoration: none;
@@ -1894,7 +1898,14 @@ ul#ds-recent-comments .ds-time{
 	line-height: 40px;
 	font-weight: 400;
 }
-
+.archive-empty a:hover{
+	font-size: 36px;
+	color: #232B3D;
+}
+.archive-empty a:hover strong,
+.archive-empty a:hover .archive-desc{
+	display: inline;
+}
 @media screen and (max-width: 1050px) {
 
 	.blog,
