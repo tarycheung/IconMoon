@@ -1647,6 +1647,7 @@ ul#ds-recent-comments .ds-time{
 .travel-photography .drop-shadow img{
    -moz-box-shadow:0 3px 11px #999;
    box-shadow:0 3px 11px #999;
+   margin-bottom: 10px;
 }
 .travel-photography .drop-shadow a:hover{
 	background:none;

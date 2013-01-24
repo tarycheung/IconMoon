@@ -31,7 +31,7 @@ if (is_array($taginfo)) {
 <br/><br/>
 <hr>
 <div class='textbox-extra'>
-	<div><h6>相关日志:</h6></div>
+	<div><h6>相关博文:</h6></div>
 	<div class='textbox-related'>{$showrelate}</div>
 
 </div>
