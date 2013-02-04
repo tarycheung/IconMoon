@@ -514,8 +514,8 @@ h3 strong{
 .about-photo-maggie a:hover{ background-position:-9px -3277px;}
 .about-photo-1{ left:186px;}
 .about-photo-2{ left:376px;}
-.about-photo-3{	left:566px;}
-.about-photo-4{	left:756px;}
+.about-photo-3{left:566px;}
+.about-photo-4{left:756px;}
 .about-photo-1 a{background-position:-186px -3159px;}
 .about-photo-1 a{background-position:-186px -3159px;}
 .about-photo-2 a{background-position:-376px -3159px;}
@@ -1654,6 +1654,95 @@ ul#ds-recent-comments .ds-time{
 }
 .travel-photography .textbox-extra{
 	color:#619291;
+}
+/*Apps*/
+.apps{
+	background: #222326;
+	border: none;
+}
+.apps .textbox-content{
+	color: #83868f;
+	min-height: 560px;
+}
+.apps a{
+	color: #f60;
+	text-shadow: none;
+}
+.apps:hover{
+	box-shadow: none;
+}
+.apps h2 a{
+	color: #fff;
+	font-weight: 400;
+	font-size: 1.3em;
+}
+.apps h2 a:hover{
+	background: none;
+	color: #f60;
+}
+.apps .title-label{
+	float: left;
+	color: #f60;
+}
+.apps .title-label a{
+	color: #f60;
+}
+.apps-icon{
+	font-size: 28px;
+	font-weight: 700;
+	font-family: 'Myriad Pro';
+	text-align: center;
+	width: 175px;
+	float: left;
+	margin: 20px 0 0 30px;
+}
+.apps-icon img{
+	border-radius: 30.7px;
+	box-shadow: 0 6px 10px #111;
+	margin-bottom: 20px;
+}
+.iphone-ss{
+	position: absolute;
+	right: 16px;
+	top: -20px;
+	box-shadow: 0 13px 11px #111;
+}
+.iphone-ss img{
+	max-width: 320px;
+	max-height: 480px;
+}
+.iphone-ss-1{
+	right: 80px;
+	top: 40px;
+}
+.apps-desc{
+	position: absolute;
+	top: 280px;
+	width: 220px;
+	background: #000;
+	padding: 10px;
+	border-radius: 8px;
+}
+.apps-content{
+	margin-top: 500px;
+}
+.apps a{
+	background: none;
+}
+.apps .blog-readmore{
+	text-align: center;
+	width: 100px;
+	left: 0px;
+	bottom: 20px;
+	margin-top: 400px;
+	color: #f60;
+	border: none;
+	position: absolute;
+}
+.apps .blog-readmore a{
+	color: #fff;
+	background: #f60;
+	padding: 3px 0;
 }
 /*fun*/
 .fun{

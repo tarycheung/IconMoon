@@ -80,7 +80,7 @@ $elements['displayside']=<<<eot
 				<li class="indent"><a href="category/works-chn/" title="我的GUI作品">作品发布</a></li>
 				<li class="indent"><a href="category/tutorials-chn/" title="原创以及转载的设计教程和心得">理论教程</a></li>
 				<li class="indent"><a href="category/travel-photography/" title="游记、攻略加摄影">旅游摄影</a></li>
-				<li class="indent"><a href="links.php" title="朋友们的博客和网站">友情链接</a></li>
+				<li class="indent"><a href="category/apps/" title="优秀设计的 iOS App 推荐">App 推荐</a></li>
 			</ul>
 		</div>
 
