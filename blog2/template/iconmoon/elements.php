@@ -82,8 +82,7 @@ $elements['displayside']=<<<eot
 				<li class="indent"><a href="category/diary-chn/" title="生活中的点滴"><span class="cate-number">4</span>生活 · 日记</a></li>
 				<li class="indent"><a href="category/fun/" title="有趣的视频、图片、文章分享"><span class="cate-number">5</span>娱乐 · 分享</a></li>
 				<!-- <li class="indent"><a href="category/apps/" title="优秀设计的 iOS App 推荐"><span class="cate-number">5</span>应用 · 推荐</a></li>  -->
-				<li class="indent"><a href="category/works-chn/" title="我的GUI作品"><span class="cate-number">6</span>我的作品</a></li>
-				<li class="indent"><a href="http://IconMoon.com/about.html" title="About"><span class="cate-number">7</span>关于博主</a></li>
+				<li class="indent"><a href="category/works-chn/" title="我的GUI作品"><span class="cate-number">6</span>个人 · 作品</a></li>
 			</ul>
 
 

@@ -15,7 +15,7 @@ html{
 }
 body{
 	font-size:14px;
-	font-family:Cabin, Calibri, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
+	font-family:Cabin, Calibri, sans-serif;
 	text-align:center;
 	color:#30384c;
 	background:url('images/bg.jpg') no-repeat center top;
@@ -79,16 +79,9 @@ h3, h6,
 #nav a{
 	font-family:"Cabin Condensed", 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
 }
-.webpick-chn h2 a,
-.webpick-chn .title-label,
-.webpick-chn h6,
-.jobs h2 a,
-.quote {
-	font-family:'Palatino', Georgia, 'Times New Roman', 'Songti SC', Simsun, Mingliu, serif;
-}
 .blog,
 h2{
-	font-family: "Open Sans";
+	font-family: "Open Sans",'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
 }
 /*Main*/
 #wrapper{
@@ -963,7 +956,7 @@ h2 a:hover{
 	padding:8px 8px 8px 27px;
 	font-size:1.5em;
 	line-height:1.5em;
-	font-style:normal;
+	font-style:italic;
 	font-weight: 400;
 }
 .quote-content{
@@ -1542,8 +1535,9 @@ ul#ds-recent-comments .ds-time{
 .webpick-chn:hover{
 	box-shadow:none;
 }
-.textbox-title{
+.webpick-chn .textbox-title{
 	text-align: center;
+	height: auto;
 }
 .webpick-chn h2{
 	width: 100%;
@@ -1582,7 +1576,7 @@ ul#ds-recent-comments .ds-time{
 .webpick-chn .textbox-content{
 	color:#444;
 	line-height: 1.75em;
-	margin-top: 20px;
+	margin-top: 5px;
 }
 .webpick-chn .textbox-content a{
 	font-weight: 700;
@@ -1699,7 +1693,6 @@ ul#ds-recent-comments .ds-time{
 .apps-icon{
 	font-size: 28px;
 	font-weight: 700;
-	font-family: 'Myriad Pro';
 	text-align: center;
 	width: 175px;
 	float: left;
@@ -2036,6 +2029,7 @@ ul#ds-recent-comments .ds-time{
 		width:600px;
 		margin: 20px auto;
 		margin-bottom: 10px;
+		margin-top: 35px;
 	}
 	.textbox-content img,
 	.textbox-content iframe,
@@ -2045,6 +2039,9 @@ ul#ds-recent-comments .ds-time{
 	.textbox-content iframe,
 	.textbox-content embed{
 		max-height: 400px;
+	}
+	.pages{
+		margin-top: 20px;
 	}
 	#portfolio #content{
 		height:350px;
@@ -2118,7 +2115,6 @@ ul#ds-recent-comments .ds-time{
 	}
 
 }
-
 @media screen and (max-width: 978px) {
 	#header-mask,
 	#sidebar_Douban{
@@ -2192,6 +2188,9 @@ ul#ds-recent-comments .ds-time{
 	#footer{
 		border: none;
 	}
+	.webpick-chn .title-label{
+		background: none;
+	}
 }
 
 @media screen and (max-width: 800px) {
@@ -2235,10 +2234,6 @@ ul#ds-recent-comments .ds-time{
 }
 
 @media screen and (max-width: 520px) {
-	#header{
-		height:110px;
-		padding-top:15px;
-	}
 	#logo{
 		height:80px;
 	}
@@ -2299,7 +2294,7 @@ ul#ds-recent-comments .ds-time{
 	#blog-side-cate strong,
 	.add-reply-title,
 	#nav a{
-		font-family:Cabin;
+		font-family:Cabin, "Avenir";
 	}
 	#logo{
 		position:static;
@@ -2314,7 +2309,16 @@ ul#ds-recent-comments .ds-time{
 		width:500px;
 		height:130px;
 	}
-	#photos #logo .logo{
+	#photos #logo .logo,
+	.showcase-prev,
+	.showcase-next,
+	#portfolio h3,
+	#sidebar_Douban,
+	#about-photo,
+	.navi-corner,
+	#sidebar_latest-comments,
+	.footer-nav,
+	.g-search{
 		display:none;
 	}
 	#nav{
@@ -2343,14 +2347,6 @@ ul#ds-recent-comments .ds-time{
 		background:none;
 		margin-top:30px;
 	}
-
-	.showcase-prev, .showcase-next{
-		display:none;
-	}
-	#portfolio h3{
-
-		display:none;
-	}
 	h3 strong{
 		color:#9ca5ba;
 		font-weight:400; 
@@ -2360,17 +2356,10 @@ ul#ds-recent-comments .ds-time{
 		left:340px;
 		background:none;
 	}
-	.navi-corner{
-		display:none;
-	}
-
 	#footer{
 		font-size:2em;
 		padding:0 0 30px;
 		border: none;
-	}
-	.footer-nav{
-		display:none;
 	}
 	.intouch{
 		text-align:center;
@@ -2395,9 +2384,8 @@ ul#ds-recent-comments .ds-time{
 		background:url('images/m.png');
 		text-shadow:0 3px 0 #fff;
 		text-indent:-9910px;
-		margin:0 15px 0 15px;
+		margin:0 15px 0 10px;
 	}
-
 	.intouch .intouch-twitter{background-position:-100px -140px;}
 	.intouch .intouch-flickr{background-position:-200px -140px;}
 	.intouch .intouch-dribbble{background-position:-300px -140px;}
@@ -2407,15 +2395,14 @@ ul#ds-recent-comments .ds-time{
 	.intouch .intouch-sina{background-position:0 -250px;}
 
 	#about-content,
+	.webpick-chn .title-label,
 	.about-photo a:hover,
 	.about-ul-icon,
 	.contact-link a:hover,
 	#about #inner-content{
 		background:none;
 	}
-	#about-photo{
-		display: none;
-	}
+
 	#about-content,#about #inner-content{
 		height:auto;
 	}
@@ -2461,10 +2448,9 @@ ul#ds-recent-comments .ds-time{
 		height:110px;
 		float:left;
 		background: url('images/m.png');
+		opacity: 1;
 		text-indent:-9910px;
-
 	}
-
 
 	#about .contact-link-twitter a{background-position:-100px -140px;}
 	.contact-link-flickr a{background-position:-200px -140px;}
@@ -2479,7 +2465,7 @@ ul#ds-recent-comments .ds-time{
 	}
 	.blog #content{
 		width:100%;
-		margin-top:0px;
+		margin-top:0;
 	}
 	.blog #header{
 		position: static;
@@ -2574,9 +2560,11 @@ ul#ds-recent-comments .ds-time{
 		text-shadow:none;
 		color: #fff;
 		border:none;
+		border-radius: 12px;
 	}
 	.panel-content{
 		padding:26px 50px 20px 60px;
+		font-size: 40px;
 	}
 	.blog .panel ul li{
 		list-style:none;
@@ -2592,6 +2580,7 @@ ul#ds-recent-comments .ds-time{
 	#sidebar_entries li,
 	#sidebar_replies li{
 		background:none;
+		list-style: circle;
 	}
 
 	#blog-side-cate,
@@ -2602,12 +2591,13 @@ ul#ds-recent-comments .ds-time{
 		margin:0;
 	}
 	#blog-side-cate{
-		font-size:48px;
 		font-weight:700;
 		line-height:70px;
 	}
 	#blog-side-cate li{
 		float:left;
+		font-size:54px;
+		list-style: none;
 		margin:6px 36px 0 6px;
 	}
 	#blog-side-cate ul{
@@ -2616,18 +2606,14 @@ ul#ds-recent-comments .ds-time{
 	}
 	.blog .blog-sidebar-friends li{
 		margin-right:30px;
-		font-size: 60px;
-		list-style: disc;
+		font-size: 40px;
 	}
 	.blog .blog-sidebar-friends li a{
 		background: none;
 	}
 	#blog-side-about{
-		font: 1.5em;
+		font-size:40px;
 		padding: 60px;
-	}
-	.g-search, .panel:nth-child(2), .panel:nth-child(3), .panel:nth-child(6){
-		display:none;
 	}
 	#toTop{
 		opacity: 0;
