@@ -75,24 +75,19 @@ $elements['displayside']=<<<eot
 <div id='blog-side-cate' class="panel"> 
 	<div class="panel-content">
 
-		<div id="blog-side-cate-cn">
 			<ul>
-				<li class="indent"><a href="category/works-chn/" title="我的GUI作品">作品发布</a></li>
-				<li class="indent"><a href="category/tutorials-chn/" title="原创以及转载的设计教程和心得">理论教程</a></li>
-				<li class="indent"><a href="category/travel-photography/" title="游记、攻略加摄影">旅游摄影</a></li>
-				<li class="indent"><a href="category/apps/" title="优秀设计的 iOS App 推荐">App 推荐</a></li>
-			</ul>
-		</div>
+				<li class="indent"><a href="category/webpick-chn/" title="关于设计">设计 · 网摘</a></li>
+				<li class="indent"><a href="category/tutorials-chn/" title="原创以及转载的设计教程和心得">理论 · 教程</a></li>
+				<li class="indent"><a href="category/travel-photography/" title="游记、攻略加摄影">旅游 · 摄影</a></li>
+				<li class="indent"><a href="category/diary-chn/" title="生活中的点滴">生活 · 日记</a></li>
+				<li class="indent"><a href="category/apps/" title="优秀设计的 iOS App 推荐">App · 推荐</a></li>
+				<li class="indent"><a href="category/fun/" title="有趣的视频、图片、文章分享">娱乐 · 分享</a></li>
+				<li class="indent"><a href="category/works-chn/" title="我的GUI作品">我的作品</a></li>
 
-
-		<div id="blog-side-cate-en">
-			<ul>
-				<li class="indent"><a href="category/webpick-chn/" title="关于设计">设计网摘</a></li>
-				<li class="indent"><a href="category/diary-chn/" title="生活中的点滴">生活日记</a></li>
-				<li class="indent"><a href="category/fun/" title="有趣的视频、图片、文章分享">随意分享</a></li>
+				
 				<li class="indent"><a href="http://IconMoon.com/about.html" title="About">关于博主</a></li>
-			</ul> 
-		</div>
+			</ul>
+
 
 	</div> 
 </div>
@@ -223,9 +218,9 @@ $elements['sideblock']=<<<eot
 
 
 
-<div class="panel">
+<div class="panel" id="sidebar_{id}">
 <h5 onclick='showhidediv("sidebar_{id}");'>{title}</h5>
-<div class="panel-content" id="sidebar_{id}" style="display: {ifextend}">
+<div class="panel-content"  style="display: {ifextend}">
 {content}
 </div>
 </div>
