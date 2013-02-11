@@ -1,6 +1,6 @@
 /*Designed by JJ.Ying
 http://IconMoon.com
-Jan. 2013*/
+Feb. 2013*/
 *{
 	margin:0;
 	padding:0;
@@ -70,7 +70,7 @@ acronym{
 .mobile-only{
 	visibility:hidden;
 }
-h2, h3, h6,
+h3, h6,
 #about #inner-content,
 .commentbox-title,
 .commentbox-admin-name,
@@ -85,6 +85,10 @@ h2, h3, h6,
 .jobs h2 a,
 .quote {
 	font-family:'Palatino', Georgia, 'Times New Roman', 'Songti SC', Simsun, Mingliu, serif;
+}
+.blog,
+h2{
+	font-family: "Open Sans";
 }
 /*Main*/
 #wrapper{
@@ -506,7 +510,6 @@ h3 strong{
 	height:160px;
 	display:block;
 	text-indent:-9999px;
-	-webkit-transition:none;
 }
 .contact-link a{
 	width:136px;
@@ -527,7 +530,7 @@ h3 strong{
 .about-photo-7 a{background-position:-562px -1746px;}
 .about-photo-8 a{background-position:-756px -1746px;}
 .about-photo a{opacity: 0.5;-webkit-transition:opacity 0.3s;}
-.about-photo a:hover{opacity: 1;}
+.about-photo a:hover{opacity: 1;-webkit-transition:opacity 0.3s;}
 
 .contact-link-message{ left:122px;}
 .contact-link-twitter{ left:258px;}
@@ -757,7 +760,7 @@ h5{
 }
 /* textbox */
 .textbox{
-	margin:20px 20px 37px 15px;
+	margin:20px 20px 37px 0px;
 	background:#fff;
 	-moz-border-radius:13px;
 	-khtml-border-radius:13px;
@@ -1027,9 +1030,6 @@ h2 a:hover{
 form{
 	display:inline;
 }
-input{
-	font-family:Cabin, calibri, sans-serif;
-}
 input.text{
 	height:20px;
 	padding:1px;
@@ -1100,30 +1100,33 @@ select{
 }
 /*Blog-sidebar*/
 #blog-side-cate{
-	font-size: 21px;
+	font-size: 24px;
 }
 #blog-side-cate .panel-content{
-	margin:0 0 22px 27px;
+	margin:0 0 5px 13px;
+}
+.cate-number{
+	margin: 0 9px 0 0;
+	padding: 1px 7px 1px 0;
+	font-family: "Courier New";
+	font-weight: 400;
+	display: inline-block;
+	color: #d7dae2;
+	-webkit-transition: margin 0.2s ease-in-out 0s;
 }
 #blog-side-cate li{
 	background: none;
+	line-height: 1.6em;
 }
-#blog-side-cate-en,
-#blog-side-cate-cn{
-	float:left;
+#blog-side-cate ul{
 	overflow:hidden;
-}
-#blog-side-cate-en{
-	padding-left:18px;
-}
-#blog-side-cate a{
-	padding: 2px 1px;
-	border-bottom: 2px solid transparent;
 }
 #blog-side-cate a:hover{
 	text-decoration: none;
-	border-bottom: 1px solid #d7361d;
 	color: #394259;
+}
+#blog-side-cate a:hover .cate-number{
+	margin-right: 12px;
 }
 #blog-side-about{
 	padding: 10px 20px;
@@ -1140,7 +1143,7 @@ select{
 }
 #blog-side-about a:hover{
 	text-decoration: none;
-	color: #394259;
+	color: #d7361d;
 	border-bottom: 1px solid #d7361d;
 }
 .blog .blog-sidebar-friends{
@@ -1530,8 +1533,8 @@ ul#ds-recent-comments .ds-time{
 .webpick-chn{
 	background:#f4f4ef;
 	background-clip:padding-box;
-	border:25px solid #f4f4ef;
-	border-image:url('images/webpick-border.png') 25 27 25 25 round;
+	border:14px solid #f4f4ef;
+	border-image:url('images/webpick-border.png') 14 14 14 14 round;
 	border-radius:0;
 	-webkit-border-radius:0;
 	box-shadow:none;
@@ -1557,7 +1560,7 @@ ul#ds-recent-comments .ds-time{
 }
 .webpick-chn h2 a:hover{
 	background: none;
-	color:#65655e;
+	color:#75756e;
 }
 .webpick-chn .title-label{
 	text-align: center;
@@ -1794,9 +1797,7 @@ ul#ds-recent-comments .ds-time{
 	width: 100%;
 	background: #333;
 	margin: 0;
-	-webkit-transition-property: height;
-	-webkit-transition-duration: 0.4s;
-	-webkit-transition-timing-function: ease-in;
+	-webkit-transition-property: height 0.4s ease-in 0s;
 }
 .fun .textbox-title:hover .title-label{
 	height: 20px;
@@ -2119,7 +2120,8 @@ ul#ds-recent-comments .ds-time{
 }
 
 @media screen and (max-width: 978px) {
-	#header-mask{
+	#header-mask,
+	#sidebar_Douban{
 		display: none;
 	}
 	.blog #sidebar{
@@ -2154,16 +2156,14 @@ ul#ds-recent-comments .ds-time{
 		left: 766px;
 	}
 	#blog-side-cate{
-		width: 80%;
+		width: 95%;
 		text-align: center;
 	}
 	#blog-side-cate li{
 		float: left;
 		font-size: 17px;
 	}
-	#blog-side-cate-cn,
-	#blog-side-cate-en{
-		width: 48%;
+	#blog-side-cate ul{
 		float: left;
 		position: static;
 		display: inline;
@@ -2189,8 +2189,8 @@ ul#ds-recent-comments .ds-time{
 	.fun .textbox-content{
 		width: auto;
 	}
-	.blog .panel:nth-child(1){
-
+	#footer{
+		border: none;
 	}
 }
 
@@ -2610,8 +2610,7 @@ ul#ds-recent-comments .ds-time{
 		float:left;
 		margin:6px 36px 0 6px;
 	}
-	#blog-side-cate-en,
-	#blog-side-cate-cn{
+	#blog-side-cate ul{
 		float:left;
 		padding:22px 0 20px;
 	}

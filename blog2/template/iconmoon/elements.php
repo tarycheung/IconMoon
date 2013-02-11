@@ -15,7 +15,7 @@ $elements['header']=<<<eot
 		<title>{pagetitle} 图月志 // JJ Ying 的界面设计博客</title>
 		<script type="text/javascript" src="images/js/common.js"></script>
 		<script type="text/javascript" src="../js/jquery.tools.min.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Cabin:400,700|Cabin+Condensed' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 		{ajax_js}
 		{extraheader}
 	</head>
@@ -76,16 +76,14 @@ $elements['displayside']=<<<eot
 	<div class="panel-content">
 
 			<ul>
-				<li class="indent"><a href="category/webpick-chn/" title="关于设计">设计 · 网摘</a></li>
-				<li class="indent"><a href="category/tutorials-chn/" title="原创以及转载的设计教程和心得">理论 · 教程</a></li>
-				<li class="indent"><a href="category/travel-photography/" title="游记、攻略加摄影">旅游 · 摄影</a></li>
-				<li class="indent"><a href="category/diary-chn/" title="生活中的点滴">生活 · 日记</a></li>
-				<li class="indent"><a href="category/apps/" title="优秀设计的 iOS App 推荐">App · 推荐</a></li>
-				<li class="indent"><a href="category/fun/" title="有趣的视频、图片、文章分享">娱乐 · 分享</a></li>
-				<li class="indent"><a href="category/works-chn/" title="我的GUI作品">我的作品</a></li>
-
-				
-				<li class="indent"><a href="http://IconMoon.com/about.html" title="About">关于博主</a></li>
+				<li class="indent"><a href="category/webpick-chn/" title="关于设计"><span class="cate-number">1</span>设计 · 网摘</a></li>
+				<li class="indent"><a href="category/tutorials-chn/" title="原创以及转载的设计教程和心得"><span class="cate-number">2</span>理论 · 教程</a></li>
+				<li class="indent"><a href="category/travel-photography/" title="游记、攻略加摄影"><span class="cate-number">3</span>旅游 · 摄影</a></li>
+				<li class="indent"><a href="category/diary-chn/" title="生活中的点滴"><span class="cate-number">4</span>生活 · 日记</a></li>
+				<li class="indent"><a href="category/fun/" title="有趣的视频、图片、文章分享"><span class="cate-number">5</span>娱乐 · 分享</a></li>
+				<!-- <li class="indent"><a href="category/apps/" title="优秀设计的 iOS App 推荐"><span class="cate-number">5</span>应用 · 推荐</a></li>  -->
+				<li class="indent"><a href="category/works-chn/" title="我的GUI作品"><span class="cate-number">6</span>我的作品</a></li>
+				<li class="indent"><a href="http://IconMoon.com/about.html" title="About"><span class="cate-number">7</span>关于博主</a></li>
 			</ul>
 
 
