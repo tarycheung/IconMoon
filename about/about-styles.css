@@ -1,6 +1,8 @@
 /*Designed by JJ.Ying
 http://IconMoon.com
 Feb. 2013*/
+@charset "utf-8";
+
 *{
 	margin:0;
 	padding:0;
@@ -8,21 +10,206 @@ Feb. 2013*/
 	font-size: 100%;
 	vertical-align: baseline;
 	outline:none;
-	text-align: center;
 }
-body{
-	height: 13000px;
-	background: #fff;
+html,body{
+ 	font-family: 'Open Sans';
+	width:100%;
+	height:100%;
 }
-.test{
-	height: 900px;
+/*Common*/
+.bottom{
 	position: absolute;
+	bottom: 0;
 }
-#test2{
-	top: 1000px;
-	left: 100px;
+/*Animations*/
+@-webkit-keyframes 'fade-in'
+{
+0%   {opacity: 0;}
+100% {opacity: 1;}
 }
-#test3{
-	top: 800px;
-	left: 50px;
+/*Navigation*/
+.navigation{
+	position:fixed;
+	z-index:1;
+	top:290px;
+	font-size: 12px;
+	box-shadow: 3px 3px 15px rgba(0,0,0,0.3);
 }
+.navigation li{
+	color:#777;
+	display:block;
+	padding: 2px 12px 2px 10px;
+	line-height:22px;
+	font-weight:400;
+	-webkit-transition: all 0.3s ease-in-out;
+	border-bottom:1px solid #111;
+	text-align:left;
+	text-shadow: 0 1px 0 #000;
+	background: rgba(0,0,0,0.8);
+
+}
+.navigation li:hover{
+	cursor:pointer;
+	color: #fff !important;
+}
+.navigation .active{
+	background: rgba(255,255,255,0.8);
+	color: #000 !important;
+	font-weight: 700;
+	text-shadow: none;
+}
+.navigation-1{
+
+}
+.slide{
+	background-attachment: fixed;
+	width:100%;
+	height:100%;
+	position: relative;
+	box-shadow:inset 0px 5px 20px rgba(0,0,0,0.2);
+}
+.wrapper{
+	width:960px;
+	height:200px;
+	margin:0 auto;
+	position:relative;
+}
+.slideno{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	font-size:100px;
+	font-weight:bold;
+	color:rgba(255,255,255,0.3);
+}
+.button{
+	display:block;
+	width:50px;
+	height:50px;
+	position:absolute;
+	bottom:0px;
+	left:50%;
+	background-color:#333333;
+	background-image:url(../images/arrow.png);
+}
+.button:hover{
+	background-color:#494949;
+	cursor:pointer;
+}
+.center{
+	position:absolute;
+	top:50%;
+	left:50%;
+	z-index:1;
+}
+/******************************
+ SLIDE 1 
+*******************************/
+@-webkit-keyframes 'name-in'
+{
+0%   {opacity: 0;padding-top:0px;}
+100% {opacity: 1;padding-top:50px;}
+}
+#slide1{
+	background: url(images/bg1.jpg);
+	background-size: cover;
+}
+.jjying1{
+	width:78px;
+	margin-top:-141px;
+	margin-left:-39px;
+	padding-top: 50px;
+	opacity: 1;
+	-webkit-animation:name-in 1s ease-out 0s 1 alternate;
+}
+.jjying2{
+	width:335px;
+	padding-top: 50px;
+	margin-top:-80px;
+	margin-left:-167px;
+	-webkit-animation:name-in 0.7s ease-out 0s 1 alternate;
+}
+/******************************
+ SLIDE 2 
+*******************************/
+#slide2{
+	background: #fff url(images/bg5.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	box-shadow: none;
+}
+.nickname{
+	width:783px;
+	margin-top:-110px;
+	margin-left:-392px;
+	-webkit-animation:fade-in 1s ease-out 0s 1 alternate;
+}
+/******************************
+ SLIDE 3 
+*******************************/
+#slide3{
+	background: #fff;
+background-size: cover;
+background-attachment: fixed;	
+}
+#slide3 img:first-child{
+	position:absolute;
+top: 700px;
+left: 300px;
+}
+#slide3 img:nth-child(2){
+	position:absolute;
+	top:100px;
+	left:100px;
+}
+#slide3 img:nth-child(3){
+	position:absolute;
+	top:150px;
+	left:300px;
+}
+#slide3 img:nth-child(4){
+	position:absolute;
+	top:450px;
+	left:300px;
+}
+#slide3 img:nth-child(5){
+	position:absolute;
+	top:200px;
+	right:300px;
+}
+#slide3 img:nth-child(6){
+	position:absolute;
+	top:100px;
+	right:300px;
+}
+/******************************
+ SLIDE 4 
+*******************************/
+
+@-webkit-keyframes 'printer-in'
+{
+0% {opacity: 0;right:-100px;}
+50% {opacity: 0.5;right:-50px;}
+100%   {opacity: 1;right: 0;}
+}
+#slide4{
+	background:#0c0c0c url(images/bg4.jpg) no-repeat;
+	background-size: cover;
+}
+
+#printer{
+	width: 610px;
+	height: 240px;
+	right: 0;
+	-webkit-animation: printer-in 2s ease-in-out 0s 1;
+}
+#slide4 .parallaxbg{
+	position:absolute;
+	right:40px;
+	top:40px;
+	font-size:28px;
+	color:rgba(51,51,51,0.3);
+}
+/******************************
+Animations
+*******************************/

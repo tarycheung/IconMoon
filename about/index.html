@@ -1,64 +1,128 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="UTF-8" id="blog-html">
+<!DOCTYPE HTML>
+<html>
 <head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta http-equiv="Content-Language" content="UTF-8" />
-		<meta content="all" name="robots" />
-		<meta name="author" content="JJ Ying" />
-		<meta name="description" content="图月志，JJ Ying 的个人博客，界面设计和我的个人生活" />
-		<meta name="keywords" content="designs, icons, themes, skin, customizing, GUI, 设计,  图标, 界面" />
-		<link rel="alternate" type="application/rss+xml" title="图月志" href="http://feed.feedsky.com/yingjunjiu" />
-		<link rel="stylesheet" rev="stylesheet" href="about-styles.css" type="text/css" media="all" />
-		<title>关于 JJ Ying</title>
-		<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
-		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+	<meta charset="utf-8">
+	<meta content="all" name="robots" />
+	<meta name="author" content="JJ Ying" />
+	<meta name="description" content="图月志，JJ Ying 的个人博客，界面设计和我的个人生活" />
+	<meta name="keywords" content="designs, icons, themes, skin, customizing, GUI, 设计,  图标, 界面" />
+	<link rel="alternate" type="application/rss+xml" title="图月志" href="http://feed.feedsky.com/yingjunjiu" />
+	<link rel="stylesheet" rev="stylesheet" href="about-styles.css" type="text/css" media="all" />
+	<title>关于 JJ Ying</title>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/js.js"></script>
+	<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+	<script type="text/javascript" src="js/waypoints.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-<div class="test test1">1你觉得呢</div>
+
+	<ul class="navigation">
+		<li data-slide="1" class="navigation-1">顶部</li>
+		<li data-slide="2">昵称</li>
+		<li data-slide="3">公司 · 百度</li>
+		<li data-slide="4">公司 · 惠普</li>
+		<li data-slide="5">个人作品</li>
+		<li data-slide="6">摄影</li>
+		<li data-slide="7">旅游</li>
+		<li data-slide="8">桌面美化</li>
+		<li data-slide="9">朋友们</li>
+		<li data-slide="10">联系</li>
+	</ul>
+
+
+	<div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="1">
+		<img class="center jjying1" src="images/jjying1.png" data-stellar-ratio="1.5" >
+		<img class="center jjying2" src="images/jjying2.png" data-stellar-ratio="1" >
+		
+		<a class="button" data-slide="2" title=""></a>
+
+	</div><!--End Slide 1-->
 
 
 
-<div class="test test2" id="test2" data-stellar-ratio="3">第二个框</div>
+	<div class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.3">
+	
+		<img class="center nickname nickname1" src="images/nickname1.png" data-stellar-ratio="0.7" >
+		<img class="center nickname nickname2" src="images/nickname2.png" data-stellar-ratio="1.1" >
+		<img class="center nickname nickname3" src="images/nickname3.png" data-stellar-ratio="0.8" >
+		<img class="center nickname nickname4" src="images/nickname4.png" data-stellar-ratio="1.2" >
+		<img class="center nickname nickname5" src="images/nickname5.png" data-stellar-ratio="0.6" >
+		<img class="center nickname nickname6" src="images/nickname6.png" data-stellar-ratio="1.3" >
+	
+		<div class="wrapper">
 
-<div class="test test3" id="test3">你觉得呢</div>
 
-<script type="text/javascript">
-$.stellar({
-  // Set scrolling to be in either one or both directions
-  horizontalScrolling: true,
-  verticalScrolling: true,
+		</div>
 
-  // Set the global alignment offsets
-  horizontalOffset: 0,
-  verticalOffset: 0,
+		<span class="slideno">Slide 2</span>
+		<a class="button" data-slide="3" title=""></a>
 
-  // Refreshes parallax content on window load and resize
-  responsive: false,
+	</div><!--End Slide 2-->
 
-  // Select which property is used to calculate scroll.
-  // Choose 'scroll', 'position', 'margin' or 'transform',
-  // or write your own 'scrollProperty' plugin.
-  scrollProperty: 'scroll',
 
-  // Select which property is used to position elements.
-  // Choose between 'position' or 'transform',
-  // or write your own 'positionProperty' plugin.
-  positionProperty: 'position',
 
-  // Enable or disable the two types of parallax
-  parallaxBackgrounds: true,
-  parallaxElements: true,
 
-  // Hide parallax elements that move outside the viewport
-  hideDistantElements: true,
 
-  // Customise how elements are shown and hidden
-  hideElement: function($elem) { $elem.hide(); },
-  showElement: function($elem) { $elem.show(); }
-});
-</script>
+	<div class="slide" id="slide3" data-slide="3" data-stellar-background-ratio="0">
+		<div class="wrapper">
+		
+			<img src="images/slide3/freelance.png" data-stellar-ratio="1.4" data-stellar-vertical-offset="-102"alt="">
+			<img src="images/slide3/psdtuts.png" data-stellar-ratio="1.5" data-stellar-vertical-offset="-53"alt="">
+			<img src="images/slide3/rockable.png" data-stellar-ratio="2.7" data-stellar-vertical-offset="-200"alt="">
+			<img src="images/slide3/themeforest.png" data-stellar-ratio="3" data-stellar-vertical-offset="-200"alt="">
+			<img src="images/slide3/tutshub.png" data-stellar-ratio="1" data-stellar-vertical-offset="-200"alt="">
+			<img src="images/slide3/psdtuts.png" data-stellar-ratio="1.5" data-stellar-vertical-offset="-200"alt="">
+		</div>
+
+		<span class="slideno">Slide 3</span>
+		<a class="button" data-slide="4" title=""></a>
+
+	</div><!--End Slide 3-->
+
+
+
+
+
+
+	<div class="slide" id="slide4" data-slide="4" data-stellar-background-ratio="1">
+		<img class="bottom" id="printer" src="images/printer.png" data-stellar-ratio="1" >
+
+		<span class="slideno">Slide 4</span>
+
+	</div><!--End Slide 4-->
+	
+	
+	
+		<div class="slide" id="slide5" data-slide="5" data-stellar-background-ratio="0">
+			<span class="slideno">5</span>
+		</div><!--End Slide 5-->
+		
+		<div class="slide" id="slide6" data-slide="6" data-stellar-background-ratio="0">
+			<span class="slideno">6</span>
+		</div><!--End Slide 6-->
+		
+		<div class="slide" id="slide7" data-slide="7" data-stellar-background-ratio="0">
+			<span class="slideno">7</span>
+		</div><!--End Slide 7-->
+		
+		<div class="slide" id="slide8" data-slide="8" data-stellar-background-ratio="0">
+			<span class="slideno">8</span>
+		</div><!--End Slide 8-->
+		
+		<div class="slide" id="slide9" data-slide="9" data-stellar-background-ratio="0">
+			<span class="slideno">9</span>
+		</div><!--End Slide 9-->
+		
+		<div class="slide" id="slide10" data-slide="10" data-stellar-background-ratio="0">
+			<span class="slideno">10</span>
+		</div><!--End Slide 10-->
+
+
+		
+
 
 </body>
 </html>
