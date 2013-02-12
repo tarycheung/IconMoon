@@ -1,0 +1,28 @@
+/*Designed by JJ.Ying
+http://IconMoon.com
+Feb. 2013*/
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	font-size: 100%;
+	vertical-align: baseline;
+	outline:none;
+	text-align: center;
+}
+body{
+	height: 13000px;
+	background: #fff;
+}
+.test{
+	height: 900px;
+	position: absolute;
+}
+#test2{
+	top: 1000px;
+	left: 100px;
+}
+#test3{
+	top: 800px;
+	left: 50px;
+}
