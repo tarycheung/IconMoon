@@ -1096,15 +1096,15 @@ select{
 	font-size: 24px;
 }
 #blog-side-cate .panel-content{
-	margin:0 0 5px 13px;
+	margin:0 0 5px 23px;
 }
 .cate-number{
 	margin: 0 9px 0 0;
 	padding: 1px 7px 1px 0;
-	font-family: "Courier New";
 	font-weight: 400;
 	display: inline-block;
 	color: #d7dae2;
+	width: 30px;
 	-webkit-transition: margin 0.2s ease-in-out 0s;
 }
 #blog-side-cate li{
@@ -2023,13 +2023,13 @@ ul#ds-recent-comments .ds-time{
 		overflow:hidden;
 		float:left;
 		margin:0;
-		width: 680px;
+		width: 660px;
     }
 	.textbox{
-		width:600px;
+		width:610px;
 		margin: 20px auto;
-		margin-bottom: 10px;
-		margin-top: 35px;
+		margin-bottom: 0;
+		margin-top: 25px;
 	}
 	.textbox-content img,
 	.textbox-content iframe,
@@ -2062,7 +2062,7 @@ ul#ds-recent-comments .ds-time{
 	.blog #logo{
 		float: left;
 		position:static;
-		margin: 0 0 0 680px;
+		margin: 0 0 0 660px;
 	}
 	#logo .logo{
 		background-position:0 -17px;
