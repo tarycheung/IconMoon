@@ -1603,6 +1603,10 @@ ul#ds-recent-comments .ds-time{
 .webpick-chn h6{
 	color:#444;
 }
+.webpick-chn .quote{
+	border-bottom: 1px solid #bbb;
+	border-top: 1px solid #bbb;
+}
 /*Travel*/
 .travel-photography{
 	border:6px solid #abd8d7;
@@ -1786,14 +1790,10 @@ ul#ds-recent-comments .ds-time{
 	color:#fff;
 }
 .fun .title-label{
-	height: 0;
+	height: 20px;
 	width: 100%;
 	background: #333;
 	margin: 0;
-	-webkit-transition-property: height 0.4s ease-in 0s;
-}
-.fun .textbox-title:hover .title-label{
-	height: 20px;
 }
 .fun .title-label,
 .fun .title-label a{
@@ -1853,7 +1853,6 @@ ul#ds-recent-comments .ds-time{
 .fun .textbox-extra{
 	color:#555;
 }
-
 /*Jobs*/
 .jobs{
 	background:#fff;
