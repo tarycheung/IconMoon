@@ -61,13 +61,13 @@ if ($job=='' || $job=="default") {
 	for ($i=0; $i<count($detail_array); $i++) {
 		$tmp_gp=$detail_array[$i]['category'];
 		$tmp_st=$detail_array[$i]['property'];
-		$tmp_tm=gmdate('Y/m/d H:i', $detail_array[$i]['pubtime']+3600*$config['timezone']);
+		$tmp_tm=gmdate('<b>n</b> 月 <b>j</b> 日 · Y', $detail_array[$i]['pubtime']+3600*$config['timezone']);
 		if ($tmp_st || $tmp_st==3) $addclass='hiddenitem';
 		else $addclass='visibleitem';
 		$hiddensign_s=array(0=>"openblog.gif", 1=>"lockblog.gif", 2=>"secretblog.gif", 3=>"draft.gif");
 		$hiddensign_p=array(0=>$lna[269], 1=>$lna[270], 2=>$lna[271], 3=>$lna[272]);
 		$hiddensign="<img src='admin/theme/{$themename}/{$hiddensign_s[$tmp_st]}' alt='' title='{$hiddensign_p[$tmp_st]}'>";
-		$tablebody.="<tr class='$addclass'><td align='center'><input type='checkbox' name='selid[]' id='selid[]' value='{$detail_array[$i]['blogid']}'></td><td align='center'>{$hiddensign}</td><td>{$detail_array[$i]['title']}</td><td>{$tmp_tm}</td><td align='center'>{$categories[$tmp_gp]['catename']}</td><td align='center'><a href='javascript: ensuredel(\"{$detail_array[$i]['blogid']}\", \"1\");'><img src='admin/theme/{$themename}/del.gif' alt='{$lna[78]}' title='{$lna[78]}' border='0'></a></td><td align='center'><a href='admin.php?go=edit_edit_{$detail_array[$i]['blogid']}'><img src='admin/theme/{$themename}/edit.gif' alt='{$lna[77]}' title='{$lna[77]}' border='0'></a></td></tr>";
+		$tablebody.="<tr class='$addclass'><td align='center'><input type='checkbox' name='selid[]' id='selid[]' value='{$detail_array[$i]['blogid']}'></td><td align='center'>{$hiddensign}</td><td class=\"entry-list-name\">{$detail_array[$i]['title']}</td><td class=\"entry-list-date\">{$tmp_tm}</td><td align='center'>{$categories[$tmp_gp]['catename']}</td><td align='center'><a href='javascript: ensuredel(\"{$detail_array[$i]['blogid']}\", \"1\");'><img src='admin/theme/{$themename}/del.gif' alt='{$lna[78]}' title='{$lna[78]}' border='0'></a></td><td align='center'><a href='admin.php?go=edit_edit_{$detail_array[$i]['blogid']}'><img src='admin/theme/{$themename}/edit.gif' alt='{$lna[77]}' title='{$lna[77]}' border='0'></a></td></tr>";
 	}
 	for ($i=0; $i<sizeof($arrayvalue_categories); $i++) {
 		$selected=($arrayvalue_categories[$i]===$category) ? ' selected' : '';
@@ -77,7 +77,7 @@ if ($job=='' || $job=="default") {
 	$pagebar=gen_page ($page, 5, "admin.php?go=entry_default&category={$category}&property={$property}&timeperiod={$timeperiod}&keyword=".urlencode($keyword), $numenries, $adminitemperpage);
 	$display_overall.=highlightadminitems('default', 'entry');
 $display_overall_plus= <<<eot
-<table class='tablewidth' align=center cellpadding=4 cellspacing=0>
+<table class='tablewidth entry-list' align=center cellpadding=4 cellspacing=0>
 <tr>
 <td width=160 class="sectstart">
 {$lna[3]}
@@ -87,7 +87,7 @@ $display_overall_plus= <<<eot
 </table>
 
 <form action="admin.php?go=entry_default" method="post">
-<table cellpadding=3 cellspacing=1 align=center class='tablewidth'>
+<table cellpadding=3 cellspacing=1 align=center class='tablewidth entry-list'>
 <tr><td colspan=7>
 <select name="category"><option value=''>{$lna[328]}</option>$puttingcates</select>  $adminselection2 $adminselection4 $adminselection3 <input type=submit value="{$lna[244]}" class='formbutton'></td></tr>
 <tr><td colspan=7 height=10></td></tr>
@@ -95,7 +95,7 @@ $display_overall_plus= <<<eot
 </form>
 
 <form action="admin.php?go=entry_batch" method="post" id='f_s' name='f_s'>
-<table cellpadding=3 cellspacing=1 align=center class='tablewidth'>
+<table cellpadding=3 cellspacing=1 align=center class='tablewidth entry-list'>
 <tr align=center class="admintitle">
 <td width=35 align=center>{$lna[245]}</td><td width=35>{$lna[297]}</td><td align=center>{$lna[284]}</td><td width=200 align=center>{$lna[288]}</td><td width=80 align=center>{$lna[285]}</td><td width=35 align=center>{$lna[78]}</td><td width=35 align=center>{$lna[77]}</td></tr>
 {$tablebody}
@@ -245,7 +245,7 @@ if ($job=='draft') {
 	}
 	$display_overall.=highlightadminitems('draft', 'entry');
 $display_overall_plus= <<<eot
-<table class='tablewidth' align=center cellpadding=4 cellspacing=0>
+<table class='tablewidth entry-list' align=center cellpadding=4 cellspacing=0>
 <tr>
 <td width=160 class="sectstart">
 {$lna[23]}
@@ -255,7 +255,7 @@ $display_overall_plus= <<<eot
 </table>
 
 <form action="admin.php?go=entry_batch" method="post" id='f_s' name='f_s'>
-<table cellpadding=3 cellspacing=1 align=center class='tablewidth'>
+<table cellpadding=3 cellspacing=1 align=center class='tablewidth entry-list'>
 <tr align=center class="admintitle"><td width=35 align=center>{$lna[245]}</td><td width=35 align=center>{$lna[297]}</td><td align=center>{$lna[284]}</td><td width=200 align=center>{$lna[288]}</td><td width=80 align=center>{$lna[285]}</td><td width=35 align=center>{$lna[78]}</td><td width=35 align=center>{$lna[77]}</td><td width=35 align=center>{$lna[340]}</td></tr>
 {$tablebody}
 eot;
@@ -355,7 +355,7 @@ if ($job=="pagemanage") {
 	$pagebar=gen_page ($page, 5, "admin.php?go=entry_pagemanage", $numenries, $adminitemperpage);
 	$display_overall.=highlightadminitems('pagemanage', 'entry');
 $display_overall_plus= <<<eot
-<table class='tablewidth' align=center cellpadding=4 cellspacing=0>
+<table class='tablewidth entry-list' align=center cellpadding=4 cellspacing=0>
 <tr>
 <td width=160 class="sectstart">
 {$lna[1057]}
@@ -365,7 +365,7 @@ $display_overall_plus= <<<eot
 </table>
 
 <form action="admin.php?go=entry_deletepage" method="post" id='f_s' name='f_s'>
-<table cellpadding=3 cellspacing=1 align=center class='tablewidth'>
+<table cellpadding=3 cellspacing=1 align=center class='tablewidth entry-list'>
 <tr align=center class="admintitle">
 <td width=35 align=center>{$lna[245]}</td><td width=35>{$lna[297]}</td><td align=center>{$lna[284]}</td><td width=200 align=center>{$lna[288]}</td><td width=35 align=center>{$lna[78]}</td><td width=35 align=center>{$lna[77]}</td></tr>
 {$tablebody}

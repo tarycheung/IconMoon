@@ -331,12 +331,11 @@ $display_overall.= <<<eot
 </tr>
 <tr>
 <td colspan=4 align=center class="sectbar">
-<input type=button value="Submit" onclick="chktitle();" class="formbutton">
-$quickbutton_bottom
-<input type=button value="Preview" onclick="previewcontent();" class="formbutton formbutton2">
+<input type=button value="保 存" onclick="chktitle();" class="formbutton entry-submit">
+
 </td></tr>
 </table>
-<div style='visibility: hidden'><input type=submit value="{$lna[64]}" id='realsubmit' class='formbutton'></div>
+<div style='display:none;'><input type=submit value="{$lna[64]}" id='realsubmit' class='formbutton'></div>
 </form>
 
 <script type="text/javascript">
