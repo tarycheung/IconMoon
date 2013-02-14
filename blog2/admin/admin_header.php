@@ -90,13 +90,13 @@ $editorjs
 <!-- div id='changeBox' class='adminbox-success'>"+ajaxMsg+"</div><div id='divMask' class='adminbox-success-mask'></div -->
 eot;
 
-$admin_item["main"]=array("default"=>$lna[12], "config"=>$lna[13], "mbcon"=>$lna[14], "funclock"=>$lna[1194], "module"=>$lna[15], "update"=>$lna[16], "langset"=>"Language");
+$admin_item["main"]=array("default"=>$lna[12], "config"=>服务器, "mbcon"=>$lna[14], "module"=>$lna[15], "update"=>$lna[16]);
 
 $admin_item["category"]=array("default"=>$lna[4]);
 if ($flset['tags']!=1)  $admin_item["category"]["tags"]=$lna[17];
 
-$admin_item["link"]=array("default"=>$lna[18], "detail"=>$lna[19], "groupsorting"=>$lna[252], "add"=>$lna[20], "pending"=>$lna[21]);
-$admin_item["entry"]=array("default"=>$lna[3], "write"=>$lna[22], "draft"=>$lna[23], "pagewrite"=>$lna[1056], "pagemanage"=>$lna[1057]);
+$admin_item["link"]=array("default"=>$lna[18], "detail"=>$lna[19], "groupsorting"=>$lna[252], "add"=>$lna[20]);
+$admin_item["entry"]=array("default"=>$lna[3], "write"=>$lna[22]);
 $admin_item["reply"]=array("default"=>$lna[6], "censor"=>$lna[24], "tb"=>$lna[25], "tbcensor"=>$lna[947]);
 
 if ($flset['guestbook']!=1) {
