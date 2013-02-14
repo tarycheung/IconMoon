@@ -28,7 +28,7 @@ $backtoaddnew="{$lna[326]}|admin.php?go=entry_write";
 include_once("data/cache_adminlist.php");
 
 if ($job=='' || $job=="default") {
-	acceptrequest('category,property,keyword,timeperiod');
+	acceptrequest('category,property,frontpage,keyword,timeperiod');
 	$timeperiod=floor($timeperiod);
 	$keyword=safe_convert($keyword);
 	if ($keyword==$lna[1129]) $keyword='';
@@ -39,15 +39,23 @@ if ($job=='' || $job=="default") {
 	}
 	$adminselection.="</select>";
 
-	$propertysel=$timeperiodsel=array();
+
+	$propertysel=$timeperiodsel=$frontpagesel=array();
+
 
 	$propertysel[$property]="selected";
 	$adminselection2="<select name=\"property\"><option value='10' {$propertysel[10]}>{$lna[1130]}</option><option value=0 {$propertysel[0]}>{$lna[269]}</option><option value=1 {$propertysel[1]}>{$lna[270]}</option><option value=2 {$propertysel[2]}>{$lna[271]}</option></select>";
+	
+
+$frontpagesel[$frontpage]="selected";
+$adminselection5="<select name=\"frontpage\"><option value='10' {$frontpagesel[10]}>所有日志</option><option value='0' {$frontpagesel[0]}> </option><option value=1 {$frontpagesel[1]}>不显示在首页</option><option value=2 {$frontpagesel[2]}> </option></select>";
+
 
 	$timeperiodsel[$timeperiod]="selected";
 	$adminselection4="<select name=\"timeperiod\"><option value='0' {$timeperiodsel[0]}>{$lna[1131]}</option><option value=7 {$timeperiodsel[7]}>{$lna[1132]}</option><option value=30 {$timeperiodsel[30]}>{$lna[1133]}</option><option value=90 {$timeperiodsel[90]}>{$lna[1134]}</option><option value=180 {$timeperiodsel[180]}>{$lna[1135]}</option><option value=365 {$timeperiodsel[365]}>{$lna[1136]}</option></select>";
 
 	$queryplus=($property==10 || $property==="") ? "`property`<3" : "`property`=".floor($property);
+	$queryplus=($frontpage==10 || $frontpage==="") ? "`frontpage`<3" : "`frontpage`=".floor($frontpage);
 	$queryplus.=($category==="") ? '' : " AND `category`='".floor($category)."'";
 	$queryplus.=($timeperiod==0) ? '' : " AND `pubtime`>='".(time()-$timeperiod*3600*24)."'";
 	$queryplus.=($keyword) ? " AND `title` LIKE '%{$keyword}%'" : '';
@@ -64,10 +72,10 @@ if ($job=='' || $job=="default") {
 		$tmp_tm=gmdate('<b>n</b> 月 <b>j</b> 日 · Y', $detail_array[$i]['pubtime']+3600*$config['timezone']);
 		if ($tmp_st || $tmp_st==3) $addclass='hiddenitem';
 		else $addclass='visibleitem';
-		$hiddensign_s=array(0=>"openblog.gif", 1=>"lockblog.gif", 2=>"secretblog.gif", 3=>"draft.gif");
+		$hiddensign_s=array(0=>"openblog.png", 1=>"lockblog.gif", 2=>"secretblog.png", 3=>"draft.gif");
 		$hiddensign_p=array(0=>$lna[269], 1=>$lna[270], 2=>$lna[271], 3=>$lna[272]);
-		$hiddensign="<img src='admin/theme/{$themename}/{$hiddensign_s[$tmp_st]}' alt='' title='{$hiddensign_p[$tmp_st]}'>";
-		$tablebody.="<tr class='$addclass'><td align='center'><input type='checkbox' name='selid[]' id='selid[]' value='{$detail_array[$i]['blogid']}'></td><td align='center'>{$hiddensign}</td><td class=\"entry-list-name\">{$detail_array[$i]['title']}</td><td class=\"entry-list-date\">{$tmp_tm}</td><td align='center'>{$categories[$tmp_gp]['catename']}</td><td align='center'><a href='javascript: ensuredel(\"{$detail_array[$i]['blogid']}\", \"1\");'><img src='admin/theme/{$themename}/del.gif' alt='{$lna[78]}' title='{$lna[78]}' border='0'></a></td><td align='center'><a href='admin.php?go=edit_edit_{$detail_array[$i]['blogid']}'><img src='admin/theme/{$themename}/edit.gif' alt='{$lna[77]}' title='{$lna[77]}' border='0'></a></td></tr>";
+		$hiddensign="<a href=\"post/{$detail_array[$i]['blogid']}\" title=\"立刻前往\"><img src='admin/theme/{$themename}/{$hiddensign_s[$tmp_st]}' alt='' title='{$hiddensign_p[$tmp_st]}'></a>";
+		$tablebody.="<tr class='$addclass'><td align='center' class=\"entry-list-center\"></td><td align='center' class=\"entry-list-center\">{$hiddensign}</td><td class=\"entry-list-name\"><a href='admin.php?go=edit_edit_{$detail_array[$i]['blogid']}' title=\"编辑该博文\">{$detail_array[$i]['title']}</a></td><td class=\"entry-list-date\">{$tmp_tm}</td><td align='center'>{$categories[$tmp_gp]['catename']}</td><td align='center' class=\"entry-list-center\"><input type='checkbox' name='selid[]' id='selid[]' value='{$detail_array[$i]['blogid']}'></td><td align='center' class=\"entry-list-center\"><a href='javascript: ensuredel(\"{$detail_array[$i]['blogid']}\", \"1\");'><img class=\"entry-list-icon\" src='admin/theme/{$themename}/del.png' alt='{$lna[78]}' title='{$lna[78]}' border='0'></a></td></tr>";
 	}
 	for ($i=0; $i<sizeof($arrayvalue_categories); $i++) {
 		$selected=($arrayvalue_categories[$i]===$category) ? ' selected' : '';
@@ -89,7 +97,7 @@ $display_overall_plus= <<<eot
 <form action="admin.php?go=entry_default" method="post">
 <table cellpadding=3 cellspacing=1 align=center class='tablewidth entry-list'>
 <tr><td colspan=7>
-<select name="category"><option value=''>{$lna[328]}</option>$puttingcates</select>  $adminselection2 $adminselection4 $adminselection3 <input type=submit value="{$lna[244]}" class='formbutton'></td></tr>
+<select name="category"><option value=''>{$lna[328]}</option>$puttingcates</select>  $adminselection2 $adminselection4 $adminselection5 $adminselection3 <input type=submit value="{$lna[244]}" class='formbutton'></td></tr>
 <tr><td colspan=7 height=10></td></tr>
 </table>
 </form>
@@ -97,17 +105,14 @@ $display_overall_plus= <<<eot
 <form action="admin.php?go=entry_batch" method="post" id='f_s' name='f_s'>
 <table cellpadding=3 cellspacing=1 align=center class='tablewidth entry-list'>
 <tr align=center class="admintitle">
-<td width=35 align=center>{$lna[245]}</td><td width=35>{$lna[297]}</td><td align=center>{$lna[284]}</td><td width=200 align=center>{$lna[288]}</td><td width=80 align=center>{$lna[285]}</td><td width=35 align=center>{$lna[78]}</td><td width=35 align=center>{$lna[77]}</td></tr>
+<td width=20 align=center></td><td width=35></td><td align=center>标题</td><td width=200 align=center> 日期</td><td width=140 align=center>分类</td><td width=35 align=center> </td><td width=25 align=center> </td></tr>
 {$tablebody}
-<tr><td colspan=3><a href="#unexist" onclick="checkallbox('f_s', 'checked');">{$lna[247]}</a> | <a href="#unexist" onclick="checkallbox('f_s', '');">{$lna[248]}</a></td><td colspan=4 align=right>$pagebar</td></tr>
+<tr class="entry-list-pages"><td></td><td colspan=3> $pagebar</td><td colspan=3 align=right><a href="#unexist" onclick="checkallbox('f_s', 'checked');">{$lna[247]}</a> | <a href="#unexist" onclick="checkallbox('f_s', '');">{$lna[248]}</a></td></tr>
 <tr><td colspan=7 height=20></td></tr>
-<tr class="adminoption"><td colspan=7>{$lna[249]}<br><input type=radio name=opt value='del' onclick="document.getElementById('f_s').submit();">{$lna[78]} <input type=radio name=opt value='noreply'onclick="document.getElementById('f_s').submit();">{$lna[329]} <input type=radio name=opt value='sticky'>{$lna[330]} <input type=radio name=opt value='unsticky'>{$lna[331]}  <br><input type=radio name=opt value='changeauthor'>{$lna[873]}{$adminselection} <input type=radio name=opt value='move'>{$lna[250]}<select name="newcategory">$puttingcates</select>  <input type=radio name=opt value='newppt'>{$lna[332]}<select name="newproperty"><option value=0>{$lna[269]}</option><option value=1>{$lna[270]}</option><option value=2>{$lna[271]}</option></select><br> <input type=button value="{$lna[64]}" class='formbutton' onclick="adminSubmitAjax('f_s');">
+<tr class="adminoption"><td colspan=7>{$lna[249]}<br><input type=radio name=opt value='del' onclick="document.getElementById('f_s').submit();">{$lna[78]} <input type=radio name=opt value='noreply'onclick="document.getElementById('f_s').submit();">{$lna[329]} <input type=radio name=opt value='sticky'>{$lna[330]} <input type=radio name=opt value='unsticky'>{$lna[331]} <input type=radio name=opt value='onfrontpage'>显示在首页  <br><input type=radio name=opt value='changeauthor'>{$lna[873]}{$adminselection} <input type=radio name=opt value='move'>{$lna[250]}<select name="newcategory">$puttingcates</select>  <input type=radio name=opt value='newppt'>{$lna[332]}<select name="newproperty"><option value=0>{$lna[269]}</option><option value=1>{$lna[270]}</option><option value=2>{$lna[271]}</option></select><br> <input type=button value="{$lna[64]}" class='formbutton' onclick="adminSubmitAjax('f_s');">
 </td></tr>
 </table>
 </form>
-
-<br><br><div align=center width=70%>{$lna[333]}<img src='admin/theme/{$themename}/openblog.gif'>{$lna[269]} <img src='admin/theme/{$themename}/lockblog.gif'>{$lna[270]} <img src='admin/theme/{$themename}/secretblog.gif'>{$lna[271]} </div>
-<br>
 eot;
 	if ($ajax=='on') die($display_overall_plus);
 	else $display_overall.=$display_overall_plus;
@@ -147,6 +152,7 @@ if ($job=='batch') {
 	elseif ($opt=='move') $queryact="UPDATE `{$db_prefix}blogs` SET `category`='{$newcategory}' WHERE {$batch_id}";
 	elseif ($opt=='sticky') $queryact="UPDATE `{$db_prefix}blogs` SET `sticky`='1' WHERE {$batch_id}";
 	elseif ($opt=='unsticky') $queryact="UPDATE `{$db_prefix}blogs` SET `sticky`='0' WHERE {$batch_id}";
+	elseif ($opt=='onfrontpage') $queryact="UPDATE `{$db_prefix}blogs` SET `frontpage`='0' WHERE {$batch_id}";
 	elseif ($opt=='newppt') $queryact="UPDATE `{$db_prefix}blogs` SET `property`='{$newproperty}' WHERE {$batch_id}";
 	elseif ($opt=='noreply') $queryact="DELETE FROM `{$db_prefix}replies` WHERE {$batch_id}";
 	elseif ($opt=='publish') $queryact="UPDATE `{$db_prefix}blogs` SET `property`='0' WHERE {$batch_id}";

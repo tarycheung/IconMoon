@@ -186,15 +186,15 @@ function gen_page ($page, $numperline, $returnurl, $totalvolume, $perpagevolume)
 	if (empty($total_pages)) return '';
 	$firstindexpage=floor($page/$numperline)*$numperline+1;
 	$lastindexpage=min(($firstindexpage+$numperline-1), $total_pages);
-	$pagebar.=" {$lnc[8]} {$page}/{$total_pages} ";
-	$pagebar.=" <a href=\"{$returnurl}{$conxer}page=1\"><img src=\"images/arrows/doubleleft.gif\" alt=\"{$lnc[9]}\" title=\"{$lnc[9]}\" border=\"0\"/></a> ";
-	if ($page!=1) $pagebar.=" <a href=\"{$returnurl}{$conxer}page=".($page-1)."\"><img src=\"images/arrows/singleleft.gif\" alt=\"{$lnc[10]}\" title=\"{$lnc[10]}\" border=\"0\"/></a> ";
+	$pagebar.=" <span class=\"pagebar-label\">分页: {$page} / {$total_pages} </span>";
+	$pagebar.=" <a href=\"{$returnurl}{$conxer}page=1\" class=\"pagebar-left-most\"><img src=\"images/arrows/singleleft.gif\" alt=\"{$lnc[9]}\" title=\"{$lnc[9]}\" border=\"0\"/></a> ";
+	if ($page!=1) $pagebar.=" <a href=\"{$returnurl}{$conxer}page=".($page-1)."\" class=\"pagebar-left\">上一页</a> ";
 	for ($i=$firstindexpage; $i<=$lastindexpage; $i++) {
-		if ($i!=$page) $pagebar.=" <a href=\"{$returnurl}{$conxer}page={$i}\">[{$i}]</a> ";
-		else $pagebar.=" <span class=\"pagelink-current\">[{$i}]</span> ";
+		if ($i!=$page) $pagebar.=" <a href=\"{$returnurl}{$conxer}page={$i}\" class=\"pagebar-number\">{$i}</a> ";
+		else $pagebar.=" <span class=\"pagelink-current pagebar-current\">{$i}</span> ";
 	}
-	if ($page!=$total_pages) $pagebar.=" <a href=\"{$returnurl}{$conxer}page=".($page+1)."\"><img src=\"images/arrows/singleright.gif\" alt=\"{$lnc[11]}\" title=\"{$lnc[11]}\" border=\"0\"/></a> ";
-	$pagebar.=" <a href=\"{$returnurl}{$conxer}page={$total_pages}\"><img src=\"images/arrows/doubleright.gif\" alt=\"{$lnc[12]}\" title=\"{$lnc[12]}\" border=\"0\"/></a> ";
+	if ($page!=$total_pages) $pagebar.=" <a href=\"{$returnurl}{$conxer}page=".($page+1)."\" class=\"pagebar-right\">下一页</a> ";
+	$pagebar.=" <a href=\"{$returnurl}{$conxer}page={$total_pages}\" class=\"pagebar-right-most\"><img src=\"images/arrows/singleright.gif\" alt=\"{$lnc[12]}\" title=\"{$lnc[12]}\" border=\"0\"/></a> ";
 	return $pagebar;
 }
 

@@ -246,11 +246,11 @@ if ($job=='mbconsave') {
 if ($job=='module') {
 	acceptrequest('section');
 	if (!$section) $section='header';
-	$class_head=($section=='header') ? 'sect' : 'prefleft';
-	$class_side=($section=='sidebar') ? 'sect' : 'prefleft';
-	$class_footer=($section=='footer') ? 'sect' : 'prefleft';
-	$class_prebody=($section=='prebody') ? 'sect' : 'prefleft';
-	$class_new=($section=='new' || $section=='new2') ? 'sect' : 'prefleft';
+	$class_head=($section=='header') ? 'navi1' : 'navi2';
+	$class_side=($section=='sidebar') ?  'navi1' : 'navi2';
+	$class_footer=($section=='footer') ?  'navi1' : 'navi2';
+	$class_prebody=($section=='prebody') ?  'navi1' : 'navi2';
+	$class_new=($section=='new' || $section=='new2') ?  'navi1' : 'navi2';
 	$realname=array('header'=>$lna[71], 'sidebar'=>$lna[72], 'footer'=>$lna[73], 'prebody'=>$lna[1055], 'new'=>$lna[74]);
 	if ($section=='header' || $section=='sidebar' || $section=='footer' || $section=='prebody') {
 		$formbody="<form action=\"admin.php?go=main_modulesave\" method=\"post\" id=\"ajaxForm1\"><table width=95% align=right cellpadding=4 cellspacing=1><tr class='admintitle' ><td width=30 align=center>{$lna[75]}</td><td align=center>{$lna[76]}</td><td align=center>{$lna[77]}</td><td align=center>{$lna[78]}</td></tr>\n";
@@ -266,8 +266,8 @@ if ($job=='module') {
 			}
 			$linkdel=($mod_array[$i]['func']=='system') ? "javascript: alert(\"{$lna[81]}\");" : "javascript: redirectcomfirm (\"admin.php?go=main_moduledel_".base64_encode($mod_array[$i]['name'])."\");";
 			$linkedit="admin.php?go=main_module&section=edit&itemname=".base64_encode($mod_array[$i]['name']);
-			$class_distinct=($i%2==0) ? 'visibleitem' : 'hiddenitem';
-			$formbody.="<tr class='$class_distinct'><td width=30 align=center><input type=checkbox name='selid[]' value='{$mod_array[$i]['name']}'{$chex}></td><td width='80%'><b>{$mod_array[$i]['name']}</b>$addwords<br>{$mod_array[$i]['desc']}</td><td align=center width=30><a href='$linkedit'><img src='admin/theme/{$themename}/edit.gif' alt='{$lna[77]}' title='{$lna[77]}' border='0'></a></td><td align=center width=30><a href='$linkdel'><img src='admin/theme/{$themename}/del.gif' alt='{$lna[78]}' title='{$lna[78]}' border='0'></a></td></tr>\n";
+			$class_distinct=($i%2==0) ? 'even' : 'odd';
+			$formbody.="<tr class='$class_distinct module'><td width=30 align=center><input type=checkbox name='selid[]' value='{$mod_array[$i]['name']}'{$chex}></td><td width='80%'><b>{$mod_array[$i]['name']}</b>$addwords<br>{$mod_array[$i]['desc']}</td><td align=center width=30><a href='$linkedit' class=\"module-icon\"><img src='admin/theme/{$themename}/edit.png' alt='{$lna[77]}' title='{$lna[77]}' border='0'></a></td><td align=center width=30 class=\"module-icon\"><a href='$linkdel'><img src='admin/theme/{$themename}/del.png' alt='{$lna[78]}' title='{$lna[78]}' border='0'></a></td></tr>\n";
 		}
 		$formbody.="<tr class='sect' align=center><td colspan=4><input type=hidden name=section value='$section'><input type=button value=\"{$lna[82]}\" class='formbutton' onclick=\"adminSubmitAjax(1);\"> <input type=reset value=\"{$lna[65]}\" class='formbutton'> <input type=button value=\"{$lna[83]}\" onclick=\"window.location='admin.php?go=main_module&section=new2&newitemposition={$section}'\" class='formbutton'> <input type=button value=\"{$lna[84]}\" onclick=\"window.location='admin.php?go=main_ordermodule&section={$section}'\" class='formbutton'></td></tr>\n";
 		$formbody.="<tr class='sect'><td colspan=4><ul><li>{$lna[85]}</li><li>{$lna[86]}</li><li>{$lna[87]}</li><li>{$lna[88]}</li></ul></td></tr>\n";
