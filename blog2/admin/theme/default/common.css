@@ -2,16 +2,6 @@ body{
 	font-family:'Open Sans', Calibri, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
 	color:#444;
 }
-@font-face {
-    font-family: 'iconic_fill';
-    src: url('iconic_fill.eot');
-    src: url('iconic_fill.eot?#iefix') format('embedded-opentype'),
-         url('iconic_fill.woff') format('woff'),
-         url('iconic_fill.ttf') format('truetype'),
-         url('iconic_fill.svg#iconic_fill') format('svg');
-    font-weight: 400;
-    font-style: normal;
-}
 html{
 	background:#e9e9e9;
 	padding:0;
@@ -463,9 +453,10 @@ form{
 	-webkit-transition: margin 0.2s ease-in-out 0s;
 }
 .font-icon{
-	font-family: iconic_fill;
+	font-family: Elusive-Icons;
 	font-weight: 400;
-	opacity: 1;
+	font-size: 1.25em;
+	vertical-align: text-top;
 }
 .quick-links li a:hover{
 	border-bottom: 1px dotted #333;

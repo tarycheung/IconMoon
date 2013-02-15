@@ -78,10 +78,10 @@ $display_overall_plus= <<<eot
 <td colspan=2  class="sect">
 $promptcleartmp
 <ul class="quick-links">
-	<li><h4><a href="admin.php?go=edit_add"><span class="font-icon">&#x270e; </span>写新博文 </a></h4></li>
-	<li><h4><a href="admin.php?go=main_module&section=sidebar"><span class="font-icon">&#xe054; </span>管理侧边栏 </a></h4></li>
-	<li><h4><a href="admin.php?go=main_mbcon"><span class="font-icon">&#x2699; </span>常规设置 </a></h4></li>
-	<li><h4><a href="http://iconmoon.duoshuo.com/admin/"><span class="font-icon">&#xe004; </span>多说评论管理 </a></h4></li>
+	<li><h4><a href="admin.php?go=edit_add"><i class="font-icon icon-plus-sign"></i> 写新博文 </a></h4></li>
+	<li><h4><a href="admin.php?go=main_module&section=sidebar"><i class="font-icon icon-website-alt"></i> 管理侧边栏 </a></h4></li>
+	<li><h4><a href="admin.php?go=main_mbcon"><i class="font-icon icon-cog-alt"></i> 常规设置 </a></h4></li>
+	<li><h4><a href="http://iconmoon.duoshuo.com/admin/"><i class="font-icon icon-flag-alt"></i> 多说评论管理 </a></h4></li>
 </ul>
 
 

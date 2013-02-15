@@ -4,6 +4,7 @@ if (!defined('VALIDADMIN')) die ('Access Denied.');
 include_once("data/cache_adminskinlist.php");
 
 $csslocation="admin/theme/{$currentadminskin}/common.css";
+$fonticon="admin/theme/{$currentadminskin}/font-icon.css";
 $themename=$currentadminskin;
 $adminitemperpage=35;
 if (file_exists("lang/{$langback}/tips.php")) include_once("lang/{$langback}/tips.php");
@@ -20,7 +21,7 @@ if ($act=='edit' || $act=='page') {
 		$useeditor=$mbcon['editortype'];
 		require("editor/{$useeditor}/editordef.php");
 	}
-	$adminclassshow['entry']='_active';
+	$adminclassshow['new']='_active';
 }
 
 $adminclassshow[$act]='_active';
@@ -38,14 +39,12 @@ $display_overall.=<<<eot
 <meta name="robots" content="noindex, nofollow" />
 <link REL="SHORTCUT ICON" HREF="favicon.ico">
 <link rel="stylesheet" rev="stylesheet" href="{$csslocation}" type="text/css" media="all" />
-<title>{$config['blogname']} - {$lna[0]} [Powered by Bo-Blog]</title>
+<link rel="stylesheet" rev="stylesheet" href="{$fonticon}" type="text/css" media="all" />
+<title>图月志</title>
 $initialjs
 <script type="text/javascript" src="lang/{$langback}/jslang.js"></script>
-
 <script type="text/javascript" src="images/js/common.js"></script>
 <script type="text/javascript">
-
-
 
 //<![CDATA[
 var ajaxloadingIMG='admin/theme/{$themename}/ajaxloader.gif';
@@ -76,12 +75,13 @@ $editorjs
 
 <div id="adminheaderbar">
 <ul>
-<span class="ahb{$adminclassshow['main']}"><li class="firstitem" onmouseover="adminitemhover('main',this)"><a href="admin.php?act=main"><span class="font-icon">&#x2302; </span>{$lna[2]}</a></li></span>
-<span class="ahb{$adminclassshow['entry']}"><li onmouseover="adminitemhover('entry',this)"><a href="admin.php?act=entry"><span class="font-icon">&#x270e; </span>{$lna[3]}</a></li></span>
-<span class="ahb{$adminclassshow['category']}"><li onmouseover="adminitemhover('category',this)"><a href="admin.php?act=category"><span class="font-icon">&#xe02b; </span>{$lna[4]}</a></li></span>
-<span class="ahb{$adminclassshow['link']}"><li onmouseover="adminitemhover('link',this)"><a href="admin.php?act=link"><span class="font-icon">&#xe077; </span>{$lna[5]}</a></li></span>
-<span class="ahb{$adminclassshow['addon']}"><li onmouseover="adminitemhover('addon',this)"><a href="admin.php?act=addon"><span class="font-icon">&#xe025; </span>{$lna[9]}</a></li></span>
-<span class="ahb{$adminclassshow['carecenter']}"><li onmouseover="adminitemhover('carecenter',this)"><a href="admin.php?act=carecenter"><span class="font-icon">&#xe078; </span>{$lna[11]}</a></li></span>
+<span class="ahb{$adminclassshow['main']}"><li class="firstitem" onmouseover="adminitemhover('main',this)"><a href="admin.php?act=main"><i class="font-icon icon-home-alt"></i> {$lna[2]}</a></li></span>
+<span class="ahb{$adminclassshow['new']}"><li onmouseover="adminitemhover('new',this)"><a href="admin.php?act=edit"><i class="font-icon icon-plus-sign"></i> 写新博文</a></li></span>
+<span class="ahb{$adminclassshow['entry']}"><li onmouseover="adminitemhover('entry',this)"><a href="admin.php?act=entry"><i class="font-icon icon-pencil-alt"></i> {$lna[3]}</a></li></span>
+<span class="ahb{$adminclassshow['category']}"><li onmouseover="adminitemhover('category',this)"><a href="admin.php?act=category"><i class="font-icon icon-folder-sign"></i> {$lna[4]}</a></li></span>
+<span class="ahb{$adminclassshow['link']}"><li onmouseover="adminitemhover('link',this)"><a href="admin.php?act=link"><i class="font-icon icon-group-alt"></i> {$lna[5]}</a></li></span>
+<span class="ahb{$adminclassshow['addon']}"><li onmouseover="adminitemhover('addon',this)"><a href="admin.php?act=addon"><i class="font-icon icon-idea-alt"></i> {$lna[9]}</a></li></span>
+<span class="ahb{$adminclassshow['carecenter']}"><li onmouseover="adminitemhover('carecenter',this)"><a href="admin.php?act=carecenter"><i class="font-icon icon-wrench-alt"></i> {$lna[11]}</a></li></span>
 </ul>
 </div>
 </div>
@@ -96,7 +96,8 @@ $admin_item["category"]=array("default"=>$lna[4]);
 if ($flset['tags']!=1)  $admin_item["category"]["tags"]=$lna[17];
 
 $admin_item["link"]=array("default"=>$lna[18], "detail"=>$lna[19], "groupsorting"=>$lna[252], "add"=>$lna[20]);
-$admin_item["entry"]=array("default"=>$lna[3], "write"=>$lna[22]);
+$admin_item["entry"]=array();
+$admin_item["new"]=array();
 $admin_item["reply"]=array("default"=>$lna[6], "censor"=>$lna[24], "tb"=>$lna[25], "tbcensor"=>$lna[947]);
 
 if ($flset['guestbook']!=1) {
