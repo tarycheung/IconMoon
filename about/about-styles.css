@@ -167,7 +167,7 @@ html,body{
 /* Slide 2  -Bio */
 #slide2{
 	background: #eeeeee url(images/bg-tile.png);
-	box-shadow: none;
+	box-shadow:inset 0px -15px 30px rgba(0,0,0,0.15);
 }
 .bio-text{
 	margin-left:-129px;
@@ -215,38 +215,10 @@ html,body{
 }
 /* Slide 3 - Baidu */
 #slide3{
-	background: #fff;
+	background: #fff url(images/bg10.jpg) no-repeat;
+	box-shadow: none;
 }
-#slide3 img:first-child{
-	position:absolute;
-top: 700px;
-left: 300px;
-}
-#slide3 img:nth-child(2){
-	position:absolute;
-	top:100px;
-	left:100px;
-}
-#slide3 img:nth-child(3){
-	position:absolute;
-	top:150px;
-	left:300px;
-}
-#slide3 img:nth-child(4){
-	position:absolute;
-	top:450px;
-	left:300px;
-}
-#slide3 img:nth-child(5){
-	position:absolute;
-	top:200px;
-	right:300px;
-}
-#slide3 img:nth-child(6){
-	position:absolute;
-	top:100px;
-	right:300px;
-}
+
 /*  Slide 4  - HP */
 #gap-3-4{
 	background: #0c0c0c url(images/bg7.jpg) no-repeat;
@@ -342,7 +314,7 @@ h3{
 	background: #fff url(images/bg8.jpg);
 	background-size: cover;
 	background-attachment: fixed;
-	box-shadow: none;
+	box-shadow:inset 0px -20px 50px rgba(0,0,0,0.5);
 }
 .travel-mask{
 	width: 100%;
@@ -357,13 +329,13 @@ h3{
 }
 @-webkit-keyframes 'travel-plane' {
 	0%{margin-left: -600px;opacity:0}
-	10%{opacity:0.5;}
-	90%{opacity:0.5;}
+	10%{opacity:0.9;}
+	90%{opacity:0.9;}
 	100%{margin-left: 600px;opacity:0}
 }
 .travel-plane{
 	margin-left: -1200px;
-	margin-top: 100px;
+	margin-top: 10px;
 	-webkit-animation: travel-plane 25s linear 0.2s infinite backwards;
 }
 .travel-arrow{
@@ -521,34 +493,73 @@ a:hover .travel-photo{
 	-webkit-animation: travel-text-in 1.0s ease-in-out 0.5s 1 forwards;
 }
 /*  Slide 7  - Football */
+#gap-6-7{
+	background: url(images/bg-tile-dark-2.png);
+	height: 290px;
+}
 #slide7{
-	background: #000 url(images/bg9.jpg) no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
+	background: #2d2d2d url(images/bg-tile-dark.png);
 	box-shadow: none;
-	-webkit-animation: bg-move 6s ease-in-out 0s infinite alternate;
-	box-shadow:inset 0px -35px 30px rgba(0,0,0,0.7);
 	position: relative;
 }
+.football{
+	background: #000 url(images/bg9.jpg) no-repeat;
+	width: 900px;
+	height: 600px;
+	margin-left: -450px;
+	margin-top: -300px;
+	box-shadow:0px 10px 30px rgba(0,0,0,0.5);
+	-webkit-animation: bg-move 12s ease-in-out 0s infinite alternate;
+}
+.inner-football{
+	position: relative;
+	width: 900px;
+	height: 600px;
+	display: block;
+	overflow: hidden;
+	box-shadow:inset 0px -35px 30px rgba(0,0,0,0.7);
+}
 @-webkit-keyframes 'bg-move' {
-	0% { background-position: -100px 0;}
-	100% {background-position: -200px 0;}
+	0% { background-position: 0px 0;}
+	100% {background-position: -300px 0;}
 }
 .football-text{
-	bottom: 250px;
-	left: 100px;
+	bottom: 30px;
+	left: 120px;
 	opacity: 0;
-	-webkit-animation: fade-in .3s ease-in-out 0s 1 forwards;
+	-webkit-animation: fade-in 1.2s ease-in-out 0s 1 forwards;
 }
-
+@-webkit-keyframes 'football-icon-in' {
+	0% {opacity: 0;-webkit-transform: translate(0px,-200px) rotate(30deg);}
+	12.2% {opacity: 0.7;-webkit-transform: translate(0px,-150px);}
+	24.4%{opacity: 1;-webkit-transform: translate(0px,0px) rotate(0deg);}
+	33%{opacity: 1;-webkit-transform: translate(0px,-75px);}
+	41.7%{opacity: 1;-webkit-transform: translate(0px,-100px);}
+	50.6%{opacity: 1;-webkit-transform: translate(0px,-75px);}
+	59%{opacity: 1;-webkit-transform: translate(0px,0px);}
+	65%{opacity: 1;-webkit-transform: translate(0px,-37.5px);}
+	71.2%{opacity: 1;-webkit-transform: translate(0px,-50px);}
+	77.3%{opacity: 1;-webkit-transform: translate(0px,-37.5px);}
+	83.4%{opacity: 1;-webkit-transform: translate(0px,0px);}
+	87.7%{opacity: 1;-webkit-transform: translate(0px,-18.8px);}
+	91.7%{opacity: 1;-webkit-transform: translate(0px,-25px);}
+	95.9%{opacity: 1;-webkit-transform: translate(0px,-18.8px);}
+	100%{opacity: 1;-webkit-transform: translate(0px,0px);}
+}
+.football-icon{
+	bottom: 20px;
+	left: 30px;
+	opacity: 0;
+	-webkit-animation: football-icon-in 2s linear 0s 1 forwards;
+}
 @-webkit-keyframes kit-in
 {
-0% {opacity: 0;-webkit-transform: translate(0px,100px);}
+0% {opacity: 0;-webkit-transform: translate(0px,30px);}
 100%   {opacity: 1;-webkit-transform: translate(0px,0px);}
 }
 @-webkit-keyframes manutd-in
 {
-0% {opacity: 0;-webkit-transform: translate(0px,-100px);}
+0% {opacity: 0;-webkit-transform: translate(0px,-70px);}
 100%   {opacity: 1;-webkit-transform: translate(0px,0px);}
 }
 #kit{
@@ -557,21 +568,19 @@ a:hover .travel-photo{
 	right: 0;
 	opacity: 0;
 	display: block;
-	left: none !important;
-	top: none !important;
-	-webkit-animation: kit-in .6s ease-out .5s 1 forwards;
+	bottom: 0;
+	-webkit-animation: kit-in .6s ease-in-out 1.1s 1 forwards;
 	background: url('images/football-2.png') no-repeat bottom right;
 }
 #manutd{
-	width: 693px;
-	height: 244px;
-	right: 500px;
+	width: 558px;
+	height: 420px;
 	opacity: 0;
 	display: block;
-	left: none !important;
-	top: none !important;
+	left: -30px;
+	top: -70px;
 	bottom: 400px;
-	-webkit-animation: manutd-in .6s ease-out .5s 1 forwards;
+	-webkit-animation: manutd-in .6s ease-in-out 1.4s 1 forwards;
 	background: url('images/football-1.png') no-repeat bottom right;
 }
 /*  Slide 8  - Customization */
