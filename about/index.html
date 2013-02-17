@@ -14,6 +14,7 @@
 	<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
 	<script type="text/javascript" src="js/waypoints.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.tools.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -26,102 +27,160 @@
 		<li data-slide="4">公司 · 惠普</li>
 		<li data-slide="5">个人作品</li>
 		<li data-slide="6">摄影</li>
-		<li data-slide="7">旅游</li>
+		<li data-slide="7">足球</li>
 		<li data-slide="8">桌面美化</li>
 		<li data-slide="9">朋友们</li>
 		<li data-slide="10">联系</li>
 	</ul>
 
-
+	<!--  Slide 1 - Cover-->
 	<div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="1">
 		<img class="center jjying1" src="images/jjying1.png" data-stellar-ratio="1.5" >
 		<img class="center jjying2" src="images/jjying2.png" data-stellar-ratio="1" >
 		
 		<a class="button" data-slide="2" title=""></a>
 
-	</div><!--End Slide 1-->
+	</div>
 
 
-
+	<!--  Slide 2 - Bio-->
 	<div class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.3">
 	
-		<img class="center nickname nickname1" src="images/nickname1.png" data-stellar-ratio="0.7" >
-		<img class="center nickname nickname2" src="images/nickname2.png" data-stellar-ratio="1.1" >
-		<img class="center nickname nickname3" src="images/nickname3.png" data-stellar-ratio="0.8" >
-		<img class="center nickname nickname4" src="images/nickname4.png" data-stellar-ratio="1.2" >
-		<img class="center nickname nickname5" src="images/nickname5.png" data-stellar-ratio="0.6" >
-		<img class="center nickname nickname6" src="images/nickname6.png" data-stellar-ratio="1.3" >
+		<img class="center bio-text bio-text-1" src="images/bio-text-1.png" data-stellar-ratio="0.7" >
+		<img class="center bio-text bio-text-2" src="images/bio-text-2.png" data-stellar-ratio="0.7" >
+		<img class="center bio-text bio-text-3" src="images/bio-text-3.png" data-stellar-ratio="0.7" >
+		
+		<img class="center bio-icon bio-icon-1" src="images/bio-icon-1.png" data-stellar-ratio="0.7" >
+		<img class="center bio-icon bio-icon-2" src="images/bio-icon-2.png" data-stellar-ratio="0.7" >
+		<img class="center bio-icon bio-icon-3" src="images/bio-icon-3.png" data-stellar-ratio="0.7" >
+
 	
 		<div class="wrapper">
 
 
 		</div>
 
-		<span class="slideno">Slide 2</span>
-		<a class="button" data-slide="3" title=""></a>
+		<a class="button dark-button" data-slide="3" title=""></a>
 
-	</div><!--End Slide 2-->
-
+	</div>
 
 
 
 
-	<div class="slide" id="slide3" data-slide="3" data-stellar-background-ratio="0">
+	<!--  Slide 3 - Baidu-->
+	<div class="slide" id="slide3" data-slide="3" data-stellar-background-ratio="1">
 		<div class="wrapper">
-		
-			<img src="images/slide3/freelance.png" data-stellar-ratio="1.4" data-stellar-vertical-offset="-102"alt="">
-			<img src="images/slide3/psdtuts.png" data-stellar-ratio="1.5" data-stellar-vertical-offset="-53"alt="">
-			<img src="images/slide3/rockable.png" data-stellar-ratio="2.7" data-stellar-vertical-offset="-200"alt="">
-			<img src="images/slide3/themeforest.png" data-stellar-ratio="3" data-stellar-vertical-offset="-200"alt="">
-			<img src="images/slide3/tutshub.png" data-stellar-ratio="1" data-stellar-vertical-offset="-200"alt="">
-			<img src="images/slide3/psdtuts.png" data-stellar-ratio="1.5" data-stellar-vertical-offset="-200"alt="">
+
 		</div>
 
 		<span class="slideno">Slide 3</span>
-		<a class="button" data-slide="4" title=""></a>
+		<a class="button dark-button" data-slide="4" title=""></a>
 
-	</div><!--End Slide 3-->
+	</div>
 
-
-
-
+	<div class="gap" id="gap-3-4" data-stellar-background-ratio="1"></div>
 
 
+	<!-- Slide 4 - HP -->
 	<div class="slide" id="slide4" data-slide="4" data-stellar-background-ratio="1">
-		<img class="bottom" id="printer" src="images/printer.png" data-stellar-ratio="1" >
+		<div class="bottom" id="printer" data-stellar-ratio="1" ></div>
+		<a class="button" data-slide="5" title=""></a>
+	</div>
+	
+	<div class="gap" id="gap-4-5" data-stellar-background-ratio="1"></div>
+	
+	<!-- Slide 5 - Personal -->
+	<div class="slide" id="slide5" data-slide="5" data-stellar-background-ratio="1">
+		<div class="scrollable personal-works" data-stellar-ratio="1" >
+			<div class="items">
+				<div class="personal-single">
+					<h3>Mac Icon Design</h3>
+					<img class="personal-icon personal-icon-1" src="images/personal-icon-1.jpg" alt="" >
+					<img class="personal-icon personal-icon-2" src="images/personal-icon-2.jpg"  alt="">
+					<img class="personal-icon personal-icon-3" src="images/personal-icon-1.jpg" alt="">
+				</div>
 
-		<span class="slideno">Slide 4</span>
+				<div class="personal-single">
+					<h3>iOS UI Design</h3>
+					<img class="personal-icon personal-icon-1" src="images/personal-icon-1.jpg" alt="" >
+					<img class="personal-icon personal-icon-2" src="images/personal-icon-2.jpg"  alt="">
+					<img class="personal-icon personal-icon-3" src="images/personal-icon-1.jpg" alt="">
+				</div>
 
-	</div><!--End Slide 4-->
-	
-	
-	
-		<div class="slide" id="slide5" data-slide="5" data-stellar-background-ratio="0">
-			<span class="slideno">5</span>
-		</div><!--End Slide 5-->
+			</div>
+		</div>
+		<div class="navi-wrapper"><div class="navi"></div></div>
+		<a class="button dark-button" data-slide="6" title=""></a>
+	</div>
+
+	<div class="gap" id="gap-5-6" data-stellar-background-ratio="1"></div>
 		
-		<div class="slide" id="slide6" data-slide="6" data-stellar-background-ratio="0">
-			<span class="slideno">6</span>
-		</div><!--End Slide 6-->
+		<!-- Slide 6 - Travel & Photography -->
+		<div class="slide" id="slide6" data-slide="6" data-stellar-background-ratio="0.25">
+			<a class="button" data-slide="7" title=""></a>
+			<img class="center travel-plane" src="images/travel-plane.png"  data-stellar-ratio="0.75" >
+			<img class="center travel-map" src="images/travel-map.png" >
+			
+			<img class="center travel-arrow travel-arrow-1" src="images/travel-arrow-1.png"  data-stellar-ratio="1" >
+			<img class="center travel-arrow travel-arrow-2" src="images/travel-arrow-2.png"  data-stellar-ratio="1" >
+			<img class="center travel-arrow travel-arrow-3" src="images/travel-arrow-3.png"  data-stellar-ratio="1" >
+			<img class="center travel-arrow travel-arrow-4" src="images/travel-arrow-4.png"  data-stellar-ratio="1" >
+			<img class="center travel-arrow travel-arrow-5" src="images/travel-arrow-5.png"  data-stellar-ratio="1" >
+			<img class="center travel-arrow travel-arrow-6" src="images/travel-arrow-6.png"  data-stellar-ratio="1" >
+			<img class="center travel-arrow travel-arrow-7" src="images/travel-arrow-7.png"  data-stellar-ratio="1" >
+			
+			<a href="#"><img class="center travel-photo travel-photo-1" src="images/travel-photo-1.png"  data-stellar-ratio="1" ></a>
+			<a href="#"><img class="center travel-photo travel-photo-2" src="images/travel-photo-2.png"  data-stellar-ratio="1" ></a>
+			<a href="#"><img class="center travel-photo travel-photo-3" src="images/travel-photo-3.png"  data-stellar-ratio="1" ></a>
+			<a href="#"><img class="center travel-photo travel-photo-4" src="images/travel-photo-4.png"  data-stellar-ratio="1" ></a>
+			<a href="#"><img class="center travel-photo travel-photo-5" src="images/travel-photo-5.png"  data-stellar-ratio="1" ></a>
+			<a href="#"><img class="center travel-photo travel-photo-6" src="images/travel-photo-6.png"  data-stellar-ratio="1" ></a>
+			<a href="#"><img class="center travel-photo travel-photo-7" src="images/travel-photo-7.png"  data-stellar-ratio="1" ></a>
+			
+			<div class="travel-mask"></div>
+			<img class="center travel-text" src="images/travel-text.png" data-stellar-ratio="1" >
+			
+			<img class="center travel-icon" src="images/travel-icon.png" data-stellar-ratio="1" >
+			
+		</div>
 		
-		<div class="slide" id="slide7" data-slide="7" data-stellar-background-ratio="0">
-			<span class="slideno">7</span>
-		</div><!--End Slide 7-->
 		
-		<div class="slide" id="slide8" data-slide="8" data-stellar-background-ratio="0">
-			<span class="slideno">8</span>
-		</div><!--End Slide 8-->
+		<div class="gap" id="gap-6-7" data-stellar-background-ratio="1"></div>
 		
-		<div class="slide" id="slide9" data-slide="9" data-stellar-background-ratio="0">
-			<span class="slideno">9</span>
-		</div><!--End Slide 9-->
 		
+		<!-- Slide 7 - Football -->
+		<div class="slide" id="slide7" data-slide="7" data-stellar-background-ratio="0.5">
+			<img class="bottom football-text" src="images/football-text.png"  data-stellar-ratio="0.9" >
+			<div class="bottom" id="manutd" data-stellar-ratio="1" ></div>
+			<div class="bottom" id="kit" data-stellar-ratio="1" ></div>
+			<a class="button" data-slide="8" title=""></a>
+		</div>
+		
+		<!-- Slide 8 - 桌面美化 -->
+		<div class="slide" id="slide8" data-slide="8" data-stellar-background-ratio="1.2">
+			<span class="slideno">桌面美化</span>
+			<a class="button dark-button" data-slide="9" title=""></a>
+		</div>
+		
+		<!-- Slide 9 - Friends -->
+		<div class="slide" id="slide9" data-slide="9" data-stellar-background-ratio="0.2">
+			<span class="slideno">我的朋友们</span>
+			<a class="button dark-button" data-slide="10" title=""></a>
+		</div>
+		
+		<!-- Slide 10 - Contacts -->
 		<div class="slide" id="slide10" data-slide="10" data-stellar-background-ratio="0">
-			<span class="slideno">10</span>
-		</div><!--End Slide 10-->
+			<span class="slideno">联系我</span>
+			<a class="button button-2-top" data-slide="1" title="返回顶部"></a>
+		</div>
 
 
-		
+<!-- Slider -->
+<script type="text/javascript">
+$(function() {
+	$(".scrollable").scrollable({ circular: true, keyboard: true }).navigator();
+});
+</script>
 
 
 </body>
