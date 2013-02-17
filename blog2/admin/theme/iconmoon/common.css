@@ -609,6 +609,16 @@ form{
 	font-size: 14px;
 	padding-top: 20px;
 }
+.entry-list-filter{
+	opacity: 0.5;
+	-webkit-transition: opacity 0.2s ease-in-out 0.5s;
+}
+.entry-list-filter td{
+	text-align: center;
+}
+.entry-list-filter:hover{
+	opacity: 1;
+}
 /* Module */
 .module{
 	border-bottom: 1px dotted #ddd;

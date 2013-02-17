@@ -96,9 +96,9 @@ $display_overall_plus= <<<eot
 
 <form action="admin.php?go=entry_default" method="post">
 <table cellpadding=3 cellspacing=1 align=center class='tablewidth entry-list'>
-<tr><td colspan=7>
-<select name="category"><option value=''>{$lna[328]}</option>$puttingcates</select>  $adminselection2 $adminselection4 $adminselection5 $adminselection3 <input type=submit value="{$lna[244]}" class='formbutton'></td></tr>
-<tr><td colspan=7 height=10></td></tr>
+<tr class="entry-list-filter"><td colspan=7>
+<select name="category"><option value=''>{$lna[328]}</option>$puttingcates</select>  $adminselection2 $adminselection4 $adminselection3 <input type=submit value="{$lna[244]}" class='formbutton'></td></tr>
+<tr><td colspan=7 height=15></td></tr>
 </table>
 </form>
 
