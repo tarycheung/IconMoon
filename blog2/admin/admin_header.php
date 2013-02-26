@@ -69,7 +69,7 @@ $editorjs
 </div>
 </div>
 <div id="adminheader">
-<div id="admin-link"><a href="category/weblog/">博客首页  »</a></div>
+<div id="admin-link"><a href="../blog2">博客首页  »</a></div>
 <div id="admin-link" class="admin-link-2"><a href="../index.html">IconMoon  »</a></div>
 <div id="adminheader">
 
