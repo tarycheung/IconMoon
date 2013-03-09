@@ -79,13 +79,13 @@ a{
 }
 @-webkit-keyframes 'l-in'
 {
-0%   {opacity: 0;-webkit-transform: translate(-50px,0);}
-100% {opacity: 1;-webkit-transform: translate(0,0);}
+0%   {opacity: 0;-webkit-transform: translate(-50px,0px);}
+100% {opacity: 1;-webkit-transform: translate(0px,0px);}
 }
 @-webkit-keyframes 'r-in'
 {
-0%   {opacity: 0;-webkit-transform: translate(50px,0);}
-100% {opacity: 1;-webkit-transform: translate(0,0);}
+0%   {opacity: 0;-webkit-transform: translate(50px,0px);}
+100% {opacity: 1;-webkit-transform: translate(0px,0px);}
 }
 @-webkit-keyframes 'rotate'
 {
@@ -158,8 +158,8 @@ a{
 }
 @-webkit-keyframes 'name-in'
 {
-0%   {opacity: 0;-webkit-transform:translate(0,-50px);}
-100% {opacity: 1;-webkit-transform:translate(0,0px);}
+0%   {opacity: 0;-webkit-transform:translate(0px,-50px);}
+100% {opacity: 1;-webkit-transform:translate(0px,0px);}
 }
 #slide1{
 	background: url(images/bg1.jpg);
@@ -176,14 +176,14 @@ a{
 	margin-top:-170px;
 	margin-left:-70px;
 	opacity: 0;
-	-webkit-animation:name-in 1s ease-out 0.2s 1 forwards;
+	-webkit-animation:name-in 0.7s ease-out 0.2s 1 forwards;
 }
 .jjying2{
 	width:335px;
 	opacity: 0;
 	margin-top:-30px;
 	margin-left:-167px;
-	-webkit-animation:name-in 0.7s ease-out 0s 1 forwards;
+	-webkit-animation:name-in 0.7s ease-out 1.3s 1 forwards;
 }
 /* Slide 2  -Bio */
 #slide2{
@@ -237,12 +237,29 @@ a{
 }
 /* Slide 3 - Baidu */
 #gap-2-3{
-	height: 600px;
+	height: 900px;
 	background: #fff;
 }
 #slide3{
 	background: #fff url(images/bg10.jpg) no-repeat;
 	box-shadow: none;
+}
+.baidu-text{
+	width:539px;
+	margin-top:-370px;
+	margin-left:110px;
+	opacity: 0;
+	-webkit-animation: fade-in 0.7s ease-out 0.2s 1 forwards;
+}
+.baidu-mac{
+	width:458px;
+	margin-top:170px;
+	margin-left:170px;
+	opacity: 0;
+	-webkit-animation: fade-in 0.7s ease-out 0.2s 1 forwards;
+}
+.baidu-mac-2{
+	-webkit-animation: fade-in 0.7s ease-out 1.2s 1 forwards;	
 }
 
 /*  Slide 4  - HP */
@@ -259,6 +276,7 @@ a{
 #slide4{
 	background:#0c0c0c;
 	position: relative;
+	overflow: hidden;
 }
 
 #printer{
@@ -438,57 +456,55 @@ h3{
 	-webkit-animation: travel-arrow-in-7 .2s ease-in-out 0.65s 1 forwards;
 }
 @-webkit-keyframes 'travel-photo-in' {
-0%{opacity:0;-webkit-filter:blur(15px);}
+0%{opacity:1;-webkit-filter:blur(15px);}
+100%{opacity:1;-webkit-filter:blur(0px);}
+}
+@-webkit-keyframes 'travel-photo' {
+0%{opacity:1;-webkit-filter:blur(0px);}
+50%{opacity:1;-webkit-filter:blur(5px);}
 100%{opacity:1;-webkit-filter:blur(0px);}
 }
 .travel-photo{
-	opacity: 0;
+	opacity: 1;
 	display: block;
-	-webkit-transition: all .2s ease-in-out 0s;
+	-webkit-transition: all .2s ease-in-out;
 }
 a:hover .travel-photo{
-	-webkit-transform: scale(1);
+	-webkit-animation: travel-photo 0.5s ease-out 0s 1 forwards;
 }
 .travel-photo-1{
-	margin-left: -710px;
-	margin-top:-20px;
-	-webkit-transform: scale(0.5) rotate(35deg);
-	-webkit-animation: travel-photo-in .4s ease-out 1.1s 1 forwards;
+	margin-left: -614px;
+	margin-top:5px;
+	-webkit-animation: travel-photo-in 0.4s ease-out 0s 1 forwards;
 }
 .travel-photo-2{
-	margin-left: -542px;
-	margin-top: 110px;
-	-webkit-transform: scale(0.6) rotate(0deg);
-	-webkit-animation: travel-photo-in .4s ease-out 0.5s 1 forwards;
+	margin-left: -437px;
+	margin-top: 170px;
+	-webkit-animation: travel-photo-in .4s ease-out 0s 1 forwards;
 }
 .travel-photo-3{
-	margin-left: -302px;
-	margin-top: 0px;
-	-webkit-transform: scale(0.55) rotate(7deg);
-	-webkit-animation: travel-photo-in .4s ease-out 0.5s 1 forwards;
+	margin-left: -202px;
+	margin-top: 55px;
+	-webkit-animation: travel-photo-in .4s ease-out 0s 1 forwards;
 }
 .travel-photo-4{
-	margin-left: -122px;
-	margin-top: 100px;
-	-webkit-transform: scale(0.5) rotate(7deg);
-	-webkit-animation: travel-photo-in .4s ease-out 0.9s 1 forwards;
+	margin-left: -22px;
+	margin-top: 164px;
+	-webkit-animation: travel-photo-in .4s ease-out 0s 1 forwards;
 }
 .travel-photo-5{
-	margin-left: 112px;
-	margin-top: 92px;
-	-webkit-transform: scale(0.5) rotate(7deg);
-	-webkit-animation: travel-photo-in .4s ease-out 1.3s 1 forwards;
+	margin-left: 232px;
+	margin-top: 162px;
+	-webkit-animation: travel-photo-in .4s ease-out 0s 1 forwards;
 }
 .travel-photo-6{
-	margin-left: -52px;
-	margin-top:-140px;
-	-webkit-transform: scale(0.6) rotate(7.5deg);
-	-webkit-animation: travel-photo-in .4s ease-out 1.26s 1 forwards;
+	margin-left: 52px;
+	margin-top:-100px;
+	-webkit-animation: travel-photo-in .4s ease-out 0s 1 forwards;
 }
 .travel-photo-7{
-	margin-left: 332px;
-	margin-top: 45px;
-	-webkit-transform: scale(0.65) rotate(-37deg);
+	margin-left: 398px;
+	margin-top: 47px;
 	-webkit-animation: travel-photo-in .4s ease-out 0.95s 1 forwards;
 }
 
@@ -629,14 +645,12 @@ a:hover .travel-photo{
 	padding: 10px 10px 5px;
 	-webkit-transition: all .1s ease-in-out 0s;
 	border-right: 5px solid transparent;
-	border-top-left-radius: 55px;
-	border-bottom-left-radius: 55px;
+	border-radius: 55px;
 	opacity: 0;
 }
 
 .friends-single:hover{
 	background: rgba(255,255,255,0.5);
-	border-right: 5px solid #fff;
 }
 .friends-single a{
 	display: inline-block;
@@ -776,12 +790,12 @@ a:hover .travel-photo{
 .contacts-text-1{
 	margin-top: -266px;
 	width: 502px;
-	-webkit-animation: l-in .6s ease-in-out 1 forwards;
+	-webkit-animation: l-in .6s ease-in-out .1s 1 forwards;
 }
 .contacts-text-2{
 	margin-top: 24px;
 	width: 503px;
-	-webkit-animation: r-in .6s ease-in-out 1 forwards;
+	-webkit-animation: r-in .6s ease-in-out .1s 1 forwards;
 }
 .contacts-links{
 	margin-top: -185px;
