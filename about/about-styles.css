@@ -119,7 +119,7 @@ a{
 	-webkit-transition: all 0.3s ease-in-out;
 	text-align:center;
 	text-shadow: 0 1px 0 #000;
-	width: 9.7%;
+	width: 8.9%;
 	height: 30px;
 
 }
@@ -299,22 +299,22 @@ a{
 }
 @-webkit-keyframes hp-ui-in-l
 {
-0% {opacity: 0;-webkit-transform: translate(150px,0);}
+0% {opacity: 0;-webkit-transform: translate(150px,-30px);}
 100%   {opacity: 0.75;-webkit-transform: translate(0,0);}
 }
 @-webkit-keyframes hp-ui-in-l-2
 {
-0% {opacity: 0;-webkit-transform: translate(300px,0);}
+0% {opacity: 0;-webkit-transform: translate(300px,-60px);}
 100%   {opacity: 0.75;-webkit-transform: translate(0,0);}
 }
 @-webkit-keyframes hp-ui-in-r
 {
-0% {opacity: 0;-webkit-transform: translate(-150px,0);}
+0% {opacity: 0;-webkit-transform: translate(-150px,-30px);}
 100%   {opacity: 0.75;-webkit-transform: translate(0,0);}
 }
 @-webkit-keyframes hp-ui-in-r-2
 {
-0% {opacity: 0;-webkit-transform: translate(-300px,0);}
+0% {opacity: 0;-webkit-transform: translate(-300px,-60px);}
 100%   {opacity: 0.75;-webkit-transform: translate(0,0);}
 }
 .hp-ui{
@@ -688,9 +688,9 @@ a:hover .travel-photo{
 	width: 558px;
 	height: 420px;
 	opacity: 0;
+	top: 50px;
+	left: 140px;
 	display: block;
-	left: -30px;
-	top: -70px;
 	bottom: 400px;
 	-webkit-animation: manutd-in .6s ease-in-out 1.4s 1 forwards;
 	background: url('images/football-1.png') no-repeat bottom right;
@@ -698,11 +698,29 @@ a:hover .travel-photo{
 /*  Slide 8  - Customization */
 #slide8{
 	background: #fff url(images/bg2.jpg);
-	background-size: cover;
 	box-shadow: none;
 }
+/*Maggie*/
+#maggie{
+	background: #fff;	
+}
+.maggie{
+	background: #000 url(images/maggie-bg.jpg)  center center;
+	width: 900px;
+	height: 600px;
+	margin-left: -450px;
+	margin-top: -300px;
+	background-attachment: fixed;
+}
+.inner-maggie{
+	background: url(images/maggie-mask.png);
+	width: 900px;
+	height: 600px;
+	display: block;
+	overflow: hidden;
+}
 /*  Slide 9  - Friends*/
-#slide9{
+#friends{
 	background: #eeeeee url(images/bg-tile.png);
 	box-shadow:inset 0px -15px 30px rgba(0,0,0,0.15);
 	overflow: hidden;
@@ -784,7 +802,7 @@ a:hover .travel-photo{
 	color: :#333;
 }
 /*  Slide 10 - Contacts */
-#slide10{
+#contacts{
 	background: #fff url(images/bg5.jpg);
 	background-size: cover;
 	background-attachment: fixed;
