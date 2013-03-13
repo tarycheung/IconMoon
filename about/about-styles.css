@@ -719,7 +719,7 @@ a:hover .travel-photo{
 	display: block;
 	overflow: hidden;
 }
-/*  Slide 9  - Friends*/
+/* Friends*/
 #friends{
 	background: #eeeeee url(images/bg-tile.png);
 	box-shadow:inset 0px -15px 30px rgba(0,0,0,0.15);
@@ -742,7 +742,7 @@ a:hover .travel-photo{
 }
 .friends-avatar{
 	float: left;
-	opacity: 0.35;
+	opacity: 0.5;
 	-webkit-transition: all .2s ease-in-out 0s;
 }
 .friends-name{
@@ -787,12 +787,12 @@ a:hover .travel-photo{
 	0% {-webkit-transform: translate(-30px,-100px);opacity:0;}
 	100% {-webkit-transform: translate(0px,0px);opacity: 1;}
 }
-.friends-1{margin-left: -400px;	margin-top: -300px;-webkit-animation: friends-in-1 .3s ease-out .4s 1 forwards;}
-.friends-2{margin-left: -550px;	margin-top: -150px;-webkit-animation: friends-in-2 .3s ease-out .3s 1 forwards;}
-.friends-3{margin-left: -450px;	margin-top: 12px;-webkit-animation: friends-in-3 .3s ease-out .35s 1 forwards;}
-.friends-4{margin-left: 20px;	margin-top: -200px;-webkit-animation: friends-in-4 .3s ease-out .45s 1 forwards;}
-.friends-5{margin-left: 150px;	margin-top: -50px;-webkit-animation: friends-in-5 .3s ease-out .25s 1 forwards;}
-.friends-6{margin-left: 30px;	margin-top: 100px;-webkit-animation: friends-in-6 .3s ease-out .3s 1 forwards;}
+.friends-1{margin-left: -380px;	margin-top: -300px;-webkit-animation: friends-in-1 .3s ease-out .4s 1 forwards;}
+.friends-2{margin-left: -530px;	margin-top: -150px;-webkit-animation: friends-in-2 .3s ease-out .3s 1 forwards;}
+.friends-3{margin-left: -430px;	margin-top: 12px;-webkit-animation: friends-in-3 .3s ease-out .35s 1 forwards;}
+.friends-4{margin-left: 100px;	margin-top: -220px;-webkit-animation: friends-in-4 .3s ease-out .45s 1 forwards;}
+.friends-5{margin-left: 260px;	margin-top: -50px;-webkit-animation: friends-in-5 .3s ease-out .25s 1 forwards;}
+.friends-6{margin-left: 130px;	margin-top: 100px;-webkit-animation: friends-in-6 .3s ease-out .3s 1 forwards;}
 
 
 
@@ -800,6 +800,16 @@ a:hover .travel-photo{
 	font-weight: 700;
 	font-size: 24px;
 	color: :#333;
+}
+@-webkit-keyframes 'friends-text-in' {
+	0% {-webkit-transform: scale(50%);opacity:0;}
+	100% {-webkit-transform: scale(100%);opacity:0.8;}
+}
+.friends-text{
+	margin-left: -20px;
+	margin-top: -280px;
+	opacity: 0;
+	-webkit-animation: friends-text-in .75s ease-out .3s 1 forwards;
 }
 /*  Slide 10 - Contacts */
 #contacts{
