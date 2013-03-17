@@ -14,15 +14,13 @@
 	<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
 	<script type="text/javascript" src="js/waypoints.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="js/jquery.tools.min.js"></script>
-<!--	
+	<script type="text/javascript" src="js/jquery.jribbble-1.0.1.ugly.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
--->
 </head>
 <body>
 
 
-	<ul class="navigation">
+<!--	<ul class="navigation">
 		<li data-slide="1" class="navigation-1">顶部</li>
 		<li data-slide="2">昵称</li>
 		<li data-slide="3">公司 · 百度</li>
@@ -30,13 +28,12 @@
 		<li data-slide="5">个人作品</li>
 		<li data-slide="6">摄影</li>
 		<li data-slide="7">足球</li>
-		<li data-slide="8">桌面美化</li>
+		<li data-slide="8">朋友们</li>
 		<li data-slide="9">Maggie</li>
-		<li data-slide="10">朋友们</li>
-		<li data-slide="11">联系</li>
-	</ul>
+		<li data-slide="10">联系</li>
+	</ul>-->
 
-	<!--  Slide 1 - Cover-->
+	<!--Cover-->
 	<div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.3">
 		<img class="center jjying1" src="images/jjying1.png" data-stellar-ratio="1.5" >
 		<img class="center jjying2" src="images/jjying2.png" data-stellar-ratio="1" >
@@ -46,7 +43,7 @@
 	</div>
 
 
-	<!--  Slide 2 - Bio-->
+	<!--Bio-->
 	<div class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.3">
 	
 		<img class="center bio-text bio-text-1" src="images/bio-text-1.png" data-stellar-ratio="0.7" >
@@ -105,28 +102,35 @@
 	
 	<div class="gap" id="gap-4-5" data-stellar-background-ratio="1"></div>
 	
-	<!-- Slide 5 - Personal -->
-	<div class="slide" id="slide5" data-slide="5" data-stellar-background-ratio="1">
-		<div class="scrollable personal-works" data-stellar-ratio="1" >
-			<div class="items">
-				<div class="personal-single">
-					<h3>Mac Icon Design</h3>
-					<img class="personal-icon personal-icon-1" src="images/personal-icon-1.jpg" alt="" >
-					<img class="personal-icon personal-icon-2" src="images/personal-icon-2.jpg"  alt="">
-					<img class="personal-icon personal-icon-3" src="images/personal-icon-1.jpg" alt="">
-				</div>
+	<!-- Personal -->
+	<div class="slide" id="personal" data-slide="5" data-stellar-background-ratio="1">
 
-				<div class="personal-single">
-					<h3>iOS UI Design</h3>
-					<img class="personal-icon personal-icon-1" src="images/personal-icon-1.jpg" alt="" >
-					<img class="personal-icon personal-icon-2" src="images/personal-icon-2.jpg"  alt="">
-					<img class="personal-icon personal-icon-3" src="images/personal-icon-1.jpg" alt="">
-				</div>
+	<div class="center dribbble-shots" data-stellar-ratio="1">
+	
+	    <ul id="shotsByPlayerId"></ul>
+	
+    <script type="text/javascript">
+        var callback = function (playerShots) {
+            var html = '';
 
-			</div>
-		</div>
-		<div class="navi-wrapper"><div class="navi"></div></div>
-		<a class="button dark-button" data-slide="6" title=""></a>
+            $('h2 b').text(playerShots.shots[0].player.name);
+
+            $.each(playerShots.shots, function (i, shot) {
+                html += '<a target="_blank" class="dribbble-single" href="' + shot.url + '">';
+                html += '<img src="' + shot.image_url + '" ';
+                html += 'alt="' + shot.title + '"><div class="dribbble-desc"> ' + shot.title + '</div></a></li>';
+            });
+
+            $('#shotsByPlayerId').html(html);
+        };
+
+        $.jribbble.getShotsByPlayerId('JJYing', callback, {page: 1, per_page: 8});
+    </script>
+    </div>
+		
+<img class="center personal-text" src="images/personal-text.png" data-stellar-ratio="1" >
+		
+		<a class="button" data-slide="6" title=""></a>
 	</div>
 
 	<div class="gap" id="gap-5-6" data-stellar-background-ratio="1"></div>
@@ -179,42 +183,36 @@
 			<a class="button" data-slide="8" title=""></a>
 		</div>
 
-	<!-- Slide 8 - Customizing -->
-	<div class="slide" id="slide8" data-slide="8" data-stellar-background-ratio="1">
-
-		<a class="button" data-slide="9" title=""></a>
-	</div>		
-
-		<!-- Slide 9 - Maggie -->
-		<div class="slide" id="maggie" data-slide="9" data-stellar-background-ratio="0">
-
-			<div class="center maggie" data-stellar-ratio="1">
-				<div class="inner-maggie">
-
-				</div>
-			</div>
-			
-			<a class="button dark-button" data-slide="10" title=""></a>
-		</div>
-
 
 		<!--  Friends -->
-		<div class="slide" id="friends" data-slide="10" data-stellar-background-ratio="0.3">
+		<div class="slide" id="friends" data-slide="8" data-stellar-background-ratio="0.3">
 			<div class="center friends-single friends-1" data-stellar-ratio="1" ><a href="http://leongao.com" target="_blank"><img class="friends-avatar" src="images/friends-leon.png"><h5><div class="friends-name">Leon Gao</div>一个好人</h5></a></div>
 			<div class="center friends-single friends-2" data-stellar-ratio="1" ><a href="http://jianjia360.com" target="_blank"><img class="friends-avatar" src="images/friends-moonmonster.png"><h5><div class="friends-name">MoonMonster</div>交互长文君</h5></a></div>
 			<div class="center friends-single friends-3" data-stellar-ratio="1" ><a href="http://www.kidcomic.net" target="_blank"><img class="friends-avatar" src="images/friends-kidaubis.png"><h5><div class="friends-name">Kidaubis</div>不在 LOL 中超神，就在 GUI 中涅磐<br/>Prince of Contests</h5></a></div>
 			<div class="center friends-single friends-4" data-stellar-ratio="1" ><a href="http://lavi.cc" target="_blank"><img class="friends-avatar" src="images/friends-lavi.png"><h5><div class="friends-name">Lavi</div>做设计有些年头了还一直不服老的中年大叔</h5></a></div>
 			<div class="center friends-single friends-5" data-stellar-ratio="1" ><a href="http://jimmy.sh" target="_blank"><img class="friends-avatar" src="images/friends-jimmy.png"><h5><div class="friends-name">Jimmy</div>程序员中的设计师，设计师中的程序员</h5></a></div>
-			<div class="center friends-single friends-6" data-stellar-ratio="1" ><a href="http://dribbble.com/Mimo" target="_blank"><img class="friends-avatar" src="images/friends-mimo.png"><h5><div class="friends-name">Mimo</div>一个好人</h5></a></div>
+			<div class="center friends-single friends-6" data-stellar-ratio="1" ><a href="http://dribbble.com/Mimo" target="_blank"><img class="friends-avatar" src="images/friends-mimo.png"><h5><div class="friends-name">Mimo</div>爱美，爱生活，爱可爱个性的角色~</h5></a></div>
 			
 			<img class="center friends-text" src="images/friends-text.png" data-stellar-ratio="1" >
 
 			
-			<a class="button dark-button" data-slide="11" title=""></a>
+			<a class="button dark-button" data-slide="9" title=""></a>
 		</div>
 		
-		<!-- Slide 10 - Contacts -->
-		<div class="slide" id="contacts" data-slide="11" data-stellar-background-ratio="0">
+		<!--Maggie -->
+		<div class="slide" id="maggie" data-slide="9" >
+
+			<div class="center maggie">
+				<div class="inner-maggie">
+
+				</div>
+			</div>
+			
+			<a class="button" data-slide="10" title=""></a>
+		</div>
+		
+		<!--Contacts -->
+		<div class="slide" id="contacts" data-slide="10" data-stellar-background-ratio="0">
 			<div class="center contacts-links contacts-weibo" data-stellar-ratio="1"><a href="http://weibo.com/yingjunjiu/"><img src="images/contacts-weibo.png"><h4>新浪微博</h4></a></div>
 			<div class="center contacts-links contacts-flickr" data-stellar-ratio="1"><a href="http://www.flickr.com/photos/jjying/"><img src="images/contacts-flickr.png"><h4>Flickr</h4></a></div>
 			<div class="center contacts-links contacts-zhihu" data-stellar-ratio="1"><a href="http://www.zhihu.com/people/jjying"><img src="images/contacts-zhihu.png"><h4>知乎</h4></a></div>
@@ -225,21 +223,11 @@
 			<img class="center contacts-text contacts-text-1" src="images/contacts-text-1.png" data-stellar-ratio="1">
 			<img class="center contacts-text contacts-text-2" src="images/contacts-text-2.png" data-stellar-ratio="1">
 			<div class="center blog-posts" data-stellar-ratio="1">
-				<!--	<script type="text/javascript" src="http://iconmoon.com/blog2/news.php?time=1&amp;n=4&amp;target=_self"></script> -->
+			<script type="text/javascript" src="http://iconmoon.com/blog2/news.php?time=1&amp;n=4&amp;target=_blank"></script>
 			</div>
 			
 			<a class="button button-2-top" data-slide="1" title="返回顶部"></a>
 		</div>
-		
-
-
-
-<!-- Slider -->
-<script type="text/javascript">
-$(function() {
-	$(".scrollable").scrollable({ circular: true, keyboard: true }).navigator();
-});
-</script>
 
 
 </body>

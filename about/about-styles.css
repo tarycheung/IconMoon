@@ -257,7 +257,7 @@ a{
 }
 .baidu-text{
 	width:539px;
-	margin-top:-370px;
+	margin-top:-290px;
 	margin-left:110px;
 	opacity: 0;
 	-webkit-animation: fade-in 0.7s ease-out 0.2s 1 forwards;
@@ -273,9 +273,9 @@ a{
 	-webkit-animation: blur-in 0.7s ease-out 1.2s 1 forwards;	
 }
 
-/*  Slide 4  - HP */
+/* HP */
 #gap-3-4{
-	background: #0c0c0c url(images/bg7.jpg) no-repeat;
+	background: #0c0c0c url(images/bg7.gif) no-repeat;
 	background-size: 100% 100%;
 	height: 500px;
 }
@@ -357,69 +357,62 @@ a{
 	margin-top: -280px;
 	-webkit-animation: top-in .3s ease-out 0.3s 1 forwards;
 }
-/*  Slide 5  - Personal */
+/* Personal */
 #gap-4-5{
-	background: #fff url(images/bg6.jpg) no-repeat;
-	background-size: 100% 100%;
-	height: 500px;
+	background: #fff url(images/bg6.gif) repeat-x;
+	height: 38px;
 }
-#slide5{
-	background: #fff;
+#personal{
+	background: #000;
 	box-shadow: none;
 }
-.scrollable{
-	position:relative;
-	overflow:hidden;
+.dribbble-shots{
+	width: 960px;
+	height: 360px;
+	margin-left: -480px;
+	margin-top: -150px;
+	box-shadow: 0px 13px 25px #000;
 }
-.personal-works{
-	width:100%;
-	height:100%;
-	margin:0 auto;
-}
-.scrollable .items{
-	width:200000em;
-	position:absolute;
-}
-.items div{
-	float:left;
-	position:relative;
-}
-.personal-single{ 
-	width:960px; 
-	height:600px; 
-	margin: 100px 800px 0 200px;
+.dribbble-single{
+	width: 240px;
+	height: 180px;
+	overflow: hidden;
+	float: left;
 	position: relative;
 }
-h3{
-	font-size: 34px;
-	font-weight: 400;
-	display: inline-block;
-	margin: 0 auto;
+.dribbble-single img{
+	width: 240px;
+	height: 180px;
+	-webkit-transition: all .2s ease-out 0s;
 }
-@-webkit-keyframes 'personal-icon-in' {
-	0% { opacity:0; top: 150px;-webkit-transform: scale(0.5);}
-	100% { opacity:100; top: 200px;-webkit-transform: scale(1);}
-}
-.personal-icon{
+.dribbble-desc{
+	background: #000;
+	display: block;
+	width: 200px;
+	height: auto;
 	position: absolute;
-	top: 200px;
+	top: 0;
+	left: 0;
 	opacity: 0;
+	padding: 10px 20px;
+	color: #fff;
+	-webkit-transition: all .2s ease-out 0s;
+	text-align: center;
+	font-size: 17px;
 }
-.personal-icon-1{
-	left: 50px;
-	-webkit-animation: personal-icon-in .3s ease-out .5s 1 forwards;
+.dribbble-single:hover  .dribbble-desc{
+	opacity: 0.9;
 }
-.personal-icon-2{
-	left: 350px;
-	-webkit-animation: personal-icon-in .3s ease-out .6s 1 forwards;
+.personal-text{
+	width: 902px;
+	margin-left: -451px;
+	margin-top: -280px;
+	opacity: 0.9;
 }
-.personal-icon-3{
-	left: 700px;
-	-webkit-animation: personal-icon-in .3s ease-out .7s 1 forwards;
-}
-/*  Slide 6  - Photography */
+/*  Photography */
 #gap-5-6{
-	height:1000px;
+	height:100px;
+	background: #000;
 }
 #slide6{
 	background: #fff url(images/bg8.jpg);
@@ -603,7 +596,7 @@ a:hover .travel-photo{
 }
 /*  Slide 7  - Football */
 #gap-6-7{
-	background: url(images/bg-tile-dark-2.png);
+	background: url(images/bg-tile-dark.jpg);
 	height: 290px;
 }
 #slide7{
@@ -695,26 +688,21 @@ a:hover .travel-photo{
 	-webkit-animation: manutd-in .6s ease-in-out 1.4s 1 forwards;
 	background: url('images/football-1.png') no-repeat bottom right;
 }
-/*  Slide 8  - Customization */
-#slide8{
-	background: #fff url(images/bg2.jpg);
-	box-shadow: none;
-}
 /*Maggie*/
 #maggie{
-	background: #fff;	
+	background: #e01a60;	
 }
 .maggie{
 	background: #000 url(images/maggie-bg.jpg)  center center;
-	width: 900px;
+	width: 630px;
 	height: 600px;
-	margin-left: -450px;
-	margin-top: -300px;
+	margin-left: -315px;
+	margin-top: -330px;
 	background-attachment: fixed;
 }
 .inner-maggie{
 	background: url(images/maggie-mask.png);
-	width: 900px;
+	width: 630px;
 	height: 600px;
 	display: block;
 	overflow: hidden;
@@ -806,7 +794,7 @@ a:hover .travel-photo{
 	100% {-webkit-transform: scale(100%);opacity:0.8;}
 }
 .friends-text{
-	margin-left: -20px;
+	margin-left: -36px;
 	margin-top: -280px;
 	opacity: 0;
 	-webkit-animation: friends-text-in .75s ease-out .3s 1 forwards;
@@ -881,6 +869,7 @@ a:hover .travel-photo{
 }
 .contacts-text{
 	margin-left: -252px;
+	opacity: 0;
 }
 .contacts-text-1{
 	margin-top: -266px;
