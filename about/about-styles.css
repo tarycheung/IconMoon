@@ -271,7 +271,7 @@ a{
 }
 /* Slide 3 - Baidu */
 #gap-2-3{
-	height: 900px;
+	height: 300px;
 	background: #fff;
 }
 #slide3{
@@ -662,8 +662,8 @@ a:hover .travel-photo{
 	-webkit-animation: travel-photo-in .4s ease-out 0s 1 forwards;
 }
 .travel-photo-5{
-	margin-left: 232px;
-	margin-top: 162px;
+	margin-left: 245px;
+	margin-top: 165px;
 	-webkit-animation: travel-photo-in .4s ease-out 0s 1 forwards;
 }
 .travel-photo-6{
@@ -708,7 +708,7 @@ a:hover .travel-photo{
 /*  Slide 7  - Football */
 #gap-6-7{
 	background: url(images/bg-tile-dark.jpg);
-	height: 290px;
+	height: 190px;
 }
 #slide7{
 	background: #2d2d2d url(images/bg-tile-dark.png);
