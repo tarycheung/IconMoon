@@ -1,6 +1,6 @@
 /*Designed by JJ.Ying
 http://IconMoon.com
-Mar. 2013*/
+Apr. 2013*/
 @charset "utf-8";
 
 *{
@@ -242,12 +242,12 @@ a{
 	100% {margin-left:-269px;opacity:1;-webkit-transform: rotate(0deg);}
 }
 @-moz-keyframes bio-text-in {
-	0% {-moz-transform:translate(649px,0);opacity:0;}
-	100% {-moz-transform:translate(0,0);opacity:1;}
+	0% {opacity:0;}
+	100% {opacity:1;}
 }
 @-moz-keyframes bio-icon-in2 {
-	0% {margin-left:-300px;opacity:0;-moz-transform: rotate(-60deg);}
-	100% {margin-left:-269px;opacity:1;-moz-transform: rotate(0deg);}
+	0% {opacity:0;}
+	100% {opacity:1;}
 }
 .bio-icon{
 	width: 100px;
@@ -723,6 +723,7 @@ a:hover .travel-photo{
 	margin-top: -300px;
 	box-shadow:0px 10px 30px rgba(0,0,0,0.5);
 	-webkit-animation: bg-move 12s ease-in-out 0s infinite alternate;
+	-moz-animation: bg-move 12s ease-in-out 0s infinite alternate;
 }
 .inner-football{
 	position: relative;
@@ -736,11 +737,16 @@ a:hover .travel-photo{
 	0% { background-position: 0px 0;}
 	100% {background-position: -300px 0;}
 }
+@-moz-keyframes bg-move {
+	0% { background-position: 0px 0;}
+	100% {background-position: -300px 0;}
+}
 .football-text{
 	bottom: 30px;
 	left: 120px;
 	opacity: 0;
 	-webkit-animation: fade-in 1.2s ease-in-out 0s 1 forwards;
+	-moz-animation: fade-in 1.2s ease-in-out 0s 1 forwards;
 }
 @-webkit-keyframes 'football-icon-in' {
 	0% {opacity: 0;-webkit-transform: translate(0px,-200px);}
@@ -764,6 +770,7 @@ a:hover .travel-photo{
 	left: 30px;
 	opacity: 0;
 	-webkit-animation: football-icon-in 2s linear 0s 1 forwards;
+	-moz-animation: fade-in .3s linear 0s 1 forwards;	
 }
 .football-icon:hover{
 	-webkit-animation: rotate 2s linear 0s infinite forwards;
@@ -786,6 +793,7 @@ a:hover .travel-photo{
 	display: block;
 	bottom: 0;
 	-webkit-animation: kit-in .6s ease-in-out 1.1s 1 forwards;
+	-moz-animation: fade-in .6s ease-in-out 0.1s 1 forwards;
 	background: url('images/football-2.png') no-repeat bottom right;
 }
 #manutd{
@@ -797,6 +805,7 @@ a:hover .travel-photo{
 	display: block;
 	bottom: 400px;
 	-webkit-animation: manutd-in .6s ease-in-out 1.4s 1 forwards;
+	-moz-animation: fade-in .6s ease-in-out 1.1s 1 forwards;
 	background: url('images/football-1.png') no-repeat bottom right;
 }
 /*Maggie*/
@@ -843,9 +852,11 @@ a:hover .travel-photo{
 	float: left;
 	opacity: 0.5;
 	-webkit-transition: all .2s ease-in-out 0s;
+	-moz-transition: all .2s ease-in-out 0s;
 }
 .friends-name{
 	-webkit-transition: all .2s ease-in-out 0s;
+	-moz-transition: all .2s ease-in-out 0s;
 }
 .friends-single:hover .friends-avatar{
 	opacity: 1;
@@ -886,12 +897,12 @@ a:hover .travel-photo{
 	0% {-webkit-transform: translate(-30px,-100px);opacity:0;}
 	100% {-webkit-transform: translate(0px,0px);opacity: 1;}
 }
-.friends-1{margin-left: -380px;	margin-top: -300px;-webkit-animation: friends-in-1 .3s ease-out .4s 1 forwards;}
-.friends-2{margin-left: -530px;	margin-top: -150px;-webkit-animation: friends-in-2 .3s ease-out .3s 1 forwards;}
-.friends-3{margin-left: -430px;	margin-top: 12px;-webkit-animation: friends-in-3 .3s ease-out .35s 1 forwards;}
-.friends-4{margin-left: 100px;	margin-top: -220px;-webkit-animation: friends-in-4 .3s ease-out .45s 1 forwards;}
-.friends-5{margin-left: 260px;	margin-top: -50px;-webkit-animation: friends-in-5 .3s ease-out .25s 1 forwards;}
-.friends-6{margin-left: 130px;	margin-top: 100px;-webkit-animation: friends-in-6 .3s ease-out .3s 1 forwards;}
+.friends-1{margin-left: -380px;	margin-top: -300px;-webkit-animation: friends-in-1 .3s ease-out .4s 1 forwards;-moz-animation: fade-in .3s ease-out .4s 1 forwards;}
+.friends-2{margin-left: -530px;	margin-top: -150px;-webkit-animation: friends-in-2 .3s ease-out .3s 1 forwards;-moz-animation: fade-in .3s ease-out .4s 1 forwards;}
+.friends-3{margin-left: -430px;	margin-top: 12px;-webkit-animation: friends-in-3 .3s ease-out .35s 1 forwards;-moz-animation: fade-in .3s ease-out .4s 1 forwards;}
+.friends-4{margin-left: 100px;	margin-top: -220px;-webkit-animation: friends-in-4 .3s ease-out .45s 1 forwards;-moz-animation: fade-in .3s ease-out .4s 1 forwards;}
+.friends-5{margin-left: 260px;	margin-top: -50px;-webkit-animation: friends-in-5 .3s ease-out .25s 1 forwards;-moz-animation: fade-in .3s ease-out .4s 1 forwards;}
+.friends-6{margin-left: 130px;	margin-top: 100px;-webkit-animation: friends-in-6 .3s ease-out .3s 1 forwards;-moz-animation: fade-in .3s ease-out .4s 1 forwards;}
 
 
 
@@ -909,6 +920,7 @@ a:hover .travel-photo{
 	margin-top: -280px;
 	opacity: 0;
 	-webkit-animation: friends-text-in .75s ease-out .3s 1 forwards;
+	-moz-animation: fade-in .75s ease-out .3s 1 forwards;
 }
 /*  Slide 10 - Contacts */
 #contacts{
@@ -946,6 +958,7 @@ a:hover .travel-photo{
 }
 .blog-posts a{
 	-webkit-transition: all .2s ease-in-out 0s;
+	-moz-transition: all .2s ease-in-out 0s;
 	display: inline-block;
 	font-size: 17px;
 	width: 326px;
@@ -956,6 +969,7 @@ a:hover .travel-photo{
 .blog-posts a:hover {
 	text-indent: 5px;
 	-webkit-transition: all .2s ease-in-out 0s;
+	-moz-transition: all .2s ease-in-out 0s;
 	display: inline-block;
 	color: #fff;
 	border-bottom: 1px dotted rgba(0,0,0,0.8);
@@ -965,7 +979,9 @@ a:hover .travel-photo{
 	margin-top: 183px;
 	opacity: 0.7;
 	-webkit-transition: opacity .2s ease-in-out 0s;
+	-moz-transition: opacity .2s ease-in-out 0s;
 	-webkit-animation: contacts-logo 4.6s ease-in-out 1.0s infinite forwards;
+	-moz-animation: contacts-logo 4.6s ease-in-out 1.0s infinite forwards;
 }
 @-webkit-keyframes 'contacts-logo' {
 	0% {-webkit-transform: scale(1);}
@@ -974,8 +990,16 @@ a:hover .travel-photo{
 	20% {-webkit-transform: scale(1);}
 	100% {-webkit-transform: scale(1);}
 }
+@-moz-keyframes contacts-logo {
+	0% {-moz-transform: scale(1);}
+	7% {-moz-transform: scale(0.8);}
+	15% {-moz-transform: scale(1.1);}
+	20% {-moz-transform: scale(1);}
+	100% {-moz-transform: scale(1);}
+}
 .contacts-logo:hover{
 	-webkit-animation: none;
+	-moz-animation: none;
 	opacity: 1;
 }
 .contacts-text{
@@ -986,11 +1010,13 @@ a:hover .travel-photo{
 	margin-top: -266px;
 	width: 502px;
 	-webkit-animation: l-in .6s ease-in-out .1s 1 forwards;
+	-moz-animation: fade-in .6s ease-in-out .1s 1 forwards;
 }
 .contacts-text-2{
 	margin-top: 24px;
 	width: 503px;
 	-webkit-animation: r-in .6s ease-in-out .1s 1 forwards;
+	-moz-animation: fade-in .6s ease-in-out .1s 1 forwards;
 }
 .contacts-links{
 	margin-top: -185px;
@@ -999,6 +1025,7 @@ a:hover .travel-photo{
 	opacity: 0;
 	text-shadow: 0 2px 6px rgba(0,0,0,0.4);
 	-webkit-animation: fade-in .5s ease-out 0.4s 1 forwards;
+	-moz-animation: fade-in .6s ease-in-out .1s 1 forwards;
 }
 h4{
 	text-align: center;
@@ -1007,18 +1034,21 @@ h4{
 	font-weight: 400;
 	padding: 10px 0 0;
 	-webkit-transition: color .2s ease-in-out 0s;
+	-moz-transition: color .2s ease-in-out 0s;
 }
 .contacts-links:hover h4{
 	color: #fff;
 }
 .contacts-links img{
 	-webkit-transition: all .2s ease-in-out 0s;
+	-moz-transition: all .2s ease-in-out 0s;
 	width: 74px;
 	height: 74px;
 	margin-top: 2px;
 }
 .contacts-links:hover img{
 	-webkit-transform: translate(0,-6px);
+	-moz-transform: translate(0,-6px);
 }
 .contacts-weibo{
 	margin-left:-252px;
