@@ -83,6 +83,7 @@ $elements['displayside']=<<<eot
 				<li class="indent"><a href="category/fun/" title="有趣的视频、图片、文章分享"><span class="cate-number">5</span>娱乐 · 分享</a></li>
 				<!-- <li class="indent"><a href="category/apps/" title="优秀设计的 iOS App 推荐"><span class="cate-number">5</span>应用 · 推荐</a></li>  -->
 				<li class="indent"><a href="category/works-chn/" title="我的 GUI 作品"><span class="cate-number">6</span>个人 · 作品</a></li>
+				<li class="indent"><a href="../about" title="关于 JJ Ying"><span class="cate-number">7</span>关于 · 博主</a></li>
 			</ul>
 
 
@@ -90,7 +91,7 @@ $elements['displayside']=<<<eot
 </div>
 <div class="clear"></div>
 <div id='blog-side-about'>
-	图月志是 <a href="../about.html" title="关于我">JJ Ying</a> 的个人博客，内容包括界面设计和我的个人生活，平时我也出没于 <a href="http://weibo.com/yingjunjiu/" title="我的新浪微博">新浪微博</a>、<a href="http://dribbble.com/players/JJYing" title="我的 Dribbble 页面">Dribbble</a> 和 <a href="http://www.zhihu.com/people/jjying" title="我的知乎页面">知乎</a> 。<br/><br/>本博客所有内容若需转载请 <a href="mailto:ying.jun.jiu@gmail.com" title="我的电子邮件">联系我</a> 。
+	图月志是 <a href="../about" title="关于我">JJ Ying</a> 的个人博客，内容包括界面设计和我的个人生活，平时我也出没于 <a href="http://weibo.com/yingjunjiu/" title="我的新浪微博">新浪微博</a>、<a href="http://dribbble.com/players/JJYing" title="我的 Dribbble 页面">Dribbble</a> 和 <a href="http://www.zhihu.com/people/jjying" title="我的知乎页面">知乎</a> 。<br/><br/>本博客所有内容若需转载请 <a href="mailto:ying.jun.jiu@gmail.com" title="我的电子邮件">联系我</a> 。
 </div>
 
 <div class="clear"></div>
