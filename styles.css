@@ -889,6 +889,15 @@ h2 a:hover{
 	line-height:24px;
 	color:#7987a8;
 }
+.textbox-content .code{
+	background: #292725;
+	color: #96785f;
+	font-size: 14px;
+	font-style: normal;
+	font-family: Monaco;
+	line-height: 23px;
+	border-left: 15px solid #2f2d2b;
+}
 .textbox-extra{
 	display:block:
 	font-size:14px;
