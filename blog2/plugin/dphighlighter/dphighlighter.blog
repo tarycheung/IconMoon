@@ -1,0 +1,10 @@
+$info['name']="dphighlighter";
+$info['author']="Mesak";
+$info['intro']="SyntaxHighlighter";
+$info['time']="2006/10/11";
+$info['newitemposition']="footer";
+$info['newitemactive']="1";
+$info['content']=<<<ENDMODULE
+\$blogitem['dphighlighter']=array('type'=>'html', 'code'=>"<script type=\"text/javascript\" src=\"images/hl/shCore.js\"></script><php>aW5jbHVkZV9vbmNlKCJwbHVnaW4vZHBoaWdobGlnaHRlci9jb25maWcucGhwIik7DQokZHBfaW50ZXJmYWNlID0gYXJyYXkoJ0NTaGFycCcsJ1BocCcsJ0pTY3JpcHQnLCdKYXZhJywnVmInLCdTcWwnLCdYbWwnLCdDc3MnLCdDcHAnLCdEZWxwaGknLCdQeXRob24nLCdSdWJ5Jyk7DQpmb3JlYWNoICgkZHBfaW50ZXJmYWNlIGFzICR2YWx1ZSkge2lmICgkZHBfY29uZmlnWyR2YWx1ZV09PTEpICRhZGRvbmUuPSAiXG48c2NyaXB0IHR5cGU9XCJ0ZXh0L2phdmFzY3JpcHRcIiBzcmM9XCJpbWFnZXMvaGwvc2hCcnVzaCIgLiR2YWx1ZS4iLmpzXCI+PC9zY3JpcHQ+Ijt9DQokcGhwcmV0dXJuID0gJGFkZG9uZTs=</php>\\n<script class=\"javascript\">dp.SyntaxHighlighter.HighlightAll('code');</script>");
+ENDMODULE;
+$a=0;

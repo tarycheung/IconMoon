@@ -1,0 +1,13 @@
+<?PHP
+$dp_config['Cpp']='0';
+$dp_config['CSharp']='0';
+$dp_config['Vb']='0';
+$dp_config['Delphi']='0';
+$dp_config['Python']='0';
+$dp_config['Ruby']='0';
+$dp_config['Java']='0';
+$dp_config['Sql']='0';
+$dp_config['Css']='1';
+$dp_config['Php']='0';
+$dp_config['JScript']='0';
+$dp_config['Xml']='0';

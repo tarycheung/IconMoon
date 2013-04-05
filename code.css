@@ -1,0 +1,18 @@
+.textbox-content .css{
+	background: #292725 url('images/code.png') no-repeat top left;
+	color: rgba(228, 216, 195, 1.0);
+	font-size: 12px;
+	font-style: normal;
+	font-family: Monaco, "Courier New", Courier, mono;
+	line-height: 23px;
+	padding: 10px 40px;
+}
+.css-name{
+	color: #96785f;	
+}
+.css-1{
+	color: rgba(249, 49, 100, 1);
+}
+.css-2{
+	color: rgba(215, 189, 16, 1.0);
+}
