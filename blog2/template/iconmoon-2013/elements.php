@@ -11,7 +11,7 @@ $elements['header']=<<<eot
 		<meta name="keywords" content="designs, icons, themes, skin, customizing, GUI, 设计,  图标, 界面" />
 		{baseurl}
 		<link rel="alternate" type="application/rss+xml" title="图月志" href="http://feed.feedsky.com/yingjunjiu" />
-		<link rel="stylesheet" rev="stylesheet" href="../../../styles.css" type="text/css" media="all" />
+		<link rel="stylesheet" rev="stylesheet" href="../../../blog.css" type="text/css" media="all" />
 		<title>{pagetitle} 图月志 // JJ Ying 的界面设计博客</title>
 		<script type="text/javascript" src="images/js/common.js"></script>
 		<script type="text/javascript" src="../js/jquery.tools.min.js"></script>
