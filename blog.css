@@ -5,15 +5,15 @@ Apr. 2013*/
 	margin:0;
 	padding:0;
 	border:0;
-	font-size: 100%;
 	vertical-align: baseline;
 	outline:none;
 }
 body{
-	font-size:14px;
+	font-size: 62.5%;
 	font-family: "Open Sans",'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
 	text-align:center;
 	color:#30384c;
+	line-height: 1;
 }
 a{
 	text-decoration:none;				
@@ -65,22 +65,14 @@ acronym{
 .mobile-only{
 	visibility:hidden;
 }
-h3, h6,
-#blog-side-cate strong{
-	font-family:"Cabin Condensed", 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
+h2, h3, h6{
+	font-family: 'Open Sans', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
 }
 /*Main*/
 #wrapper{
 	margin:0 auto;
 }
 /*Header*/
-#header{
-	width:950px;
-	height:115px;
-	display:block;
-	position:relative;
-	margin:0 auto;
-}
 #header-mask{
 	height: 10px;
 	background: #2c3345;
@@ -89,9 +81,28 @@ h3, h6,
 	position: fixed;
 	z-index: 9999;
 }
+#nav{
+	width:100%;
+	height: 60px;
+	position: fixed;
+	display: block;
+	background: #fbfbfb;
+	border-bottom: 1px solid #ddd;
+	z-index: 999;
+	font-size: 1.6em;
+	font-weight: 700;
+}
+#nav ul{
+	width: 750px;
+	margin: 0 auto;
+	padding: 25px 0 0 300px;
+}
+#nav li{
+	float: left;
+	list-style: none;
+	margin-left: 30px;
+}
 h1{
-	font-size: 1px;
-	line-height: 1px;
 	text-indent: -9999px;
 }
 /*footer*/
@@ -102,15 +113,14 @@ h1{
 	height:167px;
 	position:relative;
 	padding:0 0;
-	font-size:12px;
 	border-top: 1px dotted #adb3c4;
 	margin-top: 25px;
+	font-size: 1.2em;
 }
 #inner-footer{
 	text-align:center;
 	padding-top:60px;
 	color:#505970;
-	line-height:30px;
 	text-shadow:0 1px 0 #d4d8e3;
 }
 #inner-footer a{
@@ -148,17 +158,21 @@ h1{
 /*Blog*/
 .blog,
 #blog-html{
-	background: #f8f8f8 url('images/blog-bg.png');
+	background: #f8f8f8;
 }
-.blog #wrapper{
+#wrapper{
 	width:1050px;
 	background-attachment: fixed;
 	background: transparent;
 }
-.blog #header{
+#header{
+	height:115px;
+	display:block;
+	position:relative;
+	margin:0 auto;
 	width: 1050px;
-	z-index: 999;
-	height: 50px;
+	z-index: 1999;
+	height: 10px;
 }
 .blog #blog-logo{
 	left: 0px;
@@ -172,7 +186,7 @@ h1{
 	border-radius: 6px;
 }
 .blog #blog-logo a{
-	background: url('images/blog.png');
+	background: url('images/2013/blog.png');
 	display: block;
 	width: 296px;
 	height: 113px;
@@ -180,10 +194,11 @@ h1{
 .blog #blog-logo a:hover{
 	background-position: -300px 0;
 }
-.blog #content{
+#content{
 	width:770px;
 	float:left;
-	margin-top: 60px;
+	font-size: 1.6em;
+	margin-top: 110px;
 	text-align:left;
 }
 .blog #mainWrapper a{
@@ -193,11 +208,12 @@ h1{
 }
 .sidebar{
 	float:right;
-	font-size: 12px;
 	width:236px;
 	height:100%;
+	font-size: 1.2em;
+	line-height:1.8em;
 	text-align:left;
-	margin-top: 52px;
+	margin-top: 122px;
 }
 #innerSidebar{
 	margin:0;
@@ -242,21 +258,18 @@ h1{
 }
 .textbox-title,
 .textbox-title-top{
-	height:80px;
+	height:auto;
 	position:relative;
 	color:#a7bacd;
 }
-.textbox-title-top{
-	height:35px;
-}
 .title-label{
 	display:block;
-	font-size:12px;
 	clear:left;
+	font-size: 0.75em;
 	color:#9ba2b2;
 	text-align:left;
-	margin:4px 13px 7px 0;
-	padding:4px 0 0;
+	margin:9px 13px 7px 0;
+	padding:8px 0 0;
 	font-weight:400;
 }
 .title-label a{
@@ -272,7 +285,7 @@ h2{
 	display:inline;
 	float:left;
 	padding-right:30px;
-	font-size:36px;
+	font-size: 2.1em;
 	color:#394259;
 	font-weight:700; 
 	z-index:50;
@@ -296,8 +309,7 @@ h2 a:hover{
 	color:#4a4f5e;
 	margin:6px 0 5px 0;
 	clear:both;
-	line-height:26px;
-	font-size:16px;
+	line-height:1.75em;
 	position:relative;
 	padding-top: 14px;
 	z-index:5;
@@ -348,8 +360,8 @@ h2 a:hover{
 }
 .textbox-content h6{
 	font-weight:700;
-	font-size:24px;
-	line-height:24px;
+	font-size:1.5em;
+	line-height:1.2em;
 	color:#7987a8;
 	border-left: 4px solid #a9b7c8;
 	padding: 0 0 0 6px;
@@ -357,7 +369,6 @@ h2 a:hover{
 }
 .textbox-extra{
 	display:block;
-	font-size:14px;
 	color:#7987A8;
 	overflow:hidden;
 	padding:15px 0 7px;
@@ -375,11 +386,10 @@ h2 a:hover{
 	text-decoration:none;
 }
 .textbox-extra h6{
-	padding-bottom:1px;
+	padding-bottom:11px;
 }
 .textbox-related{
-	font-size:21px;
-	line-height:33px;
+	line-height: 1.8em;
 }
 .tags{
 	text-align:right;
@@ -421,7 +431,6 @@ h2 a:hover{
 	margin:10px;
 	padding:8px 8px 8px 27px;
 	font-size:1.5em;
-	line-height:1.5em;
 	font-style:italic;
 	font-weight: 400;
 }
@@ -474,7 +483,6 @@ h2 a:hover{
 }
 .linkgroup{
 	font-weight:700;
-	font-size:18px;
 	color:#626576;
 	margin:0 0 6px 10px;
 }
@@ -501,7 +509,7 @@ input.button,
 .blog-bottom-link a{
 	cursor:pointer;
 	padding:3px 5px 3px;
-	font-size:17px;
+	font-size:1.7em;
 	font-weight:400;
 	border:1px solid #2b3244;
 	background:#3e4861;
@@ -550,7 +558,7 @@ textarea{
 	border:1px solid #9FA4B2;
 	background:#fff;
 	color:#393B48; 
-	font-size:14px;
+	font-size:1.4em;
 	}
 select{ 
 	color:#696B78; 
@@ -563,29 +571,27 @@ select{
 }
 h5{
 	text-align:left;
-	font-size:14px;
+	font-size:1.333em;
 	font-weight:700;
-	padding:3px 7px;
-}
-.panel h5{
+	padding:0 5px;
+	margin-left: -9px;
+	border-left: 4px solid #0157ae;
 	color:#333;
-	background: #eee;
-    font-weight: 400;
-	border-bottom:2px solid #ddd;
-	box-shadow: 0px 1px 0px #fff;
 }
 .panel .panel-content{
 	margin:12px 0 27px 0;
-	line-height:180%;
 	color:#666;
 }
 .panel .panel-content a{
 	color:#666;
+	-webkit-transition: all .1s ease-in-out 0s !important;
 }
 .panel .panel-content a:hover,
 .panel-content a strong,
 .panel-content a:hover strong{
 	color: #0157ae;
+	text-decoration: none;
+	margin-left: 4px;
 }
 .panel-content ul{
 	margin:0;
@@ -593,41 +599,16 @@ h5{
 }
 .panel-content ul li{
     list-style:none;
-	text-indent:15px;
+	border-bottom: 1px dotted #ccc;
+	line-height: 2.2em;
+}
+.panel-content ul li:hover{
+	border-bottom: 1px solid #ccc;
 }
 .sidebar .panel-content .ul-non-list-style li,
 .panel-content ol{
 	margin:0;
 	list-style-position:inside;
-}
-#blog-side-cate{
-	font-size: 14px;
-}
-#blog-side-cate .panel-content{
-	margin:0 0 5px 0px;
-}
-.cate-number{
-	margin: 0;
-	padding: 1px 3px 1px 0;
-	font-weight: 400;
-	display: inline-block;
-	color: #ddd;
-	width: 20px;
-	-webkit-transition: margin 0.2s ease-in-out 0s;
-}
-#blog-side-cate li{
-	background: none;
-	line-height: 1.6em;
-	text-indent: 0;
-	float: left;
-	margin-right: 25px;
-}
-#blog-side-cate ul{
-	overflow:hidden;
-}
-#blog-side-cate a:hover{
-	text-decoration: none;
-	color: #0157ae;
 }
 #blog-side-about{
 	margin: 20px 0;
@@ -635,8 +616,7 @@ h5{
 #blog-side-about a{
 	font-weight: 700;
 	border-bottom: 1px dotted #394259;
-	line-height: 2em;
-	color: #0157ae;	
+	color: #333;	
 }
 #blog-side-about a:hover{
 	text-decoration: none;
@@ -644,32 +624,23 @@ h5{
 }
 .blog .blog-sidebar-friends{
 	padding:0 20px 0 0;
-	font-size: 12px;
 }
 .blog .blog-sidebar-friends ul{
 	clear:both;
 }
 .blog .blog-sidebar-friends li{
-	background:url('images/blog.png') no-repeat -582px -170px;
-	float:left;
+	display: block;
 	margin-right:15px;
-	line-height: 2.1em;
 }
 
 .blog .blog-sidebar-friends li a{
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
-	padding:1px 5px;
-}
-.blog .blog-sidebar-friends li a:hover{
-	background:#333;
-	color:#eee;
-	text-decoration: none;
 }
 
 .blog .blog-sidebar-popular li,
 #sidebar_entries li{
-	background:url('images/blog.png') no-repeat -582px -230px;
+
 }
 .g-search{
 	text-align:left;
@@ -691,12 +662,11 @@ h5{
 	background:none;
 	top:0;
 	left:0;
-	font-size:14px; 	
 	color:#566688;
 	width:210px;
 	padding:0 15px;
 	line-height:34px;
-	background: url('images/blog.png') no-repeat 0 -184px;
+	background: url('images/2013/blog.png') no-repeat 0 -184px;
 }
 .g-search .g-input:hover{
 	background-position:0 -224px;
@@ -712,23 +682,22 @@ h5{
 }
 #sidebar_latest-comments ul#ds-recent-comments li.ds-comment{
 	background:none;
-	font-size: 12px;
 	border-top: none;
-	margin-top:0px !important;
+	margin-top: 0px !important;
 	text-indent: 0;
 	padding: 0 0 6px !important;
+	border-bottom: 1px dotted #ccc;
 }
 ul#ds-recent-comments .ds-meta{
 	font-weight: 700;
 	text-indent: 0;
-	font-size: 12px;
 	margin:5px 0 0px;
-	color: #0157ae !important;
+	color: #333 !important;
 }
 ul#ds-recent-comments .ds-meta a{
 	background: none;
 	-webkit-border-radius: 5px;
-	color: #0157ae !important;
+	color: #333 !important;
 }
 ul#ds-recent-comments .ds-meta a:hover{
 	color: #0157ae !;
@@ -772,7 +741,7 @@ ul#ds-recent-comments .ds-time{
 .blog-price{
 	text-align:center;
 	margin:0 auto;
-	font-size:18px;
+	font-size:1.8em;
 	line-height:36px;
 	font-weight:700;
 	width:104px;
@@ -858,7 +827,6 @@ ul#ds-recent-comments .ds-time{
 .blog-readmore{
 		width:99%;
 		margin-top:20px;
-		font-size:17px;
 		text-align: left;
 }
 .blog-readmore a{
@@ -925,13 +893,11 @@ ul#ds-recent-comments .ds-time{
 	padding: 20px 0 0;
 }	
 .archive-month{
-	font-size: 14px;
 	padding: 14px 0 14px;
 	text-align: center;
 	border-bottom: 1px dotted #dce;
 }
 .archive-month a{
-	font-size: 36px;
 	text-decoration: none;
 	font-weight: 700;
 	display: inline-block;
@@ -947,11 +913,11 @@ ul#ds-recent-comments .ds-time{
 .archive-month a:hover{
 	text-decoration: none;
 	text-shadow: none;
-	font-size: 80px;
+	font-size: 3em;
 }
 .archive-month a strong{
 	color: #7987A8;
-	font-size: 14px;
+	font-size: 1.4em;
 	vertical-align: top;
 	font-weight: 700;
 }
@@ -961,17 +927,48 @@ ul#ds-recent-comments .ds-time{
 }
 .archive-desc{
 	color: #7987A8;
-	font-size: 14px;
 	line-height: 40px;
 	font-weight: 400;
 }
 .archive-empty a:hover{
-	font-size: 36px;
+	font-size: 1em;
 	color: #232B3D;
 }
 .archive-empty a:hover strong,
 .archive-empty a:hover .archive-desc{
 	display: inline;
+}
+/*Large Reslutions*/
+@media screen and (min-width: 1650px) {
+	body{
+		font-size: 80%;
+	}
+	#wrapper{
+		width: 80%;
+	}
+	#content{
+		width: 75%;
+	}
+	#sidebar{
+		width: 20%;
+	}
+	#header{
+		width: 100%;
+	}
+	.textbox-content{
+	}
+}
+@media screen and (min-width: 2000px) {
+	body{
+		font-size: 140%;
+	}
+	#wrapper{
+		max-width: 1900px;
+	}
+	.textbox-content{
+		font-size: 24px;
+		line-height: 36px;
+	}
 }
 
 
@@ -1050,7 +1047,7 @@ ul#ds-recent-comments .ds-time{
 	.blog #logo .logo{
 		height: auto;
 		background-position: 0 0;
-		background: url('images/blog.png');
+		background: url('images/2013/blog.png');
 		height: 163px;
 		position: relative;
 	}
