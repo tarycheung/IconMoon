@@ -169,7 +169,7 @@ if ($job=='archivelist') {
 	$allvaliddates=$blog->getarraybyquery("SELECT `pubtime` FROM `{$db_prefix}blogs` ORDER BY `pubtime` DESC");
 	$allvaliddates=$allvaliddates['pubtime'];
 	$resultdates=array();
-	$result="<div class=\"archive-list\">";
+	$result="<table width=\"100%\">";
 	if (is_array($allvaliddates)) {
 		foreach ($allvaliddates as $time) {
 			$y=gmdate('Y', $time+3600*$config['timezone']);
@@ -180,35 +180,22 @@ if ($job=='archivelist') {
 		$uniquedates=array_keys($resultdates);
 		for ($i=0; $i<count($uniquedates); $i++) {
 			$y=$uniquedates[$i];
-			$result.="<div class=\"archive-year\">{$y}{$lnc[299]}</div>";
-			
-$yearhot=$blog->getgroupbyquery("SELECT * FROM `{$db_prefix}blogs` WHERE year(from_unixtime(pubtime)) =$y ORDER BY `views` DESC LIMIT 0 , 7");
-if (is_array($yearhot)) {
-$viewhows='<ol class="archive-hot">';
-foreach ($yearhot as $onehotview) {
-$viewhows.="<li><a href=\"read.php?".$onehotview['blogid']."\">{$onehotview['title']}</a></li>";
-}
-$viewhows.='</ol><div class="clear"></div>';
-} else {
-$viewhows='No view!';
-}
-			$result.=$viewhows;
-			
+			$result.="<tr><td colspan=\"4\" class=\"archive-year\" ><h6>{$y}{$lnc[299]}</h6></td></tr>\n<tr>";
 			for ($j=12; $j>0; $j--) {
 				$resultdates[$y][$j]=floor($resultdates[$y][$j]);
 				if ($resultdates[$y][$j]==0)
-				$result.="<div class=\"archive-month archive-empty\"><a href=\"".getlink_archive($j, $y)."\" rel=\"noindex,nofollow\">{$j}<strong>{$lnc[298]}</strong></a></div>"; 
+				$result.="<td class=\"archive-month archive-empty\"><a href=\"".getlink_archive($j, $y)."\" rel=\"noindex,nofollow\">{$j}<strong>{$lnc[298]}</strong></a></td>"; 
 				else {
-					$result.="<div class=\"archive-month\"><a href=\"".getlink_archive($j, $y)."\" rel=\"noindex,nofollow\"><strong>{$j}</strong>{$lnc[298]} <br/><span class=\"archive-desc\">{$resultdates[$y][$j]} 篇博文</span></a></div>";
+					$result.="<td class=\"archive-month\"><a href=\"".getlink_archive($j, $y)."\" rel=\"noindex,nofollow\">{$j}<strong>{$lnc[298]}</strong> <br/><span class=\"archive-desc\">{$resultdates[$y][$j]}篇博文</span></a></td>"; 				
 				}
+
+				if ($j%4==1) $result.="</tr><tr>";
+				
 			}
-			
+			$result.="</tr>\n";
 		}
 	}
-	
-	
-	
-	$result.="</div>";
+	$result.="</table>";
 	$section_body_main=$t->set('contentpage', array('title'=>$lnc[106], 'contentbody'=>$result));
 	announcebar();
 	$bodymenu=$t->set('mainpage', array('pagebar'=>'', 'iftoppage'=>'none', 'ifbottompage'=>'none',  'ifannouncement'=>$ifannouncement, 'topannounce'=>$topannounce, 'mainpart'=>$section_body_main, 'currentpage'=>'', 'previouspageurl'=>'', 'nextpageurl'=>'', 'turningpages'=>'', 'totalpages'=>'', 'previouspageexists'=>'', 'nextpageexists'=>''));
