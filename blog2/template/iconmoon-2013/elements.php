@@ -32,32 +32,35 @@ eot;
 $elements['displayheader']=<<<eot
 <div id="header-mask"></div>
 
-<div id="nav">
-	<ul>
-		<li class="indent"><a href="category/webpick-chn/" title="关于设计">.设计网摘</a></li>
-		<li class="indent"><a href="category/tutorials-chn/" title="原创以及转载的设计教程和心得">.理论教程</a></li>
-		<li class="indent"><a href="category/travel-photography/" title="游记、攻略加摄影">.摄影旅游</a></li>
-		<li class="indent"><a href="category/diary-chn/" title="生活中的点滴">.生活日记</a></li>
-		<li class="indent"><a href="category/fun/" title="有趣的视频、图片、文章分享">.娱乐分享</a></li>
-		<li class="indent"><a href="category/works-chn/" title="我的 GUI 作品">.个人作品</a></li>
-		<li class="indent"><a href="../about" title="关于 JJ Ying">.关于博主</a></li>
-	</ul>
-</div>
+
+
+		<div id="header">
+			<div id="inner-header">
+
+				<div id="logo">
+					<a href="../blog2" class="logo" title="图月志首页"><h1><strong>图月志</strong>// JJ Ying 的界面设计博客</h1></a>
+				</div>
+
+				<div id="nav">
+					<ul>
+						<li class="indent"><a href="category/webpick-chn/" title="关于设计">.设计网摘</a></li>
+						<li class="indent"><a href="category/tutorials-chn/" title="原创以及转载的设计教程和心得">.理论教程</a></li>
+						<li class="indent"><a href="category/travel-photography/" title="游记、攻略加摄影">.摄影旅游</a></li>
+						<li class="indent"><a href="category/diary-chn/" title="生活中的点滴">.生活日记</a></li>
+						<li class="indent"><a href="category/fun/" title="有趣的视频、图片、文章分享">.娱乐分享</a></li>
+						<li class="indent"><a href="category/works-chn/" title="我的 GUI 作品">.个人作品</a></li>
+						<li class="indent"><a href="../about" title="关于 JJ Ying">.关于博主</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
 
 <div id="wrapper">
 	
 	<div id="innerWrapper">
 
-		<div id="header">
-			<div id="inner-header">
 
-				<div id="blog-logo">
-					<a href="../blog2" class="logo" title="图月志首页"><h1><strong>图月志</strong>// JJ Ying 的界面设计博客</h1></a>
-				</div>
-
-
-			</div>
-		</div>
 		
 
 
