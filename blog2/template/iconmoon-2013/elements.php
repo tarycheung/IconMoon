@@ -22,9 +22,6 @@ $elements['header']=<<<eot
 	</head>
 <body id="{pageID}" class="blog">
 <a name="top"></a>
-
-
-
 eot;
 
 
@@ -43,16 +40,15 @@ $elements['displayheader']=<<<eot
 
 				<div id="nav">
 					<ul>
-						<li class="indent"><a href="category/webpick-chn/" title="关于设计">.设计网摘</a></li>
-						<li class="indent"><a href="category/tutorials-chn/" title="原创以及转载的设计教程和心得">.理论教程</a></li>
-						<li class="indent"><a href="category/travel-photography/" title="游记、攻略加摄影">.摄影旅游</a></li>
-						<li class="indent"><a href="category/diary-chn/" title="生活中的点滴">.生活日记</a></li>
-						<li class="indent"><a href="category/fun/" title="有趣的视频、图片、文章分享">.娱乐分享</a></li>
-						<li class="indent"><a href="category/works-chn/" title="我的 GUI 作品">.个人作品</a></li>
-						<li class="indent"><a href="../about" title="关于 JJ Ying">.关于博主</a></li>
+						<li><a href="category/webpick-chn/" title="关于设计">.设计网摘</a></li>
+						<li><a href="category/tutorials-chn/" title="原创以及转载的设计教程和心得">.理论教程</a></li>
+						<li><a href="category/travel-photography/" title="游记、攻略加摄影">.摄影旅游</a></li>
+						<li><a href="category/diary-chn/" title="生活中的点滴">.生活日记</a></li>
+						<li><a href="category/fun/" title="有趣的视频、图片、文章分享">.娱乐分享</a></li>
+						<li><a href="category/works-chn/" title="我的 GUI 作品">.个人作品</a></li>
+						<li><a href="../about" title="关于 JJ Ying">.关于博主</a></li>
 					</ul>
 				</div>
-
 			</div>
 		</div>
 
