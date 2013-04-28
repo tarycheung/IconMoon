@@ -20,7 +20,7 @@ a{
 	color:#30384c;
 }
 a:hover{
-	color:#d6351c;
+	color:#0157ae;
 	text-decoration:underline;
 }
 ul{
@@ -217,7 +217,7 @@ h1{
 }
 #mainWrapper a{
 	-webkit-transition-property:color, background; 
-	-webkit-transition-duration: 0.3s, 0.3s;
+	-webkit-transition-duration: 0.2s, 0.2s;
 	-webkit-transition-timing-function: ease-in, ease-in;
 }
 .sidebar{
@@ -306,18 +306,9 @@ h2{
 }
 h2 a{
 	color:#394259;
-	-moz-border-radius:7px;
-	-khtml-border-radius:7px;
-	-webkit-border-radius:7px;
-	border-radius:7px;
 }
 h2 a:hover{
 	text-decoration:none;
-	-moz-border-radius:7px;
-	-khtml-border-radius:7px;
-	-webkit-border-radius:7px;
-	border-radius:7px;
-	color:#d53422;
 }
 .textbox-content{
 	color:#4a4f5e;
@@ -353,7 +344,7 @@ h2 a:hover{
 	padding:0;
 }
 .textbox-content a{
-	font-weight:400;
+	font-weight:700;
 	color:#232b3d;
 	text-decoration: none;
 	border-bottom: 1px dotted #666;
@@ -361,7 +352,8 @@ h2 a:hover{
 .title-label a:hover,
 .textbox-content a:hover{
 	text-decoration: none;
-	border-bottom: 1px solid #666;
+	color: #0157ae;
+	border-bottom: 1px dotted #0157ae;
 }
 .textbox-content dt{
 	font:normal normal bold 16px/26px 'times';
@@ -593,15 +585,15 @@ h5{
 	border-left: 0.3em solid #0157ae;
 	color:#333;
 }
-.panel .panel-content{
+.panel-content{
 	margin:12px 0 27px 0;
 	color:#666;
 }
-.panel .panel-content a{
+.panel-content a{
 	color:#666;
 	-webkit-transition: all .1s ease-in-out 0s !important;
 }
-.panel .panel-content a:hover,
+.panel-content a:hover,
 .panel-content a strong,
 .panel-content a:hover strong{
 	color: #0157ae;
@@ -637,19 +629,17 @@ h5{
 	text-decoration: none;
 	border-bottom: 1px solid #0157ae;
 }
-.blog .blog-sidebar-friends{
+.blog-sidebar-friends{
 	padding:0 20px 0 0;
 }
-.blog .blog-sidebar-friends ul{
+.blog-sidebar-friends ul{
 	clear:both;
 }
-.blog .blog-sidebar-friends li{
+.blog-sidebar-friends li{
 	display: block;
 	margin-right:15px;
 }
-
-.blog .blog-sidebar-friends li a{
-	border-radius: 5px;
+.blog-sidebar-friends li a{
 	-webkit-border-radius: 5px;
 }
 
@@ -860,7 +850,8 @@ ul#ds-recent-comments .ds-time{
 	-webkit-transition: all .2s ease-in-out 0s;
 }
 .blog-readmore a:hover{
-	border: 1px dotted #232b3d;
+	border: 1px dotted #0157ae;
+	color: #0157ae;
 }
 /*Drop Shadow*/
 .drop-shadow img{
@@ -893,8 +884,6 @@ ul#ds-recent-comments .ds-time{
 	box-shadow:0 4px 6px #cfcfcf;
 	border:2px solid #d7361d;
 }
-
-
 .textbox-content a[name="entrymore"]{
 	border: none;
 }
@@ -1261,38 +1250,40 @@ ul#ds-recent-comments .ds-time{
 	}
 	#sidebar{
 		clear:both;
-		font-size:40px;
+		font-size:1em;
 		width:100%;
-		background:#282f40;
+		background:#0a0f1a;
 		margin:40px 0 0;
 		border-top:2px solid #fff;
-		box-shadow:inset 0 30px 50px #1d2330;
-		text-shadow:0 2px 1px #000;
+		box-shadow:inset 0 30px 50px #000;
+		text-shadow:0 12px 12px rgba(0,0,0,0.3);
 	}
 	.panel{
-		padding:30px;
 		width: auto;
 	}
 	.panel h5{
 		width:100%;
-		background-color:#3e4860;
-		text-shadow:none;
-		color: #fff;
-		border:none;
-		border-radius: 12px;
+		border: none;
+		color: #30384c;
+		font-size: 2.5em;
+		text-align: center;
+		margin: 0 auto;
+		padding: 0.4em 0 0.4em;
+		margin: 0.4em 0 0.2em;
 	}
 	.panel-content{
-		padding:26px 50px 20px 60px;
-		font-size: 40px;
+		width:80%;
+		margin: 0 auto;
+		color: #fff;
 	}
-	.blog .panel ul li{
-		list-style:none;
+	.panel ul li{
+		list-style: none;
+		color: #06aaff;
+		border-bottom: 4px dotted #294461;
 	}
-	#blog-side-cate li{
-		text-shadow:none;
+	.panel a{
+		color: #06aaff;
 	}
-	#blog-side-cate li,
-	#blog-side-cate	.blog-cate-last,
 	.panel-content ul li,
 	.blog .blog-sidebar-friends li,
 	.blog-sidebar-popular li,
@@ -1302,22 +1293,20 @@ ul#ds-recent-comments .ds-time{
 		list-style: circle;
 	}
 	#blog-side-about{
-		text-shadow:none;
+		width: 85%;
+		margin: 1.5em auto 0;
 	}
-	#blog-side-cate .panel-content{
-		margin:0;
+	#blog-side-about a{
+		color: #06aaff;
+	}	
+	.blog-sidebar-friends li{
+		float: left;
+		margin-right: 0.5em;	
 	}
-	.blog .blog-sidebar-friends li{
-		margin-right:30px;
-		font-size: 40px;
-	}
-	.blog .blog-sidebar-friends li a{
+	.blog-sidebar-friends li a{
 		background: none;
 	}
-	#blog-side-about{
-		font-size:40px;
-		padding: 60px;
-	}
+
 	#toTop{
 		opacity: 0;
 	}
