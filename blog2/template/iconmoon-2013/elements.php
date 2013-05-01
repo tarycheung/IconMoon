@@ -15,7 +15,8 @@ $elements['header']=<<<eot
 		<link rel="stylesheet" rev="stylesheet" href="../../../blog.css" type="text/css" media="all" />
 		<link rel="shortcut icon" HREF="favicon.ico">
 		<script type="text/javascript" src="images/js/common.js"></script>
-		<script type="text/javascript" src="../js/jquery.tools.min.js"></script>
+		<script type="text/javascript" src="../js/waypoints.min.js"></script>
+		<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 		{ajax_js}
 		{extraheader}
@@ -40,13 +41,13 @@ $elements['displayheader']=<<<eot
 
 				<div id="nav">
 					<ul>
-						<li><a href="category/webpick-chn/" title="关于设计">.设计网摘</a></li>
-						<li><a href="category/tutorials-chn/" title="原创以及转载的设计教程和心得">.理论教程</a></li>
-						<li><a href="category/travel-photography/" title="游记、攻略加摄影">.摄影旅游</a></li>
-						<li><a href="category/diary-chn/" title="生活中的点滴">.生活日记</a></li>
-						<li><a href="category/fun/" title="有趣的视频、图片、文章分享">.娱乐分享</a></li>
-						<li><a href="category/works-chn/" title="我的 GUI 作品">.个人作品</a></li>
-						<li><a href="../about" title="关于 JJ Ying">.关于博主</a></li>
+						<li><a href="category/webpick-chn/" title="关于设计">设计网摘</a></li>
+						<li><a href="category/tutorials-chn/" title="原创以及转载的设计教程和心得">理论教程</a></li>
+						<li><a href="category/travel-photography/" title="游记、攻略加摄影">摄影旅游</a></li>
+						<li><a href="category/diary-chn/" title="生活中的点滴">生活日记</a></li>
+						<li><a href="category/fun/" title="有趣的视频、图片、文章分享">娱乐分享</a></li>
+						<li><a href="category/works-chn/" title="我的 GUI 作品">个人作品</a></li>
+						<li><a href="../about" title="关于 JJ Ying">关于博主</a></li>
 					</ul>
 				</div>
 			</div>
@@ -185,6 +186,31 @@ try {
 var pageTracker = _gat._getTracker("UA-568739-7");
 pageTracker._trackPageview();
 } catch(err) {}</script>
+
+
+<!-- Header Shadow -->
+<script type="text/javascript">
+$(function() {
+		if ($(window).scrollTop() > 50) {
+		  	$('#header').addClass('bar-shadow');
+		}
+		else {
+		  	$('#header').removeClass('bar-shadow');
+		}
+	    setTimeout(arguments.callee, 40);
+});
+
+$(function() {
+		if ($(window).scrollTop() > 900) {
+		  	$('.sidebar').addClass('fixed-sidebar');
+		}
+		else {
+		  	$('.sidebar').removeClass('fixed-sidebar');
+		}
+	    setTimeout(arguments.callee, 40);
+});
+
+</script>
 
 eot;
 
