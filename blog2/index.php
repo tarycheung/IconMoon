@@ -105,14 +105,30 @@ if (defined('whereAmI')) $currentpagelocation=whereAmI;
 else {
 	$nav=$_SERVER["REQUEST_URI"];
 	$currentpagelocation=strrchr($nav, '/');
+	$currentcategory=strchr($nav,'/category');
 	@list($currentpagelocation, $unused)=@explode('.', substr($currentpagelocation, 1));
 	if ($currentpagelocation=='') $currentpagelocation='index';
 }
 $headmenu_tmp=str_replace(array("<span id=\"nav_{$currentpagelocation}\">", "<span id=\"navitem_{$currentpagelocation}\">"), array("<span id=\"nav_{$currentpagelocation}\" class=\"activepage\">", "<span id=\"navitem_{$currentpagelocation}\" class=\"activepageitem\">"), $headmenu); 
 $headmenu=($headmenu_tmp==$headmenu) ? str_replace(array("<span id=\"nav_index\">", "<span id=\"navitem_index\">"), array("<span id=\"nav_index\" class=\"activepage\">", "<span id=\"navitem_index\" class=\"activepageitem\">"), $headmenu) : $headmenu_tmp;
+
+
+
+
 //Assign an ID for current page
 $currentpage_cssid='pagelocation-'.$currentpagelocation;
+
+//Assign current category
+if (substr_count($currentcategory,"tutorials-chn")>0) $currentpage_cssid='category-tutorial';
+if (substr_count($currentcategory,"webpick-chn")>0) $currentpage_cssid='category-webpick';
+if (substr_count($currentcategory,"travel-photography")>0) $currentpage_cssid='category-travel';
+if (substr_count($currentcategory,"diary-chn")>0) $currentpage_cssid='category-diary';
+if (substr_count($currentcategory,"fun")>0) $currentpage_cssid='category-fun';
+if (substr_count($currentcategory,"works-chn")>0) $currentpage_cssid='category-works';
+
+
 $headerhtml=str_replace('{pageID}', $currentpage_cssid, $headerhtml);
+
 
 //Section: Side
 if ($plugin_closesidebar!=1) {

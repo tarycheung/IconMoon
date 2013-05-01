@@ -120,6 +120,14 @@ h2, h3, h6{
 	vertical-align: top;
 	text-decoration: none;
 }
+#category-webpick .nav-webpick,
+#category-tutorial .nav-tutorial,
+#category-travel .nav-travel,
+#category-diary .nav-diary,
+#category-fun .nav-fun,
+#category-works .nav-works{
+	font-weight: 700;
+}
 h1{
 	text-indent: -9999px;
 }
@@ -523,7 +531,7 @@ input.button,
 .blog-bottom-link a{
 	cursor:pointer;
 	padding:3px 9px 3px;
-	font-size:1.7em;
+	font-size:1em;
 	font-weight:400;
 	border:1px solid #2b3244;
 	background:#3e4861;
