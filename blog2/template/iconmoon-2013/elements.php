@@ -13,6 +13,7 @@ $elements['header']=<<<eot
 		<title>{pagetitle} 图月志 // JJ Ying 的界面设计博客</title>
 		<link rel="alternate" type="application/rss+xml" title="图月志" href="http://feed.feedsky.com/yingjunjiu" />
 		<link rel="stylesheet" rev="stylesheet" href="../../../blog.css" type="text/css" media="all" />
+		<link rel="stylesheet" rev="stylesheet" href="../../../font-icon.css" type="text/css" media="all" />
 		<link rel="shortcut icon" HREF="favicon.ico">
 		<script type="text/javascript" src="images/js/common.js"></script>
 		<script type="text/javascript" src="../js/waypoints.min.js"></script>
@@ -41,13 +42,13 @@ $elements['displayheader']=<<<eot
 
 				<div id="nav">
 					<ul>
-						<li><a href="category/webpick-chn/" title="关于设计" class="nav-webpick">设计网摘</a></li>
-						<li><a href="category/tutorials-chn/" title="原创以及转载的设计教程和心得" class="nav-tutorial">理论教程</a></li>
-						<li><a href="category/travel-photography/" title="游记、攻略加摄影" class="nav-travel">摄影旅游</a></li>
-						<li><a href="category/diary-chn/" title="生活中的点滴" class="nav-diary">生活日记</a></li>
-						<li><a href="category/fun/" title="有趣的视频、图片、文章分享" class="nav-fun">娱乐分享</a></li>
-						<li><a href="category/works-chn/" title="我的 GUI 作品" class="nav-works">个人作品</a></li>
-						<li><a href="../about" title="关于 JJ Ying" class="nav-about">关于博主</a></li>
+						<li><a href="category/webpick-chn/" title="关于设计" class="nav-webpick"><i class="font-icon icon-quotes-alt"></i>设计网摘</a></li>
+						<li><a href="category/tutorials-chn/" title="原创以及转载的设计教程和心得" class="nav-tutorial"><i class="font-icon icon-flag-alt"></i>理论教程</a></li>
+						<li><a href="category/travel-photography/" title="游记、攻略加摄影" class="nav-travel"><i class="font-icon icon-map-marker-alt"></i>摄影旅游</a></li>
+						<li><a href="category/diary-chn/" title="生活中的点滴" class="nav-diary"><i class="font-icon icon-pencil-alt"></i>生活日记</a></li>
+						<li><a href="category/fun/" title="有趣的视频、图片、文章分享" class="nav-fun"><i class="font-icon icon-idea-alt"></i>娱乐分享</a></li>
+						<li><a href="category/works-chn/" title="我的 GUI 作品" class="nav-works"><i class="font-icon icon-screen-alt"></i>个人作品</a></li>
+						<li><a href="../about" title="关于 JJ Ying" class="nav-about"><i class="font-icon icon-star-alt"></i>关于博主</a></li>
 					</ul>
 				</div>
 			</div>
