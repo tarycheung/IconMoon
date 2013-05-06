@@ -1,6 +1,6 @@
 /*Designed by JJ Ying
 http://jjying.com
-Apr. 2013*/
+May. 2013*/
 *{
 	margin:0;
 	padding:0;
@@ -219,8 +219,8 @@ h1{
 	height: 93px;
 	opacity: 0;
 	background: url('images/2013/blog.png') -300px 0;
-	-webkit-transition: opacity .2s ease-in 0s;
-	-moz-transition: opacity .2s ease-in 0s;	
+	-webkit-transition: opacity .2s ease-out 0s;
+	-moz-transition: opacity .2s ease-out 0s;	
 }
 #logo a:hover{
 	opacity: 1;
@@ -235,7 +235,10 @@ h1{
 #mainWrapper a{
 	-webkit-transition-property:color, background; 
 	-webkit-transition-duration: 0.2s, 0.2s;
-	-webkit-transition-timing-function: ease-in, ease-in;
+	-webkit-transition-timing-function: ease-out, ease-out;
+	-moz-transition-property:color, background; 
+	-moz-transition-duration: 0.2s, 0.2s;
+	-moz-transition-timing-function: ease-out, ease-out;	
 }
 .sidebar{
 	float:right;
@@ -282,7 +285,7 @@ h1{
 }
 /* textbox */
 .textbox{
-	margin:20px 20px 37px 0px;
+	margin:20px 20px 4em 0px;
 }
 .blog #mainWrapper .btn a,
 .blog #mainWrapper .blog-work-bar a{
@@ -330,7 +333,7 @@ h2 a:hover{
 }
 .textbox-content{
 	color:#4a4f5e;
-	margin:6px 0 5px 0;
+	margin:6px 0 0.7em 0;
 	clear:both;
 	line-height:1.75em;
 	position:relative;
@@ -461,6 +464,7 @@ h2 a:hover{
 }
 .quote-content{
 	display: inline;
+	font-family: 'Palatino','Songti SC', serif;
 }
 .quote-content:after,
 .quote-content:before{
@@ -715,7 +719,6 @@ ul#ds-recent-comments .ds-meta a{
 	color: #333 !important;
 }
 ul#ds-recent-comments .ds-meta a:hover{
-	color: #0157ae !;
 	text-decoration: underline;
 }
 ul#ds-recent-comments .ds-excerpt{
@@ -867,7 +870,8 @@ ul#ds-recent-comments .ds-time{
 .drop-shadow img{
 	margin:5px 0;
 	border:5px solid #fefefe;
-   box-shadow:0 5px 13px #bfbfbf;
+	border: none;
+   	box-shadow:0 5px 13px #bfbfbf;
 }
 .drop-shadow a img{
 	-webkit-transition-property:border; 
@@ -1158,7 +1162,10 @@ ul#ds-recent-comments .ds-time{
 	}
 }
 @media all and (-webkit-min-device-pixel-ratio: 2) {
-
+	#logo, #logo a:hover{
+		background-image:url('images/2013/blog@2x.png');
+		background-size:600px 314px;
+	}	
 }
 /* iPhone 4 */
 @media screen and (max-device-width: 480px){
@@ -1167,6 +1174,10 @@ ul#ds-recent-comments .ds-time{
 	}
 	.mobile-only{
 		visibility:visible;
+	}
+	.mobile-hide{
+		display: none;
+		visibility: hidden;
 	}
 	#wrapper,
 	#innerWrapper,
@@ -1186,7 +1197,7 @@ ul#ds-recent-comments .ds-time{
 		float:none;
 		padding-top:5px;
 		width: 100%;
-		font-size: 0.8em;
+		font-size: 0.95em;
 		text-align: left;
 	}
 	#nav li{
@@ -1194,7 +1205,8 @@ ul#ds-recent-comments .ds-time{
 		float:none;
 		display:inline-block;
 		text-align: center;
-		width: 24%;
+		width: 32%;
+		height: 180%;
 	}
 	#footer{
 		font-size:0.675em;
@@ -1209,21 +1221,28 @@ ul#ds-recent-comments .ds-time{
 	#header{
 		position: static;
 		margin: 0;
-		height: 360px;
+		height: 440px;
 		padding: 0;
 		width: 100%;
+		box-shadow: 0px 3px 25px rgba(0,0,0,0.1);		
 	}
 	#logo{
 		height: auto;
 		margin: 0 auto;
 		position: static;
-		width: 297px;
+		width: 472px;
+		background: url('images/2013/blog@2x.png');
+		background-size:1200px 628px;
 	}
-	#logo .logo{
-		width: 297px;
-		height: 163px;
-		background-image: url('images/blog@2x.png');
-		background-size: 594px 326px;
+	#logo a{
+		width: 472px;
+		height: 186px;
+		background: url('images/2013/blog@2x.png') -600px 0;
+		-webkit-transition: none;
+	}
+	#logo a:hover{
+		background: url('images/2013/blog@2x.png') -600 0;
+		background-size:1200px 628px;
 	}
 	.textbox{
 		width:85%;
@@ -1239,16 +1258,22 @@ ul#ds-recent-comments .ds-time{
 		margin:0 0 26px;
 	}
 	.blog .title-label{
-		font-size: 1em;
+		font-size: 0.75em;
+	}
+	h2{
+		font-size: 1.6em;
 	}
 	.blog h2 a{
 		height: auto;
-		line-height:1.3;
+		line-height:1.25;
 		font-weight:700;
 	}
 	.textbox-content{
 		position:relative;
 		z-index:5;
+	}
+	.textbox-content a{
+		border-width: 4px;
 	}
 	.textbox-content p[align="center"]{
 		text-align: center;
@@ -1279,6 +1304,7 @@ ul#ds-recent-comments .ds-time{
 	}
 	.panel{
 		width: auto;
+		padding: 0 0 2em;
 	}
 	.panel h5{
 		width:100%;
@@ -1314,9 +1340,11 @@ ul#ds-recent-comments .ds-time{
 	#blog-side-about{
 		width: 85%;
 		margin: 1.5em auto 0;
+		color: #30384c;		
 	}
 	#blog-side-about a{
 		color: #06aaff;
+		border-bottom: 4px dotted #294461;		
 	}	
 	.blog-sidebar-friends li{
 		float: left;
@@ -1325,7 +1353,18 @@ ul#ds-recent-comments .ds-time{
 	.blog-sidebar-friends li a{
 		background: none;
 	}
-
+	#sidebar_latest-comments ul#ds-recent-comments li.ds-comment{
+		border-bottom: 4px dotted #294461;
+	}
+	ul#ds-recent-comments .ds-meta{
+		color: #30384c !important;
+	}
+	ul#ds-recent-comments .ds-meta a{
+		color: #30384c !important;
+	}
+	ul#ds-recent-comments .ds-time{
+		display: none;
+	}
 	#toTop{
 		opacity: 0;
 	}

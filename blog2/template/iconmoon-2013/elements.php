@@ -48,7 +48,7 @@ $elements['displayheader']=<<<eot
 						<li><a href="category/diary-chn/" title="生活中的点滴" class="nav-diary"><i class="font-icon icon-pencil-alt"></i>生活日记</a></li>
 						<li><a href="category/fun/" title="有趣的视频、图片、文章分享" class="nav-fun"><i class="font-icon icon-idea-alt"></i>娱乐分享</a></li>
 						<li><a href="category/works-chn/" title="我的 GUI 作品" class="nav-works"><i class="font-icon icon-screen-alt"></i>个人作品</a></li>
-						<li><a href="../about" title="关于 JJ Ying" class="nav-about"><i class="font-icon icon-star-alt"></i>关于博主</a></li>
+						<li class="mobile-hide"><a href="../about" title="关于 JJ Ying" class="nav-about"><i class="font-icon icon-star-alt"></i>关于博主</a></li>
 					</ul>
 				</div>
 			</div>
