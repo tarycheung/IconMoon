@@ -66,7 +66,7 @@ acronym{
 	visibility:hidden;
 }
 h2, h3, h6{
-	font-family: 'Open Sans', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
+	font-family: 'Open Sans', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', '黑体', sans-serif;
 }
 /*Main*/
 #wrapper{
@@ -464,7 +464,7 @@ h2 a:hover{
 }
 .quote-content{
 	display: inline;
-	font-family: 'Palatino','Songti SC', serif;
+	font-family: 'Palatino','Times New Roman', 'Songti SC', serif;
 }
 .quote-content:after,
 .quote-content:before{
@@ -614,7 +614,6 @@ h5{
 	-webkit-transition: all .1s ease-in-out 0s !important;
 }
 .panel-content a:hover,
-.panel-content a strong,
 .panel-content a:hover strong{
 	color: #0157ae;
 	text-decoration: none;
@@ -660,6 +659,10 @@ h5{
 }
 .blog-sidebar-friends li a{
 	-webkit-border-radius: 5px;
+}
+.blog-sidebar-friends-desc{
+	color: #bbb;
+	margin-left: 0.6em;
 }
 .g-search{
 	text-align:left;
@@ -727,7 +730,7 @@ ul#ds-recent-comments .ds-excerpt{
 }
 ul#ds-recent-comments .ds-time{
 	margin-right:5px !important;
-	color: #c3c9d6 !important;
+	color: #bbb !important;
 	font-weight: 400;
 	float: right;
 }
@@ -1352,6 +1355,9 @@ ul#ds-recent-comments .ds-time{
 	}
 	.blog-sidebar-friends li a{
 		background: none;
+	}
+	.blog-sidebar-friends-desc{
+		display: none;
 	}
 	#sidebar_latest-comments ul#ds-recent-comments li.ds-comment{
 		border-bottom: 4px dotted #294461;
