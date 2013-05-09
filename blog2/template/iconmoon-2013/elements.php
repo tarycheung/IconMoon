@@ -242,7 +242,7 @@ $elements['sideblock']=<<<eot
 
 
 <div class="panel" id="sidebar_{id}">
-<h5 onclick='showhidediv("sidebar_{id}");'>{title}</h5>
+<h5>{title}</h5>
 <div class="panel-content"  style="display: {ifextend}">
 {content}
 </div>
@@ -251,7 +251,7 @@ eot;
 
 $elements['sideblock_category']=<<<eot
 <div id='panelCategory' class="panel">
-<h5 onclick='showhidediv("sideblock_category");'>// {title}</h5>
+<h5 >{title}</h5>
 <div class="panel-content" id="sideblock_category" style="display: {ifextend}">
 {content}
 </div>

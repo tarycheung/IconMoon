@@ -160,7 +160,7 @@ if (in_array('archive', $allopenmods)) {
 			$archive1[]="<li><a href=\"{$outurl}\" rel=\"noindex,nofollow\">{$ymshow}</a></li>";
 			$basemonth-=1;
 		}
-		$archiveshow='<ul>'.implode("\n", $archive1).'</ul>';
+		$archiveshow='<ul>'.implode("\n", $archive1).'</ul><br/><a href="archive.php" title="所有归档"><i class="font-icon icon-play"></i> <b>所有归档</b></a>';
 	}
 	plugin_runphp('sidebararchive');
 	$blogitem['archive']+=array(
