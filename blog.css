@@ -553,6 +553,7 @@ input.button,
 	text-shadow:0 1px 0 #000;
 	text-decoration:none;
 	-webkit-transition: all .2s ease-in-out 0s !important;
+	-moz-transition: all .2s ease-in-out 0s !important;
 	vertical-align:baseline;
 }
 	input.button:hover,
@@ -616,6 +617,7 @@ h5{
 .panel-content a{
 	color:#666;
 	-webkit-transition: all .1s ease-in-out 0s !important;
+	-moz-transition: all .1s ease-in-out 0s !important;	
 }
 .panel-content a:hover,
 .panel-content a:hover strong{
@@ -662,7 +664,7 @@ h5{
 	display: block;
 }
 .blog-sidebar-friends li a{
-	-webkit-border-radius: 5px;
+
 }
 .blog-sidebar-friends-desc{
 	color: #bbb;
@@ -722,7 +724,6 @@ ul#ds-recent-comments .ds-meta{
 }
 ul#ds-recent-comments .ds-meta a{
 	background: none;
-	-webkit-border-radius: 5px;
 	color: #333 !important;
 }
 ul#ds-recent-comments .ds-meta a:hover{
@@ -868,6 +869,7 @@ ul#ds-recent-comments .ds-time{
 	text-decoration:none;
 	border-radius: 2px;
 	-webkit-transition: all .2s ease-in-out 0s;
+	-moz-transition: all .2s ease-in-out 0s;
 }
 .blog-readmore a:hover{
 	border: 1px dotted #0157ae;
@@ -957,6 +959,7 @@ ul#ds-recent-comments .ds-time{
 	font-size: 0.75em;
 	opacity: 0.65;
 	-webkit-transition: all .15s ease-in-out 0s;
+	-moz-transition: all .15s ease-in-out 0s;
 }
 .archive-month a:hover .archive-desc,
 .archive-month a:hover{
