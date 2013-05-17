@@ -891,7 +891,7 @@ ul#ds-recent-comments .ds-time{
    background:none;
 }
 .drop-shadow a:hover img{
-	border:5px solid #ddd;
+   	box-shadow:0 5px 13px #9f9f9f;
 }
 /*Douban*/
 #sidebar_Douban{
