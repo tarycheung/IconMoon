@@ -138,7 +138,19 @@ $elements['displayfooter']=<<<eot
 	<div id="footer">
 
 		<div id="inner-footer">
-			<span class="footer-nav"><a href="../index.html" title="Go back to the portfolio page">Portfolio</a><b>//</b><a href="../about.html" title="More about me">About</a><b>//</b><a href="../photography.html" title="My Photos">Photography</a><b>//</b><a href="../blog2/" title="Read my blog about design and life">Blog</a><b>//</b><a href="http://UglyUI.com" title="World's Worst Interface Design Collection">UglyUI.com</a><b>//</b></span>© 2013 <strong>JJ Ying</strong>. All rights reserved.  Powered by <a href="http://bo-blog.com/" title="Bo-Blog 2, a free-of-charge weblog engine based on PHP script and MySQL storage."><strong>Bo-Blog</strong></a>.
+			<span class="footer-nav">
+				我的: 
+				<a href="http://jjying.com" title="关于我"><i class="font-icon icon-chevron-right"></i> 关于页面</a>
+				<a href="http://dribbble.com/players/JJYing" title="我的 Dribbble"><i class="font-icon icon-chevron-right"></i> Dribbble</a>
+				<a href="http://weibo.com/yingjunjiu/" title="我的微博"><i class="font-icon icon-chevron-right"></i> 新浪微博</a>
+				<a href="http://www.zhihu.com/people/jjying" title="我的知乎"><i class="font-icon icon-chevron-right"></i> 知乎</a>
+				<a href="http://www.flickr.com/photos/jjying/" title="我的照片"><i class="font-icon icon-chevron-right"></i> Flickr</a>
+				<a href="http://jjying.me" title="我的在线收藏夹"><i class="font-icon icon-chevron-right"></i> Tumblr</a>
+				<a href="http://www.linkedin.com/in/jjying" title="我的简历"><i class="font-icon icon-chevron-right"></i> Linkedin</a>
+				<a href="http://foursquare.com/jjying" title="我的位置"><i class="font-icon icon-chevron-right"></i> Foursquare</a>
+			</span>
+			<br/>
+			© 2013 <strong>JJ Ying</strong>. All rights reserved.  Powered by <a href="http://bo-blog.com/" title="Bo-Blog 2, a free-of-charge weblog engine based on PHP script and MySQL storage."><strong>Bo-Blog</strong></a>.
 		</div>
 	</div>
 </div>

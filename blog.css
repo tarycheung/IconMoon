@@ -139,29 +139,27 @@ h1{
 	padding:0 0;
 	border-top: 1px dotted #adb3c4;
 	margin-top: 25px;
-	font-size: 1.2em;
+	font-size: 1.4em;
+	line-height: 2.2;
 }
 #inner-footer{
 	text-align:center;
 	margin:0 auto;
 	width:1050px;	
 	padding-top:60px;
-	color:#505970;
-	text-shadow:0 1px 0 #d4d8e3;
 }
 #inner-footer a{
 	font-weight:400;
-	padding-bottom:2px;
+}
+.footer-nav a{
+	margin: 0 0.2em 0 0.7em;
+}
+.footer-nav i{
+	font-size: 0.9em;
 }
 #inner-footer a:hover{
 	text-decoration:none;
 	border-bottom:1px dotted #0157ae;
-}
-#inner-footer b{
-	font-weight:400;
-	color:#d1d5e1;
-	margin:0 19px;
-	text-shadow:none;
 }
 /*hack*/
 .clear{
@@ -1043,7 +1041,6 @@ ul#ds-recent-comments .ds-time{
 	}
 }
 /*Small Reslutions*/
-
 @media screen and (max-width: 1100px) {
 	#wrapper,
 	#inner-header,
@@ -1142,7 +1139,7 @@ ul#ds-recent-comments .ds-time{
 		line-height: 1.7;
 	}
 	#footer{
-		font-size: 0.75em;
+		font-size: 1.2em;
 		line-height: 2;
 	}
 }
