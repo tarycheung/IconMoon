@@ -10,7 +10,7 @@ May. 2013*/
 }
 body{
 	font-size: 62.5%;
-	font-family: "Open Sans",'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
+	font-family: 'Open San', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
 	text-align:center;
 	color:#30384c;
 	line-height: 1;
@@ -664,7 +664,7 @@ h5{
 .blog-sidebar-friends li a{
 
 }
-.blog-sidebar-friends-desc{
+.blog-sidebar-desc{
 	color: #bbb;
 	margin-left: 0.6em;
 }
@@ -1079,7 +1079,7 @@ ul#ds-recent-comments .ds-time{
 	}
 }
 @media screen and (max-width: 978px) {
-	#sidebar_Douban{
+	#sidebar_archive{
 		display: none;
 	}
 	#sidebar{

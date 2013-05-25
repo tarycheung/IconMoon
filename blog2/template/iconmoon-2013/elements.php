@@ -148,8 +148,8 @@ $elements['displayfooter']=<<<eot
 				<a href="http://jjying.me" title="我的在线收藏夹"><i class="font-icon icon-chevron-right"></i> Tumblr</a>
 				<a href="http://www.linkedin.com/in/jjying" title="我的简历"><i class="font-icon icon-chevron-right"></i> Linkedin</a>
 				<a href="http://foursquare.com/jjying" title="我的位置"><i class="font-icon icon-chevron-right"></i> Foursquare</a>
-			</span>
 			<br/>
+			</span>
 			© 2013 <strong>JJ Ying</strong>. All rights reserved.  Powered by <a href="http://bo-blog.com/" title="Bo-Blog 2, a free-of-charge weblog engine based on PHP script and MySQL storage."><strong>Bo-Blog</strong></a>.
 		</div>
 	</div>
