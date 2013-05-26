@@ -29,8 +29,8 @@ ul{
 	list-style-type:disc;
 }
 ol{
-	list-style-position:outside;
-	margin-left:30px;
+	list-style-position:inside;
+	margin-left:20px;
 }
 hr{
 	height:3px;
@@ -879,6 +879,7 @@ ul#ds-recent-comments .ds-time{
 	border:5px solid #fefefe;
 	border: none;
    	box-shadow:0 5px 13px #bfbfbf;
+   	background: #e4e4e4;
 }
 .drop-shadow a img{
 	-webkit-transition-property:border; 
