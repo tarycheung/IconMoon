@@ -14,13 +14,13 @@ $targets=($target=='') ? '': " target='{$target}'";
 $number=($newvolume=='') ? 5 : floor($newvolume);
 $category=($category=='') ? '' : floor($category);
 
-$news=GetNewPosts ($number, 'blogid,title,pubtime', 0, $category);
+$news=GetNewPosts ($number, 'blogid,title,pubtime,blogalias', 0, $category);
 
 if (!is_array($news)) exit();
 else {
 	foreach ($news as $entry) {
 		$times=($time==1) ? "".gmdate($timeformat, $entry['pubtime']+$config['timezone']*3600)."" : '';
-		$show.="<li><a href='{$config['blogurl']}/".getlink_entry($entry['blogid'], $entry['blogalias'])."'{$targets}><span class='blog-post-title'>{$entry['title']}</span> </a><span class='blog-post-date'> {$times}</span></li>";
+		$show.="<li><a href='{$config['blogurl']}/".getlink_entry($entry['blogid'], $entry['blogalias'])."'{$targets}><span class='blog-post-title'>{$entry['title']}</span> </a><span class='blog-post-date'> {$times}</span></li>";		
 	}
 }
 

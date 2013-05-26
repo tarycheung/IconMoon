@@ -186,7 +186,13 @@ $yearhot=$blog->getgroupbyquery("SELECT * FROM `{$db_prefix}blogs` WHERE year(fr
 if (is_array($yearhot)) {
 $viewhows='<ol class="archive-hot">';
 foreach ($yearhot as $onehotview) {
+
+if($onehotview['blogalias']=="") {
 $viewhows.="<li><a href=\"read.php?".$onehotview['blogid']."\">{$onehotview['title']}</a></li>";
+} else {
+ $viewhows.="<li><a href=\"".$onehotview['blogalias']."\">{$onehotview['title']}</a></li>";	
+}
+
 }
 $viewhows.='</ol><div class="clear"></div>';
 } else {
