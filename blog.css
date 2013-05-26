@@ -10,7 +10,7 @@ May. 2013*/
 }
 body{
 	font-size: 62.5%;
-	font-family: 'Open San', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
+	font-family: 'Open Sans', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
 	text-align:center;
 	color:#30384c;
 	line-height: 1;
@@ -1152,7 +1152,9 @@ ul#ds-recent-comments .ds-time{
 		width: 25%;
 		height: 40px;
 	}
-
+	.archive-desc{
+		display: none;
+	}
 	#content{
 		margin-top: 35px;
 	}
