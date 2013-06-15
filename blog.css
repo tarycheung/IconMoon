@@ -1,6 +1,6 @@
 /*Designed by JJ Ying
 http://jjying.com
-May. 2013*/
+Jun. 2013*/
 *{
 	margin:0;
 	padding:0;
@@ -1276,7 +1276,7 @@ ul#ds-recent-comments .ds-time{
 	.blog h2 a{
 		height: auto;
 		line-height:1.25;
-		font-weight:700;
+		font-weight:400;
 	}
 	.textbox-content{
 		position:relative;
