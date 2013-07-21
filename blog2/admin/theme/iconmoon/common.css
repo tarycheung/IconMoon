@@ -20,12 +20,14 @@ table{
 }
 input, textarea, select{
 	font-size:12px; 
+	font-family: 'Meta Serif OT',Corbel,'Hiragino Sans GB';
 }
 option, textarea, select{
 	border:1px solid #999;
 	margin:4px 5px;
 	outline:none;
 	-webkit-transition: all .1s ease-in-out 0s;
+	-moz-transition: all .1s ease-in-out 0s;
 }
 option:hover, textarea:hover, select:hover{
 	border:1px solid #666;
@@ -35,6 +37,7 @@ input{
 	border: none;
 	border-bottom: 1px dotted #888;
 	-webkit-transition: all .1s ease-in-out 0s;
+	-moz-transition: all .1s ease-in-out 0s;	
 }
 input:hover{
 	border-bottom: 1px dotted #000;
@@ -51,6 +54,8 @@ input:hover{
 	cursor:pointer;
 	color:#333;
 	-webkit-transition: all .1s ease-in-out 0s;
+	-moz-transition: all .1s ease-in-out 0s;
+
 }
 .button:hover,
 .ed_button:hover,
@@ -103,13 +108,15 @@ form{
 	margin:4px 4px 0 40px;
 }
 .edit-entry{
-	font-size:14px;
-	line-height:22px;
-	width:95%;
+	font-size:16px;
+	line-height:27px;
+	width:93%;
 	color:#444;
 	height:500px;
-	padding:10px;
+	padding:18px;
 	margin:10px 0 0;
+	background: #fcfcfc;	
+	border-color: #e1e1e1;
 }
 .edit-entry:hover{
 	margin:10px 0 0;
@@ -133,6 +140,7 @@ form{
 	cursor:pointer;
 	text-align: center;
 	-webkit-transition: all .1s ease-in-out 0s;
+	-moz-transition: all .1s ease-in-out 0s;
 }
 .entry-submit{
 	font-size:24px;
@@ -244,7 +252,7 @@ form{
 #dropmenudiv{
 	background:#333;
 	width: 100px;
-	-webkit-box-shadow:0 5px 13px rgba(0, 0, 0, 0.1);
+	box-shadow:0 5px 13px rgba(0, 0, 0, 0.1);
 	text-align: left;
 }
 #dropmenudiv ul{
@@ -282,7 +290,7 @@ form{
 	padding: 0; margin: auto;
 	width: 1000px;
 	background:#fff;
-	-webkit-box-shadow:0 0 21px rgba(33, 33, 33, 0.07);
+	box-shadow:0 0 21px rgba(33, 33, 33, 0.07);
 }
 #admininner {
 	width: 960px;
@@ -451,6 +459,8 @@ form{
 	color: #444;
 	font-weight: 400;
 	-webkit-transition: margin 0.2s ease-in-out 0s;
+	-moz-transition: margin 0.2s ease-in-out 0s;
+
 }
 .font-icon{
 	font-family: Elusive-Icons;
@@ -553,6 +563,7 @@ form{
 }
 .entry-list-name{
 	-webkit-transition: all .1s ease-in-out 0s;
+	-moz-transition: all .1s ease-in-out 0s;	
 	position: relative;
 	display: block;
 	width: 100%;
@@ -564,6 +575,7 @@ form{
 	height: 100%;
 	padding: 8px 0;
 	-webkit-transition: all .1s ease-in-out 0s;
+	-moz-transition: all .1s ease-in-out 0s;	
 }
 .entry-list-name a:hover{
 	font-weight: 700;
@@ -575,6 +587,7 @@ form{
 .entry-list-icon{
 	opacity: 0;
 	-webkit-transition: opacity .2s ease-in-out 0s;
+	-moz-transition: opacity .2s ease-in-out 0s;	
 }
 .entry-list tr:hover .entry-list-icon{
 	opacity: 0.6;
@@ -593,7 +606,7 @@ form{
 .entry-list-date{
 	font-size: 14px;
 	color: #999;
-	font-family: corbel;
+	font-family: 'Meta Serif OT',corbel;
 }
 .entry-list-date b{
 	width: 16px;
@@ -612,6 +625,7 @@ form{
 .entry-list-filter{
 	opacity: 0.5;
 	-webkit-transition: opacity 0.2s ease-in-out 0.5s;
+	-moz-transition: opacity 0.2s ease-in-out 0.5s;
 }
 .entry-list-filter td{
 	text-align: center;
@@ -629,6 +643,7 @@ form{
 .module .module-icon{
 	opacity: 0;
 	-webkit-transition: all .1s ease-in-out 0s;
+	-moz-transition: all .1s ease-in-out 0s;	
 }
 .module:hover .module-icon{
 	opacity: 0.6;
@@ -671,6 +686,7 @@ form{
 	font-weight: 700;
 	padding: 1px 7px;
 	-webkit-transition: all .1s ease-in-out 0s;
+	-moz-transition: all .1s ease-in-out 0s;	
 	font-size: 17px;
 }
 .pagebar-left:hover,
