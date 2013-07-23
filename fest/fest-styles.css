@@ -1,0 +1,32 @@
+/*Designed by JJ Ying
+http://jjying.com
+Apr. 2013*/
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	font-size: 100%;
+	vertical-align: baseline;
+	outline:none;
+}
+body{
+	font-size:14px;
+	font-family:Cabin, Calibri, sans-serif;
+	text-align:center;
+	color:#30384c;
+	background:#fff;
+}
+.box{
+	width: 100%;
+	height: 556px;
+}
+.inner{
+	width: 1300px;
+	height: 556px;
+}
+#header .inner{
+	background: #fff url('images/header.jpg') no-repeat right top;
+}
+#box-2013-07 .inner{
+	background: #fff url('images/2013-07.jpg') no-repeat right top;
+}
