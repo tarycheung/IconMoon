@@ -1,6 +1,5 @@
 /*Designed by JJ Ying
-http://jjying.com
-Jun. 2013*/
+http://jjying.com*/
 *{
 	margin:0;
 	padding:0;
@@ -35,7 +34,7 @@ ol{
 hr{
 	height:3px;
 	border:none;
-    border-bottom:3px dotted #dde6ee;	
+    border-bottom:1px dotted #ccc;	
 }
 acronym{
 	text-decoration:none;
@@ -56,6 +55,9 @@ acronym{
 .red-f,
 .red{
 	color:#ac0000;
+}
+.blue{
+	color: #0157ae;
 }
 .icon{
 	display:inline-block;
@@ -235,11 +237,8 @@ h1{
 	text-align:left;
 }
 #mainWrapper a{
-	-webkit-transition-property:color, background; 
-	-webkit-transition-duration: 0.2s, 0.2s;
-	-webkit-transition-timing-function: ease-out, ease-out;
 	-moz-transition-property:color, background; 
-	-moz-transition-duration: 0.2s, 0.2s;
+	-moz-transition-duration: 0.13s, 0.13s;
 	-moz-transition-timing-function: ease-out, ease-out;	
 }
 .sidebar{
@@ -368,7 +367,7 @@ h2 a:hover{
 }
 .textbox-content a{
 	font-weight:700;
-	color:#232b3d;
+	color:#4a4f5e;
 	text-decoration: none;
 	border-bottom: 1px dotted #666;
 }
@@ -396,40 +395,6 @@ h2 a:hover{
 	padding: 0 0 0 0.3em;
 	margin-left: -0.6em;
 }
-.textbox-extra{
-	display:block;
-	color:#7987A8;
-	overflow:hidden;
-	padding:15px 0 7px;
-}
-.textbox-extra a{
-	color:#7987A8;
-	font-weight:400;
-}
-.textbox-extra b{
-	display:inline;
-	margin:0 20px 0 0;
-	font-weight:400;
-}
-.textbox-extra a{
-	text-decoration:none;
-}
-.textbox-extra h6{
-	padding-bottom:11px;
-}
-.textbox-related{
-	line-height: 1.8em;
-}
-.tags{
-	text-align:right;
-}
-.tags a{
-	text-decoration:none;
-}
-.single-tag{
-	margin-right:10px;
-	display:inline-block;
-}
 .textbox-adminbar{
 	width:150px;
 	z-index: 9999;
@@ -441,19 +406,124 @@ h2 a:hover{
 .textbox:hover .textbox-adminbar{
 	opacity:1;
 }
-/* comments*/
+/*Related Articles*/
+.textbox-extra{
+	display:block;
+	overflow:hidden;
+	margin: 10px auto 30px;
+	width: 100%;
+}
+.textbox-extra-title{
+	font-weight: 700;
+	font-size: 1.5em;
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 0.5em;
+	color: #4a4f5e;
+}
+.textbox-extra a{
+	text-decoration:none;
+}
+.textbox-related{
+	line-height: 2.1em;
+}
+.textbox-extra .related-item{
+	width: 100%;
+	display: inline-block;
+	font-weight: 400;
+	border-bottom: 1px dotted #ccc;
+	font-size: 1.2em;
+	line-height: 2.5em;
+}
+.related-date{
+	float: right;
+	text-align: right;
+	font-size: 0.675em;
+	display: inline;
+	color: #bbb;
+}
+.related-category a{
+	display: inline;
+	
+}
+.tags{
+	text-align: center;
+	color: #ccc;
+	font-weight: 400;
+}
+.tags a{
+	text-decoration:none;
+	font-weight: 400;
+	margin-left: 0.2em;
+}
+.single-tag{
+	margin-right:1.5em;
+	display:inline-block;
+}
+/*comments*/
 .comment-pages{
 	display:none;
 }
-/*Add comment*/
+#ds-thread *{
+font-size:inherit !important;
+}
+#ds-thread .ds-login-buttons,
+#ds-thread .ds-powered-by{
+	font-size: 0.75em !important;
+}
+#ds-thread #ds-reset .ds-highlight{color: #0157ae !important; font-weight:700 !important;}
+.ds-user-name{font-weight:700;}
+#ds-recent-comments li.ds-comment{font-size:1em !important;}
+#ds-recent-comments li.ds-comment .ds-excerpt{line-height:1.5 !important;}
+.ds-post{
+	border-top: 1px dotted #ccc !important;
+}
+.ds-sort{
+display:none;
+}
+#ds-thread .ds-comment-footer{
+	font-size: 0.75em !important;
+}
+#ds-thread .ds-comments-tabs{
+	text-align: center;
+	font-size: 0.75em !important;	
+}
+.ds-tab .ds-current{
+	color: #0157ae !important;
+}
+.ds-tab{
+	margin: 0 auto !important;
+	width: auto !important;
+	display: block !important;
+}
+.ds-tab a{
+	background: none !important;
+	border: none !important;
+}
+.ds-post{
+	border-top: 1px dotted #ccc;
+}
+.ds-gradient-bg,
+.ds-textarea-wrapper{
+	background-image: none !important;
+}
+.ds-textarea-wrapper{
+	border-radius: 0 !important;
+	border-color: #ddd !important;
+}
+#ds-thread .ds-account-control{
+	width: auto !important;
+	font-size: 0.75em !important;
+}
+.ds-visitor{
+	display: none;
+}
 .box{
-	margin:5px 15px 30px 20px;
+	margin:5px 20px 30px 0;
 	display:block;
 }
-.inner-box{
-	padding:4px;
-}
-#ds-thread .ds-highlight{color: #00f !important;}
 /*UBB*/
 .code,
 .quote {
@@ -542,48 +612,28 @@ input.button,
 	padding:3px 9px 3px;
 	font-size:1em;
 	font-weight:400;
-	border:1px solid #2b3244;
-	background:#3e4861;
-	background:-moz-linear-gradient(top,  #3e4861,  #2b3244);
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #3e4861), color-stop(1, #2b3244));
+	background:#2c3245;
 	color:#e6e9f2;
-	border-radius:3px;
-	text-shadow:0 1px 0 #000;
+	border-radius:0.3em;
 	text-decoration:none;
-	-webkit-transition: all .2s ease-in-out 0s !important;
-	-moz-transition: all .2s ease-in-out 0s !important;
+	-webkit-transition: all .15s ease-in-out 0s !important;
+	-moz-transition: all .15s ease-in-out 0s !important;
 	vertical-align:baseline;
+	font-weight: 400;
+	text-shadow: none;
 }
 	input.button:hover,
 	.pages a:hover,
-	.blog-bottom-link a:hover{
+	.blog-bottom-link a:hover,
+	.sec-btn a:hover{
 		color:#fff;
-		text-shadow:0 1px 2px #3e4861;
-		box-shadow:0 0 6px #016edc;
-		border-radius:3px;
-		border:1px solid #0157ae;
 		text-decoration:none;
 		background:#0157ae;
-		background:-moz-linear-gradient(top,  #016edc,  #0157ae);
-		background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #016edc), color-stop(1, #0157ae));
 	}
 .sec-btn a{
-	border:1px solid #cacdd9;
-	background:#f4f5f8;
-	background:-moz-linear-gradient(top,  #fff,  #eeeff2);
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #eeeff2));
-	color:#424b5e;
-	text-shadow:0 1px 0 #fff;
+	background:#dfdfdf;
+	color:#444;
 }
-	.sec-btn a:hover{
-		border:1px solid #cacdd9;
-		background:#f4f5f8;
-		background:-moz-linear-gradient(top,  #fff,  #eeeff2);
-		background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #eeeff2));
-		color:#424b5e;
-		text-shadow:0 1px 0 #fff;
-		box-shadow:0 0 6px #cacdd9;
-	}
 textarea{ 
 	border:1px solid #9FA4B2;
 	background:#fff;
@@ -1381,5 +1431,31 @@ ul#ds-recent-comments .ds-time{
 	#toTop{
 		opacity: 0;
 	}
-	
+	.archive-desc{
+		display: none;
+	}
+	.archive-month{
+		font-size: 0.7em;
+	}
+	.textbox-extra .related-item{
+		width: 100%;
+		text-align: center;
+		line-height: 1.3em;
+		padding-top: 0.35em;
+	}
+	.textbox-extra .related-date{
+		display: block;
+		text-align: center;
+		float: none;
+		clear: both;
+		font-weight: 700;
+		font-size: 0.5em;
+	}
+	.textbox-extra{
+		padding-bottom: 2em;
+	}
+	#ds-thread{
+		width:85% !important;
+		margin: 0 auto;
+	}	
 }

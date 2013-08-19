@@ -1,7 +1,8 @@
 <?php
 $relatednum=5;
 $url_this = "http://".$_SERVER['HTTP_HOST']. $_SERVER['REQUEST_URI'];
-
+$timeformat="Y 年 n 月 j 日";
+$time=1;
 
 if (!defined('VALIDREQUEST')) die ('Access Denied.');
 
@@ -21,25 +22,29 @@ if (is_array($taginfo)) {
 	$allsingle=array_unique(@explode(',', $alllse));
 	if (is_array($allsingle)) {
 		$tagforsearch=makeaquery($allsingle, "`blogid`='%s'", 'OR');
-		$allrelates=$blog->getgroupbyquery("SELECT blogid,title,views,blogalias FROM `{$db_prefix}blogs` WHERE ({$tagforsearch}) AND `property`<2 ORDER BY `pubtime`DESC LIMIT 0,{$relatednum}");
+		$allrelates=$blog->getgroupbyquery("SELECT blogid,title,views,blogalias,pubtime,category FROM `{$db_prefix}blogs` WHERE ({$tagforsearch}) AND `property`<2 ORDER BY `pubtime`DESC LIMIT 0,{$relatednum}");
 		if (is_array($allrelates)) {
 			foreach ($allrelates as $relateditem) {
 				if ($relateditem['blogid']==0 || $relateditem['blogid']==$records[0]['blogid']) continue;
-				$showrelate.=" &raquo; <a href=\"".getlink_entry($relateditem['blogid'], $relateditem['blogalias'])."\">{$relateditem['title']}</a><br/>";
+				
+				$times=($time==1) ? "".gmdate($timeformat, $relateditem['pubtime']+$config['timezone']*3600)."" : '';
+				
+				$showrelate.="<a href=\"".getlink_entry($relateditem['blogid'], $relateditem['blogalias'])."\" class=\"related-item\">{$relateditem['title']} <span class=\"related-date\"><i class=\"font-icon icon-time\"></i> {$times}</span></a><br/>";
 			}
-			if ($showrelate) $plugin_return="<!-- Added by RelatedTopic, plugin for Bo-Blog 2.0.0 -->\r
+			if ($showrelate) $plugin_return="
 <br/><br/>
-<hr>
-<div class='textbox-extra'>
-	<div><h6>相关博文:</h6></div>
-	<div class='textbox-related'>{$showrelate}</div>
 
+<div class='textbox-extra '>
+	<div class='textbox-related'>
+	<div class='textbox-extra-title'><i class=\"font-icon icon-asterisk blue\"></i> 相关博文</div>
+	<hr>
+	{$showrelate}</div>
 </div>
 
 
 
 	<div class='clear'></div>
-\r<!-- RelatedTopic over -->";
+";
 		}
 	}
 }

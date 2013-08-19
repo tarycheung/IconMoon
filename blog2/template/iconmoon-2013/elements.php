@@ -342,10 +342,6 @@ $elements['viewentry']=<<<eot
 	<div class="textbox-content textbox-content-single">
 		{entrycontent}
 		<div class="clear"></div>
-		<div class="textbox-extra tags">
-			<b>标签:</b> {alltags}
-		</div> 
-		<div class="clear"></div>
 	</div>
 	</div>
 <div class="box">
@@ -354,6 +350,7 @@ $elements['viewentry']=<<<eot
 	<a name="topreply"></a>
 
 <a name="comments"></a>
+<div class='textbox-extra-title'><i class="font-icon icon-asterisk blue"></i> 博文评论</div>
 <!-- Duoshuo Comment BEGIN -->
 	<div class="ds-thread"></div>
 	<script type="text/javascript">
