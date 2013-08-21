@@ -18,7 +18,7 @@ $elements['header']=<<<eot
 		<script type="text/javascript" src="images/js/common.js"></script>
 		<script type="text/javascript" src="../js/waypoints.min.js"></script>
 		<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
 		{ajax_js}
 		{extraheader}
 	</head>
@@ -156,38 +156,6 @@ $elements['displayfooter']=<<<eot
 </div>
 </div>
 
-<div id="toTop"></div> <!-- Scroll to top Ribbon -->
-
-<!-- Scroll Code -->
-	<script type="text/javascript" src="../js/jquery.localscroll-1.2.7-min.js"></script>
-	<script type="text/javascript">
-		<!--
-		$(document).ready(function()
-		{
-		$.localScroll({
-				queue:true,
-				duration:1000
-		});
-		});
-		-->
-	</script>
-	<script type="text/javascript">
-		$(function () {
-			$(window).scroll(function () {
-				if ($(this).scrollTop() != 0) {
-					$('#toTop').fadeIn();
-				} else {
-					$('#toTop').fadeOut();
-				}
-			});
-			$('#toTop').click(function () {
-				$('body,html').animate({
-					scrollTop: 0
-				},
-				800);
-			});
-		});
-	</script>
 
 <!-- Analytics -->
 <script type="text/javascript">

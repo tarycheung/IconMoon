@@ -9,7 +9,7 @@ http://jjying.com*/
 }
 body{
 	font-size: 62.5%;
-	font-family: 'Open Sans', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
+	font-family: 'Roboto', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
 	text-align:center;
 	color:#30384c;
 	line-height: 1;
@@ -68,7 +68,7 @@ acronym{
 	visibility:hidden;
 }
 h2, h3, h6{
-	font-family: 'Open Sans', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', '黑体', sans-serif;
+	font-family: 'Roboto', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', '黑体', sans-serif;
 }
 /*Main*/
 #wrapper{
@@ -250,7 +250,6 @@ h1{
 	text-align:left;
 	margin-top: 80px;
 }
-
 #innerSidebar{
 	margin:0;
 }
@@ -520,6 +519,15 @@ display:none;
 .ds-visitor{
 	display: none;
 }
+.ds-avatar img{
+	border-radius: 30px !important;
+}
+.ds-comment-body{
+	padding-left: 75px !important;
+}
+.ds-service-link{
+	background-image: url('images/ds-social-icon.png') !important;
+}
 .box{
 	margin:5px 20px 30px 0;
 	display:block;
@@ -786,6 +794,11 @@ ul#ds-recent-comments .ds-time{
 	color: #bbb !important;
 	font-weight: 400;
 	float: right;
+	opacity: 0;
+	-webkit-transition: opacity .4s ease-in-out 0.1s;
+}
+ul#ds-recent-comments li.ds-comment:hover .ds-time{
+	opacity: 1;
 }
 /*Blog Portolio*/
 .blog-work-intro{
@@ -958,16 +971,6 @@ ul#ds-recent-comments .ds-time{
 }
 .textbox-content a[name="entrymore"]{
 	border: none;
-}
-#toTop {
-	width:69px;
-	height:53px;
-	background:url(images/main.png) -673px -101px;
-	position:fixed;
-	bottom:20px;
-	right:0;
-	cursor:pointer;
-	display:none;
 }
 .archive-year{
 	padding: 55px 0 0;
