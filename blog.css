@@ -1431,9 +1431,6 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	ul#ds-recent-comments .ds-time{
 		display: none;
 	}
-	#toTop{
-		opacity: 0;
-	}
 	.archive-desc{
 		display: none;
 	}
