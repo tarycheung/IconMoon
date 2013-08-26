@@ -15,9 +15,9 @@ $elements['header']=<<<eot
 		<link rel="stylesheet" rev="stylesheet" href="../../../blog.css" type="text/css" media="all" />
 		<link rel="stylesheet" rev="stylesheet" href="../../../font-icon.css" type="text/css" media="all" />
 		<link rel="shortcut icon" HREF="favicon.ico">
-		<script type="text/javascript" src="images/js/common.js"></script>
-		<script type="text/javascript" src="../js/waypoints.min.js"></script>
 		<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+		<script src='../js/nprogress.js'></script>
+		<script type="text/javascript" src="../js/waypoints.min.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
 		{ajax_js}
 		{extraheader}
@@ -30,8 +30,6 @@ eot;
 
 $elements['displayheader']=<<<eot
 <div id="header-mask"></div>
-
-
 
 		<div id="header">
 			<div id="inner-header">
@@ -156,6 +154,15 @@ $elements['displayfooter']=<<<eot
 </div>
 </div>
 
+<!-- Loading Bar -->
+<script>
+	NProgress.start();
+	document.onreadystatechange=function(){ 
+		if(document.readyState=="complete"){ 
+		        setTimeout(function() { NProgress.done();  }, 1000);
+		    } 
+	} 
+</script>
 
 <!-- Analytics -->
 <script type="text/javascript">
