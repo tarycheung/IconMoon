@@ -18,7 +18,7 @@ $elements['header']=<<<eot
 		<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
 		<script src='../js/nprogress.js'></script>
 		<script type="text/javascript" src="../js/waypoints.min.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
 		{ajax_js}
 		{extraheader}
 	</head>
@@ -159,10 +159,12 @@ $elements['displayfooter']=<<<eot
 	NProgress.start();
 	document.onreadystatechange=function(){ 
 		if(document.readyState=="complete"){ 
-		        setTimeout(function() { NProgress.done();  }, 1000);
+		        setTimeout(function() { NProgress.done();  }, 500);
 		    } 
 	} 
 </script>
+
+
 
 <!-- Analytics -->
 <script type="text/javascript">
@@ -260,10 +262,11 @@ $elements['excerpt']=<<<eot
 		<h2>
 			{entrytitle}
 		</h2>
-		<div class="title-label">{entrydatem} 月 {entrydated} 日 &#8226; {entrydatey} 年  &#8226; <span class="entry-cate">{entrycate}</span><!-- &#8226; {entrycomment}--><span class="textbox-adminbar">{ifadmin}</span></div>
+		
 	</div>
 	<div class="textbox-content">{entrycontent}</div>
 	<div class="sep"></div>
+	<div class="title-label">{entrydatem} 月 {entrydated} 日 &#8226; {entrydatey} 年  &#8226; <span class="entry-cate">{entrycate}</span><span class="textbox-adminbar">{ifadmin}</span></div>
 </div>
 eot;
 

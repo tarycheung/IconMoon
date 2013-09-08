@@ -9,7 +9,7 @@ http://jjying.com*/
 }
 body{
 	font-size: 62.5%;
-	font-family: 'Roboto', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
+	font-family: 'Oxygen', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
 	text-align:center;
 	color:#30384c;
 	line-height: 1;
@@ -68,7 +68,7 @@ acronym{
 	visibility:hidden;
 }
 h2, h3, h6{
-	font-family: 'Roboto', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', '黑体', sans-serif;
+	font-family: 'Myriad Pro', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', '黑体', sans-serif;
 }
 /*Main*/
 #wrapper{
@@ -398,9 +398,7 @@ h2 a:hover{
 	width:150px;
 	z-index: 9999;
 	opacity:0;
-	-webkit-transition-property:opacity; 
-	-webkit-transition-duration: 0.2s;
-	-webkit-transition-timing-function: ease-in;
+	-webkit-transition: opacity .15s ease-in-out 0.5s;
 }
 .textbox:hover .textbox-adminbar{
 	opacity:1;
@@ -519,6 +517,7 @@ display:none;
 .ds-visitor{
 	display: none;
 }
+.ds-avatar,
 .ds-avatar img{
 	border-radius: 30px !important;
 }
@@ -544,7 +543,7 @@ display:none;
 }
 .quote-content{
 	display: inline;
-	font-family: 'Palatino','Times New Roman', 'Songti SC', serif;
+	font-family: 'Meta Serif OT', 'Cambria', 'Palatino','Times New Roman', 'Songti SC', serif;
 }
 .quote-content:after,
 .quote-content:before{
@@ -582,12 +581,16 @@ display:none;
 	clear:both;
 }
 .linkbody{
-	padding:.4em 0;
-	text-align:left;
+	padding: .4em 2em .4em 0;
+	text-align: center;
+}
+.linktitle{
+	display: block;
+	font-size: 1.5em;
+	line-height: 1.5em;
 }
 .linkdesc{
 	color:#bbb;
-	margin:0 0 0 1em;
 }
 .linkgroup{
 	font-weight:400;
@@ -973,8 +976,8 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	border: none;
 }
 .archive-year{
-	padding: 55px 0 0;
-	text-align: left;
+	padding: 1.5em 2em 0 0;
+	text-align: center;
 	font-size: 2.5em;
 	line-height: 0.8em;
 }	
@@ -1034,7 +1037,6 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	margin: 20px 0;
 	display: block;
 	list-style-position: outside;
-	font-style: italic;
 }
 .archive-hot li{
 	float: left;
@@ -1042,17 +1044,15 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 }
 .archive-hot li a{
 	font-weight: 400;
-	font-style: normal;
 }
 /*Loading Bar*/
 #nprogress {
   pointer-events: none;
   -webkit-pointer-events: none;
 }
-
 #nprogress .bar {
 	background: #0157ae;
-	background: -webkit-gradient(linear, right top, left top, from(#0157ae), to(#2c3345));	
+	background: -webkit-gradient(linear, right top, left top, from(#0157ae), to(#2c3345));
 	position: fixed;
 	z-index: 10000;
 	top: 0;
@@ -1060,18 +1060,16 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	width: 100%;
 	height: 10px;
 }
-
-/* Fancy blur effect */
 #nprogress .peg {
 	display: block;
 	position: absolute;
 	right: 0px;
-	width: 2px;
+	width: .3em;
 	height: 100%;
 	background: #29d;
 	opacity: 1.0;
+	box-shadow: -.2em 0 1.5em #29d;
 }
-
 /* Remove these to get rid of the spinner */
 #nprogress .spinner {
   display: block;
@@ -1351,7 +1349,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	}
 	#content{
 		width:100%;
-		margin-top:0;
+		margin-top:40px;
 		font-size: 1em;
 	}
 	#header{
@@ -1383,26 +1381,25 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	.textbox{
 		width:85%;
 		box-shadow:none;
-		margin:0 auto;
-		margin-bottom:65px;
-		margin-top:25px;
-		padding:16px 24px 10px;
+		margin:.1em auto 1em;
+		padding:.2em 24px 1em;
 		overflow: hidden;
 		border-bottom:6px dotted #e9ebf1;		
 	}
-	.blog .textbox-title{
-		margin:0 0 26px;
-	}
 	.blog .title-label{
 		font-size: 0.75em;
+		text-align: center;
+		width: 100%;		
 	}
 	h2{
 		font-size: 1.6em;
+		text-align: center;
+		width: 100%;
 	}
-	.blog h2 a{
+	h2 a{
 		height: auto;
 		line-height:1.25;
-		font-weight:400;
+		font-weight:700;
 	}
 	.textbox-content{
 		position:relative;
@@ -1414,14 +1411,19 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	.textbox-content p[align="center"]{
 		text-align: center;
 	}
-	.blog .blog-readmore{
+	.blog-readmore{
 		height:65px;
-		margin-top:30px;
+		width: 100%;
+		margin: 1em auto 0.25em;
+		text-align: center;
+		font-size: 1.25em;
 	}
-	.blog-readmore a{
+	.blog .blog-readmore a{
 		height:65px;
-		margin-top:10px;
 		width:300px;
+		margin: 0 auto;
+		border: none;
+		border-bottom: .1em dotted #ccc;
 	}
 	.blog .pages a{
 		font-size:50px;
@@ -1530,5 +1532,10 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	#ds-thread{
 		width:85% !important;
 		margin: 0 auto;
-	}	
+	}
+	.linktitle{
+		display: block;
+		font-size: 1.25em;
+		line-height: 1.5em;
+	}
 }
