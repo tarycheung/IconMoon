@@ -18,7 +18,7 @@ $elements['header']=<<<eot
 		<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
 		<script src='../js/nprogress.js'></script>
 		<script type="text/javascript" src="../js/waypoints.min.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,700' rel='stylesheet' type='text/css'>
 		{ajax_js}
 		{extraheader}
 	</head>
@@ -138,14 +138,18 @@ $elements['displayfooter']=<<<eot
 		<div id="inner-footer">
 			<span class="footer-nav">
 				我的: 
-				<a href="http://jjying.com" title="关于我"><i class="font-icon icon-chevron-right"></i> 关于页面</a>
-				<a href="http://dribbble.com/players/JJYing" title="我的 Dribbble"><i class="font-icon icon-chevron-right"></i> Dribbble</a>
-				<a href="http://weibo.com/yingjunjiu/" title="我的微博"><i class="font-icon icon-chevron-right"></i> 新浪微博</a>
-				<a href="http://www.zhihu.com/people/jjying" title="我的知乎"><i class="font-icon icon-chevron-right"></i> 知乎</a>
-				<a href="http://www.flickr.com/photos/jjying/" title="我的照片"><i class="font-icon icon-chevron-right"></i> Flickr</a>
-				<a href="http://jjying.me" title="我的在线收藏夹"><i class="font-icon icon-chevron-right"></i> Tumblr</a>
-				<a href="http://www.linkedin.com/in/jjying" title="我的简历"><i class="font-icon icon-chevron-right"></i> Linkedin</a>
-				<a href="http://foursquare.com/jjying" title="我的位置"><i class="font-icon icon-chevron-right"></i> Foursquare</a>
+				<a href="http://jjying.com" title="关于我">关于页面</a>
+				<a href="http://weibo.com/yingjunjiu/" title="我的微博">新浪微博</a>
+				<a href="http://www.zhihu.com/people/jjying" title="我的知乎">知乎</a>
+				<a href="http://www.xiami.com/u/89583" title="我的虾米">虾米</a>
+				<a href="http://www.douban.com/people/JJ.Ying/" title="我的豆瓣">豆瓣</a>
+				<a href="http://dribbble.com/players/JJYing" title="我的 Dribbble">Dribbble</a>
+				<a href="https://twitter.com/JJYing" title="我的照片">Twitter</a>
+				<a href="http://instagram.com/jjying" title="我的照片">Instagram</a>
+				<a href="http://www.flickr.com/photos/jjying/" title="我的照片">Flickr</a>
+				<a href="http://jjying.me" title="我的在线收藏夹">Tumblr</a>
+				<a href="http://www.linkedin.com/in/jjying" title="我的简历">Linkedin</a>
+				<a href="http://foursquare.com/jjying" title="我的位置">Foursquare</a>
 			<br/>
 			</span>
 			© 2013 <strong>JJ Ying</strong>. All rights reserved.  Powered by <a href="http://bo-blog.com/" title="Bo-Blog 2, a free-of-charge weblog engine based on PHP script and MySQL storage."><strong>Bo-Blog</strong></a>.
