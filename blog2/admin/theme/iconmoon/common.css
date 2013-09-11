@@ -1,5 +1,5 @@
 body{
-	font-family:'Open Sans', Calibri, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
+	font-family: 'Merriweather Sans', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
 	color:#444;
 }
 html{
@@ -18,9 +18,13 @@ body, div, td, option, input, textarea, select{
 table{
 	border-collapse: collapse;
 }
-input, textarea, select{
+input, select{
 	font-size:12px; 
-	font-family: 'Meta Serif OT',Corbel,'Hiragino Sans GB';
+	font-family: 'Merriweather Sans', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
+}
+textarea{
+	font-size:12px; 
+	font-family: 'ff-tisa-web-pro','Meta Serif OT',Corbel,'Hiragino Sans GB';
 }
 option, textarea, select{
 	border:1px solid #999;
@@ -46,16 +50,14 @@ input:hover{
 .ed_button,
 .thickbox{
 	margin:4px 3px 2px 0;
-	font-weight:700;
 	padding:1px 7px 3px;
 	border: none;
-	font-size:13px;
+	font-size:12px;
 	background:#eee;
 	cursor:pointer;
 	color:#333;
 	-webkit-transition: all .1s ease-in-out 0s;
 	-moz-transition: all .1s ease-in-out 0s;
-
 }
 .button:hover,
 .ed_button:hover,
@@ -69,7 +71,7 @@ body{
 	text-align:center;
 }
 a {
-	color:#334;
+	color:#333;
 	text-decoration: none;
 }
 form{
@@ -131,7 +133,7 @@ form{
 	display:none;
 }
 .formbutton{
-	font-family:'Open Sans', Calibri, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
+	font-family:'Merriweather Sans', Calibri, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
 	border:2px solid #333;
 	background:#333;
 	color: #fff;
@@ -158,7 +160,7 @@ form{
 .formbutton2{
 	font-weight:700;
 	border:1px solid #cacdd9;
-	font-family:'Open Sans', Calibri, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
+	font-family:'Merriweather Sans', Calibri, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
 	background:-moz-linear-gradient(top,  #fff,  #eeeff2);
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #eeeff2));
 	cursor:pointer;
@@ -578,11 +580,11 @@ form{
 	-moz-transition: all .1s ease-in-out 0s;	
 }
 .entry-list-name a:hover{
-	font-weight: 700;
-	color: #333 !important;
+	font-weight: 400;
+	color: #000 !important;
 }
 .entry-list tr:hover .entry-list-name{
-	text-indent: 3px;
+	text-indent: 9px;
 }
 .entry-list-icon{
 	opacity: 0;
@@ -606,7 +608,7 @@ form{
 .entry-list-date{
 	font-size: 14px;
 	color: #999;
-	font-family: 'Meta Serif OT',corbel;
+	font-family: 'Meta Serif OT','Merriweather',corbel;
 }
 .entry-list-date b{
 	width: 16px;
