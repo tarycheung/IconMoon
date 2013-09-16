@@ -180,7 +180,14 @@ if ($job=='archivelist') {
 		$uniquedates=array_keys($resultdates);
 		for ($i=0; $i<count($uniquedates); $i++) {
 			$y=$uniquedates[$i];
-			$result.="<div class=\"archive-year\">{$y}{$lnc[299]}</div>";
+			$yeararchivecount=0;		
+			for ($j=12; $j>0; $j--) {
+
+				$resultdates[$y][$j]=floor($resultdates[$y][$j]);
+				$yeararchivecount+=$resultdates[$y][$j];
+			}
+			
+			$result.="<div class=\"archive-year\">{$y} 年<span class=\"archive-year-count\">{$yeararchivecount} 篇博文</span></div>";
 			
 $yearhot=$blog->getgroupbyquery("SELECT * FROM `{$db_prefix}blogs` WHERE year(from_unixtime(pubtime)) =$y ORDER BY `views` DESC LIMIT 0 , 7");
 if (is_array($yearhot)) {
@@ -194,7 +201,7 @@ $viewhows.="<li><a href=\"read.php?".$onehotview['blogid']."\">{$onehotview['tit
 }
 
 }
-$viewhows.='</ol><div class="clear"></div>';
+$viewhows.="</ol><div class=\"clear\"></div>";
 } else {
 $viewhows='No view!';
 }
@@ -203,11 +210,11 @@ $viewhows='No view!';
 			for ($j=12; $j>0; $j--) {
 				$resultdates[$y][$j]=floor($resultdates[$y][$j]);
 				if ($resultdates[$y][$j]==0)
-				$result.="<div class=\"archive-month archive-empty\"><a href=\"".getlink_archive($j, $y)."\" rel=\"noindex,nofollow\">{$j}<strong>{$lnc[298]}</strong></a></div>"; 
+				$result.="<div class=\"archive-month archive-empty\"><a href=\"".getlink_archive($j, $y)."\" rel=\"noindex,nofollow\">{$j}<strong> 月</strong></a></div>"; 
 				else {
-					$result.="<div class=\"archive-month\"><a href=\"".getlink_archive($j, $y)."\" rel=\"noindex,nofollow\"><strong>{$j}</strong>{$lnc[298]} <br/><span class=\"archive-desc\">{$resultdates[$y][$j]} 篇博文</span></a></div>";
+					$result.="<div class=\"archive-month\"><a href=\"".getlink_archive($j, $y)."\" rel=\"noindex,nofollow\"><strong>{$j}</strong> 月<span class=\"archive-desc\"> · {$resultdates[$y][$j]} 篇博文</span></a></div>";
 				}
-			}
+			}$result.="<br /><br /><br />";
 			
 		}
 	}
