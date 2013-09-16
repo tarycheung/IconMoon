@@ -90,7 +90,7 @@ $elements['displayside']=<<<eot
 </div>
 <div class="clear"></div>
 <div id='blog-side-about'>
-	图月志是 <a href="../about" title="关于我">JJ Ying</a> 的个人博客，内容包括界面设计和我的个人生活，平时我也出没于 <a href="http://weibo.com/yingjunjiu/" title="我的新浪微博">新浪微博</a>、<a href="http://dribbble.com/players/JJYing" title="我的 Dribbble 页面">Dribbble</a> 和 <a href="http://www.zhihu.com/people/jjying" title="我的知乎页面">知乎</a> 。<br/><br/>本博客所有内容若需转载请 <a href="mailto:ying.jun.jiu@gmail.com" title="我的电子邮件">联系我</a> 。
+	图月志是 <a href="../about" title="关于我">JJ Ying</a> 的个人博客，内容包括界面设计和我的个人生活，平时我经常出没于 <a href="http://weibo.com/yingjunjiu/" title="我的新浪微博">新浪微博</a>、<a href="http://dribbble.com/players/JJYing" title="我的 Dribbble 页面">Dribbble</a> 和<a href="http://www.zhihu.com/people/jjying" title="我的知乎页面">知乎</a>。<br/><br/>浏览过往博文请移步<a href="archive.php">归档页</a>，本博客所有内容若需转载请<a href="mailto:ying.jun.jiu@gmail.com" title="我的电子邮件">联系我</a>。
 </div>
 
 <div class="clear"></div>
