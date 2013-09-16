@@ -22,6 +22,7 @@ $elements['header']=<<<eot
 		{ajax_js}
 		{extraheader}
 	</head>
+	
 <body id="{pageID}" class="blog">
 <a name="top"></a>
 eot;
@@ -167,7 +168,6 @@ $elements['displayfooter']=<<<eot
 		    } 
 	} 
 </script>
-
 
 
 <!-- Analytics -->
