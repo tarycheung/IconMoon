@@ -1,17 +1,17 @@
 /*Designed by JJ Ying
 http://jjying.com*/
 *{
-	margin:0;
-	padding:0;
-	border:0;
+	margin: 0;
+	padding: 0;
+	border: 0;
 	vertical-align: baseline;
-	outline:none;
+	outline: none;
 }
 body{
 	font-size: 62.5%;
 	font-family: 'Merriweather Sans', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
-	text-align:center;
-	color:#30384c;
+	text-align: center;
+	color: #30384c;
 	line-height: 1;
 }
 a{
@@ -67,9 +67,8 @@ acronym{
 .mobile-only{
 	visibility:hidden;
 }
-h2, h3, h6{
+h2, h3, h5, h6{
 	font-family: 'Merriweather Sans','Myriad Pro', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', '黑体', sans-serif;
-	font-weight: 400;
 }
 /*Main*/
 #wrapper{
@@ -399,20 +398,17 @@ h2 a:hover{
 	border:none;
 	text-decoration:underline;
 }
-.textbox-content h6{
-	font-weight:700;
-	font-size:1.5em;
-	line-height:1.2em;
-	color:#7987a8;
-	border-left: 0.3em solid #a9b7c8;
-	padding: 0 0 0 0.3em;
-	margin-left: -0.6em;
+h3,h6{
+	border-bottom: .25em solid #eaecee;
+	font-size: 1.5em;
+	font-weight: 700;
+	line-height: 1.5em;
 }
 .textbox-adminbar{
 	width:150px;
 	z-index: 9999;
 	opacity:0;
-	-webkit-transition: opacity .15s ease-in-out 0.5s;
+	-webkit-transition: opacity .15s ease-in-out 0s;
 }
 .textbox:hover .textbox-adminbar{
 	opacity:1;
@@ -1597,7 +1593,6 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		float: none;
 		margin: 0;
 	}
-
 	.archive-month a strong{
 		font-size: 1.5em;
 	}
