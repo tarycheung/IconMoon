@@ -700,3 +700,38 @@ form{
 .pagebar-label{
 	margin-right: 50px;
 }
+/*Editor*/
+.ed_button,
+.upload-btn{
+	font-family: 'Merriweather Sans';
+	font-size: 14px;
+	padding: .2em .5em;
+	margin: .5em .2em 0;
+}
+.upload-btn{
+	background: none;
+}
+#ed_bold{
+	font-weight: 700;
+}
+#ed_italic{
+	font-style: italic;
+	font-family: 'georgia';
+}
+#ed_link{
+	text-decoration: underline;
+}
+#ed_center,
+#ed_separator{
+	font-family: 'Helvetica';
+	font-weight: 700;
+}
+#icon-list{
+	float: right;
+	margin: 8px 10px 0 0;
+}
+#icon-list a{
+	font-size: 75%;
+	font-weight: 400;
+	text-decoration: underline;
+}

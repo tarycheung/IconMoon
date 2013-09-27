@@ -84,8 +84,6 @@ $elements['displayside']=<<<eot
 <div id='blog-side-cate' class="panel"> 
 	<div class="panel-content">
 
-
-
 	</div> 
 </div>
 <div class="clear"></div>

@@ -46,7 +46,7 @@ edButtons.push(
 edButtons.push(
 	new edButton(
 		'ed_italic'
-		,'I'
+		,'i'
 		,'[i]'
 		,'[/i]'
 		,'i'
@@ -76,18 +76,8 @@ edButtons.push(
 
 edButtons.push(
 	new edButton(
-		'ed_center'
-		,'Center'
-		,'[p align=center]'
-		,'[/p]'
-		,'m'
-	)
-);
-
-edButtons.push(
-	new edButton(
 		'ed_separator'
-		,'Separator'
+		,'---'
 		,'[separator]'
 		,''
 		,''
@@ -97,8 +87,37 @@ edButtons.push(
 
 edButtons.push(
 	new edButton(
+		'ed_center'
+		,'Ξ'
+		,'[p align=center]'
+		,'[/p]'
+		,'m'
+	)
+);
+
+edButtons.push(
+	new edButton(
+		'ed_h3'
+		,'H3'
+		,'<h3>'
+		,'</h3>'
+	)
+);
+
+edButtons.push(
+	new edButton(
+		'ed_ds'
+		,'Shadow'
+		,'<div class="drop-shadow">'
+		,'</div>\n'
+	)
+);
+
+
+edButtons.push(
+	new edButton(
 		'ed_ul'
-		,'UL'
+		,'•-'
 		,'<ul>'
 		,'</ul>'
 		,'u'
@@ -108,7 +127,7 @@ edButtons.push(
 edButtons.push(
 	new edButton(
 		'ed_ol'
-		,'OL'
+		,'1.-'
 		,'<ol>'
 		,'</ol>'
 		,'o'
@@ -118,42 +137,45 @@ edButtons.push(
 edButtons.push(
 	new edButton(
 		'ed_li'
-		,'LI'
+		,'li'
 		,'<li>'
 		,'</li>'
 		,'l'
 	)
 );
 
-
 edButtons.push(
 	new edButton(
-		'ed_h6'
-		,'H6'
-		,'<h6>'
-		,'</h6>'
+		'ed_icon'
+		,'⌘'
+		,'<i class="font-icon icon-⌘"></i>'
+		,''
+		,''
+		,-1
 	)
 );
-
-edButtons.push(
-	new edButton(
-		'ed_ds'
-		,'Drop Shadow'
-		,'<div class="drop-shadow">'
-		,'</div>\n'
-	)
-);
-
 
 
 var extendedStart = edButtons.length;
 
 // below here are the extended buttons
 
+
+
+edButtons.push(
+	new edButton(
+		'ed_quote'
+		,'Quote'
+		,'[quote]'
+		,'[/quote]'
+		,'x'
+	)
+);
+
 edButtons.push(
 	new edButton(
 		'ed_hr'
-		,'hr'
+		,'<hr>'
 		,'[hr]'
 		,''
 		,''
@@ -163,18 +185,8 @@ edButtons.push(
 
 edButtons.push(
 	new edButton(
-		'ed_quote'
-		,'QUOTE'
-		,'[quote]'
-		,'[/quote]'
-		,'x'
-	)
-);
-
-edButtons.push(
-	new edButton(
 		'ed_img2'
-		,'IMG'
+		,'img'
 		,'[img]'
 		,'[/img]'
 		,'m'
@@ -200,17 +212,6 @@ edButtons.push(
 	)
 );
 
-
-
-edButtons.push(
-	new edButton(
-		'ed_code'
-		,'CODE'
-		,'[code]'
-		,'[/code]'
-		,'c'
-	)
-);
 
 edButtons.push(
 	new edButton(
@@ -247,6 +248,16 @@ edButtons.push(
 		,'</u>'
 	)
 );
+
+edButtons.push(
+	new edButton(
+		'ed_h6'
+		,'H6'
+		,'<h6>'
+		,'</h6>'
+	)
+);
+
 
 edButtons.push(
 	new edButton(
@@ -394,7 +405,7 @@ function edToolbar() {
 	}
 	if (edShowExtraCookie()) {
 		document.write(
-			'<input type="button" id="ed_close" class="ed_button" onclick="edCloseAllTags();" value="Close Tags" />'
+			'<input type="button" id="ed_close" class="ed_button" onclick="edCloseAllTags();" value="</tags>" />'
 			+ '<input type="button" id="ed_extra_show" class="ed_button" onclick="edShowExtra()" value="&raquo;" style="visibility: hidden;" />'
 			+ '</span><br />'
 			+ '<span id="ed_extra_buttons">'
@@ -403,8 +414,8 @@ function edToolbar() {
 	}
 	else {
 		document.write(
-			'<input type="button" id="ed_close" class="ed_button" onclick="edCloseAllTags();" value="Close Tags" />'
-			+ '<input type="button" id="ed_extra_show" class="ed_button" onclick="edShowExtra()" value="&raquo;" />'
+			'<input type="button" id="ed_close" class="ed_button" onclick="edCloseAllTags();" value="</tags>" />'
+			+ '<input type="button" id="ed_extra_show" class="ed_button" onclick="edShowExtra()" value="+" />'
 			+ '</span><br />'
 			+ '<span id="ed_extra_buttons" style="display: none;">'
 			+ '<input type="button" id="ed_extra_hide" class="ed_button" onclick="edHideExtra();" value="&laquo;" />'

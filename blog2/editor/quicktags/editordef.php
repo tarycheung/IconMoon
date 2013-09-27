@@ -40,7 +40,13 @@ $onloadjs="";
 
 
 $editorbody=<<<eot
-<div style="margin:5px 100px 10px 10px; float:right;"><a href="javascript: showhidediv('FrameUpload');" title="Uploader" class="thickbox upload-btn"><b>Upload Files</b></a></div>
+
+
+<div style="margin:8px 30px 10px 10px; float:right;"><a href="javascript: showhidediv('FrameUpload');" title="Uploader" class="thickbox upload-btn"><i class="font-icon icon-upload"></i> <b>Upload</b></a></div>
+
+<div id="icon-list">
+	<a href="http://shoestrap.org/downloads/elusive-icons-webfont/" target="_blank">Icon List</a>
+</div>
 
 <script type="text/javascript">edToolbar();</script>
 
