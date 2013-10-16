@@ -1,11 +1,8 @@
 <?php
-
-if(!defined('mnminclude')){header('Location: ../404error.php');die();}
-
-define("EZSQL_DB_USER", "");
-define("EZSQL_DB_PASSWORD", "");
-define("EZSQL_DB_NAME", "");
-define("EZSQL_DB_HOST", "");
+define("EZSQL_DB_USER", 'tester');
+define("EZSQL_DB_PASSWORD", '123');
+define("EZSQL_DB_NAME", 'test');
+define("EZSQL_DB_HOST", 'localhost');
 if (!function_exists('gettext')) {
 	function _($s) {return $s;}
 }
