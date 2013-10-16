@@ -808,20 +808,19 @@ a:hover .travel-photo{
 	-moz-animation: fade-in .6s ease-in-out 1.1s 1 forwards;
 	background: url('images/football-1.png') no-repeat bottom right;
 }
-/*Maggie*/
-#maggie{
+/*jessie*/
+#jessie{
 	background: #e01a60;	
 }
-.maggie{
-	background: #000 url(images/maggie-bg.jpg)  center center;
+.jessie{
 	width: 630px;
 	height: 600px;
 	margin-left: -315px;
 	margin-top: -330px;
 	background-attachment: fixed;
 }
-.inner-maggie{
-	background: url(images/maggie-mask.png);
+.inner-jessie{
+	background: url(images/jessie-bg.jpg);
 	width: 630px;
 	height: 600px;
 	display: block;
