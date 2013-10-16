@@ -220,9 +220,8 @@ h1{
 	top: 0;
 	position: absolute;
 	background: none;
-	height: 93px;
-	box-shadow:0 3px 6px rgba(0, 0, 0, 0.07);
-	border-radius: 6px;
+	width: 236px;
+	height: 58px;
 	background: url('images/2013/blog.png');
 }
 #logo a{
@@ -231,15 +230,14 @@ h1{
 	height: 93px;
 	 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	 filter: alpha(opacity=0);
-	opacity: 0;
+	 opacity: 0;
 	background: url('images/2013/blog.png') -300px 0;
-	-webkit-transition: opacity .2s ease-out 0s;
-	-moz-transition: opacity .2s ease-out 0s;	
+	-webkit-transition: opacity .1s ease-out 0s;
+	-moz-transition: opacity .1s ease-out 0s;
 }
 #logo a:hover{
 	opacity: 1;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	filter: alpha(opacity=100);	
 }
 #content{
 	width:770px;
@@ -295,7 +293,7 @@ h1{
 .listbox-entry a{
 	color:#4E5067;
 }
-/* textbox */
+/* ~Textbox */
 .textbox{
 	margin:20px 20px 4em 0px;
 }
@@ -388,6 +386,10 @@ h2 a:hover{
 	text-decoration: none;
 	color: #0157ae;
 	border-bottom: 1px dotted #0157ae;
+}
+.textbox-content ul,
+.textbox-content ol{
+	margin-left: 0;
 }
 .textbox-content dt{
 	font:normal normal bold 16px/26px 'times';
@@ -596,7 +598,7 @@ h3,h6{
 /*UBB*/
 .code,
 .quote {
-	margin:0.25em 1.5em 0 1em;
+	margin:0.25em 1.5em 0 0em;
 	font-size:1em;
 	line-height: 1.7em;
 	font-weight: 400;
@@ -650,10 +652,6 @@ h3,h6{
 .linkgroupcontent{
 	margin:10px 0 40px 10px;
 }
-/*tag list*/
-.taglist a{
-	text-decoration:none;
-}
 /*Form*/
 form{
 	display:inline;
@@ -693,18 +691,7 @@ input.button,
 	background:#dfdfdf;
 	color:#444;
 }
-textarea{ 
-	border:1px solid #9FA4B2;
-	background:#fff;
-	color:#393B48; 
-	font-size:1.4em;
-	}
-select{ 
-	color:#696B78; 
-	background:#FBFCFD;
-	border:1px solid #696B78;
-}
-/*Blog-sidebar*/
+/*sidebar*/
 .panel{
 	margin:5px 0 0 0;
 }
@@ -988,6 +975,9 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	border: 1px dotted #0157ae;
 	color: #0157ae;
 }
+.textbox-content a[name="entrymore"]{
+	border: none;
+}
 /*Drop Shadow*/
 .drop-shadow img{
 	margin:5px 0;
@@ -1007,11 +997,12 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 .drop-shadow a:hover img{
    	box-shadow:0 5px 13px #9f9f9f;
 }
-.textbox-content a[name="entrymore"]{
-	border: none;
+/* ~Archive */
+.archive-page-desc{
+	font-weight: 400;
 }
 .archive-year{
-	padding: .5em 1em 0 0;
+	padding: 1em 1em 0 0;
 	text-align: center;
 	font-size: 2.5em;
 	line-height: 0.8em;
@@ -1055,6 +1046,9 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	color: #232b3d;
 	font-size: 2em;
 }
+.archive-month a:hover strong{
+	color: #0157ae;
+}
 .archive-desc{
 	line-height: 1.5em;
 	font-weight: 400;
@@ -1068,7 +1062,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	text-shadow: none;
 	border: none;
 	opacity: 1;
-	color: #232b3d;
+	color: #0157ae;
 }
 .archive-empty a:hover{
 	font-size: 1em;
@@ -1087,7 +1081,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 }
 .archive-hot li{
 	float: left;
-	margin: 0 3.5em 0 0;
+	margin: 0 3.5em 0 2em;
 }
 .archive-hot li a{
 	font-weight: 400;

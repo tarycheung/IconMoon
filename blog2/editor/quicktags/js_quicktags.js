@@ -85,15 +85,7 @@ edButtons.push(
 	)
 ); // special case
 
-edButtons.push(
-	new edButton(
-		'ed_center'
-		,'Ξ'
-		,'[p align=center]'
-		,'[/p]'
-		,'m'
-	)
-);
+
 
 edButtons.push(
 	new edButton(
@@ -101,6 +93,16 @@ edButtons.push(
 		,'H3'
 		,'<h3>'
 		,'</h3>'
+	)
+);
+
+edButtons.push(
+	new edButton(
+		'ed_center'
+		,'Ξ'
+		,'[p align=center]'
+		,'[/p]'
+		,'m'
 	)
 );
 
@@ -146,6 +148,17 @@ edButtons.push(
 
 edButtons.push(
 	new edButton(
+		'ed_video'
+		,'Video'
+		,'<iframe height=480 width=100% src="http://player.youku.com/embed/★" frameborder=0 allowfullscreen></iframe>'
+		,''
+		,''
+		,-1
+	)
+);
+
+edButtons.push(
+	new edButton(
 		'ed_icon'
 		,'⌘'
 		,'<i class="font-icon icon-⌘"></i>'
@@ -154,6 +167,7 @@ edButtons.push(
 		,-1
 	)
 );
+
 
 
 var extendedStart = edButtons.length;
