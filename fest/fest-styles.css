@@ -37,3 +37,11 @@ body{
 	background: url('images/13-08.png') no-repeat center top;
 	margin: 0 auto;
 }
+#box-13-09{
+	background: #fff url('images/13-09-bg.jpg') no-repeat left bottom;
+}
+#box-13-09 .inner{
+	background: url('images/13-09.png') no-repeat center top;
+	margin: 0 auto;
+	width: 965px;
+}
