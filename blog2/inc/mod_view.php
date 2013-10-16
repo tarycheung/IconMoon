@@ -169,6 +169,7 @@ if ($job=='archivelist') {
 	$allvaliddates=$blog->getarraybyquery("SELECT `pubtime` FROM `{$db_prefix}blogs` ORDER BY `pubtime` DESC");
 	$allvaliddates=$allvaliddates['pubtime'];
 	$resultdates=array();
+	$totalarchivecount=0;	
 	$result="<div class=\"archive-list\">";
 	if (is_array($allvaliddates)) {
 		foreach ($allvaliddates as $time) {
@@ -212,9 +213,10 @@ $viewhows='No view!';
 				if ($resultdates[$y][$j]==0)
 				$result.="<div class=\"archive-month archive-empty\"><a href=\"".getlink_archive($j, $y)."\" rel=\"noindex,nofollow\">{$j}<strong> 月</strong></a></div>"; 
 				else {
-					$result.="<div class=\"archive-month\"><a href=\"".getlink_archive($j, $y)."\" rel=\"noindex,nofollow\"><strong>{$j}</strong> 月<span class=\"archive-desc\"> · {$resultdates[$y][$j]} 篇博文</span></a></div>";
+					$result.="<div class=\"archive-month\"><a href=\"".getlink_archive($j, $y)."\" rel=\"noindex,nofollow\"><strong>{$j}</strong> 月<span class=\"archive-desc\"> · {$resultdates[$y][$j]} 篇</span></a></div>";
 				}
-			}$result.="<br /><br /><br />";
+			}$result.="<br /><br />";
+			$totalarchivecount+=$yeararchivecount;
 			
 		}
 	}
@@ -222,7 +224,8 @@ $viewhows='No view!';
 	
 	
 	$result.="</div>";
-	$section_body_main=$t->set('contentpage', array('title'=>$lnc[106], 'contentbody'=>$result));
+	$archivepagetitle="归档页<span class=\"archive-page-desc\"> (共 $totalarchivecount 篇博文)</span>";
+	$section_body_main=$t->set('contentpage', array('title'=>$archivepagetitle, 'contentbody'=>$result));
 	announcebar();
 	$bodymenu=$t->set('mainpage', array('pagebar'=>'', 'iftoppage'=>'none', 'ifbottompage'=>'none',  'ifannouncement'=>$ifannouncement, 'topannounce'=>$topannounce, 'mainpart'=>$section_body_main, 'currentpage'=>'', 'previouspageurl'=>'', 'nextpageurl'=>'', 'turningpages'=>'', 'totalpages'=>'', 'previouspageexists'=>'', 'nextpageexists'=>''));
 }
