@@ -89,7 +89,7 @@ h2, h3, h5, h6{
 	z-index: 999;
 	font-size: 1.6em;
 	font-weight: 700;
-	width: 76%;
+	width: 79.5%;
 	float: right;
 }
 #nav ul{
@@ -149,7 +149,6 @@ h1{
 	margin:0 auto;
 	width:1050px;	
 	padding-top:60px;
-	text-transform: uppercase;
 }
 #inner-footer a{
 	font-weight:400;
@@ -220,19 +219,19 @@ h1{
 	top: 0;
 	position: absolute;
 	background: none;
-	width: 236px;
+	width: 212px;
 	height: 58px;
-	background: url('images/2013/blog.png');
+	background: #2c3345 url('images/2013/blog.png');
 }
 #logo a{
 	display: block;
-	width: 236px;
-	height: 93px;
+	width: 212px;
+	height: 58px;
 	 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	 filter: alpha(opacity=0);
 	 opacity: 0;
 	background: url('images/2013/blog.png') -300px 0;
-	-webkit-transition: opacity .1s ease-out 0s;
+	-webkit-transition: opacity .2s ease-out 0s;
 	-moz-transition: opacity .1s ease-out 0s;
 }
 #logo a:hover{
@@ -243,7 +242,7 @@ h1{
 	width:770px;
 	float:left;
 	font-size: 1.6em;
-	margin-top: 100px;
+	margin: 65px 0 0;
 	text-align:left;
 }
 #mainWrapper a{
@@ -295,7 +294,7 @@ h1{
 }
 /* ~Textbox */
 .textbox{
-	margin:20px 20px 4em 0px;
+	margin:20px 20px 3em 0px;
 }
 .blog #mainWrapper .btn a,
 .blog #mainWrapper .blog-work-bar a{
@@ -390,6 +389,26 @@ h2 a:hover{
 .textbox-content ul,
 .textbox-content ol{
 	margin-left: 0;
+}
+.textbox-content ol,
+.textbox-content ul{
+	counter-reset: item
+}
+.textbox-content ol li,
+.textbox-content ul li{
+	display: block;
+}
+.textbox-content ul li:before{
+	content: "‣ "; 
+	color: #0157ae;
+	font-weight: 700;
+	font-size: 1.2em;
+}
+.textbox-content ol li:before{
+	content: counter(item) ". "; 
+	counter-increment: item;
+	color: #0157ae;
+	font-weight: 700;
 }
 .textbox-content dt{
 	font:normal normal bold 16px/26px 'times';
@@ -1076,17 +1095,16 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	font-size: 0.875em;
 	margin: 20px 0 20px 2em;
 	display: block;
-	list-style: cjk-ideographic;
 	list-style-position: inside;
 }
 .archive-hot li{
 	float: left;
-	margin: 0 3.5em 0 2em;
+	margin: 0 2.5em 0 0em;
 }
 .archive-hot li a{
 	font-weight: 400;
 }
-/*Loading Bar*/
+/*~Loading Bar*/
 #nprogress {
   pointer-events: none;
   -webkit-pointer-events: none;
@@ -1155,7 +1173,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
   0%   { transform: rotate(0deg);   transform: rotate(0deg); }
   100% { transform: rotate(360deg); transform: rotate(360deg); }
 }
-/*Large Reslutions*/
+/*~Large Reslutions*/
 @media screen and (min-width: 1650px) {
 	body{
 		font-size: 80%;
@@ -1182,29 +1200,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	.textbox-content{
 	}
 }
-@media screen and (min-width: 2000px) {
-	body{
-		font-size: 135%;
-		line-height: 1.25;
-	}
-	#header{
-		height: 80px;
-		font-size: 0.875em;
-	}
-	#content{
-		margin-top: 130px;
-	}
-	#footer{
-		font-size: 0.75em;
-	}
-	.textbox-content{
-		font-size: 0.875em;
-		line-height: 1.7;
-	}
-	#nav{
-		width: 84%;
-	}
-}
+
 /*Small Reslutions*/
 @media screen and (max-width: 1100px) {
 	#wrapper,
@@ -1213,12 +1209,13 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		width: 90%;
 	}
 	#nav{
-		width: 73.5%;
+		width: 76%;
 		font-size: 1.4em;
 	}
     #content{
 		float:left;
 		width: 75%;
+		margin: 55px 0 0;
     }
 	.textbox{
 		margin: 20px auto;
@@ -1251,9 +1248,6 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	}
 }
 @media screen and (max-width: 978px) {
-	#sidebar_archive{
-		display: none;
-	}
 	#sidebar{
 		clear: both;
 		width: 100%;
@@ -1275,6 +1269,9 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		background: none;
 		border: none;
 	}
+	#inner-header{
+		width: 100%;	
+	}
 	#nav{
 		width: 100%;
 		font-size: 1.6em;
@@ -1288,8 +1285,18 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		top: none;
 		left: none;
 		float: none;
-		width: 236px;
+		width: 100%;
+		background: url('images/2013/blog.png')  0 -65px;
+		background-attachment: fixed;
 	}
+	#logo a{
+		margin: 0 auto;
+		opacity: 1;
+		background: url('images/2013/blog.png');
+	}
+	#logo a:hover{
+		background-position: -300px 0;
+	}	
 	.textbox{
 		width:95%;
 		margin:0 auto;
@@ -1369,7 +1376,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		position: absolute;
 	}
 	#inner-header{
-		width: 90%;
+		width: 100%;
 	}
 	.footer-nav,
 	.g-search,
@@ -1383,7 +1390,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		margin:20px auto;
 		float:none;
 		padding-top:5px;
-		width: 100%;
+		width: 90%;
 		font-size: 0.95em;
 		text-align: left;
 	}
@@ -1400,6 +1407,9 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		padding:0 0 30px;
 		border: none;
 	}
+	#inner-footer{
+		width: 100%;
+	}
 	#content{
 		width:100%;
 		margin-top:40px;
@@ -1408,7 +1418,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	#header{
 		position: static;
 		margin: 0;
-		height: 440px;
+		height: 380px;
 		padding: 0;
 		width: 100%;
 		box-shadow: 0px 3px 25px rgba(0,0,0,0.1);		
@@ -1417,18 +1427,20 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		height: auto;
 		margin: 0 auto;
 		position: static;
-		width: 472px;
-		background: url('images/2013/blog@2x.png');
+		width: 100%;
+		background: #2c3345 url('images/2013/blog@2x.png') 0 -130px;
 		background-size:1200px 628px;
 	}
 	#logo a{
-		width: 472px;
-		height: 186px;
-		background: url('images/2013/blog@2x.png') -600px 0;
+		width: 424px;
+		opacity: 1;
+		margin: 0 auto;
+		height: 120px;
+		background: url('images/2013/blog@2x.png') -0 0;
 		-webkit-transition: none;
 	}
 	#logo a:hover{
-		background: url('images/2013/blog@2x.png') -600 0;
+		background: url('images/2013/blog@2x.png') -600px 0;
 		background-size:1200px 628px;
 	}
 	.textbox{
@@ -1447,6 +1459,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		font-size: 1.6em;
 		text-align: center;
 		width: 100%;
+		margin-bottom: 0.25em;
 	}
 	h2 a{
 		height: auto;
@@ -1456,6 +1469,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	.textbox-content{
 		position:relative;
 		z-index:5;
+		overflow: hidden;
 	}
 	.textbox-content a{
 		border-width: 4px;
@@ -1615,5 +1629,11 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		display: block;
 		font-size: 1.25em;
 		line-height: 1.5em;
+	}
+	#nprogress .peg {
+		visibility: hidden;
+	}
+	#nprogress{
+		visibility: hidden;
 	}
 }

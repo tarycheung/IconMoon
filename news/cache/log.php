@@ -3691,3 +3691,68 @@
 [16-Oct-2013 03:28:50 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
 [16-Oct-2013 03:28:50 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
 [16-Oct-2013 03:28:50 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:05 UTC] PHP Strict Standards:  Declaration of ezSQL_mysql::query() should be compatible with ezSQLcore::query() in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 37
+[16-Oct-2013 03:34:05 UTC] PHP Strict Standards:  Declaration of ezSQL_mysql::escape() should be compatible with ezSQLcore::escape() in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 37
+[16-Oct-2013 03:34:05 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:05 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:05 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:05 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:05 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:05 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:05 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:05 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:05 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:05 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:05 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:20 UTC] PHP Strict Standards:  Declaration of ezSQL_mysql::query() should be compatible with ezSQLcore::query() in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 37
+[16-Oct-2013 03:34:20 UTC] PHP Strict Standards:  Declaration of ezSQL_mysql::escape() should be compatible with ezSQLcore::escape() in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 37
+[16-Oct-2013 03:34:20 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:20 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:20 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:20 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:20 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:20 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:20 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:20 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:20 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:20 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:20 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:42 UTC] PHP Strict Standards:  Declaration of ezSQL_mysql::query() should be compatible with ezSQLcore::query() in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 37
+[16-Oct-2013 03:34:42 UTC] PHP Strict Standards:  Declaration of ezSQL_mysql::escape() should be compatible with ezSQLcore::escape() in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 37
+[16-Oct-2013 03:34:42 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:42 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:42 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:42 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:42 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:42 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:42 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:42 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:42 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:42 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:34:42 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:35:59 UTC] PHP Strict Standards:  Declaration of ezSQL_mysql::query() should be compatible with ezSQLcore::query() in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 37
+[16-Oct-2013 03:35:59 UTC] PHP Strict Standards:  Declaration of ezSQL_mysql::escape() should be compatible with ezSQLcore::escape() in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 37
+[16-Oct-2013 03:35:59 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:35:59 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:35:59 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:35:59 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:35:59 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:35:59 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:35:59 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:35:59 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:35:59 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:35:59 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 03:35:59 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 17:10:30 UTC] PHP Strict Standards:  Declaration of ezSQL_mysql::query() should be compatible with ezSQLcore::query() in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 37
+[16-Oct-2013 17:10:30 UTC] PHP Strict Standards:  Declaration of ezSQL_mysql::escape() should be compatible with ezSQLcore::escape() in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 37
+[16-Oct-2013 17:10:30 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 17:10:30 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 17:10:30 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 17:10:30 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 17:10:30 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 17:10:30 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 17:10:30 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 17:10:30 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 17:10:30 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 17:10:30 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
+[16-Oct-2013 17:10:30 UTC] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /Users/jjying/Dropbox/IconMoon/news/libs/db.php on line 163
