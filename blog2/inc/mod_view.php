@@ -170,7 +170,30 @@ if ($job=='archivelist') {
 	$allvaliddates=$allvaliddates['pubtime'];
 	$resultdates=array();
 	$totalarchivecount=0;	
-	$result="<div class=\"archive-list\">";
+	
+// Archive Page Infographics
+	$the_current_time=time();
+	$days=floor(($the_current_time-1154998861)/(24*60*60));
+	$totalvisits=floor(($statistics['total'])/10000);
+	$result="
+	<div class=\"archive-infographics\">
+		<div class=\"main-counters infographics-total-entries\">
+			<div class=\"counters-numbers\">{$statistics['entries']}</div>
+			<div class=\"counters-desc\">篇博文</div>
+		</div>
+		<div class=\"main-counters infographics-total-visits\">
+			<div class=\"counters-numbers\">{$totalvisits}</div>
+			<div class=\"counters-desc\">万次访问</div>
+		</div>
+		<div class=\"main-counters infographics-total-entries\">
+			<div class=\"counters-numbers\">{$days}</div>
+			<div class=\"counters-desc\">天前建站</div>
+		</div>
+
+	</div>
+	
+	<div class=\"archive-list\">";
+	
 	if (is_array($allvaliddates)) {
 		foreach ($allvaliddates as $time) {
 			$y=gmdate('Y', $time+3600*$config['timezone']);
@@ -224,7 +247,7 @@ $viewhows='No view!';
 	
 	
 	$result.="</div>";
-	$archivepagetitle="归档页<span class=\"archive-page-desc\"> (共 $totalarchivecount 篇博文)</span>";
+	$archivepagetitle="";
 	$section_body_main=$t->set('contentpage', array('title'=>$archivepagetitle, 'contentbody'=>$result));
 	announcebar();
 	$bodymenu=$t->set('mainpage', array('pagebar'=>'', 'iftoppage'=>'none', 'ifbottompage'=>'none',  'ifannouncement'=>$ifannouncement, 'topannounce'=>$topannounce, 'mainpart'=>$section_body_main, 'currentpage'=>'', 'previouspageurl'=>'', 'nextpageurl'=>'', 'turningpages'=>'', 'totalpages'=>'', 'previouspageexists'=>'', 'nextpageexists'=>''));

@@ -221,22 +221,16 @@ h1{
 	background: none;
 	width: 212px;
 	height: 58px;
-	background: #2c3345 url('images/2013/blog.png');
+	background: #2c3345;
 }
 #logo a{
 	display: block;
 	width: 212px;
 	height: 58px;
-	 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	 filter: alpha(opacity=0);
-	 opacity: 0;
-	background: url('images/2013/blog.png') -300px 0;
-	-webkit-transition: opacity .2s ease-out 0s;
-	-moz-transition: opacity .1s ease-out 0s;
+	background: url('images/2013/blog.png') 0 0;
 }
 #logo a:hover{
-	opacity: 1;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	background-position: -300px 0;
 }
 #content{
 	width:770px;
@@ -257,7 +251,7 @@ h1{
 	font-size: 1.2em;
 	line-height:1.8em;
 	text-align:left;
-	margin-top: 80px;
+	margin-top: 45px;
 }
 #innerSidebar{
 	margin:0;
@@ -1017,6 +1011,12 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
    	box-shadow:0 5px 13px #9f9f9f;
 }
 /* ~Archive */
+#pagelocation-archive .textbox-title{
+	display: none;
+}
+.archive-list{
+	clear: both;
+}
 .archive-page-desc{
 	font-weight: 400;
 }
@@ -1129,6 +1129,30 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	opacity: 1.0;
 	box-shadow: -.2em 0 1.5em #29d;
 }
+/*~Infographics*/
+.archive-infographics{
+	clear: both;
+	display: block;
+	background: #00f;
+	width: 100%;
+	text-align: left;	
+}
+.main-counters{
+	float: left;
+	width: 33%;
+	padding: 0 0 1.5em;
+	border-bottom: 1px dotted #dce;
+	margin: 0 0 1em;
+}
+.counters-numbers{
+	font-weight: 700;
+	line-height: 1.1;
+	font-size: 3.5em;
+	display: inline;
+}
+.counters-desc{
+	display: inline;
+}
 /* Remove these to get rid of the spinner */
 #nprogress .spinner {
   display: block;
@@ -1195,7 +1219,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		width: 100%;
 	}
 	#nav{
-		width: 80%;
+		width: 83.5%;
 	}
 	.textbox-content{
 	}
@@ -1245,6 +1269,11 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		margin-left: 0;
 		line-height: 1.1em;
 		padding-bottom: 0.5em;
+	}
+	.counters-desc{
+		clear: both;
+		float: none;
+		display: block;
 	}
 }
 @media screen and (max-width: 978px) {
@@ -1337,6 +1366,9 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	#content{
 		margin-top: 35px;
 	}
+	.counters-numbers{
+		font-size: 2em;
+	}	
 }
 
 @media screen and (max-width: 520px) {
@@ -1636,4 +1668,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	#nprogress{
 		visibility: hidden;
 	}
+	.counters-numbers{
+		font-size: 2em;
+	}		
 }
