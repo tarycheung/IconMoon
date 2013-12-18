@@ -175,19 +175,20 @@ if ($job=='archivelist') {
 	$the_current_time=time();
 	$days=floor(($the_current_time-1154998861)/(24*60*60));
 	$totalvisits=floor(($statistics['total'])/10000);
+	$totalvisits2=floor(($totalvisits*10/8)/2.5)/10;
 	$result="
 	<div class=\"archive-infographics\">
 		<div class=\"main-counters infographics-total-entries\">
 			<div class=\"counters-numbers\">{$statistics['entries']}</div>
-			<div class=\"counters-desc\">篇博文</div>
+			<div class=\"counters-desc\">篇博文<span>* 全部念完需要 1 个月</span></div>
 		</div>
 		<div class=\"main-counters infographics-total-visits\">
 			<div class=\"counters-numbers\">{$totalvisits}</div>
-			<div class=\"counters-desc\">万次访问</div>
+			<div class=\"counters-desc\">万次访问<span>* 访客集中起来能装 {$totalvisits2} 个上海体育场</span></div>
 		</div>
 		<div class=\"main-counters infographics-total-entries\">
 			<div class=\"counters-numbers\">{$days}</div>
-			<div class=\"counters-desc\">天前建站</div>
+			<div class=\"counters-desc\">天前建站<span>* 平均 3 天一篇博文</span></div>
 		</div>
 
 	</div>

@@ -483,7 +483,10 @@ form{
 }
 /*Messagebox*/
 #messagebox{
-	background:none;
+	background:#fff;
+	width: 530px;
+	margin: 0 auto;
+	box-shadow:0 5px 13px rgba(0, 0, 0, 0.1);
 }
 .messagebox{
 	width:500px;
@@ -492,44 +495,51 @@ form{
 	background:#fff;
 }
 .messagebox h3{
-	font-size:21px;
+	font-size:20px;
 	margin:0;
 	padding:10px;
 	font-weight:700;
+	color: #333;
+	text-shadow: none;
+}
+.messagebox hr{
+	border-bottom: 1px dotted #ccc;
 }
 .messagebox-content{
 	color:#fff;
 	background:#fff;
 	padding:0px 60px 20px; 
 	text-align:left;
+	font-size: 0.4em;
 }
 .messagebox-content ul{
-	font-size:22px;
+	font-size:18px;
 	color:#333;
 	line-height:34px;
 	margin:16px;
-	text-shadow:0 1px 1px #fff;
 	list-style:disc;
 }
 #messagebox .messagebox a{
 	font-weight:400;
 	color:#444;
+	-webkit-transition: all .1s ease-in-out;
 }
 #messagebox .messagebox a:hover{
-	color:#000;
-	text-decoration:underline;
+	text-decoration: none;
+	padding-left: 0.2em;
+	color: #000;
 }
 .messagebox-bottom{
-	padding:10px 0 5px;
+	padding:15px 0 15px;
 	font-size:17px;
 	color:#fff;
 }
 #messagebox .messagebox .messagebox-bottom a{
 	border:2px solid #333;
 	background: #333;
-	padding:3px 6px;
+	padding:3px 8px;
 	font-weight:700;
-	font-size:12px;
+	font-size:1em;
 	color:#fff;
 }
 #messagebox .messagebox .messagebox-bottom a:hover{
