@@ -694,14 +694,14 @@ input.button,
 	cursor:pointer;
 	padding:3px 9px 3px;
 	font-size:1em;
-	font-weight:400;
-	background:#2c3245;
-	color:#e6e9f2;
+	font-weight:700;
+	border-radius: 2em;
+	border: 2px solid #333;
+	color:#333;
 	text-decoration:none;
 	-webkit-transition: all .15s ease-in-out 0s !important;
 	-moz-transition: all .15s ease-in-out 0s !important;
 	vertical-align:baseline;
-	font-weight: 400;
 	text-shadow: none;
 }
 	input.button:hover,
@@ -710,11 +710,12 @@ input.button,
 	.sec-btn a:hover{
 		color:#fff;
 		text-decoration:none;
-		background:#0157ae;
+		background: #0157ae;
+		border-color: #0157ae;
 	}
 .sec-btn a{
-	background:#dfdfdf;
-	color:#444;
+	color:#aaa;
+	border-color: #aaa;
 }
 /*sidebar*/
 .panel{
@@ -985,22 +986,23 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 .blog-readmore a{
 	text-align:left;
 	width:auto;
-	border: 1px dotted #7987A8;
+	border: 2px solid #333;
+	color: #333;
 	font-size: 0.875em;
 	margin:11px 0 10px 0;
 	display:inline;
-	color: #232b3d;
 	text-shadow: none;
 	font-weight: 700;
-	padding: 2px 4px;
+	padding: .15em .5em;
 	text-decoration:none;
-	border-radius: 2px;
+	border-radius: 2em;
 	-webkit-transition: all .2s ease-in-out 0s;
 	-moz-transition: all .2s ease-in-out 0s;
 }
 .blog-readmore a:hover{
-	border: 1px dotted #0157ae;
-	color: #0157ae;
+	border: 2px solid #0157ae;
+	color: #fff;
+	background: #0157ae;
 }
 .textbox-content a[name="entrymore"]{
 	border: none;
@@ -1542,7 +1544,6 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		width:300px;
 		margin: 0 auto;
 		border: none;
-		border-bottom: .1em dotted #ccc;
 	}
 	.blog .pages a{
 		font-size:50px;
