@@ -1066,61 +1066,6 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 .archive-month-chart a{
 	display: none !important;
 }
-.archive-month{
-	display: inline-block;
-	padding: 20px 0 20px;
-	width: 16.65%;
-	text-align: left;
-	border-bottom: 1px dotted #dce;
-}
-.archive-month a{
-	text-decoration: none;
-	font-weight: 400;
-	display: inline-block;
-	vertical-align: top;
-	padding: 8px 0 4px;
-	width:100%;
-	border: none;
-	color: #7987A8;
-	font-size: 0.75em;
-	-webkit-transition: all .15s ease-in-out 0s;
-	-moz-transition: all .15s ease-in-out 0s;	
-}
-.archive-empty{
-	display: none;
-}
-.archive-month a strong{
-	vertical-align: top;
-	font-weight: 400;
-	color: #232b3d;
-	font-size: 2em;
-}
-.archive-month a:hover strong{
-	color: #0157ae;
-}
-.archive-desc{
-	line-height: 1.5em;
-	font-weight: 400;
-	font-size: 1em;
-	-webkit-transition: all .15s ease-in-out 0s;
-	-moz-transition: all .15s ease-in-out 0s;		
-}
-.archive-month a:hover .archive-desc,
-.archive-month a:hover{
-	text-decoration: none;
-	text-shadow: none;
-	border: none;
-	opacity: 1;
-	color: #0157ae;
-}
-.archive-empty a:hover{
-	font-size: 1em;
-	color: #232B3D;
-}
-.archive-empty a:hover strong,
-.archive-empty a:hover .archive-desc{
-	display: inline;
-}
 .archive-hot{
 	font-size: 0.875em;
 	margin: 20px 0 0.5em 2em;
