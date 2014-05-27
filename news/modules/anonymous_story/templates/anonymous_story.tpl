@@ -1,1 +1,0 @@
-{config_load file=anonymous_story_pligg_lang_conf}

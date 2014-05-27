@@ -1,1 +1,0 @@
-<p><div style="float:left;margin:1px 4px 1px 0px;"><img src="{$Avatar_ImgSmall}" alt="{$username}" title="{$username}" /></div>&#8220;<a class="switchurl" href="{$comment_url}">{$comment_text}</a>&#8221;</p>

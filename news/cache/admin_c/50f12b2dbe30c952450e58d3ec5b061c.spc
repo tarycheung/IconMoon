@@ -1,1 +1,0 @@
-a:3:{s:3:"url";s:29:"http://www.pligg.com/rss/blog";s:8:"feed_url";s:22:"http://pligg.com/feed/";s:5:"build";s:14:"20090627192103";}
