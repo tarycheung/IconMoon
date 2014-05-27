@@ -69,13 +69,14 @@ $adminselection5="<select name=\"frontpage\"><option value='10' {$frontpagesel[1
 	for ($i=0; $i<count($detail_array); $i++) {
 		$tmp_gp=$detail_array[$i]['category'];
 		$tmp_st=$detail_array[$i]['property'];
+		$tmp_vw=$detail_array[$i]['views'];
 		$tmp_tm=gmdate('<b>n</b> 月 <b>j</b> 日 · Y', $detail_array[$i]['pubtime']+3600*$config['timezone']);
 		if ($tmp_st || $tmp_st==3) $addclass='hiddenitem';
 		else $addclass='visibleitem';
 		$hiddensign_s=array(0=>"openblog.png", 1=>"lockblog.gif", 2=>"secretblog.png", 3=>"draft.gif");
 		$hiddensign_p=array(0=>$lna[269], 1=>$lna[270], 2=>$lna[271], 3=>$lna[272]);
 		$hiddensign="<a href=\"post/{$detail_array[$i]['blogid']}\" title=\"立刻前往\"><img src='admin/theme/{$themename}/{$hiddensign_s[$tmp_st]}' alt='' title='{$hiddensign_p[$tmp_st]}'></a>";
-		$tablebody.="<tr class='$addclass'><td align='center' class=\"entry-list-center\"></td><td align='center' class=\"entry-list-center\">{$hiddensign}</td><td class=\"entry-list-name\"><a href='admin.php?go=edit_edit_{$detail_array[$i]['blogid']}' title=\"编辑该博文\">{$detail_array[$i]['title']}</a></td><td class=\"entry-list-date\">{$tmp_tm}</td><td align='center'>{$categories[$tmp_gp]['catename']}</td><td align='center' class=\"entry-list-center\"><input type='checkbox' name='selid[]' id='selid[]' value='{$detail_array[$i]['blogid']}'></td><td align='center' class=\"entry-list-center\"><a href='javascript: ensuredel(\"{$detail_array[$i]['blogid']}\", \"1\");'><img class=\"entry-list-icon\" src='admin/theme/{$themename}/del.png' alt='{$lna[78]}' title='{$lna[78]}' border='0'></a></td></tr>";
+		$tablebody.="<tr class='$addclass'><td align='center' class=\"entry-list-center\"></td><td align='center' class=\"entry-list-center\">{$hiddensign}</td><td class=\"entry-list-name\"><a href='admin.php?go=edit_edit_{$detail_array[$i]['blogid']}' title=\"编辑该博文\">{$detail_array[$i]['title']}</a></td><td class=\"entry-list-views\">{$tmp_vw}</td><td class=\"entry-list-date\">{$tmp_tm}</td><td align='center'>{$categories[$tmp_gp]['catename']}</td><td align='center' class=\"entry-list-center\"><input type='checkbox' name='selid[]' id='selid[]' value='{$detail_array[$i]['blogid']}'></td><td align='center' class=\"entry-list-center\"><a href='javascript: ensuredel(\"{$detail_array[$i]['blogid']}\", \"1\");'><img class=\"entry-list-icon\" src='admin/theme/{$themename}/del.png' alt='{$lna[78]}' title='{$lna[78]}' border='0'></a></td></tr>";
 	}
 	for ($i=0; $i<sizeof($arrayvalue_categories); $i++) {
 		$selected=($arrayvalue_categories[$i]===$category) ? ' selected' : '';
@@ -105,7 +106,7 @@ $display_overall_plus= <<<eot
 <form action="admin.php?go=entry_batch" method="post" id='f_s' name='f_s'>
 <table cellpadding=3 cellspacing=1 align=center class='tablewidth entry-list'>
 <tr align=center class="admintitle">
-<td width=20 align=center></td><td width=35></td><td align=center>标题</td><td width=200 align=center> 日期</td><td width=140 align=center>分类</td><td width=35 align=center> </td><td width=25 align=center> </td></tr>
+<td width=20 align=center></td><td width=35></td><td align=center>标题</td><td width=60 align=right>浏览量</td><td width=200 align=center> 日期</td><td width=140 align=center>分类</td><td width=35 align=center> </td><td width=25 align=center> </td></tr>
 {$tablebody}
 <tr class="entry-list-pages"><td></td><td colspan=3> $pagebar</td><td colspan=3 align=right><a href="#unexist" onclick="checkallbox('f_s', 'checked');">{$lna[247]}</a> | <a href="#unexist" onclick="checkallbox('f_s', '');">{$lna[248]}</a></td></tr>
 <tr><td colspan=7 height=20></td></tr>

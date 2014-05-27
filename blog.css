@@ -9,7 +9,7 @@ http://jjying.com*/
 }
 body{
 	font-size: 62.5%;
-	font-family: 'Merriweather Sans', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
+	font-family: 'Lato', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
 	text-align: center;
 	color: #30384c;
 	line-height: 1;
@@ -68,13 +68,13 @@ acronym{
 	visibility:hidden;
 }
 h2, h3, h5, h6{
-	font-family: 'Merriweather Sans','Myriad Pro', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', '黑体', sans-serif;
+	font-family: 'Source Sans Pro','Myriad Pro', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', '黑体', sans-serif;
 }
 /*Main*/
 #wrapper{
 	margin:0 auto;
 }
-/*Header*/
+/*~Header*/
 #header-mask{
 	height: 10px;
 	background: #2c3345;
@@ -132,13 +132,13 @@ h2, h3, h5, h6{
 h1{
 	text-indent: -9999px;
 }
-/*footer*/
+/*~Footer*/
 #footer{
 	clear:both;
 	width: 100%;
-	height:167px;
+	height:197px;
 	position:relative;
-	padding:0 0;
+	padding:0;
 	border-top: 1px dotted #adb3c4;
 	margin-top: 25px;
 	font-size: 1.4em;
@@ -250,6 +250,7 @@ h1{
 	font-size: 1.6em;
 	margin: 65px 0 0;
 	text-align:left;
+	background: #fff;
 }
 #mainWrapper a{
 	-moz-transition-property:color, background; 
@@ -263,7 +264,7 @@ h1{
 	font-size: 1.2em;
 	line-height:1.8em;
 	text-align:left;
-	margin-top: 45px;
+	margin-top: 45px;	
 }
 #innerSidebar{
 	margin:0;
@@ -300,7 +301,8 @@ h1{
 }
 /* ~Textbox */
 .textbox{
-	margin:20px 20px 3em 0px;	
+	margin:20px 20px 3em 0px;
+	background: #fff;
 }
 .blog #mainWrapper .btn a,
 .blog #mainWrapper .blog-work-bar a{
@@ -362,7 +364,7 @@ h2 a:hover{
 	background: #e4e4e4;	
 }
 .textbox-content p[align="center"]{
-	text-align: left;
+
 }
 .textbox-content img{
 	color: #44586e;
@@ -430,6 +432,7 @@ h3,h6{
 	font-size: 1.5em;
 	font-weight: 700;
 	line-height: 1.5em;
+	margin-bottom: .25em;
 }
 .textbox-adminbar{
 	width:150px;
@@ -440,7 +443,7 @@ h3,h6{
 .textbox:hover .textbox-adminbar{
 	opacity:1;
 }
-/*Related Articles*/
+/*~Related Articles*/
 .textbox-extra{
 	display:block;
 	overflow:hidden;
@@ -496,7 +499,7 @@ h3,h6{
 	margin-right:1.5em;
 	display:inline-block;
 }
-/*comments*/
+/*~Comments*/
 .comment-pages,
 .ds-sort,
 .ds-visitor,
@@ -620,7 +623,7 @@ h3,h6{
 	margin:5px 20px 30px 0;
 	display:block;
 }
-/*UBB*/
+/*~UBB*/
 .code,
 .quote {
 	margin:0.25em 1.5em 0 0em;
@@ -630,11 +633,10 @@ h3,h6{
 	border-left: 0.3em solid #0157ae;
 	padding: 0 0 0 0.6em;
 	color: #606470;
-	font-style: italic;
 }
 .quote-content{
 	display: inline;
-	font-family: 'Merriweather', 'Songti SC', serif;
+	font-family: 'PT Serif', 'Kaiti SC', serif;
 }
 .downloadbox,
 .download{
@@ -651,7 +653,7 @@ h3,h6{
 .quote-title{
 	display:none;
 }
-/*Link*/
+/*~Links*/
 .linkover{
 	margin-bottom:6px;
 	clear:both;
@@ -677,7 +679,7 @@ h3,h6{
 .linkgroupcontent{
 	margin:10px 0 40px 10px;
 }
-/*Form*/
+/*~Form*/
 form{
 	display:inline;
 }
@@ -696,8 +698,8 @@ input.button,
 	font-size:1em;
 	font-weight:700;
 	border-radius: 2em;
-	border: 2px solid #333;
-	color:#333;
+	border: 2px solid #394259;
+	color:#394259;
 	text-decoration:none;
 	-webkit-transition: all .15s ease-in-out 0s !important;
 	-moz-transition: all .15s ease-in-out 0s !important;
@@ -717,7 +719,7 @@ input.button,
 	color:#aaa;
 	border-color: #aaa;
 }
-/*sidebar*/
+/*~Sidebar*/
 .panel{
 	margin:5px 0 4em;
 }
@@ -766,6 +768,9 @@ h5{
 .panel-content ol{
 	margin:0;
 	list-style-position:inside;
+}
+.panel-content img{
+	max-width: 100%;
 }
 #blog-side-about{
 	margin: 20px 0 4em;
@@ -870,7 +875,7 @@ ul#ds-recent-comments .ds-time{
 ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	opacity: 1;
 }
-/*Blog Portolio*/
+/*~Blog Portolio*/
 .blog-work-intro{
 	width:450px;
 	padding:0 10px 5px 6px;
@@ -915,7 +920,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 .blog-bottom-link a{
 	margin:4px 8px;
 }
-/*misc*/
+/*~Misc*/
 .common-relative{
 	position:relative;
 }
@@ -1012,7 +1017,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	margin:5px 0;
 	border:5px solid #fefefe;
 	border: none;
-   	box-shadow:0 5px 13px #bfbfbf;
+   	box-shadow:0 5px 13px #dadada;
    	background: #e4e4e4;
 }
 .drop-shadow a img{
@@ -1026,7 +1031,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 .drop-shadow a:hover img{
    	box-shadow:0 5px 13px #9f9f9f;
 }
-/* ~Archive */
+/*~Archive*/
 #pagelocation-archive .textbox-title{
 	display: none;
 }
@@ -1044,6 +1049,9 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	vertical-align: middle;
 	color: #0157ae;
 }
+.archive-year-2004{
+	display: none;
+}
 .archive-year-count{
 	vertical-align: middle;
 	color: #fff;
@@ -1051,6 +1059,12 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	margin-left: 2em;
 	background: #0157ae;
 	padding: .2em .4em;
+}
+.archive-month-chart{
+	margin-bottom: 4em;
+}
+.archive-month-chart a{
+	display: none !important;
 }
 .archive-month{
 	display: inline-block;
@@ -1109,7 +1123,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 }
 .archive-hot{
 	font-size: 0.875em;
-	margin: 20px 0 20px 2em;
+	margin: 20px 0 0.5em 2em;
 	display: block;
 	list-style-position: inside;
 }
@@ -1119,6 +1133,36 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 }
 .archive-hot li a{
 	font-weight: 400;
+}
+/*~Infographics*/
+.archive-infographics{
+	clear: both;
+	display: block;
+	width: 100%;
+	text-align: left;
+}
+.main-counters{
+	float: left;
+	width: 33%;
+	padding: 0 0 1.5em;
+	border-bottom: 1px dotted #dce;
+	margin: 0 0 1em;
+}
+.counters-numbers{
+	font-weight: 700;
+	line-height: 1.1;
+	font-size: 3.5em;
+	display: inline;
+}
+.counters-desc{
+	display: inline;
+}
+.counters-desc span{
+	display: block;
+	font-size: 0.75em;
+	color: #7987A8;
+	text-align: left;
+	line-height: 1.25;
 }
 /*~Loading Bar*/
 #nprogress {
@@ -1144,37 +1188,6 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	background: #29d;
 	opacity: 1.0;
 	box-shadow: -.2em 0 1.5em #29d;
-}
-/*~Infographics*/
-.archive-infographics{
-	clear: both;
-	display: block;
-	background: #00f;
-	width: 100%;
-	text-align: left;	
-}
-.main-counters{
-	float: left;
-	width: 33%;
-	padding: 0 0 1.5em;
-	border-bottom: 1px dotted #dce;
-	margin: 0 0 1em;
-}
-.counters-numbers{
-	font-weight: 700;
-	line-height: 1.1;
-	font-size: 3.5em;
-	display: inline;
-}
-.counters-desc{
-	display: inline;
-}
-.counters-desc span{
-	display: block;
-	font-size: 0.75em;
-	color: #7987A8;
-	text-align: left;
-	opacity: 0.5;
 }
 /* Remove these to get rid of the spinner */
 #nprogress .spinner {
@@ -1286,6 +1299,9 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		float:right;
 		width: 20%;
 	}
+	.panel-content img{
+		max-width: 100%;
+	}
 	.blog-sidebar-desc{
 		clear: left;
 		display: block;
@@ -1311,6 +1327,15 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		width: 28%;
 		float: left;
 		margin: 0 2.65%;
+	}
+	#sidebar_sidebarbanner{
+		width: 100%;
+		display: block;
+		clear: both;
+	}
+	#sidebar_sidebarbanner img{
+		max-width: 80%;
+		margin-top: 2em;
 	}
 	#content{
 		width:100%;
@@ -1356,7 +1381,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		margin-bottom: 10px;
 	}
 	.g-search{
-		float: left;
+		display: none;
 	}
 	h5 {
 		border: none;
@@ -1418,7 +1443,8 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	.mobile-only{
 		visibility:visible;
 	}
-	.mobile-hide{
+	.mobile-hide,
+	.archive-month-chart{
 		display: none;
 		visibility: hidden;
 	}
@@ -1555,14 +1581,14 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		font-size:1em;
 		width:100%;
 		background:#0a0f1a;
-		margin:40px 0 0;
+		margin:.5em 0 0;
 		border-top:2px solid #fff;
 		box-shadow:inset 0 30px 50px #000;
 		text-shadow:0 12px 12px rgba(0,0,0,0.3);
 	}
 	.panel{
 		width: auto;
-		padding: 0 0 2em;
+		padding: 0 0 .2em;
 	}
 	.panel h5{
 		width:100%;
@@ -1571,8 +1597,8 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		font-size: 2.5em;
 		text-align: center;
 		margin: 0 auto;
-		padding: 0.4em 0 0.4em;
-		margin: 0.4em 0 0.2em;
+		padding: 0em 0 0.4em;
+		margin: 0em 0 0.2em;
 	}
 	.panel-content{
 		width:80%;
@@ -1597,7 +1623,8 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	}
 	#blog-side-about{
 		width: 85%;
-		margin: 1.5em auto 0;
+		margin: .5em auto 0em;
+		padding-bottom: 4em;
 		color: #30384c;		
 	}
 	#blog-side-about a{
@@ -1691,5 +1718,19 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	}
 	.counters-numbers{
 		font-size: 2em;
-	}		
+	}
+	.drop-shadow img{
+		box-shadow: none;
+	}
+	#sidebar_sidebarbanner{
+		width: 100%;
+		display: block;
+		clear: both;
+	}
+	#sidebar_sidebarbanner img{
+		margin-top: 1.5em;
+	}
+	.counters-desc span{
+		display: none;
+	}
 }

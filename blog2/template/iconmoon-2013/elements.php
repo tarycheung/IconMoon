@@ -7,7 +7,7 @@ $elements['header']=<<<eot
 		<meta http-equiv="Content-Language" content="UTF-8" />
 		<meta content="all" name="robots" />
 		<meta name="author" content="JJ Ying" />
-		<meta name="description" content="图月志，JJ Ying 的个人博客，界面设计和我的个人生活 IconMoon, Online Porfolio of JJ Ying" />
+		<meta name="description" content="图月志，界面设计个人博客，博主 JJ Ying 是百度 MUX 上海团队的负责人" />
 		<meta name="keywords" content="designs, icons, themes, skin, customizing, GUI, 设计,  图标, 界面" />
 		{baseurl}
 		<title>{pagetitle} 图月志 // JJ Ying 的界面设计博客</title>
@@ -18,7 +18,7 @@ $elements['header']=<<<eot
 		<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
 		<script src='../js/nprogress.js'></script>
 		<script type="text/javascript" src="../js/waypoints.min.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 		{ajax_js}
 		{extraheader}
 	</head>
@@ -88,7 +88,7 @@ $elements['displayside']=<<<eot
 </div>
 <div class="clear"></div>
 <div id='blog-side-about'>
-	图月志是 <a href="../about" title="关于我">JJ Ying</a> 的个人博客，内容包括界面设计和我的个人生活，平时我经常出没于 <a href="http://weibo.com/yingjunjiu/" title="我的新浪微博">新浪微博</a>、<a href="http://dribbble.com/players/JJYing" title="我的 Dribbble 页面">Dribbble</a> 和<a href="http://www.zhihu.com/people/jjying" title="我的知乎页面">知乎</a>。<br/><br/>浏览过往博文请移步<a href="archive.php">归档页</a>，本博客所有内容若需转载请<a href="mailto:ying.jun.jiu@gmail.com" title="我的电子邮件">联系我</a>。<br/><br/>订阅图月志：<a href="http://jjying.com/JOMc">微信</a> / <a href="http://eepurl.com/GR6Gv">E-mail</a> / <a href="http://feed.feedsky.com/yingjunjiu">RSS</a>
+	图月志，界面设计个人博客，博主 <a href="../about" title="关于我">JJ Ying</a> 是<a href="http://mux.baidu.com">百度 MUX</a> 上海团队的负责人，平时经常出没于<a href="http://www.zhihu.com/people/jjying" title="我的知乎页面">知乎</a>、<a href="http://weibo.com/yingjunjiu/" title="我的新浪微博">新浪微博</a>和 <a href="http://dribbble.com/players/JJYing" title="我的 Dribbble 页面">Dribbble</a> 。<br/><br/>浏览过往博文请移步<a href="archive.php">归档页</a>，本博客所有内容若需转载请<a href="mailto:ying.jun.jiu@gmail.com" title="我的电子邮件">联系我</a>。<br/><br/>订阅图月志：<a href="http://pic.yupoo.com/yingjunjiu_v/DI8qiPwg/WUeB.jpg">微信</a> / <a href="http://eepurl.com/GR6Gv">E-mail</a> / <a href="http://feed.feedsky.com/yingjunjiu">RSS</a>
 </div>
 
 <div class="clear"></div>
@@ -137,19 +137,22 @@ $elements['displayfooter']=<<<eot
 		<div id="inner-footer">
 			<span class="footer-nav">
 				我的: 
-				<a href="http://jjying.com" title="关于我">关于页面</a>
-				<a href="http://weibo.com/yingjunjiu/" title="我的微博">新浪微博</a>
+				<a href="http://jjying.com" title="关于我">关于</a>
+				<a href="http://weibo.com/yingjunjiu/" title="我的微博">微博</a>
 				<a href="http://www.zhihu.com/people/jjying" title="我的知乎">知乎</a>
 				<a href="http://www.xiami.com/u/89583" title="我的虾米">虾米</a>
 				<a href="http://www.douban.com/people/JJ.Ying/" title="我的豆瓣">豆瓣</a>
 				<a href="http://dribbble.com/players/JJYing" title="我的 Dribbble">Dribbble</a>
+				<a href="https://www.behance.net/jjying" title="我的 Behance">Behance</a>
 				<a href="https://twitter.com/JJYing" title="我的照片">Twitter</a>
 				<a href="http://instagram.com/jjying" title="我的照片">Instagram</a>
 				<a href="http://www.flickr.com/photos/jjying/" title="我的照片">Flickr</a>
 				<a href="http://jjying.me" title="我的在线收藏夹">Tumblr</a>
-				<a href="http://www.linkedin.com/in/jjying" title="我的简历">Linkedin</a>
-				<a href="http://foursquare.com/jjying" title="我的位置">Foursquare</a>
-			<br/>
+				<a href="http://www.linkedin.com/in/jjying/zh-cn" title="我的简历">Linkedin</a>
+				<a href="http://foursquare.com/jjying" title="我的位置">4Square</a>
+			<br />
+			<i class="font-icon icon-asterisk blue"></i>
+			<br />
 			</span>
 			© 2014 <strong>JJ Ying</strong>. All rights reserved.  Powered by <a href="http://bo-blog.com/" title="Bo-Blog 2, a free-of-charge weblog engine based on PHP script and MySQL storage."><strong>Bo-Blog</strong></a>.
 		</div>
