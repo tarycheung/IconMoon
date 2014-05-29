@@ -837,7 +837,7 @@ class getblogs extends boblog {
 		$pagebar.="";
 		if ($page!=1) {
 			$previouspageurl=sprintf($urlpattern, ($page-1));
-			$pagebar.=" <span class=\"sec-btn\"><a href=\"{$previouspageurl}\" title=\"{$lnc[10]}\" >&laquo; 上一页</a></span> ";
+			$pagebar.=" <span class=\"sec-btn\"><a class=\"page-previous\" href=\"{$previouspageurl}\" title=\"也可以试试用键盘上的左右箭头来翻页哦~\" >&laquo; 上一页</a></span> ";
 			$previouspageexists='inline';
 		} else $previouspageexists='none';
 		$turningpages='';
@@ -848,7 +848,7 @@ class getblogs extends boblog {
 		$pagebar.="<span class=\"pagebar-selections\">".$turningpages."</span>";
 		if ($page!=$this->total_pages) {
 			$nextpageurl=sprintf($urlpattern, ($page+1));
-			$pagebar.=" <a href=\"{$nextpageurl}\" title=\"{$lnc[11]}\">下一页 &raquo;</a> ";
+			$pagebar.=" <a class=\"page-next\" href=\"{$nextpageurl}\" title=\"也可以试试用键盘上的左右箭头来翻页哦~\">下一页 &raquo;</a> ";
 			$nextpageexists='inline';
 		} else $nextpageexists='none';
 		$pagebar.="";

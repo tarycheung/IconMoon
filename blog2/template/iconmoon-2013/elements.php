@@ -171,6 +171,21 @@ $elements['displayfooter']=<<<eot
 </script>
 
 
+<!-- Keyboard Navigation-->
+<script type="text/javascript">
+	window.onkeydown = function (e) {
+	    var code = e.keyCode ? e.keyCode : e.which;
+	    if (code === 37) { 
+	        var nextExists = $('.page-previous').attr('href');
+	        if (nextExists) window.location.href = $('.page-previous').attr("href");
+	    } else if (code === 39) {
+	        var nextExists = $('.page-next').attr('href');
+	        if (nextExists) window.location.href = $('.page-next').attr("href");
+	    }
+	};
+</script>
+
+
 <!-- Analytics -->
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
