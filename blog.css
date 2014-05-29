@@ -68,7 +68,7 @@ acronym{
 	visibility:hidden;
 }
 h2, h3, h5, h6{
-	font-family: 'Source Sans Pro','Myriad Pro', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', '黑体', sans-serif;
+	font-family: 'Lato','Myriad Pro', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', '黑体', sans-serif;
 }
 /*Main*/
 #wrapper{
@@ -1380,7 +1380,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		background-size: 1800px 57px;
 	}	
 }
-/* iPhone 4 */
+/* iPhone*/
 @media screen and (max-device-width: 480px){
 	body{
 		font-size: 300%;
