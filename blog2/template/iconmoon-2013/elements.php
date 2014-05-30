@@ -170,7 +170,6 @@ $elements['displayfooter']=<<<eot
 	} 
 </script>
 
-
 <!-- Keyboard Navigation-->
 <script type="text/javascript">
 	window.onkeydown = function (e) {
