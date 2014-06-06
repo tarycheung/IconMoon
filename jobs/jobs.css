@@ -22,6 +22,8 @@ body{
 }
 a{
 	color: #30384c;
+	cursor: hand;
+	z-index: 9999;
 }
 
 /*~Header*/
@@ -35,35 +37,37 @@ a{
 
 /*~Content*/
 .content{
-	font-size: 1.6em;
+	font-size: 1.4em;
 	background: #f5f5f5;
 }
 /*~Item*/
 .item{
-	height: 18.75em;
-	border-bottom: 1px solid #3c4156;
+	height: 17em;
+	height: auto;
+	border-bottom: 1px solid #ddd;
 	overflow: hidden;
-	-webkit-transition: background .2s ease-out 0s;
+	-webkit-transition: all .2s ease-out 0s;
 	background-color: #2c3146;
 	background-size: 1344px 315px;
-	background-position: center center;
+	background-position: top center;
 	background-repeat: no-repeat;
 }
 .item:hover{
 	background-size: 1280px 300px;
+	-webkit-transition: all .2s ease-in 0s;	
 }
 .inner-item{
 	position: relative;
-/*	background: #2c3146;*/
+	background: rgba(250,250,250,1);
 	height: 100%;
-	-webkit-transition: all .3s ease-in 0s;
+	-webkit-transition: all .3s ease-in 0s;	
 }
-.item:hover .inner-item{
+.inner-item:hover{
 	background: rgba(255,255,255,0);
-	-webkit-transition: all .15s ease-out 0s;		
+	-webkit-transition: all .15s ease-out 0s;
 }
 .item-text{
-	-webkit-transition: all .2s ease-in 0s;
+	-webkit-transition: all .2s ease-out 0s;
 }
 .item:hover .item-text{
 	color: #fff;
@@ -71,23 +75,22 @@ a{
 	text-shadow: 0 .1em .1em rgba(0,0,0,0.2);
 }
 .item-meta{
-	color: rgba(255,255,255,.2);
-	font-weight: 400;
-	width: 100%;
-	padding: 0em 0 .3em;
-	margin: 0 auto;
+	padding: 3em 0 0;
+	color: #ccc;
+	font-weight: 700;
 }
 .item-meta span{
-	margin: 0 .2em;
-	color: rgba(255,255,255,.5);
-	opacity: 1;
-	background: rgba(255,255,255,.15);
+	margin: 0 .5em;
+	color: #014eb1;
+	background: rgba(255,255,255,.05);
 	border-radius: 2em;
 	padding: .1em .7em;
 }
+.item:hover  .item-meta span{
+	background: rgba(255,255,255,.2);
+}
 h2{
-	padding: 0em 0 0;
-	color: #fff;
+	padding: .5em .8em 0;
 	font-size: 3em;
 	font-family:"Cantata One","HY CuSongTi", "Songti SC",serif;
 	font-weight: 400;
@@ -95,21 +98,17 @@ h2{
 }
 .item-logo{
 	margin: .18em 1em 0 0;
-	position: absolute;
-	left: 1em;
-	bottom: 1em;
-	opacity: 1;
 	display: none;
 }
 .item-logo img{
 	max-width: 10em;
 }
 .item-jd-short{
-	color: rgba(255,255,255,0.6);
-	font-size: .875em;
+	color: #777;
+	font-size: .857em;
 	text-align: left;
-	margin: 1em auto 0;
-	width: 33em;
+	margin: 1.8em auto 3em;
+	width: 35em;
 	line-height: 1.3;
 	position: relative;
 }
@@ -124,18 +123,55 @@ h2{
 	top: -0.3em;
 	opacity: 0.6;
 }
-.item-bg{
-	width: 100%;
-	height: 30em;
+.item-btn-more{
 	display: block;
-	opacity: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1;
+	margin: 1em auto 0;
+	color: #fff;
+	background: rgba(1,78,177,1);
+	border-radius: 2em;
+	padding: .2em .6em;
+	font-size: 1.1666em;
+	cursor: pointer;
+	font-weight: 700;
+	-webkit-transition: all .15s ease-in-out 0s;
 }
-
-
+.item:hover .item-btn-more{
+	background: rgba(255,255,255,1);
+	color: #333;
+}
+/*~JD-full*/
+nav .item-logo{
+	margin: 4em 0 1em;
+	display: block;
+}
+h3{
+	font-family:"Cantata One","HY CuSongTi", "Songti SC",serif;
+	font-weight: 400;
+	font-size: 2em;
+	text-align: left;
+	margin: 0 0 .5em;
+}
+.jd-full{
+	width: auto;
+	max-width: 45em;
+	margin: 2em auto 0;
+	padding: 0 2em 0;
+	line-height: 1.4;
+	font-size: 1.6em;
+	text-align: left;
+}
+.jd-full ul{
+	list-style-type: disc;
+	list-style-position: outside;
+}
+.jd-full li{
+	margin: .3em 0 .3em 2em;
+}
+h4{
+	margin-left: -0.6em;
+	border-left: 0.3em solid #0157ae;
+	padding: 0 0.3em;
+}
 /*~Footer*/
 .footer{
 	clear: both;
@@ -157,17 +193,13 @@ h2{
 
 /*~Companies*/
 .hp{
-	background-color: #2077c6;
+	background-color: #2177c6 ;
 	background-image: url('images/company-bg-hp.jpg');
-}
-.hp .inner-item{
-	background-color: rgba(33,119,198,0.4);
 }
 .mux{
 	background-color: #8b121f ;
 	background-image: url('images/company-bg-mux.jpg');
 }
-
 .ark{
 	background-color: #a5a47d ;
 	background-image: url('images/company-bg-ark.jpg');
