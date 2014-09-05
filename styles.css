@@ -15,7 +15,7 @@ html{
 }
 body{
 	font-size:14px;
-	font-family:Cabin, Calibri, sans-serif;
+	font-family:'jaf-bernino-sans', Calibri, sans-serif;
 	text-align:center;
 	color:#30384c;
 	background:url('images/bg.jpg') no-repeat center top;
@@ -73,7 +73,7 @@ acronym{
 h3, h6,
 #about #inner-content,
 #nav a{
-	font-family:"Cabin Condensed", 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
+	font-family:"jaf-bernino-sans-condensed", 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
 }
 /*Main*/
 #wrapper{
