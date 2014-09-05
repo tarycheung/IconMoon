@@ -8,7 +8,6 @@ $elements['header']=<<<eot
 		<meta content="all" name="robots" />
 		<meta name="author" content="JJ Ying" />
 		<meta name="description" content="图月志，界面设计个人博客，博主 JJ Ying 是百度 MUX 上海团队的负责人" />
-		<meta name="keywords" content="designs, icons, themes, skin, customizing, GUI, 设计,  图标, 界面" />
 		{baseurl}
 		<title>{pagetitle} 图月志 // JJ Ying 的界面设计博客</title>
 		<link rel="alternate" type="application/rss+xml" title="图月志" href="http://feed.feedsky.com/yingjunjiu" />
@@ -18,7 +17,9 @@ $elements['header']=<<<eot
 		<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
 		<script src='../js/nprogress.js'></script>
 		<script type="text/javascript" src="../js/waypoints.min.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+		<!-- <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'> -->
+		<script type="text/javascript" src="//use.typekit.net/dvo8acq.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		{ajax_js}
 		{extraheader}
 	</head>
@@ -185,7 +186,7 @@ $elements['displayfooter']=<<<eot
 </script>
 
 
-<!-- Analytics -->
+<!-- Google Analytics -->
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -196,6 +197,11 @@ var pageTracker = _gat._getTracker("UA-568739-7");
 pageTracker._trackPageview();
 } catch(err) {}</script>
 
+<!-- Baidu Analytics -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F9595aadfac9865133fc81fd7d9c01c35' type='text/javascript'%3E%3C/script%3E"));
+</script>
 
 <!-- Header Shadow -->
 <script type="text/javascript">
@@ -205,16 +211,6 @@ $(function() {
 		}
 		else {
 		  	$('#header').removeClass('bar-shadow');
-		}
-	    setTimeout(arguments.callee, 40);
-});
-
-$(function() {
-		if ($(window).scrollTop() > 900) {
-		  	$('.sidebar').addClass('fixed-sidebar');
-		}
-		else {
-		  	$('.sidebar').removeClass('fixed-sidebar');
 		}
 	    setTimeout(arguments.callee, 40);
 });

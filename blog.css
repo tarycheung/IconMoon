@@ -9,7 +9,7 @@ http://jjying.com*/
 }
 body{
 	font-size: 62.5%;
-	font-family: 'Lato', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
+	font-family: 'fira-sans-1','fira-sans-2', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
 	text-align: center;
 	color: #30384c;
 	line-height: 1;
@@ -68,7 +68,7 @@ acronym{
 	visibility:hidden;
 }
 h2, h3, h5, h6{
-	font-family: 'Lato','Myriad Pro', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', '黑体', sans-serif;
+	font-family: 'adelle-sans-1','adelle-sans-2', 'Myriad Pro', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', '黑体', sans-serif;
 }
 /*Main*/
 #wrapper{

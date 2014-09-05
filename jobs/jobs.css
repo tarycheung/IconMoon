@@ -30,7 +30,7 @@ a{
 .header{
 	font-size: 1.6em;
 	background: #fff;
-	height: 6.875em;
+	height: 7.875em;
 	border-top: 0.625em solid #2c3146;
 	border-bottom: 0.125em solid rgba(0,0,0,0.1);
 }
@@ -188,6 +188,13 @@ h4{
 @media screen and (max-device-width: 480px){
 	body{
 		font-size: 100%;
+	}
+	*{
+		-webkit-transition: none !important;
+	}
+	.item:hover{
+		background-size: 1344px 315px;
+		background: none;
 	}
 }
 

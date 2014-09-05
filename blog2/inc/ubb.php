@@ -68,7 +68,7 @@ function convert_ubb ($str, $advanced=0, $inrss=0) {
 	$regubb_replace =  array(
 				"makefontsize('\\1', '\\2')",
 				"maketable('\\5','\\1','\\2','\\3','\\4')",
-				"<div class=\"quote\"><link href=\"http://fonts.googleapis.com/css?family=PT+Serif:400,700\" rel=\"stylesheet\" type=\"text/css\"><div class=\"quote-content\">\\1</div></div>",
+				"<div class=\"quote\"><div class=\"quote-content\">\\1</div></div>",
 				"<div class=\"quote\"><div class=\"quote-title\">{$lnc[266]} \\1</div><div class=\"quote-content\">\\2</div></div>",
 				"makecode('\\1')",
 				"makeurl('\\1')",
