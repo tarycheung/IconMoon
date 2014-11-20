@@ -25,7 +25,7 @@
  */
 
 /* Title */
-$lang["admin"] = "Admin";
+$lang["admin"] = "管理";
 
 /* Breadcrumbs */
 $lang["admin_breadcrumbs_home"] = "Home";

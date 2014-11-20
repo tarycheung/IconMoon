@@ -87,9 +87,6 @@ $sideBarWidth = 12 - $leftSpan;
 				<div id="main">
 
 					<!-- BREADCRUMBS -->
-					<ul class='breadcrumb'>
-						<?php echo $h->breadcrumbs("/"); ?>
-					</ul>
 					
 					<!-- POST BREADCRUMBS -->
 					<?php $h->pluginHook('theme_index_post_breadcrumbs'); ?>

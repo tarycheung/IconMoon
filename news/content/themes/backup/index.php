@@ -1,9 +1,9 @@
 <?php 
 /**
- * name: classic
- * description: Classic default theme for Hotaru CMS
- * version: 0.3
- * author: Nick Ramsay
+ * name: Default
+ * description: Default theme for Hotaru CMS
+ * version: 0.1
+ * author: shibuya246
  * authorurl: http://hotarucms.org/member.php?1-Nick
  *
  * PHP version 5
@@ -22,7 +22,7 @@
  * 
  * @category  Content Management System
  * @package   HotaruCMS
- * @author    Hotaru CMS Team
+ * @author    shibuya246 <admin@hotarucms.org>
  * @copyright Copyright (c) 2009 - 2013, Hotaru CMS
  * @license   http://www.gnu.org/copyleft/gpl.html GNU General Public License
  * @link      http://hotarucms.org/
@@ -45,50 +45,51 @@ if ($h->pluginHook('theme_index_top')) { return false; };
 
 // display header if not overriden by a plugin
 if (!$h->pluginHook('theme_index_header')) { $h->template('header'); }
+
+// check whether we have the fluid setting. If not make false
+$fluid = isset($h->vars['theme_settings']['fullWidth']) ? '-fluid' : '';
+
+// check for span from settings. if none then make default of 9
+$leftSpan = isset($h->vars['theme_settings']['leftSpan']) ? $h->vars['theme_settings']['leftSpan'] : 9;
+
+$width = ($h->sidebars) ? $leftSpan : 12;
+$sideBarWidth = 12 - $leftSpan;
+
 ?>
 
 <body>
 
 	<?php $h->pluginHook('post_open_body'); ?>	
-	<?php if ($announcements) { ?>
+
+        <!-- NAVIGATION -->
+        <?php echo $h->template('navigation'); ?>
+	
+        <?php if ($announcements) { ?>
 		<div id="announcement">
 			<?php $h->pluginHook('announcement_first'); ?>
-			<?php foreach ($announcements as $announcement) { echo $announcement . "<br />"; } ?>
+			<?php foreach ($announcements as $announcement) { echo $announcement . "<br/>"; } ?>
 			<?php $h->pluginHook('announcement_last'); ?>
 		</div>
 	<?php } ?>
-
-	<div class="container_12">
-
-	<div id="navigation" class="grid_12">
-		<!-- NAVIGATION -->
-		<?php echo $h->template('navigation'); ?>
-	</div>
 		
-	<div id="header" class="grid_12">
-		<!-- TITLE & AD BLOCKS -->
-		<div id="hd_title">
-			<h1><a href="<?php echo SITEURL; ?>"><?php echo SITE_NAME; ?></a></h1>
-			<h3 class="subtitle"><?php echo $h->vars['theme_settings']['tagline']; ?>123</h3>
-		</div>
-		<div class="clear"></div>
-	</div>
-		
-	<div id="header_end" class="grid_12">
-		<!-- CATEGORIES, ETC -->
-		<?php $h->pluginHook('header_end'); ?>
-	</div>
+        <div id="header_end">
+            <?php if (!$h->isActive('categories')) echo '<br/>'; ?>
+                <!-- CATEGORIES, ETC --> 
+                <?php $h->pluginHook('header_end'); ?>
+        </div>
+        
+	<div class="container<?php echo $fluid; ?>">
+            <div class="row<?php echo $fluid; ?>">                
 
 		<div id="content">
-
-			<?php $width = ($h->sidebars) ? '8' : '12'; ?>
-			<div id="main_container" class="grid_<?php echo $width; ?>">
+			
+			<div id="main_container" class="span<?php echo $width; ?>">
 				<div id="main">
 
 					<!-- BREADCRUMBS -->
-					<div id='breadcrumbs'>
-						<?php echo $h->breadcrumbs(); ?>
-					</div>
+					<ul class='breadcrumb'>
+						<?php echo $h->breadcrumbs("/"); ?>
+					</ul>
 					
 					<!-- POST BREADCRUMBS -->
 					<?php $h->pluginHook('theme_index_post_breadcrumbs'); ?>
@@ -96,7 +97,7 @@ if (!$h->pluginHook('theme_index_header')) { $h->template('header'); }
 					<!-- FILTER TABS -->
 					<?php $h->pluginHook('theme_index_pre_main'); ?>
 					
-					<!-- MAIN -->
+					<!-- MAIN -->                                                                                  
 					<?php if (!$h->pluginHook('theme_index_main')) { $h->template($h->pageName, 'pages'); } ?>
 
 					<div class="clear"></div>
@@ -105,22 +106,22 @@ if (!$h->pluginHook('theme_index_header')) { $h->template('header'); }
 
 			<!-- SIDEBAR -->
 			<?php if ($h->sidebars) { ?>
-				<div id="sidebar_container" class="grid_4">
-					<div id="sidebar">
-						<?php if (!$h->pluginHook('theme_index_sidebar')) { $h->template('sidebar'); } ?>
-					</div>
-				</div> 
-			<?php } ?>
+                            <div class="span<?php echo $sideBarWidth; ?>">
+                            <?php if (!$h->pluginHook('theme_index_sidebar')) { $h->template('sidebar'); } ?>					
+                            </div>
+                        <?php } ?>
 
 		</div> <!-- close "content" -->
+                
+            </div>
 
-
+            <hr/>
 		<!-- FOOTER -->
-		<div id="footer" class="grid_12">
+		<footer>
 			<?php if (!$h->pluginHook('theme_index_footer')) { $h->template('footer'); } ?>
-		</div>
-
-	</div> <!-- close "container_12" -->
+		</footer>
+        </div>
+	
 
 	<?php $h->pluginHook('pre_close_body'); ?>
 

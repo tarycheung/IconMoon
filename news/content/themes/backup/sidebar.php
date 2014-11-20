@@ -1,7 +1,7 @@
 <?php 
 /**
  * Theme name: default
- * Template name: footer.php
+ * Template name: sidebar.php
  * Template author: shibuya246
  *
  * PHP version 5
@@ -28,10 +28,8 @@
 
 ?>
 
-<?php $h->pluginHook('footer'); ?>
-© Copyright 2014 <a href="http://TuYueZhi.com">图月志</a>，Powered by <a href="http://hotarucms.org" title='<?php echo $h->lang("main_theme_footer_hotaru_link"); ?>'>Hotaru CMS</a>
-
-
-<?php $h->doIncludes('js'); ?>
-
-<?php $h->showQueriesAndTime(); ?>
+<div class="well sidebar-nav">
+    <div id="sidebar">               
+        <?php $h->pluginHook('widget_block', '', array(1)); ?>
+    </div>
+</div>

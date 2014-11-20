@@ -33,7 +33,7 @@ $lang["vote_navigation_latest"] = "Latest";
 
 /* Vote Button */
 $lang["vote_button_vote"] = "Vote!";
-$lang["vote_button_unvote"] = "Un-vote";
+$lang["vote_button_unvote"] = "埋";
 $lang["vote_button_voted"] = "Voted";
 $lang["vote_button_up_link"] = "Up!";
 $lang["vote_button_up"] = "Up";

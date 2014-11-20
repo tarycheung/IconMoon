@@ -29,20 +29,20 @@ $lang["header_meta_description"] = "Hotaru CMS is an open source content managem
 $lang["header_meta_keywords"] = "hotaru, cms, platform, content, open source";
 
 /* Forms */
-$lang['main_form_submit'] = "Submit";
-$lang['main_form_update'] = "Update";
-$lang['main_form_save'] = "Save";
-$lang['main_form_confirm'] = "Confirm";
+$lang['main_form_submit'] = "提交";
+$lang['main_form_update'] = "更新";
+$lang['main_form_save'] = "保存";
+$lang['main_form_confirm'] = "确认";
 $lang['main_form_ok'] = "OK";
-$lang['main_form_next'] = "Next";
-$lang['main_form_edit'] = "Edit";
+$lang['main_form_next'] = "下一步";
+$lang['main_form_edit'] = "编辑";
 
 /* Denied Access */
-$lang['main_access_denied'] = "Sorry, you don't have permission to view this page.";
+$lang['main_access_denied'] = "抱歉，您无权查看该页";
 
 /* Settings */
-$lang["main_settings_saved"] = "Settings Saved.";
-$lang["main_settings_not_saved"] = "Error! Settings not saved";
+$lang["main_settings_saved"] = "设置已经保存";
+$lang["main_settings_not_saved"] = "保存出错……";
 
 /* Users */
 $lang['main_userbase_cookie_error'] = "Error setting cookie. Username not provided.";
@@ -62,30 +62,30 @@ $lang['main_announcement_plugins_disabled'] = "All plugins are currently disable
 $lang['main_announcement_site_closed'] = SITE_NAME . " is currently closed!";
 
 /* Times */
-$lang['main_times_days'] = "days";
-$lang['main_times_day'] = "day";
-$lang['main_times_hours'] = "hrs";
-$lang['main_times_hour'] = "hr";
-$lang['main_times_minutes'] = "mins";
-$lang['main_times_minute'] = "min";
-$lang['main_times_seconds'] = "a few seconds";
-$lang['main_times_secs'] = "s";
+$lang['main_times_days'] = "天";
+$lang['main_times_day'] = "天";
+$lang['main_times_hours'] = "小时";
+$lang['main_times_hour'] = "小时";
+$lang['main_times_minutes'] = "分钟";
+$lang['main_times_minute'] = "分钟";
+$lang['main_times_seconds'] = "刚才";
+$lang['main_times_secs'] = "秒";
 
 /* Pagination */
-$lang['pagination_first'] = "First";
-$lang['pagination_last'] = "Last";
-$lang['pagination_previous'] = "Previous";
-$lang['pagination_next'] = "Next";
+$lang['pagination_first'] = "第一页";
+$lang['pagination_last'] = "最后一页";
+$lang['pagination_previous'] = "上一页";
+$lang['pagination_next'] = "下一页";
 
 /* Errors */
-$lang["main_theme_page_not_found"] = "Page not found";
+$lang["main_theme_page_not_found"] = "页面找不到……";
 $lang['error_csrf'] = "CSRF error. Please try again.";
 
 /* navigation */
-$lang["main_theme_navigation_home"] = "Home";
-$lang["main_theme_navigation_admin"] = "Admin";
-$lang["main_theme_navigation_login"] = "Login";
-$lang["main_theme_navigation_logout"] = "Logout";
+$lang["main_theme_navigation_home"] = "首页";
+$lang["main_theme_navigation_admin"] = "管理";
+$lang["main_theme_navigation_login"] = "登录";
+$lang["main_theme_navigation_logout"] = "登出";
 
 /* login */
 $lang["main_theme_login_username"] = "Username";
@@ -96,7 +96,7 @@ $lang["main_theme_navigation_logout"] = "Logout";
 $lang["main_theme_button_admin_login"] = "Admin Login";
 
 /* breadcrumbs */
-$lang['main_theme_breadcrumbs_home'] = "Home";
+$lang['main_theme_breadcrumbs_home'] = "首页";
 
 /* footer */
 $lang["main_theme_footer_hotaru_link"] = "HotaruCMS.org";
@@ -135,7 +135,7 @@ $lang["main_user_account_update_username_exists"] = "Sorry, that username is alr
 $lang["main_user_account_update_email_exists"] = "Sorry, that email address is already being used";
 $lang["main_user_theme_account"] = "Account";
 $lang["main_user_theme_account_instructions"] = "Update your account information:";
-$lang["main_user_theme_update_username"] = "Username:";
+$lang["main_user_theme_update_username"] = "用户名:";
 $lang["main_user_theme_update_email"] = "Email:";
 $lang["main_user_theme_update_password_instruct"] = "Change your password?";
 $lang["main_user_theme_update_old_password"] = "Old password:";
@@ -144,7 +144,7 @@ $lang["main_user_theme_update_new_password_verify"] = "New password (again):";
 $lang["main_user_theme_update_form_submit"] = "Update";
 
 /* Avatar */
-$lang["main_anonymous"] = "Anonymous";
+$lang["main_anonymous"] = "匿名";
 
 /* Startup */
 $lang["main_welcome"] = "Welcome to Hotaru CMS";
