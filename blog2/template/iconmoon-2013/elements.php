@@ -137,8 +137,7 @@ $elements['displayfooter']=<<<eot
 
 		<div id="inner-footer">
 			<span class="footer-nav">
-				我的: 
-				<a href="http://jjying.com" title="关于我">关于</a>
+				<a href="http://jjying.com" title="关于我">关于我</a>
 				<a href="http://weibo.com/yingjunjiu/" title="我的微博">微博</a>
 				<a href="http://www.zhihu.com/people/jjying" title="我的知乎">知乎</a>
 				<a href="http://www.xiami.com/u/89583" title="我的虾米">虾米</a>
@@ -150,7 +149,7 @@ $elements['displayfooter']=<<<eot
 				<a href="http://www.flickr.com/photos/jjying/" title="我的照片">Flickr</a>
 				<a href="http://jjying.me" title="我的在线收藏夹">Tumblr</a>
 				<a href="http://www.linkedin.com/in/jjying/zh-cn" title="我的简历">Linkedin</a>
-				<a href="http://foursquare.com/jjying" title="我的位置">4Square</a>
+				<a href="https://github.com/JJYing" title="我的 GitHub">GitHub</a>
 			<br />
 			<i class="font-icon icon-asterisk blue"></i>
 			<br />
