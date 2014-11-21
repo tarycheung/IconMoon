@@ -800,44 +800,6 @@ h5{
 	color: #bbb;
 	margin-left: 0.6em;
 }
-.g-search{
-	text-align:left;
-	margin: 10px 0px 30px 0;
-}
-.inner-g-search{
-	position:relative;
-}
-.g-search input{
-	text-align:left;
-	border:none;
-	height:34px;
-	background:none;
-	outline:none;
-}
-.g-search .g-input{
-	font-weight:400;
-	position:absolute;
-	background:none;
-	top:0;
-	left:0;
-	color:#566688;
-	width:150px;
-	padding:0 27px 0 7px;
-	line-height:1;
-	background: url('images/2013/blog.png') no-repeat 0 -184px;
-}
-.g-search .g-input:hover{
-	background-position:0 -224px;
-	cursor:text;
-}
-.g-search .g-input:focus{
-	background-position:0 -264px;
-	cursor:text;
-}
-.g-search .g-btn{
-	cursor:pointer;
-	width:1px;
-}
 #sidebar_latest-comments ul#ds-recent-comments li.ds-comment{
 	background:none;
 	border-top: none;

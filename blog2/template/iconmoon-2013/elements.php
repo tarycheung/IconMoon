@@ -96,22 +96,6 @@ $elements['displayside']=<<<eot
 
 				{section_side_components}
 
-					<div class="g-search">
-						<div class="inner-g-search">
-							<!--Google-->
-							<form method="get" action="http://www.google.com/search">
-							<input type="text" name="q" class="g-input"/>
-							<input type="submit" name="btnG" value=" " class="g-btn" />
-							<input type="hidden" name="ie" value="UTF-8" />
-							<input type="hidden" name="oe" value="UTF-8" />
-							<input type="hidden" name="hl" value="en" />
-							<input type="hidden" name="domains" value="iconmoon.com" />
-							<input type="hidden" name="sitesearch" value="iconmoon.com" />
-							</form>
-							<!--Google-->
-						</div>
-					</div>
-
 
 			</div>
 		</div>
