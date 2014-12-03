@@ -17,8 +17,8 @@ $elements['header']=<<<eot
 		<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
 		<script src='../js/nprogress.js'></script>
 		<script type="text/javascript" src="../js/waypoints.min.js"></script>
-		<!-- <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'> -->
-		<script type="text/javascript" src="//use.typekit.net/dvo8acq.js"></script>
+		<!-- <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'> 
+		<script type="text/javascript" src="//use.typekit.net/dvo8acq.js"></script>-->
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		{ajax_js}
 		{extraheader}
