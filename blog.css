@@ -12,7 +12,7 @@ body{
 	-webkit-font-smoothing: antialiased;
 	font-size: 62.5%;
 /*	font-family: 'fira-sans-1','fira-sans-2', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;*/
-	font-family: 'Myriad Pro', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
+	font-family: 'Myriad Pro', 'Avenir Next', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
 	text-align: center;
 	color: #30384c;
 	line-height: 1;
@@ -72,7 +72,7 @@ acronym{
 }
 h2, h3, h5, h6{
 /*	font-family: 'adelle-sans-1','adelle-sans-2', 'Myriad Pro', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', '黑体', sans-serif;*/
-	font-family: 'Myriad Pro', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
+	font-family: 'Myriad Pro', 'Avenir Next', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
 }
 /*Main*/
 #wrapper{
