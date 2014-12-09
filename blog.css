@@ -8,6 +8,8 @@ http://jjying.com*/
 	outline: none;
 }
 body{
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
 	font-size: 62.5%;
 /*	font-family: 'fira-sans-1','fira-sans-2', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;*/
 	font-family: 'Myriad Pro', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
