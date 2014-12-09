@@ -55,10 +55,6 @@ var shutajax={$shutajax};
 <script type="text/javascript" src="images/js/ajax.js"></script>
 <script type="text/javascript" src="images/js/adminmenu.js"></script>
 
-<script type="text/javascript" src="//use.typekit.net/nad7iie.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Merriweather:400,700' rel='stylesheet' type='text/css'>
 
 $editorjs
 <!--plugin_header-->
