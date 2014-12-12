@@ -190,11 +190,12 @@ if ($job=='archivelist') {
 		</div>
 		<div class=\"main-counters infographics-total-entries\">
 			<div class=\"counters-numbers\">{$days}</div>
-			<div class=\"counters-desc\">天前建站<span><i class=\"font-icon icon-asterisk\"></i> 平均 {$averageposts} 天一篇博文</span></div>
+			<div class=\"counters-desc\">天前建站<span><i class=\"font-icon icon-asterisk\"></i> 平均每 {$averageposts} 天一篇博文</span></div>
 		</div>
 	</div>
 
-	<div class=\"archive-list\">";
+	<div class=\"archive-list\">
+	<script type=\"text/javascript\" src=\"http://cdn.amcharts.com/lib/3/amcharts.js\"></script><script type=\"text/javascript\" src=\"http://cdn.amcharts.com/lib/3/serial.js\"></script>";
 	
 	if (is_array($allvaliddates)) {
 		foreach ($allvaliddates as $time) {
@@ -213,7 +214,7 @@ if ($job=='archivelist') {
 				$yeararchivecount+=$resultdates[$y][$j];
 			}
 			
-			$result.="<div class=\"archive-year\">{$y} 年<span class=\"archive-year-count\">{$yeararchivecount} 篇博文</span></div>";
+			$result.="<div class=\"archive-year-$y\"><div class=\"archive-year\">{$y} 年<span class=\"archive-year-count\">{$yeararchivecount} 篇博文</span></div>";
 			
 $yearhot=$blog->getgroupbyquery("SELECT * FROM `{$db_prefix}blogs` WHERE year(from_unixtime(pubtime)) =$y ORDER BY `views` DESC LIMIT 0 , 7");
 if (is_array($yearhot)) {
@@ -232,42 +233,40 @@ $viewhows.="</ol><div class=\"clear\"></div>";
 $viewhows='No view!';
 }
 			$result.=$viewhows;
-			
+			$montharticlenum=array("0","0","0","0","0","0","0","0","0","0","0","0");
 			for ($j=12; $j>0; $j--) {
 				$resultdates[$y][$j]=floor($resultdates[$y][$j]);
-				if ($resultdates[$y][$j]==0)
-				$result.="<div class=\"archive-month archive-empty\"><a href=\"".getlink_archive($j, $y)."\" rel=\"noindex,nofollow\">{$j}<strong> 月</strong></a></div>"; 
-				else {
-					$result.="<div class=\"archive-month\"><a href=\"".getlink_archive($j, $y)."\" rel=\"noindex,nofollow\"><strong>{$j}</strong> 月<span class=\"archive-desc\"> · {$resultdates[$y][$j]} 篇</span></a></div>";
-				}
-			}$result.="<br /><br />
-			<script type=\"text/javascript\" src=\"http://cdn.amcharts.com/lib/3/amcharts.js\"></script><script type=\"text/javascript\" src=\"http://cdn.amcharts.com/lib/3/serial.js\"></script>
+				$montharticlenum[$j-1]=$resultdates[$y][$j];
+			}$result.="<br />
 			<script type=\"text/javascript\">
-				AmCharts.makeChart(\"chartdiv\",
+				AmCharts.makeChart(\"chartdiv-$y\",
 					{
 						\"type\": \"serial\",
 						\"pathToImages\": \"http://cdn.amcharts.com/lib/3/images/\",
 						\"categoryField\": \"category\",
+						\"fontFamily\": \"Lato, Hiragino Sans GB, Microsoft Yahei, 微软雅黑, sans-serif\",
+						\"autoMarginOffset\": 0,
+						\"columnWidth\": 0.8,
+						\"marginBottom\": 0,
+						\"marginLeft\": 0,
+						\"marginRight\": 0,
+						\"marginTop\": 10,
 						\"colors\": [
-							\"#FF0066\",
+							\"#e8eaed\",
 							\"#FCD202\",
-							\"#B0DE09\",
-							\"#0D8ECF\",
-							\"#2A0CD0\",
-							\"#CD0D74\",
-							\"#CC0000\",
-							\"#00CC00\",
-							\"#0000CC\",
-							\"#DDDDDD\",
-							\"#999999\",
-							\"#333333\",
-							\"#990000\"
 						],
-						\"startDuration\": 1,
+						\"startDuration\": 0.8,
+						
 						\"handDrawScatter\": 6,
 						\"handDrawThickness\": 8,
+						\"startEffect\": \"bounce\",
 						\"categoryAxis\": {
-							\"gridPosition\": \"start\"
+							\"axisAlpha\": 0.3,
+							\"color\": \"#7987a8\",
+							\"titleColor\":\"#7987a8\",
+							\"gridAlpha\": 0.04,
+							\"gridPosition\": \"start\",
+							\"gridAlpha\": 0
 						},
 						\"trendLines\": [],
 						\"graphs\": [
@@ -288,76 +287,80 @@ $viewhows='No view!';
 								\"id\": \"ValueAxis-1\",
 								\"stackType\": \"regular\",
 								\"title\": \"博文数\",
-								\"titleBold\": false
+								\"position\": \"right\",
+								\"titleBold\": false,
+								\"showLastLabel\": false,
+								\"axisAlpha\": 0.1,
+								\"color\": \"#7987a8\",
+								\"titleColor\":\"#7987a8\",
+								\"gridAlpha\": 0.04
 							}
 						],
 						\"allLabels\": [],
-						\"balloon\": {},
-						\"legend\": {
-							\"useGraphSettings\": true
+						\"balloon\": {
+							\"borderAlpha\": 0,
+							\"borderColor\":\"#0157ae\",
+							\"fillColor\": \"#0157ae\",
+							\"fillAlpha\": 0.92,
+							\"verticalPadding\": 0,
+							\"color\": \"#ffffff\",
+							\"shadowAlpha\": 0
 						},
-						\"titles\": [
-							{
-								\"id\": \"Title-1\",
-								\"size\": 15,
-								\"text\": \"Chart Title\"
-							}
-						],
 						\"dataProvider\": [
 							{
 								\"category\": \"一月\",
-								\"column-1\": 8
+								\"column-1\": $montharticlenum[0]
 							},
 							{
 								\"category\": \"二月\",
-								\"column-1\": 6
+								\"column-1\": $montharticlenum[1]
 							},
 							{
 								\"category\": \"三月\",
-								\"column-1\": 2
+								\"column-1\": $montharticlenum[2]
 							},
 							{
 								\"category\": \"四月\",
-								\"column-1\": \"3\"
+								\"column-1\": $montharticlenum[3]
 							},
 							{
 								\"category\": \"五月\",
-								\"column-1\": \"1\"
+								\"column-1\": $montharticlenum[4]
 							},
 							{
 								\"category\": \"六月\",
-								\"column-1\": \"4\"
+								\"column-1\": $montharticlenum[5]
 							},
 							{
 								\"category\": \"七月\",
-								\"column-1\": \"2\"
+								\"column-1\": $montharticlenum[6]
 							},
 							{
 								\"category\": \"八月\",
-								\"column-1\": \"5\"
+								\"column-1\": $montharticlenum[7]
 							},
 							{
 								\"category\": \"九月\",
-								\"column-1\": \"1\"
+								\"column-1\":$montharticlenum[8]
 							},
 							{
 								\"category\": \"十月\",
-								\"column-1\": \"2\"
+								\"column-1\": $montharticlenum[9]
 							},
 							{
 								\"category\": \"十一月\",
-								\"column-1\": \"4\"
+								\"column-1\": $montharticlenum[10]
 							},
 							{
 								\"category\": \"十二月\",
-								\"column-1\": \"1\"
+								\"column-1\": $montharticlenum[11]
 							}
 						]
 					}
 				);
 			</script>
 			
-			<div id=\"chartdiv\" style=\"width: 100%; height: 400px; background-color: #FFFFFF;\" ></div>
+			<div id=\"chartdiv-$y\" class=\"archive-month-chart\" style=\"width: 100%; height: 160px; background-color: #FFFFFF;\" ></div></div>
 			
 			";
 			$totalarchivecount+=$yeararchivecount;

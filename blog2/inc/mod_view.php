@@ -169,6 +169,7 @@ if ($job=='archivelist') {
 	$allvaliddates=$blog->getarraybyquery("SELECT `pubtime` FROM `{$db_prefix}blogs` ORDER BY `pubtime` DESC");
 	$allvaliddates=$allvaliddates['pubtime'];
 	$resultdates=array();
+	$dayarticlenum=array();
 	$totalarchivecount=0;	
 	
 // Archive Page Infographics
@@ -177,7 +178,7 @@ if ($job=='archivelist') {
 	$averageposts=floor($days/$statistics['entries']*10)/10;
 	$totalvisits=floor(($statistics['total'])/10000);
 	$totalvisits2=floor(($totalvisits*10/8)/2.5)/10;
-	$totalwords=floor($statistics['entries']*1500/660000*10)/10;
+	$totalwords=floor($statistics['entries']*1500/660000*10)/10;	     
 	$result="
 	<div class=\"archive-infographics\">
 		<div class=\"main-counters infographics-total-entries\">
@@ -190,18 +191,19 @@ if ($job=='archivelist') {
 		</div>
 		<div class=\"main-counters infographics-total-entries\">
 			<div class=\"counters-numbers\">{$days}</div>
-			<div class=\"counters-desc\">天前建站<span><i class=\"font-icon icon-asterisk\"></i> 平均 {$averageposts} 天一篇博文</span></div>
+			<div class=\"counters-desc\">天前建站<span><i class=\"font-icon icon-asterisk\"></i> 平均每 {$averageposts} 天一篇博文</span></div>
 		</div>
 	</div>
 
-	<div class=\"archive-list\">
-	<script type=\"text/javascript\" src=\"http://cdn.amcharts.com/lib/3/amcharts.js\"></script><script type=\"text/javascript\" src=\"http://cdn.amcharts.com/lib/3/serial.js\"></script>";
+	<div class=\"archive-list\">";
 	
 	if (is_array($allvaliddates)) {
 		foreach ($allvaliddates as $time) {
 			$y=gmdate('Y', $time+3600*$config['timezone']);
 			$m=gmdate('n', $time+3600*$config['timezone']);
+			$d=gmdate('d', $time+3600*$config['timezone']);
 			$resultdates[$y][$m]+=1;
+			$dayarticlenum[$y][$m][$d]+=1;
 		}
 
 		$uniquedates=array_keys($resultdates);
@@ -233,136 +235,53 @@ $viewhows.="</ol><div class=\"clear\"></div>";
 $viewhows='No view!';
 }
 			$result.=$viewhows;
-			$montharticlenum=array("0","0","0","0","0","0","0","0","0","0","0","0");
-			for ($j=12; $j>0; $j--) {
-				$resultdates[$y][$j]=floor($resultdates[$y][$j]);
-				$montharticlenum[$j-1]=$resultdates[$y][$j];
-			}$result.="<br />
-			<script type=\"text/javascript\">
-				AmCharts.makeChart(\"chartdiv-$y\",
-					{
-						\"type\": \"serial\",
-						\"pathToImages\": \"http://cdn.amcharts.com/lib/3/images/\",
-						\"categoryField\": \"category\",
-						\"fontFamily\": \"Lato, Hiragino Sans GB, Microsoft Yahei, 微软雅黑, sans-serif\",
-						\"autoMarginOffset\": 0,
-						\"columnWidth\": 0.8,
-						\"marginBottom\": 0,
-						\"marginLeft\": 0,
-						\"marginRight\": 0,
-						\"marginTop\": 10,
-						\"colors\": [
-							\"#e8eaed\",
-							\"#FCD202\",
-						],
-						\"startDuration\": 0.8,
-						
-						\"handDrawScatter\": 6,
-						\"handDrawThickness\": 8,
-						\"startEffect\": \"bounce\",
-						\"categoryAxis\": {
-							\"axisAlpha\": 0.3,
-							\"color\": \"#7987a8\",
-							\"titleColor\":\"#7987a8\",
-							\"gridAlpha\": 0.04,
-							\"gridPosition\": \"start\",
-							\"gridAlpha\": 0
-						},
-						\"trendLines\": [],
-						\"graphs\": [
-							{
-								\"balloonText\": \"[[category]]博文数：[[value]]\",
-								\"cornerRadiusTop\": -4,
-								\"fillAlphas\": 1,
-								\"id\": \"AmGraph-1\",
-								\"title\": \"博文数\",
-								\"type\": \"column\",
-								\"valueField\": \"column-1\",
-								\"visibleInLegend\": false
-							}
-						],
-						\"guides\": [],
-						\"valueAxes\": [
-							{
-								\"id\": \"ValueAxis-1\",
-								\"stackType\": \"regular\",
-								\"title\": \"博文数\",
-								\"position\": \"right\",
-								\"titleBold\": false,
-								\"showLastLabel\": false,
-								\"axisAlpha\": 0.1,
-								\"color\": \"#7987a8\",
-								\"titleColor\":\"#7987a8\",
-								\"gridAlpha\": 0.04
-							}
-						],
-						\"allLabels\": [],
-						\"balloon\": {
-							\"borderAlpha\": 0,
-							\"borderColor\":\"#0157ae\",
-							\"fillColor\": \"#0157ae\",
-							\"fillAlpha\": 0.92,
-							\"verticalPadding\": 0,
-							\"color\": \"#ffffff\",
-							\"shadowAlpha\": 0
-						},
-						\"dataProvider\": [
-							{
-								\"category\": \"一月\",
-								\"column-1\": $montharticlenum[0]
-							},
-							{
-								\"category\": \"二月\",
-								\"column-1\": $montharticlenum[1]
-							},
-							{
-								\"category\": \"三月\",
-								\"column-1\": $montharticlenum[2]
-							},
-							{
-								\"category\": \"四月\",
-								\"column-1\": $montharticlenum[3]
-							},
-							{
-								\"category\": \"五月\",
-								\"column-1\": $montharticlenum[4]
-							},
-							{
-								\"category\": \"六月\",
-								\"column-1\": $montharticlenum[5]
-							},
-							{
-								\"category\": \"七月\",
-								\"column-1\": $montharticlenum[6]
-							},
-							{
-								\"category\": \"八月\",
-								\"column-1\": $montharticlenum[7]
-							},
-							{
-								\"category\": \"九月\",
-								\"column-1\":$montharticlenum[8]
-							},
-							{
-								\"category\": \"十月\",
-								\"column-1\": $montharticlenum[9]
-							},
-							{
-								\"category\": \"十一月\",
-								\"column-1\": $montharticlenum[10]
-							},
-							{
-								\"category\": \"十二月\",
-								\"column-1\": $montharticlenum[11]
-							}
-						]
+			$result.='<div class="archive-summary"><div class="archive-summary-header"><div>Jan</div><div>Feb</div><div>Mar</div><div>Apr</div><div>May</div><div>Jun</div><div>Jul</div><div>Aug</div><div>Sep</div><div>Oct</div><div>Nov</div><div>Dec</div></div>';
+			$yeardaynum=1;
+			for ($j=1; $j<13; $j++) {
+				switch ($j) {
+					case 2:
+						$monthdaynum=29;
+						break;
+					case 4:
+						$monthdaynum=31;
+						break;
+					case 6:
+						$monthdaynum=31;
+						break;
+					case 9:
+						$monthdaynum=31;
+						break;
+					case 11:
+						$monthdaynum=31;
+						break;
+					case 12:
+						$monthdaynum=31;
+						break;
+					default:
+						$monthdaynum=32;
+				}
+				for ($k=1; $k<$monthdaynum; $k++) {
+					$currentdaynum=$dayarticlenum[$y][$j][$k];
+					$p=($j-1)*31+$k;
+					if (($yeardaynum-1)%7==0 and $yeardaynum!=1) {
+						$result.='</div><div class="archive-summary-month">';
 					}
-				);
-			</script>
+					if ($yeardaynum==1) {
+						$result.='<div class="archive-summary-month">';
+					}
+
+					if ($currentdaynum>0) {
+						$result.='<a class="archive-summary-day archive-summary-day-1" title="" href="#"></a>';
+					}
+					else {
+						$result.='<a class="archive-summary-day archive-summary-day-empty" title="" href="#"></a>';
+					}
+					$yeardaynum+=1;
+				}
+			}
+			$result.='<div class="clear"></div></div></div></div>';
 			
-			<div id=\"chartdiv-$y\" class=\"archive-month-chart\" style=\"width: 100%; height: 160px; background-color: #FFFFFF;\" ></div></div>
 			
-			";
 			$totalarchivecount+=$yeararchivecount;
 			
 		}
