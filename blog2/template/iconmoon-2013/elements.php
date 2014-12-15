@@ -118,9 +118,8 @@ eot;
 $elements['displayfooter']=<<<eot
 	</div><div class="clear"></div>
 	<div id="footer">
-
 		<div id="inner-footer">
-			<span class="footer-nav">
+				<span class="footer-nav">
 				<a href="http://jjying.com" title="关于我">关于我</a>
 				<a href="http://weibo.com/yingjunjiu/" title="我的微博">微博</a>
 				<a href="http://www.zhihu.com/people/jjying" title="我的知乎">知乎</a>
