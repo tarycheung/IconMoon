@@ -980,9 +980,9 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 }
 /*Drop Shadow*/
 .drop-shadow img{
-	margin:2px 0 5px;
+	margin:.1em 0 .5em;
 	border: none;
-   	box-shadow:0 5px 13px #dadada;
+   	box-shadow:0 .7em 1em #dadada;
    	background: #e4e4e4;
 }
 .drop-shadow a img{
