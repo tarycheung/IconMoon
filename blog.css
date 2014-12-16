@@ -363,8 +363,8 @@ h2 a:hover{
 	z-index: 5;
 }
 .textbox-content iframe{
-	margin: 0 auto;
-	box-shadow: 0 5px 13px #bfbfbf;
+	margin:.1em 0 .5em;
+   	box-shadow:0 .7em 1em #dadada;
 	background: #e4e4e4;	
 }
 .textbox-content p[align="center"]{
@@ -698,7 +698,7 @@ input.button,
 .pages a,
 .blog-bottom-link a{
 	cursor:pointer;
-	padding:3px 9px 3px;
+	padding:.4em .8em .2em;
 	font-size:1em;
 	font-weight:700;
 	border-radius: 2em;
@@ -803,6 +803,10 @@ h5{
 .blog-sidebar-desc{
 	color: #a6aab3;
 	margin-left: 0.6em;
+}
+.blog-sidebar-friends-all{
+	padding: .6em 0 0;
+	display: block;
 }
 #sidebar_latest-comments ul#ds-recent-comments li.ds-comment{
 	background:none;
@@ -964,7 +968,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	display:inline;
 	text-shadow: none;
 	font-weight: 700;
-	padding: .15em .5em;
+	padding:.4em .8em .2em;
 	text-decoration:none;
 	border-radius: 2em;
 	-webkit-transition: all .2s ease-in-out 0s;
