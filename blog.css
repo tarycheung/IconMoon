@@ -1000,123 +1000,6 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 .drop-shadow a:hover img{
    	box-shadow:0 5px 13px #9f9f9f;
 }
-/*~Archive*/
-#pagelocation-archive .textbox-title{
-	display: none;
-}
-.archive-list{
-	clear: both;
-}
-.archive-page-desc{
-	font-weight: 400;
-}
-.archive-year{
-	padding: 1em 1em 0 0;
-	text-align: center;
-	font-size: 2.5em;
-	line-height: 0.8em;
-	vertical-align: middle;
-	color: #0157ae;
-}
-.archive-year-2004{
-	display: none;
-}
-.archive-year-count{
-	vertical-align: middle;
-	color: #fff;
-	font-size: 0.3em;
-	margin-left: 2em;
-	background: #0157ae;
-	padding: .2em .4em;
-}
-.archive-month-chart{
-	margin-bottom: 4em;
-}
-.archive-month-chart a{
-	display: none !important;
-}
-.archive-hot{
-	font-size: 0.875em;
-	margin: 20px 0 0.5em 2em;
-	display: block;
-	list-style-position: inside;
-}
-.archive-hot li{
-	float: left;
-	margin: 0 2.5em 0 0em;
-}
-.archive-hot li a{
-	font-weight: 400;
-}
-.archive-summary{
-	clear: both;
-	display: block;
-	width: 95%;
-	margin: 0.2em 0 9em;
-}
-.archive-summary-header{
-	width: 100%;
-	height: 0.2em;
-	display: block;
-}
-.archive-summary-header div{
-	float: left;
-	width: 8.33%;
-	text-align: center;
-	font-size: 0.7em;
-	display: inline-block;
-}
-.archive-summary-month{
-	width: 1.92%;
-	float: left;
-	height: 6em;
-}
-.archive-summary-day{
-	width: 80%;
-	height: 10%;
-	display: inline-block;
-	background: #dce0e8;
-	margin: 0.1em 0;
-}
-.archive-summary-day-1{
-	background: #a8aebd;
-}
-.archive-summary a{
-	border: none;
-}
-.archive-summary a:hover{
-	border: none;
-}
-/*~Infographics*/
-.archive-infographics{
-	clear: both;
-	display: block;
-	width: 100%;
-	text-align: left;
-}
-.main-counters{
-	float: left;
-	width: 33%;
-	padding: 0 0 1.5em;
-	border-bottom: 1px dotted #dce;
-	margin: 0 0 1em;
-}
-.counters-numbers{
-	font-weight: 700;
-	line-height: 1.1;
-	font-size: 3.5em;
-	display: inline;
-}
-.counters-desc{
-	display: inline;
-}
-.counters-desc span{
-	display: block;
-	font-size: 0.75em;
-	color: #7987A8;
-	text-align: left;
-	line-height: 1.25;
-}
 /*~Loading Bar*/
 #nprogress {
   pointer-events: none;
@@ -1369,7 +1252,10 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	}
 	.counters-numbers{
 		font-size: 2em;
-	}	
+	}
+	.archive-summary-month{
+		height: 4em;
+	}
 }
 
 @media screen and (max-width: 520px) {

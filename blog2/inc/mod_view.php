@@ -178,8 +178,9 @@ if ($job=='archivelist') {
 	$averageposts=floor($days/$statistics['entries']*10)/10;
 	$totalvisits=floor(($statistics['total'])/10000);
 	$totalvisits2=floor(($totalvisits*10/8)/2.5)/10;
-	$totalwords=floor($statistics['entries']*1500/660000*10)/10;	     
+	$totalwords=floor($statistics['entries']*1500/660000*10)/10;	
 	$result="
+	<link rel=\"stylesheet\" rev=\"stylesheet\" href=\"../../../archive.css\" type=\"text/css\" media=\"all\" />
 	<div class=\"archive-infographics\">
 		<div class=\"main-counters infographics-total-entries\">
 			<div class=\"counters-numbers\">{$statistics['entries']}</div>
@@ -271,10 +272,10 @@ $viewhows='No view!';
 					}
 
 					if ($currentdaynum>0) {
-						$result.='<a class="archive-summary-day archive-summary-day-1" title="" href="#"></a>';
+						$result.="<a class='archive-summary-day archive-summary-day-1' title='$y 年 $j 月 $k 日' href='#'></a>";
 					}
 					else {
-						$result.='<a class="archive-summary-day archive-summary-day-empty" title="" href="#"></a>';
+						$result.='<a class="archive-summary-day archive-summary-day-empty" title="" href=""></a>';
 					}
 					$yeardaynum+=1;
 				}
