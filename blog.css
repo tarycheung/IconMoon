@@ -11,7 +11,6 @@ body{
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	font-size: 62.5%;
-/*	font-family: 'fira-sans-1','fira-sans-2', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;*/
 	font-family: 'Myriad Pro', 'TrebuchetMS', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
 	text-align: center;
 	color: #30384c;
@@ -1130,7 +1129,6 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	.pages{
 		margin-top: 20px;
 	}
-
 	#sidebar{
 		float:right;
 		width: 20%;
@@ -1144,11 +1142,6 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		margin-left: 0;
 		line-height: 1.1em;
 		padding-bottom: 0.5em;
-	}
-	.counters-desc{
-		clear: both;
-		float: none;
-		display: block;
 	}
 }
 @media screen and (max-width: 978px) {
@@ -1216,9 +1209,6 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		margin-top:30px;
 		margin-bottom: 10px;
 	}
-	.g-search{
-		display: none;
-	}
 	h5 {
 		border: none;
 		border-bottom: 0.3em solid #0157ae;
@@ -1249,12 +1239,6 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	}
 	#content{
 		margin-top: 35px;
-	}
-	.counters-numbers{
-		font-size: 2em;
-	}
-	.archive-summary-month{
-		height: 4em;
 	}
 }
 
@@ -1299,7 +1283,6 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		width: 100%;
 	}
 	.footer-nav,
-	.g-search,
 	#ds-thread .ds-powered-by,
 	#ds-thread .ds-account-control,
 	.linkdesc{
@@ -1502,27 +1485,6 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	#pagelocation-archive .textbox-title h2{
 		margin-bottom: 1em;
 	}
-	.archive-year{
-		padding: 0;
-		font-size: 1.5em;
-	}
-	.archive-desc{
-		display: none;
-	}
-	.archive-hot{
-		font-size: 0.875em;
-		margin: .4em 0 .5em;
-		width: 100%;
-		display: block;
-		list-style-position: inside;
-	}
-	.archive-hot li{
-		float: none;
-		margin: 0;
-	}
-	.archive-month a strong{
-		font-size: 1.5em;
-	}
 	.textbox-extra .related-item{
 		width: 100%;
 		text-align: center;
@@ -1555,9 +1517,6 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	#nprogress{
 		visibility: hidden;
 	}
-	.counters-numbers{
-		font-size: 2em;
-	}
 	.drop-shadow img{
 		box-shadow: none;
 	}
@@ -1568,8 +1527,5 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	}
 	#sidebar_sidebarbanner img{
 		margin-top: 1.5em;
-	}
-	.counters-desc span{
-		display: none;
 	}
 }
