@@ -166,16 +166,16 @@ if ($job=='userlist') {
 }
 
 if ($job=='archivelist') {
-	$allvaliddates=$blog->getarraybyquery("SELECT `pubtime` FROM `{$db_prefix}blogs` ORDER BY `pubtime` DESC");
+	$allvaliddates=$blog->getarraybyquery("SELECT `pubtime` FROM `{$db_prefix}blogs` WHERE property='0' ORDER BY `pubtime` DESC");
 	$allvaliddates=$allvaliddates['pubtime'];
 	$resultdates=array();
 	$dayarticlenum=array();
-	$totalarchivecount=0;	
+	$dayhot=array();
 	
 // Archive Page Infographics
 	$the_current_time=time();
-	$days=floor(($the_current_time-1154998861)/(24*60*60));
-	$averageposts=floor($days/$statistics['entries']*10)/10;
+	$totaldays=floor(($the_current_time-1154998861)/(24*60*60));
+	$averageposts=floor($totaldays/$statistics['entries']*10)/10;
 	$totalvisits=floor(($statistics['total'])/10000);
 	$totalvisits2=floor(($totalvisits*10/8)/2.5)/10;
 	$totalwords=floor($statistics['entries']*1500/660000*10)/10;	
@@ -191,7 +191,7 @@ if ($job=='archivelist') {
 			<div class=\"counters-desc\">万次访问<span><i class=\"font-icon icon-asterisk\"></i> 访客需要装 {$totalvisits2} 个上海体育场</span></div>
 		</div>
 		<div class=\"main-counters infographics-total-entries\">
-			<div class=\"counters-numbers\">{$days}</div>
+			<div class=\"counters-numbers\">{$totaldays}</div>
 			<div class=\"counters-desc\">天前建站<span><i class=\"font-icon icon-asterisk\"></i> 平均每 {$averageposts} 天一篇博文</span></div>
 		</div>
 	</div>
@@ -200,26 +200,24 @@ if ($job=='archivelist') {
 	
 	if (is_array($allvaliddates)) {
 		foreach ($allvaliddates as $time) {
-			$y=gmdate('Y', $time+3600*$config['timezone']);
-			$m=gmdate('n', $time+3600*$config['timezone']);
-			$d=gmdate('d', $time+3600*$config['timezone']);
-			$resultdates[$y][$m]+=1;
-			$dayarticlenum[$y][$m][$d]+=1;
+			$y1=gmdate('Y', $time+3600*$config['timezone']);
+			$m1=gmdate('n', $time+3600*$config['timezone']);
+			$d1=gmdate('d', $time+3600*$config['timezone']);
+			$resultdates[$y1][$m1]+=1;
+			$dayarticlenum[$y1][$m1][$d1]+=1;
 		}
-
 		$uniquedates=array_keys($resultdates);
 		for ($i=0; $i<count($uniquedates); $i++) {
 			$y=$uniquedates[$i];
 			$yeararchivecount=0;		
-			for ($j=12; $j>0; $j--) {
-
+			for ($j=1; $j<13; $j++) {
 				$resultdates[$y][$j]=floor($resultdates[$y][$j]);
 				$yeararchivecount+=$resultdates[$y][$j];
 			}
 			
 			$result.="<div class=\"archive-year-$y\"><div class=\"archive-year\">{$y} 年<span class=\"archive-year-count\">{$yeararchivecount} 篇博文</span></div>";
 			
-$yearhot=$blog->getgroupbyquery("SELECT * FROM `{$db_prefix}blogs` WHERE year(from_unixtime(pubtime)) =$y ORDER BY `views` DESC LIMIT 0 , 7");
+$yearhot=$blog->getgroupbyquery("SELECT * FROM `{$db_prefix}blogs` WHERE year(from_unixtime(pubtime)) =$y and property='0' ORDER BY `views` DESC LIMIT 0 , 7");
 if (is_array($yearhot)) {
 $viewhows='<ol class="archive-hot">';
 foreach ($yearhot as $onehotview) {
@@ -233,7 +231,7 @@ $viewhows.="<li><a href=\"read.php?".$onehotview['blogid']."\">{$onehotview['tit
 }
 $viewhows.="</ol><div class=\"clear\"></div>";
 } else {
-$viewhows='No view!';
+$viewhows='今年才过了几天，没内容呢亲，饶了博主吧~';
 }
 			$result.=$viewhows;
 			$result.='<div class="archive-summary"><div class="archive-summary-header"><div>Jan</div><div>Feb</div><div>Mar</div><div>Apr</div><div>May</div><div>Jun</div><div>Jul</div><div>Aug</div><div>Sep</div><div>Oct</div><div>Nov</div><div>Dec</div></div>';
@@ -256,40 +254,49 @@ $viewhows='No view!';
 						$monthdaynum=31;
 						break;
 					case 12:
-						$monthdaynum=31;
+						$monthdaynum=31;    //	最后一天直接去掉保持整齐
 						break;
 					default:
 						$monthdaynum=32;
 				}
 				for ($k=1; $k<$monthdaynum; $k++) {
 					$currentdaynum=$dayarticlenum[$y][$j][$k];
-					$p=($j-1)*31+$k;
 					if (($yeardaynum-1)%7==0 and $yeardaynum!=1) {
-						$result.='</div><div class="archive-summary-month">';
+						$result.='</div><div class="s-m">';
 					}
 					if ($yeardaynum==1) {
-						$result.='<div class="archive-summary-month">';
+						$result.='<div class="s-m">';
 					}
 
 					if ($currentdaynum>0) {
-						$result.="<a class='archive-summary-day archive-summary-day-1' title='$y 年 $j 月 $k 日' href='#'></a>";
+						if ($currentdaynum>2) {
+							$summarydaynum=3;
+						}
+						else {
+							$summarydaynum=$currentdaynum;
+						}
+						$result.="<a class='d$summarydaynum' title='$j 月 $k 日 • $currentdaynum 篇博文' href='index.php?go=showday_$y-$j-$k'></a>";
 					}
 					else {
-						$result.='<a class="archive-summary-day archive-summary-day-empty" title="" href=""></a>';
+						$timestampforthisday = mktime(0,0,0,$j,$k,$y);
+
+						if ($timestampforthisday < time()) {
+							$result.="<a class='d0'></a>";
+						}
+						else {
+							$result.='<a class="df"></a>';
+						}
 					}
 					$yeardaynum+=1;
 				}
 			}
 			$result.='<div class="clear"></div></div></div></div>';
 			
-			
-			$totalarchivecount+=$yeararchivecount;
-			
 		}
 	}
 	
 	
-	$result.="</div>";
+	$result.='</div>';
 	$archivepagetitle="";
 	$section_body_main=$t->set('contentpage', array('title'=>$archivepagetitle, 'contentbody'=>$result));
 	announcebar();
