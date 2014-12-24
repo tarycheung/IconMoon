@@ -336,14 +336,13 @@ h1{
 	text-decoration:none;
 }
 h2{
-	margin:10px 0 3px;
+	margin:10px 0 0px;
 	display:inline;
 	float:left;
 	padding-right:30px;
 	font-size: 2.1em;
 	color:#394259;
 	font-weight:700; 
-	z-index:50;
 }
 h2 a{
 	color:#394259;
@@ -354,11 +353,11 @@ h2 a:hover{
 .textbox-content{
 	color: #4a4f5e;
 	background: #fff;
-	margin: 6px 0 0.7em 0;
+	margin: 0 0 0.7em;
 	clear: both;
 	line-height: 1.75em;
 	position: relative;
-	padding-top: 14px;
+	padding-top: .4em;
 	z-index: 5;
 }
 .textbox-content iframe{
@@ -613,6 +612,7 @@ h3,h6{
 	border: none !important;
 	border-radius: 0 !important;
 	-webkit-transition: all .15s ease-in-out 0s;
+	-moz-transition: all .15s ease-in-out 0s;
 	width: 5em !important;
 	height: 2em !important;
 }
@@ -630,7 +630,7 @@ h3,h6{
 .code,
 .quote {
 	margin:0.25em 1.5em 0 0em;
-	font-size:1em;
+	font-size:1.33em;
 	line-height: 1.7em;
 	font-weight: 400;
 	border-left: 0.3em solid #0157ae;
@@ -639,7 +639,7 @@ h3,h6{
 }
 .quote-content{
 	display: inline;
-	font-family: 'PT Serif', 'Kaiti SC', serif;
+	font-family: 'Palatino Linotype', 'Songti SC', serif;
 }
 .downloadbox,
 .download{
