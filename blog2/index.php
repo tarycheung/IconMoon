@@ -80,8 +80,6 @@ else {
 //Section: <head>..<body>
 $ajax_js="<link rel=\"EditURI\" type=\"application/rsd+xml\" title=\"RSD\" href=\"{$config['blogurl']}/inc/rsd.php\" />\n";
 $ajax_js.="<script type=\"text/javascript\" src=\"lang/{$langfront}/jslang.js?jsver={$codeversion}\"></script>\n";
-$ajax_js.="<script type=\"text/javascript\" src=\"images/js/ajax.js?jsver={$codeversion}\"></script>\n";
-$ajax_js.="<script type=\"text/javascript\" src=\"images/js/swfobject.js?jsver={$codeversion}\"></script>\n";
 $shutajax=($config['closeajax']=='1') ? 1 : 0;
 $ajax_js.="<script type=\"text/javascript\">\n//<![CDATA[\nvar moreimagepath=\"{$template['moreimages']}\";\nvar shutajax={$shutajax};\nvar absbaseurl='{$config['blogurl']}/';\n//]]>\n</script>\n";
 $ajax_js.="<link title=\"{$lnc[128]} {$config['blogname']}\" rel=\"search\"  type=\"application/opensearchdescription+xml\"  href=\"{$config['blogurl']}/inc/opensearch.php\" />\n";
