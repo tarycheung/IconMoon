@@ -21,7 +21,7 @@ a{
 	color:#30384c;
 }
 a:hover{
-	color: #0098c7;
+	color: #2671c0;
 	text-decoration: underline;
 }
 ul{
@@ -59,7 +59,7 @@ acronym{
 	color:#ac0000;
 }
 .blue{
-	color: #0098c7;
+	color: #2671c0;
 }
 .icon{
 	display:inline-block;
@@ -170,7 +170,7 @@ h1{
 }
 #inner-footer a:hover{
 	text-decoration:none;
-	border-bottom:1px dotted #0098c7;
+	border-bottom:1px dotted #2671c0;
 }
 #footer hr{
 	width: 30%;
@@ -318,22 +318,27 @@ h1{
 	color:#a7bacd;
 }
 .title-label{
-	display: block;
-	clear: left;
+	display: inline-block;
+	clear: both;
+	float: left;
 	font-size: 0.75em;
-	color: #0098c7;
+	color: #fff;
 	text-align: left;
-	margin: 9px 13px 7px 0;
-	padding: 8px 0 0;
+	margin: .3em 0 .3em;
+	padding: .3em .6em .2em;
 	font-weight: 700;
+	background: #2671c0;
+	border-radius: 3em;
 }
 .title-label a{
-	color: #0098c7;
+	color: #fff;
 	text-decoration: none;
 	padding: 0 3px;
 }
 .title-label a:hover{
-	text-decoration:none;
+	text-decoration: none;
+	opacity: 0.5;
+	color: #fff;
 }
 h2{
 	margin:10px 0 0px;
@@ -392,11 +397,10 @@ h2 a:hover{
 	text-decoration: none;
 	border-bottom: 1px dotted #666;
 }
-.title-label a:hover,
 .textbox-content a:hover{
 	text-decoration: none;
-	color: #0098c7;
-	border-bottom: 1px dotted #0098c7;
+	color: #2671c0;
+	border-bottom: 1px dotted #2671c0;
 }
 .textbox-content ul,
 .textbox-content ol{
@@ -412,14 +416,14 @@ h2 a:hover{
 }
 .textbox-content ul li:before{
 	content: "‣ "; 
-	color: #0098c7;
+	color: #2671c0;
 	font-weight: 700;
 	font-size: 1.2em;
 }
 .textbox-content ol li:before{
 	content: counter(item) ". "; 
 	counter-increment: item;
-	color: #0098c7;
+	color: #2671c0;
 	font-weight: 700;
 }
 .textbox-content dt{
@@ -439,10 +443,16 @@ h3,h6{
 	margin-bottom: .25em;
 }
 .textbox-adminbar{
-	width:150px;
-	z-index: 9999;
 	opacity:0;
+	float: right;
+	font-size: 0.75em;
+	margin: .1em 0 0;
+	padding: .3em .4em;
+	color: #a7bacd;
 	-webkit-transition: opacity .15s ease-in-out 0s;
+}
+.textbox-adminbar a{
+	color: #a7bacd;
 }
 .textbox:hover .textbox-adminbar{
 	opacity:1;
@@ -524,7 +534,7 @@ h3,h6{
 #ds-thread .ds-comment-footer{
 	font-size: 0.75em !important;
 }
-#ds-thread #ds-reset .ds-highlight{color: #0098c7 !important; font-weight:700 !important;}
+#ds-thread #ds-reset .ds-highlight{color: #2671c0 !important; font-weight:700 !important;}
 .ds-user-name{font-weight:700;}
 #ds-recent-comments li.ds-comment{font-size:1em !important;}
 #ds-recent-comments li.ds-comment .ds-excerpt{line-height:1.5 !important;}
@@ -536,7 +546,7 @@ h3,h6{
 	font-size: 0.75em !important;	
 }
 .ds-tab .ds-current{
-	color: #0098c7 !important;
+	color: #2671c0 !important;
 }
 .ds-tab{
 	margin: 0 auto !important;
@@ -564,7 +574,7 @@ h3,h6{
 	-webkit-transition: all .15s ease-in-out 0s !important;
 }
 .ds-textarea-wrapper:hover{
-	border-color: #0098c7 !important;
+	border-color: #2671c0 !important;
 }
 .ds-textarea-wrapper textarea{
 	padding: .5em !important;
@@ -619,7 +629,7 @@ h3,h6{
 	height: 2em !important;
 }
 .ds-post-button:hover{
-	background:#0098c7 !important;
+	background:#2671c0 !important;
 }
 #ds-thread .ds-powered-by{
 	margin-top: -2.5em;
@@ -635,7 +645,7 @@ h3,h6{
 	font-size:1.33em;
 	line-height: 1.7em;
 	font-weight: 400;
-	border-left: 0.3em solid #0098c7;
+	border-left: 0.3em solid #2671c0;
 	padding: 0 0 0 0.6em;
 	color: #606470;
 }
@@ -703,8 +713,8 @@ input.button,
 	font-size: 1em;
 	font-weight: 700;
 	border-radius: 2em;
-	border: 2px solid #0098c7;
-	color: #0098c7;
+	border: 2px solid #2671c0;
+	color: #2671c0;
 	text-decoration: none;
 	-webkit-transition: all .15s ease-in-out 0s !important;
 	-moz-transition: all .15s ease-in-out 0s !important;
@@ -717,8 +727,8 @@ input.button,
 	.sec-btn a:hover{
 		color: #fff;
 		text-decoration:none;
-		background: #0098c7;
-		border-color: #0098c7;
+		background: #2671c0;
+		border-color: #2671c0;
 	}
 .sec-btn a{
 	color: #a6aab3;
@@ -734,7 +744,7 @@ h5{
 	font-weight: 700;
 	padding: 0.2em 0.3em 0;
 	margin-left: -1.4em;
-	color: #0098c7;
+	color: #2671c0;
 }
 h5 i{
 	font-size: 0.8em;
@@ -750,7 +760,7 @@ h5 i{
 }
 .panel-content a:hover,
 .panel-content a:hover strong{
-	color: #0098c7;
+	color: #2671c0;
 	text-decoration: none;
 	margin-left: 4px;
 }
@@ -775,7 +785,7 @@ h5 i{
 	max-width: 100%;
 }
 #blog-side-about{
-	margin: 20px 0 4em;
+	margin: 3.6em 0 3em;
 }
 #blog-side-about a{
 	font-weight: 700;
@@ -784,7 +794,7 @@ h5 i{
 }
 #blog-side-about a:hover{
 	text-decoration: none;
-	border-bottom: 1px solid #0098c7;
+	border-bottom: 1px solid #2671c0;
 }
 .blog-sidebar-friends{
 	padding:0;
@@ -959,7 +969,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 .blog-readmore a{
 	text-align: left;
 	width: auto;
-	color: #fff;
+	color: #2671c0;
 	font-size: 0.75em;
 	margin: 11px 0 10px 0;
 	display: inline;
@@ -968,14 +978,14 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	padding: .4em .8em .2em;
 	text-decoration: none;
 	border-radius: 2em;
-	background: #0098c7;
-	-webkit-transition: all .2s ease-in-out 0s;
-	-moz-transition: all .2s ease-in-out 0s;
+	border: 2px solid #2671c0;
+	-webkit-transition: all .15s ease-in-out 0s;
+	-moz-transition: all .15s ease-in-out 0s;
 }
 .blog-readmore a:hover{
 	color: #fff;
-	background: #0098c7;
-	padding-right: 2em;
+	background: #2671c0;
+	border: 2px solid #2671c0;	
 }
 .textbox-content a[name="entrymore"]{
 	border: none;
@@ -1004,8 +1014,8 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
   -webkit-pointer-events: none;
 }
 #nprogress .bar {
-	background: #0098c7;
-	background: -webkit-gradient(linear, right top, left top, from(#0098c7), to(#2c3345));
+	background: #2671c0;
+	background: -webkit-gradient(linear, right top, left top, from(#2671c0), to(#2c3345));
 	position: fixed;
 	z-index: 10000;
 	top: 0;
@@ -1210,7 +1220,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	}
 	h5 {
 		border: none;
-		border-bottom: 0.3em solid #0098c7;
+		border-bottom: 0.3em solid #2671c0;
 		margin: 0;
 	}
 	#blog-side-about{
@@ -1387,15 +1397,15 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		font-size: 1.25em;
 	}
 	.blog .blog-readmore a{
-		height:65px;
-		width:300px;
+		height: 65px;
+		width: 300px;
 		margin: 0 auto;
 		border: none;
 	}
 	.blog .pages a{
-		font-size:50px;
-		padding:4px 22px;
-		margin:0 22px;
+		font-size: 50px;
+		padding: 4px 22px;
+		margin: 0 22px;
 	}
 	#sidebar{
 		clear:both;
