@@ -70,7 +70,6 @@ acronym{
 	visibility:hidden;
 }
 h2, h3, h5, h6{
-/*	font-family: 'adelle-sans-1','adelle-sans-2', 'Myriad Pro', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', '黑体', sans-serif;*/
 	font-family: 'Myriad Pro', 'TrebuchetMS', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, simhei, sans-serif;
 }
 /*Main*/
@@ -1410,6 +1409,9 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		width: 300px;
 		margin: 0 auto;
 		border: none;
+	}
+	.pages{
+		margin: 1.5em 0 1em;
 	}
 	.blog .pages a{
 		font-size: 50px;
