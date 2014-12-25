@@ -78,7 +78,9 @@ $elements['displayside']=<<<eot
 
 <div class="clear"></div>
 <div id='blog-side-about'>
-	图月志，界面设计个人博客，博主 <a href="../about" title="关于我">JJ Ying</a> 是<a href="http://mux.baidu.com">百度 MUX</a> 上海团队的负责人，平时经常出没于<a href="http://www.zhihu.com/people/jjying" title="我的知乎页面">知乎</a>、<a href="http://weibo.com/yingjunjiu/" title="我的新浪微博">新浪微博</a>和 <a href="http://dribbble.com/players/JJYing" title="我的 Dribbble 页面">Dribbble</a> 。<br/><br/>浏览过往博文请移步<a href="archive.php">历史热文榜</a>，本博客所有内容若需转载请<a href="mailto:ying.jun.jiu@gmail.com" title="我的电子邮件">联系我</a>。<br/><br/>订阅图月志：<a href="http://pic.yupoo.com/yingjunjiu_v/DI8qiPwg/WUeB.jpg">微信</a> / <a href="http://eepurl.com/GR6Gv">E-mail</a> / <a href="http://feed.feedsky.com/yingjunjiu">RSS</a>
+	<div class="inner">
+		图月志，界面设计个人博客，博主 <a href="../about" title="关于我">JJ Ying</a> 是<a href="http://mux.baidu.com">百度 MUX</a> 上海团队的负责人，平时经常出没于<a href="http://www.zhihu.com/people/jjying" title="我的知乎页面">知乎</a>、<a href="http://weibo.com/yingjunjiu/" title="我的新浪微博">新浪微博</a>和 <a href="http://dribbble.com/players/JJYing" title="我的 Dribbble 页面">Dribbble</a> 。<br/><br/>浏览过往博文请移步<a href="archive.php">历史热文榜</a>，本博客所有内容若需转载请<a href="mailto:ying.jun.jiu@gmail.com" title="我的电子邮件">联系我</a>。<br/><br/>订阅图月志：<a href="http://pic.yupoo.com/yingjunjiu_v/DI8qiPwg/WUeB.jpg">微信</a> / <a href="http://eepurl.com/GR6Gv">E-mail</a> / <a href="http://feed.feedsky.com/yingjunjiu">RSS</a>
+	</div>
 </div>
 
 <div class="clear"></div>
@@ -248,7 +250,7 @@ $elements['excerpt']=<<<eot
 		<h2>
 			{entrytitle}
 		</h2>
-		<div class="title-label">{entrydatem} 月 {entrydated} 日 &#8226; {entrydatey}  &#8226; <span class="entry-cate">{entrycate}</span></div>
+		<div class="title-label"><div class="inner">{entrydatem} 月 {entrydated} 日 &#8226; {entrydatey}  &#8226; <span class="entry-cate">{entrycate}</span></div></div>
 		<div class="textbox-adminbar">{ifadmin}</div>
 	</div>
 	<div class="textbox-content">{entrycontent}</div>
@@ -263,9 +265,7 @@ $elements['excerptontop']=<<<eot
 			<h2>
 			<a href="javascript: showhidediv('{topid}');">+ {entrytitletext}</a>
 			</h2>
-			<div class="title-label">
-							{entrydatem} 月 {entrydated} 日 &#8226; {entrydatey}  &#8226; <span class="entry-cate">{entrycate}</span> &#8226; {entrycomment}
-			</div>
+			<div class="title-label"><div class="inner">{entrydatem} 月 {entrydated} 日 &#8226; {entrydatey}  &#8226; <span class="entry-cate">{entrycate}</span></div></div>
 			<div class="textbox-adminbar">{ifadmin}</div>
   </div>
 	<div id="{topid}" style="display: none;">
@@ -302,9 +302,7 @@ $elements['viewentry']=<<<eot
 		<h2>
 			{entrytitle}
 		</h2>
-		<div class="title-label">
-			 {entrydatem} 月 {entrydated} 日 &#8226; {entrydatey} &#8226; <span class="entry-cate">{entrycate}</span><!-- &#8226; {entrycomment}-->
-		</div>	
+		<div class="title-label"><div class="inner">{entrydatem} 月 {entrydated} 日 &#8226; {entrydatey}  &#8226; <span class="entry-cate">{entrycate}</span></div></div>
 		<div class="textbox-adminbar">{ifadmin}</div>
 	</div>
 	<div class="textbox-content textbox-content-single">

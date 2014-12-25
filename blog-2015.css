@@ -324,11 +324,13 @@ h1{
 	font-size: 0.75em;
 	color: #fff;
 	text-align: left;
-	margin: .3em 0 .3em;
-	padding: .3em .6em .2em;
 	font-weight: 700;
+}
+.title-label .inner{
+	margin: .3em 0 .3em;
 	background: #2671c0;
 	border-radius: 3em;
+	padding: .3em .6em .2em;
 }
 .title-label a{
 	color: #fff;
@@ -622,7 +624,7 @@ h3,h6{
 	color: #fff !important;
 	text-shadow: none !important;
 	border: none !important;
-	border-radius: 0 !important;
+	border-radius: 5em !important;
 	-webkit-transition: all .15s ease-in-out 0s;
 	-moz-transition: all .15s ease-in-out 0s;
 	width: 5em !important;
@@ -709,11 +711,11 @@ input.button,
 .pages a,
 .blog-bottom-link a{
 	cursor: pointer;
-	padding: .4em .8em .2em;
+	padding: .3em .8em .2em;
 	font-size: 1em;
 	font-weight: 700;
 	border-radius: 2em;
-	border: 2px solid #2671c0;
+	border: .15em solid #2671c0;
 	color: #2671c0;
 	text-decoration: none;
 	-webkit-transition: all .15s ease-in-out 0s !important;
@@ -962,30 +964,29 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	background-position:-330px -345px;
 }
 .blog-readmore{
-		width: 99%;
-		margin-top: 20px;
-		text-align: left;
+		width: 100%;
+		background: #fff;
+		text-align: center;
+		margin: .5em 0 0;
 }
 .blog-readmore a{
-	text-align: left;
+	text-align: center;
 	width: auto;
+	margin: 0 auto;
 	color: #2671c0;
-	font-size: 0.75em;
-	margin: 11px 0 10px 0;
-	display: inline;
-	text-shadow: none;
+	font-size: .875em;
 	font-weight: 700;
-	padding: .4em .8em .2em;
+	padding: .3em 1em .2em;
 	text-decoration: none;
-	border-radius: 2em;
-	border: 2px solid #2671c0;
+	border: none;
+	border-radius: 3em;
 	-webkit-transition: all .15s ease-in-out 0s;
 	-moz-transition: all .15s ease-in-out 0s;
 }
 .blog-readmore a:hover{
+	border: none;
 	color: #fff;
 	background: #2671c0;
-	border: 2px solid #2671c0;	
 }
 .textbox-content a[name="entrymore"]{
 	border: none;
@@ -1275,8 +1276,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	.mobile-only{
 		visibility:visible;
 	}
-	.mobile-hide,
-	.archive-month-chart{
+	.mobile-hide{
 		display: none;
 		visibility: hidden;
 	}
@@ -1295,28 +1295,28 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	#ds-thread .ds-powered-by,
 	#ds-thread .ds-account-control,
 	.linkdesc{
-		display:none !important;
+		display: none !important;
 	}
 	#nav{
-		position:static;
-		margin:20px auto;
-		float:none;
-		padding-top:5px;
+		position: static;
+		margin: 20px auto;
+		float: none;
+		padding-top: 5px;
 		width: 90%;
 		font-size: 0.95em;
 		text-align: left;
 	}
 	#nav li{
-		position:static;
-		float:none;
-		display:inline-block;
+		position: static;
+		float: none;
+		display: inline-block;
 		text-align: center;
 		width: 32%;
 		height: 180%;
 	}
 	#footer{
-		font-size:0.675em;
-		padding:0 0 30px;
+		font-size: 0.675em;
+		padding: 0 0 30px;
 		border: none;
 	}
 	#inner-footer{
@@ -1363,12 +1363,21 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		border-bottom:6px dotted #e9ebf1;		
 	}
 	.blog .title-label{
-		font-size: 0.75em;
+		font-size: 0.5em;
+		font-size: 400;
 		text-align: center;
 		width: 100%;
+		background: none;
+	}
+	.blog .title-label .inner{
+		width: auto;
+		display: inline-block;
+		padding: .4em 1em .3em;
+		margin: 0 auto;
 	}
 	h2{
 		font-size: 1.6em;
+		letter-spacing: -.06em;
 		text-align: center;
 		width: 100%;
 		margin-bottom: 0.25em;
@@ -1406,65 +1415,77 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		font-size: 50px;
 		padding: 4px 22px;
 		margin: 0 22px;
+		font-weight: 700;
 	}
 	#sidebar{
-		clear:both;
-		font-size:1em;
-		width:100%;
-		background:#0a0f1a;
-		margin:.5em 0 0;
-		border-top:2px solid #fff;
-		box-shadow:inset 0 30px 50px #000;
-		text-shadow:0 12px 12px rgba(0,0,0,0.3);
+		clear: both;
+		font-size: 1em;
+		width: 100%;
+		background: #2c3444;
+		margin: .5em 0 0;
 	}
 	.panel{
 		width: auto;
-		padding: 0 0 .2em;
+		padding: 0;
+		margin: 1em 0 2.5em;
 	}
 	.panel h5{
 		width:100%;
 		border: none;
-		color: #30384c;
-		font-size: 2.5em;
+		color: #06aaff;
+		font-size: 2em;
 		text-align: center;
 		margin: 0 auto;
-		padding: 0em 0 0.4em;
-		margin: 0em 0 0.2em;
+		padding: 0 0 .8em;
+		margin: 0;
+	}
+	.panel h5 i{
+		color: #06aaff;
 	}
 	.panel-content{
-		width:80%;
+		width: 83%;
 		margin: 0 auto;
 		color: #fff;
 	}
 	.panel ul li{
 		list-style: none;
-		color: #06aaff;
+		color: #667688;
 		border-bottom: 4px dotted #294461;
 	}
+	.panel ul li a{
+		color: #fff;
+	}
 	.panel a{
-		color: #06aaff;
+		color: #fff;
 	}
 	.panel-content ul li,
 	.blog .blog-sidebar-friends li,
 	.blog-sidebar-popular li,
 	#sidebar_entries li,
 	#sidebar_replies li{
-		background:none;
-		list-style: circle;
+		background: none;
+		list-style: disc;
 	}
 	#blog-side-about{
-		width: 85%;
-		margin: .5em auto 0em;
-		padding-bottom: 4em;
-		color: #30384c;		
+		width: 100%;
+		margin: 0 auto 1.5em;
+		color: #fff;
+		background: #06aaff;
+	}
+	#blog-side-about .inner{
+		width: 83%;
+		padding:  1.5em 0;
+		margin: 0 auto;
+		font-weight: 700;
 	}
 	#blog-side-about a{
-		color: #06aaff;
-		border-bottom: 4px dotted #294461;		
+		color: #fff;
+		opacity: 0.6;
+		border-bottom: .1em solid #fff;
 	}	
 	.blog-sidebar-friends li{
 		float: left;
-		margin-right: 0.5em;	
+		margin-right: 0.5em;
 	}
 	.blog-sidebar-friends li a{
 		background: none;
@@ -1475,6 +1496,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		margin-left: 0.6em;
 		line-height: 1em;
 		padding-bottom: 0;
+		color: #667688;
 	}	
 	.blog-sidebar-friends-desc{
 		display: none;
@@ -1483,13 +1505,16 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		border-bottom: 4px dotted #294461;
 	}
 	ul#ds-recent-comments .ds-meta{
-		color: #30384c !important;
+		color: #fff !important;
 	}
 	ul#ds-recent-comments .ds-meta a{
-		color: #30384c !important;
+		color: #fff !important;
 	}
 	ul#ds-recent-comments .ds-time{
 		display: none;
+	}
+	ul#ds-recent-comments .ds-excerpt{
+		color: #667688;		
 	}
 	#pagelocation-archive .textbox-title h2{
 		margin-bottom: 1em;
@@ -1514,6 +1539,14 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	#ds-thread{
 		width:85% !important;
 		margin: 0 auto;
+	}
+	.ds-login-buttons{
+		display: none !important;
+	}
+	.ds-post-button{
+		margin: 0 auto !important;
+		width: auto;
+		display: inline-block;
 	}
 	.linktitle{
 		display: block;
