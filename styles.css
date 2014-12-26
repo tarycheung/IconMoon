@@ -9,13 +9,31 @@ Apr. 2013*/
 	vertical-align: baseline;
 	outline:none;
 }
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url('font/open-sans/OpenSans-CondLight-webfont.eot');
+    src: url('font/open-sans/OpenSans-CondLight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/open-sans/OpenSans-CondLight-webfont.woff') format('woff'),
+         url('font/open-sans/OpenSans-CondLight-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url('font/open-sans/OpenSans-CondBold-webfont.eot');
+    src: url('font/open-sans/OpenSans-CondBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/open-sans/OpenSans-CondBold-webfont.woff') format('woff'),
+         url('font/open-sans/OpenSans-CondBold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 
 html{
 	background:#fff url('images/main2.png') repeat-x 0 -378px;
 }
 body{
 	font-size:14px;
-	font-family:'jaf-bernino-sans', Calibri, sans-serif;
+	font-family:'Open Sans Condensed', Calibri, sans-serif;
 	text-align:center;
 	color:#30384c;
 	background:url('images/bg.jpg') no-repeat center top;
@@ -73,7 +91,7 @@ acronym{
 h3, h6,
 #about #inner-content,
 #nav a{
-	font-family:"jaf-bernino-sans-condensed", 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
+	font-family:"Open Sans Condensed", 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
 }
 /*Main*/
 #wrapper{
@@ -130,7 +148,7 @@ h1{
 #nav a{
 	display:block;
 	font-size:17px;
-	font-weight:400;
+	font-weight: 200;
 	margin:50px 4px 0 8px;
 	line-height:22px;
 	text-align:center;
@@ -193,7 +211,7 @@ h1{
 }
 #inner-footer a{
 	color:#505970;
-	font-weight:400;
+	font-weight: 300;
 	padding-bottom:2px;
 }
 #inner-footer a:hover{
@@ -204,7 +222,7 @@ h1{
 }
 .footer-current{
 	color:#aab0bf;
-	font-weight:400;
+	font-weight: 300;
 	text-shadow:0 1px 0 #fff;
 }
 #inner-footer b{
