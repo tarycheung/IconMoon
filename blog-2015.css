@@ -447,8 +447,8 @@ h3,h6{
 	opacity:0;
 	float: right;
 	font-size: 0.75em;
-	margin: .1em 0 0;
-	padding: .3em .4em;
+	margin: .3em 0 .3em;
+	padding: .3em 0 .2em;
 	color: #a7bacd;
 	-webkit-transition: opacity .15s ease-in-out 0s;
 }
