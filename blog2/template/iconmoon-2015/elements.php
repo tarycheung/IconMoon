@@ -134,6 +134,7 @@ $elements['displayfooter']=<<<eot
 </div>
 </div>
 
+
 <!-- Loading Bar -->
 <script>
 	NProgress.start();
@@ -157,7 +158,6 @@ $elements['displayfooter']=<<<eot
 	    }
 	};
 </script>
-
 
 <!-- Google Analytics 
 <script type="text/javascript">
@@ -310,6 +310,8 @@ $elements['viewentry']=<<<eot
 		<div class="clear"></div>
 	</div>
 	</div>
+
+	
 <div class="box">
 <div class="inner-box">
 <div id="commentWrapper" class="comment-wrapper">	
@@ -317,6 +319,7 @@ $elements['viewentry']=<<<eot
 
 <a name="comments"></a>
 <div class='textbox-extra-title'><i class="font-icon icon-asterisk blue"></i> 博文评论</div>
+
 <!-- Duoshuo Comment BEGIN -->
 	<div class="ds-thread"></div>
 	<script type="text/javascript">
@@ -324,7 +327,7 @@ $elements['viewentry']=<<<eot
 	(function() {
 		var ds = document.createElement('script');
 		ds.type = 'text/javascript';ds.async = true;
-		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.src = 'http://static.duoshuo.com/embed.unstable.js';
 		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
 	})();
 	</script>

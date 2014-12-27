@@ -35,6 +35,25 @@ if (is_array($taginfo)) {
 <br/><br/>
 
 <div class='textbox-extra '>
+	<div class='textbox-extra-title'><i class=\"font-icon icon-asterisk blue\"></i> 分享博文</div>
+	<hr>
+			<div class=\"ds-share flat\" 
+			data-thread-key=\"\" 
+			data-title='图月志' 
+			data-images=\"http://iconmoon.com/apple-touch-icon-precomposed.png\" 
+			data-content='' 
+			data-url='$url_this'>
+			    <div class=\"ds-share-inline\">
+			      <ul  class=\"ds-share-icons-32\">
+			      	
+			      	<li data-toggle=\"ds-share-icons-more\"><a class=\"ds-more\" href=\"javascript:void(0);\">分享到：</a></li>
+			        <a class=\"ds-weibo\" href=\"javascript:void(0);\" data-service=\"weibo\">微博</a>
+			        <a class=\"ds-wechat\" href=\"javascript:void(0);\" data-service=\"wechat\">微信</a>
+			      	
+			      </ul>
+			      <div class=\"ds-share-icons-more\"></div>
+			    </div>
+			 </div>
 	<div class='textbox-related'>
 	<div class='textbox-extra-title'><i class=\"font-icon icon-asterisk blue\"></i> 相关博文</div>
 	<hr>
