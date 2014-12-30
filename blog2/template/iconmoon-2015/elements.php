@@ -106,6 +106,7 @@ eot;
 $url_this = "http://".$_SERVER['HTTP_HOST']. $_SERVER['REQUEST_URI'];
 eot;
 
+$thisYear = (int)date('Y'); 
 $elements['displayfooter']=<<<eot
 	</div><div class="clear"></div>
 	<div id="footer">
@@ -128,7 +129,7 @@ $elements['displayfooter']=<<<eot
 			<i class="font-icon icon-asterisk blue"></i>
 			<br />
 			</span>
-			© 2014 <strong>JJ Ying</strong>. All rights reserved.  Powered by <a href="http://bo-blog.com/" title="Bo-Blog 2, a free-of-charge weblog engine based on PHP script and MySQL storage."><strong>Bo-Blog</strong></a>.
+			© 2005 - $thisYear <strong>JJ Ying</strong>. All rights reserved.  Powered by <a href="http://bo-blog.com/" title="Bo-Blog 2, a free-of-charge weblog engine based on PHP script and MySQL storage."><strong>Bo-Blog</strong></a>.
 		</div>
 	</div>
 </div>
