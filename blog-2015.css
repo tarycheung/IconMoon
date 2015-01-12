@@ -326,10 +326,9 @@ h1{
 	font-weight: 700;
 }
 .title-label .inner{
-	margin: .3em 0 .3em;
+	margin: .5em 0;
 	background: #2671c0;
-	border-radius: 3em;
-	padding: .3em .6em .2em;
+	padding: .3em .2em .2em .4em;
 }
 .title-label a{
 	color: #fff;
