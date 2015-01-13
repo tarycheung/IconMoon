@@ -48,8 +48,6 @@
 	display: block;
 	width: 97%;
 	margin: 0.2em 0 8em;
-	-webkit-transition: opacity .15s ease-in-out 0s;
-	-moz-transition: opacity .15s ease-in-out 0s;
 }
 .archive-summary:hover{
 	opacity: 1;

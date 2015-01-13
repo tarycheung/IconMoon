@@ -247,11 +247,11 @@ h1{
     100%{background-position: -1500px 0;}
 }
 #content{
-	width:770px;
-	float:left;
+	width: 770px;
+	float: left;
 	font-size: 1.6em;
 	margin: 65px 0 0;
-	text-align:left;
+	text-align: left;
 	background: #fff;
 }
 #mainWrapper a{
@@ -260,32 +260,31 @@ h1{
 	-moz-transition-timing-function: ease-out, ease-out;	
 }
 .sidebar{
-	float:right;
-	width:236px;
-	height:100%;
+	float: right;
+	width: 236px;
+	height: 100%;
 	font-size: 1.2em;
-	line-height:1.8em;
-	text-align:left;
-	margin-top: 45px;	
+	line-height: 1.8em;
+	text-align: left;
+	margin-top: 45px;
 }
 #innerSidebar{
 	margin:0;
 }
 .pages{
-	margin:0 0 22px 0;
-	color:#94A1BF;
+	margin:0 20px 2em 0;
 }
 .pages .pagebar-mainbody a{
-	margin:0 3px;
+	margin:0 1em;
 }
 .page-total{
-	display:none;
+	display: none;
 }
 .listbox {
-	padding:20px;
+	padding: 20px;
 }
 .listbox-table {
-	width:99%;
+	width: 99%;
 }
 .listbox-header {
 	font-weight:700;
@@ -965,7 +964,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		width: 100%;
 		background: #fff;
 		text-align: center;
-		margin: .5em 0 0;
+		margin: 1em 0 0;
 }
 .blog-readmore a{
 	text-align: center;
@@ -974,7 +973,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	color: #2671c0;
 	font-size: .875em;
 	font-weight: 700;
-	padding: .3em 1em .2em;
+	padding: .4em .8em .2em;
 	text-decoration: none;
 	border: none;
 	border-radius: 3em;
