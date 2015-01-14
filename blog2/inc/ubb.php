@@ -147,7 +147,7 @@ function makeimg ($aligncode, $widthcode, $heightcode, $src, $inrss=0) {
 	if (!empty($height)) $show.=" height=\"{$height}\"";
 	if ($inrss==1) $src=(substr(strtolower($src), 0, 4) == 'http') ? $src : $config['blogurl'].'/'.$src;
 	$onloadact=($inrss==0 && !empty($mbcon['autoresizeimg'])) ? " onload=\"if(this.width>{$mbcon['autoresizeimg']}) {this.resized=true; this.width={$mbcon['autoresizeimg']};}\"" : '';
-	$code="<img src=\"{$src}\" class=\"insertimage png-bg\" alt=\"Loading Picture...\" title=\"\" border=\"0\"{$onloadact}{$show}/>";
+	$code="<img src=\"{$src}\" class=\"insertimage png-bg\" alt=\"图片载入中...\" title=\"\" border=\"0\"{$onloadact}{$show}/>";
 	return $code;
 }
 
@@ -163,7 +163,7 @@ function makeimgwithurl ($url, $aligncode, $widthcode, $heightcode, $src, $inrss
 	if (!empty($height)) $show.=" height=\"{$height}\"";
 	if ($inrss==1) $src=(substr(strtolower($src), 0, 4) == 'http') ? $src : $config['blogurl'].'/'.$src;
 	$onloadact=($inrss==0 && !empty($mbcon['autoresizeimg'])) ? " onload=\"if(this.width>{$mbcon['autoresizeimg']}) {this.resized=true; this.width={$mbcon['autoresizeimg']};}\"" : '';
-	$code="<a href=\"{$url}\"><img src=\"{$src}\" class=\"insertimage\" alt=\"Loading Picture...\" title=\"\" border=\"0\"{$onloadact}{$show}/></a>";
+	$code="<a href=\"{$url}\"><img src=\"{$src}\" class=\"insertimage\" alt=\"图片载入中...\" title=\"\" border=\"0\"{$onloadact}{$show}/></a>";
 	return $code;
 }
 
