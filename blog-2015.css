@@ -795,17 +795,17 @@ h5 i{
 	text-decoration: none;
 	border-bottom: 1px solid #2671c0;
 }
-.blog-sidebar-friends{
+.blog-sidebar-friends,
+.blog-sidebar-hire{
 	padding:0;
 }
-.blog-sidebar-friends ul{
+.blog-sidebar-friends ul,
+.blog-sidebar-hire ul{
 	clear:both;
 }
-.blog-sidebar-friends li{
+.blog-sidebar-friends li,
+.blog-sidebar-hire li{
 	display: block;
-}
-.blog-sidebar-friends li a{
-
 }
 .blog-sidebar-desc{
 	color: #a6aab3;
@@ -1134,7 +1134,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		max-height: 400px;
 	}
 	.pages{
-		margin-top: 20px;
+		margin-top: 2em;
 	}
 	#sidebar{
 		float:right;
@@ -1164,7 +1164,8 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		float: left;
 		margin: 0 2.65%;
 	}
-	#sidebar_sidebarbanner{
+	#sidebar_sidebarbanner,
+	#sidebar_baidu-search{
 		width: 100%;
 		display: block;
 		clear: both;
@@ -1226,6 +1227,9 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		margin: 0 auto 50px;
 		font-size: 1.5em;
 		line-height: 1.7;
+	}
+	.pages{
+		margin:  4em;
 	}
 	#footer{
 		font-size: 1.2em;
@@ -1460,6 +1464,7 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 	}
 	.panel-content ul li,
 	.blog .blog-sidebar-friends li,
+	.blog .blog-sidebar-hire li,
 	.blog-sidebar-popular li,
 	#sidebar_entries li,
 	#sidebar_replies li{
@@ -1483,11 +1488,13 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		opacity: 0.6;
 		border-bottom: .1em solid #fff;
 	}	
-	.blog-sidebar-friends li{
+	.blog-sidebar-friends li,
+	.blog-sidebar-hire li{
 		float: left;
 		margin-right: 0.5em;
 	}
-	.blog-sidebar-friends li a{
+	.blog-sidebar-friends li a,
+	.blog-sidebar-hire li a{
 		background: none;
 	}
 	.blog-sidebar-desc{
@@ -1498,7 +1505,8 @@ ul#ds-recent-comments li.ds-comment:hover .ds-time{
 		padding-bottom: 0;
 		color: #667688;
 	}	
-	.blog-sidebar-friends-desc{
+	.blog-sidebar-friends-desc,
+	.blog-sidebar-hire-desc{
 		display: none;
 	}
 	#sidebar_latest-comments ul#ds-recent-comments li.ds-comment{
